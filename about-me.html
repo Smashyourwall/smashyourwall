@@ -3,268 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me — Smash Your Wall</title>
-  <meta name="description" content="Learn more about Phil, his experience with approach anxiety, and the philosophy behind Smash Your Wall.">
-
+  <title>About Phil | Smash Your Wall</title>
   <style>
     :root {
-      --bg: #f7f5f0;
-      --text: #171717;
-      --muted: #666;
-      --accent: #b94a32;
-      --accent-dark: #933a27;
-      --white: #ffffff;
-      --border: #dedbd4;
+      --bg-color: #f7f6f2;
+      --text-color: #111111;
+      --accent-color: #000000;
+      --border-color: #e5e4df;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 0 20px;
     }
 
-    nav {
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 0 80px 0;
+    }
+
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 30px;
-      border-bottom: 1px solid var(--border);
+      padding: 20px 0 60px 0;
     }
+    .brand { font-weight: 800; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; color: #000; }
+    nav a { margin-left: 20px; text-decoration: none; color: #555; font-size: 0.95rem; }
+    nav a:hover { color: #000; }
 
-    nav > a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: 1px;
-      font-size: 18px;
-    }
-
-    nav div {
-      display: flex;
-      gap: 24px;
-    }
-
-    nav div a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    nav div a:hover {
-      color: var(--accent);
-    }
-
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 90px 30px 100px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 2px;
+    .badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      color: #666;
+      margin-bottom: 8px;
+      display: block;
     }
 
-    h1 {
-      margin: 0 0 55px;
-      font-size: clamp(44px, 7vw, 72px);
-      line-height: 1;
-      letter-spacing: -2px;
+    h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+    h2 { font-size: 1.6rem; font-weight: 700; margin: 40px 0 16px 0; }
+    p { font-size: 1.08rem; color: #222; margin-bottom: 20px; }
+
+    .callout-quote {
+      border-left: 3px solid #000;
+      padding-left: 20px;
+      margin: 32px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #000;
     }
 
-    h2 {
-      margin: 85px 0 25px;
-      font-size: 32px;
-      line-height: 1.15;
-      letter-spacing: -0.8px;
-    }
-
-    p {
-      margin: 0 0 25px;
-      font-size: 18px;
-    }
-
-    .intro {
-      font-size: 22px;
-      line-height: 1.6;
-    }
-
-    .highlight {
-      margin: 55px 0;
-      padding: 30px 35px;
-      background: var(--white);
-      border-left: 5px solid var(--accent);
-      font-size: 21px;
-      line-height: 1.5;
-    }
-
-    .bottom-link {
-      margin-top: 70px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border);
-    }
-
-    .bottom-link a {
-      color: var(--accent);
+    .btn {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 14px 28px;
       font-weight: 700;
       text-decoration: none;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 25px 30px 40px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-        padding: 20px;
-      }
-
-      nav div {
-        flex-wrap: wrap;
-        gap: 14px 18px;
-      }
-
-      main {
-        padding: 60px 22px 70px;
-      }
-
-      h1 {
-        margin-bottom: 40px;
-      }
-
-      h2 {
-        margin-top: 65px;
-        font-size: 28px;
-      }
-
-      p {
-        font-size: 17px;
-      }
-
-      .intro {
-        font-size: 20px;
-      }
-
-      .highlight {
-        padding: 24px;
-        font-size: 19px;
-      }
-
-      footer {
-        padding-left: 22px;
-        padding-right: 22px;
-      }
+      border-radius: 4px;
+      margin-top: 16px;
     }
   </style>
 </head>
-
 <body>
 
-<nav>
-  <a href="index.html">SMASH YOUR WALL</a>
+<div class="container">
+  <header>
+    <a href="index.html" class="brand">Smash Your Wall</a>
+    <nav>
+      <a href="about-me.html">About Me</a>
+      <a href="memoir.html">Memoir</a>
+      <a href="articles.html">Articles</a>
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
 
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about-me.html">About Me</a>
-    <a href="memoir.html">Memoir</a>
-    <a href="articles.html">Articles</a>
-    <a href="work-with-me.html">Work With Me</a>
-    <a href="faq.html">FAQ</a>
-  </div>
-</nav>
+  <main>
+    <span class="badge">About Me</span>
+    <h1>I wasn't naturally smooth. I was hyper-analytical and totally frozen.</h1>
 
-<main>
+    <p>My name is Phil. For years, my life made zero sense on paper. I could sit at high-stakes poker tables for hours, make cold calculated decisions under intense pressure, compete in sports, and operate with total logic—until I saw an attractive woman walking past me in broad daylight.</p>
 
-  <div class="eyebrow">About Me</div>
+    <p>Then my brain would shut down. My heart rate would spike, I’d rationalize twenty reasons why "now isn't the right time," and I'd watch the opportunity walk away. Nothing.</p>
 
-  <h1>My Story</h1>
+    <div class="callout-quote">
+      Knowing what you ought to do and being physically able to walk over and do it are two entirely different skill sets.
+    </div>
 
-  <p class="intro">
-    My name is Phil. My parents sent me to an all-boys high school, so from about 14–18 I basically didn't talk to girls. That alone probably set me up for some monster approach anxiety.
-  </p>
+    <h2>The "Grandpa Method" vs. Modern Pickup Nonsense</h2>
 
-  <p>
-    I wasn't talking to women and having normal interactions with them, let alone flirting. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction. I was basically competitive at a handful of things while borderline dysfunctional with women.
-  </p>
+    <p>When I finally got sick of my own excuses, I tried learning how to fix it. But almost everything in the dating space was insufferable—cringey pick-up line scripts, fake "alpha male" posturing, or weird manipulative tricks designed to hide insecurity behind a character.</p>
 
-  <p>
-    When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them? But I couldn't just approach. It was way too daunting, especially by myself.
-  </p>
+    <p>I didn't want a character. I just wanted to be able to see a woman I thought was attractive, walk over, start a normal conversation like a human being, and accept whatever happened next.</p>
 
-  <div class="highlight">
-    I knew what I wanted to do. I just couldn't make myself do it.
-  </div>
+    <p>Before smartphones, that wasn't called "cold approach." It was just how people met. I started calling it the Grandpa Method—getting comfortable taking action in the real world without needing liquor, dark nightclubs, or weird games.</p>
 
-  <h2>My Cold Approach Philosophy</h2>
+    <h2>What Actually Happens When You Smash The Wall</h2>
 
-  <p>
-    In a perfect world, “cold approach” shouldn't even have a label. In the pre-internet era, “cold approach” was just the way people met. I labeled it the “Grandpa Method” because boomers had to meet each other before the internet somehow, right?
-  </p>
+    <p>I didn't solve this through a magical mindset shift or reading another book. I solved it through volume. Thousands of real-world interactions, direct approaches in plain daylight, hundreds of awkward rejections, and building undeniable proof that the sky doesn't fall when a girl says no.</p>
 
-  <p>
-    Either way, even if cold approach was totally normal eons ago, it now has a largely negative stigma in the general public. A lot of that comes from people who can't detect or read signals when women get uncomfortable.
-  </p>
+    <p>The weirdest side effect? Once you conquer approach anxiety, you stop obsessing over women. The needy, desperate energy vanishes. You realize that getting comfortable with hesitation gives you control over every other uncomfortable area of your life.</p>
 
-  <p>
-    It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
-  </p>
+    <p>I don't teach tricks. I help guys who are smart and capable everywhere else in life finally break through the wall holding their social life back.</p>
 
-  <div class="highlight">
-    An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
-  </div>
-
-  <h2>The Playing Field</h2>
-
-  <p>
-    After I conquered my approach anxiety, I really stopped caring about women and making them the center of my focus.
-  </p>
-
-  <p>
-    20-year-old Phil was thinking about chicks all the time. At 24? Hardly my priority.
-  </p>
-
-  <p>
-    Other things started taking over. What do I actually want from life? How much long-term flexibility do I want? How do money and flexibility go together? How do I want to live? Do I want a long-term relationship so I can eventually have a family?
-  </p>
-
-  <p>
-    Once you start having answers to those questions, other things that seemed so huge before start to feel secondary to your actual goals.
-  </p>
-
-  <p>
-    That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared.
-  </p>
-
-  <div class="bottom-link">
-    <a href="memoir.html">Want the full story? Read the memoir →</a>
-  </div>
-
-</main>
-
-<footer>
-  © Smash Your Wall
-</footer>
+    <div style="margin-top: 40px;">
+      <a href="memoir.html" class="btn">READ THE FULL MEMOIR</a>
+    </div>
+  </main>
+</div>
 
 </body>
 </html>
