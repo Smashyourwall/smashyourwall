@@ -104,17 +104,16 @@
 
     /* PHOTO */
 
-    .photo-placeholder {
+    .about-photo {
       width: 360px;
-      height: 440px;
+      height: 450px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
       margin: 0 auto;
-      background: #e2e2e0;
-      border: 1px solid #d2d2d0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
     /* SECTIONS */
@@ -212,9 +211,10 @@
         margin-bottom: 35px;
       }
 
-      .photo-placeholder {
-        width: 260px;
-        height: 320px;
+      .about-photo {
+        width: 100%;
+        max-width: 300px;
+        height: 380px;
       }
 
       .section {
@@ -265,10 +265,7 @@
 
   <h1>About Me</h1>
 
-  <!-- Replace this placeholder with your photo later -->
-  <div class="photo-placeholder">
-    Photo coming later
-  </div>
+  <img src="https://i.imgur.com/8QeRmsb.jpeg" alt="Phil — Smash Your Wall" class="about-photo">
 
 </section>
 
