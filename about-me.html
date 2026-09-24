@@ -4,7 +4,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me — Smash Your Wall</title>
-  <meta name="description" content="Learn about Phil, his experience with approach anxiety, and his philosophy on cold approach.">
+  <meta name="description" content="Learn more about Phil, his experience with approach anxiety, and the philosophy behind Smash Your Wall.">
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #171717;
+      --muted: #666;
+      --accent: #b94a32;
+      --accent-dark: #933a27;
+      --white: #ffffff;
+      --border: #dedbd4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav > a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+
+    nav div {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav div a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav div a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 90px 30px 100px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 55px;
+      font-size: clamp(44px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      margin: 85px 0 25px;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+    }
+
+    p {
+      margin: 0 0 25px;
+      font-size: 18px;
+    }
+
+    .intro {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      margin: 55px 0;
+      padding: 30px 35px;
+      background: var(--white);
+      border-left: 5px solid var(--accent);
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .bottom-link {
+      margin-top: 70px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    .bottom-link a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 25px 30px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      nav div {
+        flex-wrap: wrap;
+        gap: 14px 18px;
+      }
+
+      main {
+        padding: 60px 22px 70px;
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-top: 65px;
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+
+      .intro {
+        font-size: 20px;
+      }
+
+      .highlight {
+        padding: 24px;
+        font-size: 19px;
+      }
+
+      footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,17 +196,25 @@
 
 <main>
 
-  <p>ABOUT ME</p>
+  <div class="eyebrow">About Me</div>
 
-  <h1>About Me</h1>
+  <h1>My Story</h1>
+
+  <p class="intro">
+    My name is Phil. My parents sent me to an all-boys high school, so from about 14–18 I basically didn't talk to girls. That alone probably set me up for some monster approach anxiety.
+  </p>
 
   <p>
-    My name is Phil. My parents sent me to an all-boys high school, so from about 14–18 I basically didn't talk to girls. That alone probably set me up for some monster approach anxiety. I wasn't talking to women and having normal interactions with them, let alone flirting. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction. I was basically competitive at a handful of things while borderline dysfunctional with women.
+    I wasn't talking to women and having normal interactions with them, let alone flirting. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction. I was basically competitive at a handful of things while borderline dysfunctional with women.
   </p>
 
   <p>
     When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them? But I couldn't just approach. It was way too daunting, especially by myself.
   </p>
+
+  <div class="highlight">
+    I knew what I wanted to do. I just couldn't make myself do it.
+  </div>
 
   <h2>My Cold Approach Philosophy</h2>
 
@@ -50,9 +230,9 @@
     It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
   </p>
 
-  <p>
+  <div class="highlight">
     An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
-  </p>
+  </div>
 
   <h2>The Playing Field</h2>
 
@@ -75,6 +255,10 @@
   <p>
     That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared.
   </p>
+
+  <div class="bottom-link">
+    <a href="memoir.html">Want the full story? Read the memoir →</a>
+  </div>
 
 </main>
 
