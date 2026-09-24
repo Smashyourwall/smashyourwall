@@ -10,16 +10,22 @@
 
   <style>
     :root {
-      --bg: #f4f1e8;
+      --bg: #f5f1e8;
+      --surface: #ebe5d8;
       --text: #171717;
-      --muted: #666666;
-      --accent: #b85c38;
-      --accent-dark: #934528;
-      --border: #d8d3c7;
+      --muted: #68645c;
+      --accent: #b65a37;
+      --accent-dark: #8f4329;
+      --line: #d8d0c1;
+      --white: #fffdf8;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -30,27 +36,28 @@
       line-height: 1.7;
     }
 
+    /* NAV */
+
     nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 30px;
-      border-bottom: 1px solid var(--border);
     }
 
     nav > a {
       color: var(--text);
       text-decoration: none;
-      font-weight: 800;
-      letter-spacing: 1px;
       font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
     }
 
     nav div {
       display: flex;
-      gap: 24px;
+      gap: 26px;
     }
 
     nav div a {
@@ -58,105 +65,268 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
+      transition: color 0.2s ease;
     }
 
     nav div a:hover {
       color: var(--accent);
     }
 
-    main {
-      max-width: 780px;
+    /* HERO */
+
+    .hero {
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 70px 30px 100px;
+      padding: 80px 32px 95px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 70px;
+      align-items: end;
     }
 
-    .page-title {
-      text-align: center;
-      margin: 0 0 75px;
-      font-size: 42px;
-      letter-spacing: 2px;
-      line-height: 1.1;
-    }
-
-    .content-label {
-      font-size: 14px;
+    .hero-label {
+      margin-bottom: 22px;
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      margin: 75px 0 25px;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
-    }
-
-    p {
-      margin: 0 0 25px;
-      font-size: 18px;
-    }
-
-    .bottom-link {
-      margin-top: 70px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border);
-    }
-
-    .bottom-link a {
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
       color: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
     }
 
-    .bottom-link a:hover {
+    .hero h1 {
+      margin: 0;
+      max-width: 800px;
+      font-size: clamp(52px, 7vw, 88px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      font-weight: 900;
+    }
+
+    .hero-side {
+      padding-bottom: 7px;
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+    }
+
+    .hero-side p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* WALL DIVIDER */
+
+    .wall {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .wall-line {
+      height: 10px;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          var(--text) 0,
+          var(--text) 48px,
+          transparent 48px,
+          transparent 53px
+        );
+      opacity: 0.9;
+    }
+
+    /* CONTENT */
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 85px 32px 110px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 720px);
+      gap: 75px;
+      align-items: start;
+    }
+
+    .section-label {
+      position: sticky;
+      top: 30px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .content {
+      max-width: 720px;
+    }
+
+    .content p {
+      margin: 0 0 27px;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .content h2 {
+      margin: 100px 0 30px;
+      font-size: 42px;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .content h2:first-of-type {
+      margin-top: 100px;
+    }
+
+    /* PULL QUOTE */
+
+    .pull-quote {
+      margin: 55px 0 45px;
+      padding: 32px 36px;
+      background: var(--surface);
+      border-left: 5px solid var(--accent);
+    }
+
+    .pull-quote p {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.4;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+    }
+
+    /* BOTTOM CTA */
+
+    .bottom {
+      max-width: 720px;
+      margin: 100px 0 0 255px;
+      padding: 38px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .bottom p {
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .bottom a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .bottom a:hover {
       text-decoration: underline;
     }
 
+    /* FOOTER */
+
     footer {
-      border-top: 1px solid var(--border);
-      max-width: 1100px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 25px 30px 40px;
+      padding: 30px 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
       color: var(--muted);
       font-size: 13px;
     }
 
-    @media (max-width: 700px) {
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-inner a:hover {
+      color: var(--accent);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
 
       nav {
+        padding: 20px;
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
-        padding: 20px;
       }
 
       nav div {
         flex-wrap: wrap;
-        gap: 14px 18px;
+        gap: 12px 18px;
+      }
+
+      .hero {
+        padding: 55px 20px 65px;
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 15vw, 72px);
+        letter-spacing: -3px;
+      }
+
+      .hero-side {
+        margin-top: 40px;
+        max-width: 400px;
+      }
+
+      .wall {
+        padding: 0 20px;
+      }
+
+      .wall-line {
+        height: 7px;
       }
 
       main {
-        padding: 55px 22px 70px;
+        padding: 60px 20px 80px;
       }
 
-      .page-title {
+      .content-grid {
+        display: block;
+      }
+
+      .section-label {
+        position: static;
+        margin-bottom: 28px;
+      }
+
+      .content p {
+        font-size: 18px;
+      }
+
+      .content h2 {
+        margin-top: 75px;
         font-size: 34px;
-        margin-bottom: 55px;
       }
 
-      h2 {
-        margin-top: 60px;
-        font-size: 28px;
+      .pull-quote {
+        padding: 26px 24px;
       }
 
-      p {
-        font-size: 17px;
+      .pull-quote p {
+        font-size: 21px;
       }
 
-      footer {
-        padding-left: 22px;
-        padding-right: 22px;
+      .bottom {
+        margin: 75px 0 0;
+      }
+
+      .footer-inner {
+        padding: 25px 20px 35px;
+        flex-direction: column;
       }
     }
   </style>
@@ -177,72 +347,112 @@
   </div>
 </nav>
 
+<section class="hero">
+  <div>
+    <div class="hero-label">About Me</div>
+    <h1>I Wasn't Always Good With Women.</h1>
+  </div>
+
+  <div class="hero-side">
+    <p>
+      I could compete, think analytically, and handle pressure in plenty of areas of life. But approaching a woman I was attracted to? Completely different story.
+    </p>
+  </div>
+</section>
+
+<div class="wall">
+  <div class="wall-line"></div>
+</div>
+
 <main>
 
-  <h1 class="page-title">ABOUT ME</h1>
+  <div class="content-grid">
 
-  <div class="content-label">ABOUT ME</div>
+    <div class="section-label">
+      The Beginning
+    </div>
 
-  <p>
-    My name is Phil. For years, my life made zero sense on paper. I could compete in sports, play poker, read, think analytically, and generally function pretty well—but when it came to women, I was borderline dysfunctional.
-  </p>
+    <div class="content">
 
-  <p>
-    My parents sent me to an all-boys high school, so from about 14–18 I basically didn't talk to girls. That alone probably set me up for some monster approach anxiety. I wasn't talking to women and having normal interactions with them, let alone flirting. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction.
-  </p>
+      <p>
+        My name is Phil. For years, my life made zero sense on paper. I could compete in sports, play poker, read, think analytically, and generally function pretty well—but when it came to women, I was borderline dysfunctional.
+      </p>
 
-  <p>
-    When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them? But I couldn't just approach. It was way too daunting, especially by myself.
-  </p>
+      <p>
+        My parents sent me to an all-boys high school, so from about 14–18 I basically didn't talk to girls. That alone probably set me up for some monster approach anxiety. I wasn't talking to women and having normal interactions with them, let alone flirting. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction.
+      </p>
 
-  <h2>My Cold Approach Philosophy</h2>
+      <p>
+        When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them?
+      </p>
 
-  <p>
-    In a perfect world, “cold approach” shouldn't even have a label. In the pre-internet era, “cold approach” was just the way people met. I labeled it the “Grandpa Method” because boomers had to meet each other before the internet somehow, right?
-  </p>
+      <div class="pull-quote">
+        <p>
+          But I couldn't just approach. It was way too daunting, especially by myself.
+        </p>
+      </div>
 
-  <p>
-    Either way, even if cold approach was totally normal eons ago, it now has a largely negative stigma in the general public. A lot of that comes from people who can't detect or read signals when women get uncomfortable.
-  </p>
+      <h2>My Cold Approach Philosophy</h2>
 
-  <p>
-    It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
-  </p>
+      <p>
+        In a perfect world, “cold approach” shouldn't even have a label. In the pre-internet era, “cold approach” was just the way people met. I labeled it the “Grandpa Method” because boomers had to meet each other before the internet somehow, right?
+      </p>
 
-  <p>
-    An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
-  </p>
+      <p>
+        Either way, even if cold approach was totally normal eons ago, it now has a largely negative stigma in the general public. A lot of that comes from people who can't detect or read signals when women get uncomfortable.
+      </p>
 
-  <h2>The Playing Field</h2>
+      <p>
+        It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
+      </p>
 
-  <p>
-    After I conquered my approach anxiety, I really stopped caring about women and making them the center of my focus.
-  </p>
+      <p>
+        An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
+      </p>
 
-  <p>
-    20-year-old Phil was thinking about chicks all the time. At 24? Hardly my priority.
-  </p>
+      <h2>The Playing Field</h2>
 
-  <p>
-    Other things started taking over. What do I actually want from life? How much long-term flexibility do I want? How do money and flexibility go together? How do I want to live? Do I want a long-term relationship so I can eventually have a family?
-  </p>
+      <p>
+        After I conquered my approach anxiety, I really stopped caring about women and making them the center of my focus.
+      </p>
 
-  <p>
-    Once you start having answers to those questions, other things that seemed so huge before start to feel secondary to your actual goals.
-  </p>
+      <p>
+        20-year-old Phil was thinking about chicks all the time. At 24? Hardly my priority.
+      </p>
 
-  <p>
-    That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared.
-  </p>
+      <p>
+        Other things started taking over. What do I actually want from life? How much long-term flexibility do I want? How do money and flexibility go together? How do I want to live? Do I want a long-term relationship so I can eventually have a family?
+      </p>
 
-  <div class="bottom-link">
-    <a href="memoir.html">Want the full story? Read the memoir →</a>
+      <p>
+        Once you start having answers to those questions, other things that seemed so huge before start to feel secondary to your actual goals.
+      </p>
+
+      <p>
+        That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <p>
+      Want the full story?
+    </p>
+
+    <a href="memoir.html">
+      Read the memoir →
+    </a>
   </div>
 
 </main>
 
 <footer>
-  © Smash Your Wall
+  <div class="footer-inner">
+    <div>© Smash Your Wall</div>
+    <a href="index.html">Back to Home →</a>
+  </div>
 </footer>
 
 </body>
