@@ -10,11 +10,13 @@
 
   <style>
     :root {
-      --bg: #eeeeec;
+      --bg: #e7e7e7;
+      --white: #ffffff;
+      --section-gray: #dcdcdc;
       --text: #171717;
       --muted: #666666;
       --accent: #a94f32;
-      --border: #d2d2d0;
+      --border: #cfcfcf;
     }
 
     * {
@@ -29,17 +31,23 @@
       line-height: 1.7;
     }
 
+    /* NAV */
+
     nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 24px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border);
     }
 
-    nav > a {
+    nav > div:first-child a {
       color: var(--text);
       text-decoration: none;
       font-size: 18px;
@@ -47,30 +55,30 @@
       letter-spacing: 1px;
     }
 
-    nav div {
+    .nav-links {
       display: flex;
       gap: 24px;
     }
 
-    nav div a {
+    .nav-links a {
       color: var(--text);
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
     }
 
-    nav div a:hover {
+    .nav-links a:hover {
       color: var(--accent);
     }
 
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 80px 30px 100px;
+    /* PAGE HEADER */
+
+    .page-header {
+      text-align: center;
+      padding: 75px 30px 55px;
     }
 
     .eyebrow {
-      text-align: center;
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -80,19 +88,59 @@
     }
 
     h1 {
-      text-align: center;
-      margin: 0 0 70px;
-      font-size: 46px;
+      margin: 0;
+      font-size: 48px;
       line-height: 1.1;
       letter-spacing: -1px;
     }
 
-    .content-label {
+    /* PHOTO */
+
+    .photo-wrap {
+      text-align: center;
+      padding: 0 30px 65px;
+    }
+
+    .photo-placeholder {
+      width: 300px;
+      height: 360px;
+      margin: 0 auto;
+      background: #d3d3d3;
+      border: 1px solid #c4c4c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CONTENT SECTIONS */
+
+    .section {
+      padding: 75px 30px;
+    }
+
+    .section-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-gray {
+      background: var(--section-gray);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
       text-align: center;
       font-size: 30px;
-      font-weight: 800;
+      line-height: 1.2;
       letter-spacing: -0.5px;
-      margin-bottom: 35px;
+      margin: 0 0 38px;
     }
 
     p {
@@ -101,33 +149,23 @@
       line-height: 1.75;
     }
 
-    h2 {
-      text-align: center;
-      margin: 80px 0 30px;
-      font-size: 30px;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
+    p:last-child {
+      margin-bottom: 0;
     }
+
+    /* BOTTOM BIO */
 
     .bio-bottom {
-      margin-top: 80px;
-      padding-top: 35px;
-      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 65px 30px 80px;
+      text-align: center;
     }
 
-    .photo-placeholder {
-      width: 180px;
-      height: 220px;
-      margin-bottom: 25px;
-      background: #e2e2e0;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .bio-photo-note {
+      font-size: 14px;
       color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-      padding: 20px;
+      margin-bottom: 15px;
     }
 
     .bio-name {
@@ -143,7 +181,7 @@
 
     .memoir-link {
       display: inline-block;
-      margin-top: 35px;
+      margin-top: 30px;
       color: var(--accent);
       font-size: 17px;
       font-weight: 800;
@@ -154,8 +192,14 @@
       text-decoration: underline;
     }
 
+    /* FOOTER */
+
     footer {
+      background: var(--white);
       border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 25px 30px 40px;
@@ -163,30 +207,44 @@
       font-size: 13px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
 
-      nav {
+      .nav-inner {
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
         padding: 20px;
       }
 
-      nav div {
+      .nav-links {
         flex-wrap: wrap;
         gap: 12px 18px;
       }
 
-      main {
-        padding: 60px 22px 75px;
+      .page-header {
+        padding: 60px 22px 40px;
       }
 
       h1 {
-        font-size: 36px;
-        margin-bottom: 55px;
+        font-size: 38px;
       }
 
-      .content-label {
+      .photo-wrap {
+        padding: 0 22px 50px;
+      }
+
+      .photo-placeholder {
+        width: 240px;
+        height: 290px;
+      }
+
+      .section {
+        padding: 60px 22px;
+      }
+
+      .section-title {
         font-size: 27px;
         margin-bottom: 30px;
       }
@@ -195,17 +253,11 @@
         font-size: 17px;
       }
 
-      h2 {
-        font-size: 27px;
-        margin-top: 65px;
+      .bio-bottom {
+        padding: 55px 22px 70px;
       }
 
-      .photo-placeholder {
-        width: 150px;
-        height: 190px;
-      }
-
-      footer {
+      .footer-inner {
         padding-left: 22px;
         padding-right: 22px;
       }
@@ -216,94 +268,119 @@
 <body>
 
 <nav>
-  <a href="index.html">SMASH YOUR WALL</a>
+  <div class="nav-inner">
+    <div>
+      <a href="index.html">SMASH YOUR WALL</a>
+    </div>
 
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about-me.html">About Me</a>
-    <a href="memoir.html">Memoir</a>
-    <a href="articles.html">Articles</a>
-    <a href="work-with-me.html">Work With Me</a>
-    <a href="faq.html">FAQ</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about-me.html">About Me</a>
+      <a href="memoir.html">Memoir</a>
+      <a href="articles.html">Articles</a>
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="faq.html">FAQ</a>
+    </div>
   </div>
 </nav>
 
-<main>
-
+<header class="page-header">
   <div class="eyebrow">about me</div>
-
   <h1>About Me</h1>
+</header>
 
-  <div class="content-label">My Story</div>
+<div class="photo-wrap">
 
-  <p>
-    My name is Phil. My parents sent me to an all-boys high school, so from about 14–18 I wasn't talking to girls and having normal interactions with them, let alone flirting. That alone probably set me up for some monster approach anxiety. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction. I was basically competitive at a handful of things while borderline dysfunctional with women.
-  </p>
-
-  <p>
-    When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them? But I couldn't just approach. It was way too daunting, especially by myself.
-  </p>
-
-  <h2>My Cold Approach Philosophy</h2>
-
-  <p>
-    In a perfect world, “cold approach” shouldn't even have a label. In the pre-internet era, “cold approach” was just the way people met. I labeled it the “Grandpa Method” because boomers had to meet each other before the internet somehow, right?
-  </p>
-
-  <p>
-    Either way, even if cold approach was totally normal eons ago, it now has a largely negative stigma in the general public. A lot of that comes from the men who can't detect or read signals when women get uncomfortable.
-  </p>
-
-  <p>
-    It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
-  </p>
-
-  <p>
-    An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
-  </p>
-
-  <h2>The Playing Field</h2>
-
-  <p>
-    After I conquered my approach anxiety, I really stopped caring about women and making them the center of my focus.
-  </p>
-
-  <p>
-    20-year-old Phil was thinking about chicks all the time. At 24? Hardly the same priority.
-  </p>
-
-  <p>
-    Other things started taking over. What do I actually want from life? How much long-term flexibility do I want? How do money and flexibility go together? How do I want to live? Do I want a long-term relationship so I can eventually have a family?
-  </p>
-
-  <p>
-    Once you start having answers to those questions, other things that seemed so huge before start to feel secondary to your actual goals.
-  </p>
-
-  <p>
-    That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared. Going on so many dates also removed a lot of my neediness. It became much easier to be laid back and have fun with zero expectations.
-  </p>
-
-  <div class="bio-bottom">
-
-    <!-- Replace this placeholder with your photo later -->
-    <div class="photo-placeholder">
-      Photo coming later
-    </div>
-
-    <div class="bio-name">Phil</div>
-    <div class="bio-title">Founder of Smash Your Wall</div>
-
-    <a class="memoir-link" href="memoir.html">
-      Want the full story? Read the memoir →
-    </a>
-
+  <!-- Replace this placeholder with your photo later -->
+  <div class="photo-placeholder">
+    Photo coming later
   </div>
 
-</main>
+</div>
+
+<section class="section section-white">
+  <div class="section-inner">
+
+    <h2 class="section-title">My Story</h2>
+
+    <p>
+      My name is Phil. My parents sent me to an all-boys high school, so from about 14–18 I wasn't talking to girls and having normal interactions with them, let alone flirting. That alone probably set me up for some monster approach anxiety. And the things I was good at didn't exactly help. Baseball, basketball, video games, poker, reading—these were all things I enjoyed, but none of them gave me much female interaction. I was basically competitive at a handful of things while borderline dysfunctional with women.
+    </p>
+
+    <p>
+      When I eventually discovered cold approach, I immediately thought I'd found my solution. If I wanted to meet women, why not just go talk to them? But I couldn't just approach. It was way too daunting, especially by myself.
+    </p>
+
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="section-inner">
+
+    <h2 class="section-title">My Cold Approach Philosophy</h2>
+
+    <p>
+      In a perfect world, “cold approach” shouldn't even have a label. In the pre-internet era, “cold approach” was just the way people met. I labeled it the “Grandpa Method” because boomers had to meet each other before the internet somehow, right?
+    </p>
+
+    <p>
+      Either way, even if cold approach was totally normal eons ago, it now has a largely negative stigma in the general public. A lot of that comes from the men who can't detect or read signals when women get uncomfortable.
+    </p>
+
+    <p>
+      It's a double-edged sword. The negativity that society puts on approaching makes it far more difficult to cross the initial barrier because we think we're going to be judged into oblivion. But it also provides a huge benefit. Since almost nobody is cold approaching, guess what that means?
+    </p>
+
+    <p>
+      An approach is extremely unique and will stick out in a girl's mind, especially if she likes you.
+    </p>
+
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="section-inner">
+
+    <h2 class="section-title">The Playing Field</h2>
+
+    <p>
+      After I conquered my approach anxiety, I really stopped caring about women and making them the center of my focus.
+    </p>
+
+    <p>
+      20-year-old Phil was thinking about chicks all the time. At 24? Hardly the same priority.
+    </p>
+
+    <p>
+      Other things started taking over. What do I actually want from life? How much long-term flexibility do I want? How do money and flexibility go together? How do I want to live? Do I want a long-term relationship so I can eventually have a family?
+    </p>
+
+    <p>
+      Once you start having answers to those questions, other things that seemed so huge before start to feel secondary to your actual goals.
+    </p>
+
+    <p>
+      That was one of the unintended side effects of conquering my approach anxiety. My priorities became crystal clear, and the neediness I had around women disappeared. Going on so many dates also removed a lot of my neediness. It became much easier to be laid back and have fun with zero expectations.
+    </p>
+
+  </div>
+</section>
+
+<div class="bio-bottom">
+
+  <div class="bio-name">Phil</div>
+  <div class="bio-title">Founder of Smash Your Wall</div>
+
+  <a class="memoir-link" href="memoir.html">
+    Want the full story? Read the memoir →
+  </a>
+
+</div>
 
 <footer>
-  © Smash Your Wall
+  <div class="footer-inner">
+    © Smash Your Wall
+  </div>
 </footer>
 
 </body>
