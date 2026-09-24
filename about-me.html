@@ -10,44 +10,51 @@
 
   <style>
     :root {
-      --bg: #e7e7e7;
       --white: #ffffff;
-      --section-gray: #dcdcdc;
+      --gray: #e9e9e9;
       --text: #171717;
       --muted: #666666;
       --accent: #a94f32;
-      --border: #cfcfcf;
+      --border: #d3d3d3;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--white);
       color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
-    /* NAV */
+    /* STICKY NAV */
 
     nav {
-      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 24px 30px;
+      padding: 22px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    nav > div:first-child a {
+    .brand a {
       color: var(--text);
       text-decoration: none;
       font-size: 18px;
@@ -71,11 +78,12 @@
       color: var(--accent);
     }
 
-    /* PAGE HEADER */
+    /* PAGE INTRO */
 
-    .page-header {
+    .page-intro {
       text-align: center;
-      padding: 75px 30px 55px;
+      padding: 75px 30px 45px;
+      background: var(--white);
     }
 
     .eyebrow {
@@ -96,17 +104,18 @@
 
     /* PHOTO */
 
-    .photo-wrap {
+    .photo-section {
+      background: var(--white);
       text-align: center;
-      padding: 0 30px 65px;
+      padding: 10px 30px 70px;
     }
 
     .photo-placeholder {
       width: 300px;
       height: 360px;
       margin: 0 auto;
-      background: #d3d3d3;
-      border: 1px solid #c4c4c4;
+      background: #d8d8d8;
+      border: 1px solid #c8c8c8;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -114,15 +123,10 @@
       font-size: 14px;
     }
 
-    /* CONTENT SECTIONS */
+    /* SECTIONS */
 
     .section {
-      padding: 75px 30px;
-    }
-
-    .section-inner {
-      max-width: 780px;
-      margin: 0 auto;
+      padding: 80px 30px;
     }
 
     .section-white {
@@ -130,17 +134,22 @@
     }
 
     .section-gray {
-      background: var(--section-gray);
+      background: var(--gray);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
+    .section-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
     .section-title {
       text-align: center;
+      margin: 0 0 38px;
       font-size: 30px;
       line-height: 1.2;
       letter-spacing: -0.5px;
-      margin: 0 0 38px;
     }
 
     p {
@@ -153,19 +162,12 @@
       margin-bottom: 0;
     }
 
-    /* BOTTOM BIO */
+    /* BOTTOM */
 
     .bio-bottom {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 65px 30px 80px;
+      background: var(--white);
       text-align: center;
-    }
-
-    .bio-photo-note {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 15px;
+      padding: 65px 30px 80px;
     }
 
     .bio-name {
@@ -214,25 +216,25 @@
       .nav-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
-        padding: 20px;
+        gap: 16px;
+        padding: 18px 20px;
       }
 
       .nav-links {
         flex-wrap: wrap;
-        gap: 12px 18px;
+        gap: 10px 16px;
       }
 
-      .page-header {
-        padding: 60px 22px 40px;
+      .page-intro {
+        padding: 60px 22px 35px;
       }
 
       h1 {
         font-size: 38px;
       }
 
-      .photo-wrap {
-        padding: 0 22px 50px;
+      .photo-section {
+        padding: 10px 22px 55px;
       }
 
       .photo-placeholder {
@@ -269,7 +271,8 @@
 
 <nav>
   <div class="nav-inner">
-    <div>
+
+    <div class="brand">
       <a href="index.html">SMASH YOUR WALL</a>
     </div>
 
@@ -281,24 +284,29 @@
       <a href="work-with-me.html">Work With Me</a>
       <a href="faq.html">FAQ</a>
     </div>
+
   </div>
 </nav>
 
-<header class="page-header">
+<header class="page-intro">
+
   <div class="eyebrow">about me</div>
+
   <h1>About Me</h1>
+
 </header>
 
-<div class="photo-wrap">
+<section class="photo-section">
 
   <!-- Replace this placeholder with your photo later -->
   <div class="photo-placeholder">
     Photo coming later
   </div>
 
-</div>
+</section>
 
 <section class="section section-white">
+
   <div class="section-inner">
 
     <h2 class="section-title">My Story</h2>
@@ -312,9 +320,11 @@
     </p>
 
   </div>
+
 </section>
 
 <section class="section section-gray">
+
   <div class="section-inner">
 
     <h2 class="section-title">My Cold Approach Philosophy</h2>
@@ -336,9 +346,11 @@
     </p>
 
   </div>
+
 </section>
 
 <section class="section section-white">
+
   <div class="section-inner">
 
     <h2 class="section-title">The Playing Field</h2>
@@ -364,23 +376,27 @@
     </p>
 
   </div>
+
 </section>
 
-<div class="bio-bottom">
+<section class="bio-bottom">
 
   <div class="bio-name">Phil</div>
+
   <div class="bio-title">Founder of Smash Your Wall</div>
 
   <a class="memoir-link" href="memoir.html">
     Want the full story? Read the memoir →
   </a>
 
-</div>
+</section>
 
 <footer>
+
   <div class="footer-inner">
     © Smash Your Wall
   </div>
+
 </footer>
 
 </body>
