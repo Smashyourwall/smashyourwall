@@ -168,6 +168,33 @@
       font-size: 17px;
     }
 
+    /* SCROLL REVEAL */
+
+    .what-intro,
+    .what-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .what-intro.show,
+    .what-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .what-item:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    .what-item:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .what-item:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
     /* TURNING POINT */
 
     .turning-point {
@@ -725,6 +752,28 @@
   <footer>
     © Smash Your Wall
   </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll('.what-intro, .what-item');
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+    revealItems.forEach(item => {
+      revealObserver.observe(item);
+    });
+  </script>
 
 </body>
 </html>
