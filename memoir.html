@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Break the Wall — Smash Your Wall</title>
-
   <meta name="description" content="The story of how I spent three years terrified to approach women—and what happened when I finally made the decision to stop running in fear.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     :root {
       --white: #ffffff;
       --gray: #e2e2e0;
@@ -18,23 +21,13 @@
       --border: #d2d2d0;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--white);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
-
-    /* STICKY NAV */
 
     nav {
       position: sticky;
@@ -42,215 +35,173 @@
       z-index: 1000;
       background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 22px 30px;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .brand a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 18px;
+    .logo {
       font-weight: 800;
       letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .nav-links a {
       color: var(--text);
       text-decoration: none;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 24px;
       font-size: 14px;
-      font-weight: 600;
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    /* HERO */
 
     .hero {
       background: var(--gray);
       padding: 90px 30px 85px;
-      text-align: center;
     }
 
     .hero-inner {
-      max-width: 850px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     h1 {
+      font-size: clamp(52px, 8vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -4px;
       margin: 0 0 28px;
-      font-size: 64px;
-      line-height: 1;
-      letter-spacing: -2px;
     }
 
     .subtitle {
+      font-size: 23px;
+      line-height: 1.45;
       max-width: 720px;
-      margin: 0 auto;
-      font-size: 22px;
-      line-height: 1.5;
+      margin: 0;
     }
-
-    /* STORY */
 
     .story-section {
       background: var(--white);
-      padding: 80px 30px;
+      padding: 80px 30px 100px;
     }
 
     .story-inner {
-      max-width: 780px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     p {
-      margin: 0 0 25px;
       font-size: 18px;
-      line-height: 1.75;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
+      margin: 0 0 24px;
     }
 
     .emphasis {
       font-weight: 700;
-      font-size: 23px;
+      font-size: 21px;
     }
 
-    .strong-line {
-      font-weight: 700;
+    .memoir-cta {
+      margin-top: 42px;
+      margin-bottom: 20px;
+      padding: 30px 32px;
+      background: var(--text);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    /* MEMOIR SECTION */
-
-    .read-section {
-      background: var(--gray);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 80px 30px;
-      text-align: center;
-    }
-
-    .read-inner {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .read-title {
-      margin: 0 0 30px;
-      font-size: 32px;
+    .memoir-cta h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
       line-height: 1.2;
     }
 
-    .read-inner p {
-      margin-bottom: 25px;
+    .memoir-cta p {
+      margin: 0;
+      color: #bdbdbd;
+      font-size: 15px;
     }
 
-    .read-button {
+    .memoir-cta a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 15px 25px;
-      background: var(--text);
-      color: var(--white);
+      padding: 14px 22px;
+      background: var(--white);
+      color: var(--text);
       text-decoration: none;
-      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.3px;
-      border-radius: 3px;
+      white-space: nowrap;
     }
 
-    .read-button:hover {
-      background: #333333;
+    .memoir-cta a:hover {
+      background: var(--gray);
     }
-
-    .free-note {
-      margin-top: 18px;
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    /* FOOTER */
 
     footer {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-inner {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 25px 30px 40px;
-      color: var(--muted);
+      padding: 30px;
+      border-top: 1px solid var(--border);
       font-size: 13px;
+      color: #777;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-
+    @media (max-width: 650px) {
       .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
         padding: 18px 20px;
+        display: block;
       }
 
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 10px 16px;
+      nav .links {
+        margin-top: 12px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
       }
 
       .hero {
-        padding: 65px 22px 60px;
+        padding: 60px 20px 65px;
       }
 
       h1 {
-        font-size: 46px;
-        letter-spacing: -1.5px;
+        letter-spacing: -2px;
       }
 
       .subtitle {
-        font-size: 19px;
+        font-size: 20px;
       }
 
       .story-section {
-        padding: 60px 22px;
+        padding: 60px 20px 75px;
       }
 
       p {
         font-size: 17px;
       }
 
-      .emphasis {
-        font-size: 21px;
+      .memoir-cta {
+        display: block;
+        padding: 26px 24px;
       }
 
-      .read-section {
-        padding: 60px 22px;
+      .memoir-cta a {
+        margin-top: 20px;
       }
 
-      .read-title {
-        font-size: 28px;
-      }
-
-      .footer-inner {
-        padding-left: 22px;
-        padding-right: 22px;
+      footer {
+        padding: 25px 20px;
       }
     }
   </style>
@@ -258,137 +209,96 @@
 
 <body>
 
-<nav>
-  <div class="nav-inner">
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">SMASH YOUR WALL</a>
 
-    <div class="brand">
-      <a href="index.html">SMASH YOUR WALL</a>
+      <div class="links">
+        <a href="about-me.html">About Me</a>
+        <a href="memoir.html">Memoir</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about-me.html">About Me</a>
-      <a href="memoir.html">Memoir</a>
-      <a href="articles.html">Articles</a>
-      <a href="work-with-me.html">Work With Me</a>
-      <a href="faq.html">FAQ</a>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Break the Wall</h1>
+
+      <p class="subtitle">
+        The story of how I spent three years terrified to approach women—and what happened when I finally made the decision to stop running in fear.
+      </p>
     </div>
+  </section>
 
-  </div>
-</nav>
+  <section class="story-section">
+    <div class="story-inner">
 
-<!-- GRAY: HERO -->
+      <p>For years, I wanted to approach women.</p>
 
-<section class="hero">
+      <p>I watched videos. I imagined myself doing it.</p>
 
-  <div class="hero-inner">
+      <p>And then, when the moment actually came, I couldn't do it.</p>
 
-    <h1>Break the Wall</h1>
+      <p>
+        I spent years walking past women I wanted to talk to,
+        becoming a master of excuses, and wondering why something
+        that seemed so simple for other people felt almost impossible
+        for me.
+      </p>
 
-    <div class="subtitle">
-      The story of how I spent three years terrified to approach women—and what happened when I finally made the decision to stop running in fear.
+      <p>Eventually, I reached a point where I couldn't keep living that way.</p>
+
+      <p>On October 6, 2019, I finally approached.</p>
+
+      <p>I had had enough.</p>
+
+      <p class="emphasis">And it went terribly.</p>
+
+      <p>
+        Trust me, that first approach didn't magically fix everything.
+        In fact, it was only the beginning.
+      </p>
+
+      <p>
+        What followed was years of approaches, rejection, uncomfortable
+        conversations, unexpected successes, mistakes, and a lot of
+        figuring things out the hard way.
+      </p>
+
+      <p>I wrote the whole story down.</p>
+
+      <p>
+        <strong>Break the Wall</strong> is the unfiltered account of how
+        I went from being terrified to approach women to eventually
+        making it something I could actually do.
+      </p>
+
+      <p><strong>No course. No sales pitch. Just my story.</strong></p>
+
+      <div class="memoir-cta">
+        <div>
+          <h2>Read the Full Memoir</h2>
+          <p>It's completely free. No email. No course. No sales pitch.</p>
+        </div>
+
+        <a
+          href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          READ THE MEMOIR →
+        </a>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-
-</section>
-
-<!-- WHITE: STORY -->
-
-<section class="story-section">
-
-  <div class="story-inner">
-
-    <p>For years, I wanted to approach women.</p>
-
-    <p>I watched videos. I imagined myself doing it.</p>
-
-    <p>And then, when the moment actually came, I couldn't do it.</p>
-
-    <p>
-      I spent years walking past women I wanted to talk to,
-      becoming a master of excuses, and wondering why something
-      that seemed so simple for other people felt almost impossible
-      for me.
-    </p>
-
-    <p>Eventually, I reached a point where I couldn't keep living that way.</p>
-
-    <p>On October 6, 2019, I finally approached.</p>
-
-    <p>I had had enough.</p>
-
-    <p class="emphasis">And it went terribly.</p>
-
-    <p>
-      Trust me, that first approach didn't magically fix everything.
-      In fact, it was only the beginning.
-    </p>
-
-    <p>
-      What followed was years of approaches, rejection, uncomfortable
-      conversations, unexpected successes, mistakes, and a lot of
-      figuring things out the hard way.
-    </p>
-
-    <p>I wrote the whole story down.</p>
-
-    <p>
-      <strong>Break the Wall</strong> is the unfiltered account of how
-      I went from being terrified to approach women to eventually
-      making it something I could actually do.
-    </p>
-
-    <p class="strong-line">
-      No course. No sales pitch. Just my story.
-    </p>
-
-  </div>
-
-</section>
-
-<!-- GRAY: READ THE MEMOIR -->
-
-<section class="read-section">
-
-  <div class="read-inner">
-
-    <h2 class="read-title">Read the Memoir</h2>
-
-    <p>
-      It's completely free.
-    </p>
-
-    <p>
-      If you've ever wanted to approach an attractive stranger,
-      but found yourself standing there thinking and letting the
-      opportunity slip away, this is for you.
-    </p>
-
-    <a
-      class="read-button"
-      href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      READ THE FULL MEMOIR
-    </a>
-
-    <div class="free-note">
-      Read it online. No email required.
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <div class="footer-inner">
+  <footer>
     © Smash Your Wall
-  </div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
