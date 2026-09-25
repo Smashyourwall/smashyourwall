@@ -102,17 +102,33 @@
 
     .story-section {
       background: var(--white);
-      padding: 85px 30px 25px;
+      padding: 85px 30px 80px;
     }
 
     .story-inner {
-      max-width: 680px;
+      max-width: 1000px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .story-text {
+      max-width: 680px;
     }
 
     p {
       font-size: 18px;
       margin: 0 0 24px;
+    }
+
+    .story-photo {
+      width: 100%;
+      max-width: 360px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 3px;
     }
 
     /* TURNING POINT */
@@ -242,7 +258,7 @@
       color: #777;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 750px) {
 
       .nav-inner {
         padding: 18px 20px;
@@ -275,7 +291,20 @@
       }
 
       .story-section {
-        padding: 60px 20px 15px;
+        padding: 60px 20px 70px;
+      }
+
+      .story-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .story-text {
+        max-width: 680px;
+      }
+
+      .story-photo {
+        max-width: 360px;
       }
 
       .aftermath-section {
@@ -343,12 +372,8 @@
     </div>
   </nav>
 
-
-  <!-- HERO -->
-
   <section class="hero">
     <div class="hero-inner">
-
       <h1>Break the Wall</h1>
 
       <p class="subtitle">
@@ -358,42 +383,44 @@
       <p class="hero-message">
         I was terrified to approach. I broke through it. I can help you do the same.
       </p>
-
     </div>
   </section>
-
-
-  <!-- BEGINNING OF STORY -->
 
   <section class="story-section">
     <div class="story-inner">
 
-      <p>For years, I wanted to approach women.</p>
+      <div class="story-text">
+        <p>For years, I wanted to approach women.</p>
 
-      <p>I watched videos. I imagined myself doing it.</p>
+        <p>I watched videos. I imagined myself doing it.</p>
 
-      <p>And then, when the moment actually came, I couldn't do it.</p>
+        <p>And then, when the moment actually came, I couldn't do it.</p>
 
-      <p>
-        I spent years walking past women I wanted to talk to,
-        becoming a master of excuses, and wondering why something
-        that seemed so simple for other people felt almost impossible
-        for me.
-      </p>
+        <p>
+          I spent years walking past women I wanted to talk to,
+          becoming a master of excuses, and wondering why something
+          that seemed so simple for other people felt almost impossible
+          for me.
+        </p>
 
-      <p>
-        Eventually, I reached a point where I couldn't keep living that way.
-      </p>
+        <p>
+          Eventually, I reached a point where I couldn't keep living that way.
+        </p>
+      </div>
+
+      <div>
+        <img
+          src="https://i.imgur.com/slwbGrb.jpg"
+          alt="Phil"
+          class="story-photo"
+        >
+      </div>
 
     </div>
   </section>
 
-
-  <!-- TURNING POINT -->
-
   <section class="turning-point">
     <div class="turning-inner">
-
       <div class="date">October 6, 2019</div>
 
       <h2>I finally approached.</h2>
@@ -402,12 +429,8 @@
         I had had enough.
         <strong>And it went terribly.</strong>
       </p>
-
     </div>
   </section>
-
-
-  <!-- WHAT CAME AFTER -->
 
   <section class="aftermath-section">
     <div class="aftermath-inner">
@@ -434,9 +457,6 @@
       <p class="emphasis">
         No course. No sales pitch. Just my story.
       </p>
-
-
-      <!-- READ THE MEMOIR -->
 
       <div class="read-section">
 
@@ -477,7 +497,6 @@
 
     </div>
   </section>
-
 
   <footer>
     © Smash Your Wall
