@@ -112,15 +112,15 @@
 
     .intro-section {
       background: var(--white);
-      padding: 95px 30px 100px;
+      padding: 100px 30px 110px;
     }
 
     .intro-inner {
       max-width: 1050px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 75px;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 80px;
       align-items: center;
     }
 
@@ -131,11 +131,12 @@
     .intro-photo-wrap {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     .intro-photo {
       width: 100%;
-      max-width: 320px;
+      max-width: 380px;
       display: block;
       border-radius: 3px;
     }
@@ -265,7 +266,7 @@
       font-weight: 700;
     }
 
-    /* MEMOIR */
+    /* READ MEMOIR */
 
     .read-section {
       background: var(--gray);
@@ -540,9 +541,10 @@
     </div>
   </section>
 
-  <!-- INTRO -->
+  <!-- INTRO + PHOTO -->
 
   <section class="intro-section">
+
     <div class="intro-inner">
 
       <div class="intro-text">
@@ -604,11 +606,13 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- WHAT YOU'LL SEE -->
 
   <section class="what-section">
+
     <div class="what-inner">
 
       <div class="what-intro">
@@ -625,52 +629,70 @@
       <div class="what-grid">
 
         <div class="what-item">
+
           <h3>The Fear</h3>
+
           <p>
             What approach anxiety actually felt like from the inside,
             and why knowing what to do wasn't enough to make me do it.
           </p>
+
         </div>
 
         <div class="what-item">
+
           <h3>The First Step</h3>
+
           <p>
             What finally made me stop walking past women and take
             the first step toward actually changing.
           </p>
+
         </div>
 
         <div class="what-item">
+
           <h3>The Reps</h3>
+
           <p>
             The hundreds and eventually thousands of approaches,
             rejections, mistakes, uncomfortable conversations,
             and unexpected successes that followed.
           </p>
+
         </div>
 
         <div class="what-item">
+
           <h3>The Change</h3>
+
           <p>
             What happened when approaching stopped being the massive
             obstacle it once was, and how it changed much more than
             just my dating life.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- TURNING POINT -->
 
   <section class="turning-point">
+
     <div class="turning-inner">
 
-      <div class="date">October 6, 2019</div>
+      <div class="date">
+        October 6, 2019
+      </div>
 
-      <h2>I finally approached.</h2>
+      <h2>
+        I finally approached.
+      </h2>
 
       <p class="big-line">
         I had had enough.
@@ -678,11 +700,13 @@
       </p>
 
     </div>
+
   </section>
 
   <!-- AFTERMATH -->
 
   <section class="aftermath-section">
+
     <div class="aftermath-inner">
 
       <p>
@@ -705,16 +729,20 @@
       </p>
 
     </div>
+
   </section>
 
   <!-- READ THE MEMOIR -->
 
   <section class="read-section">
+
     <div class="read-inner">
 
       <div class="read-heading">
 
-        <h2>Read the Memoir</h2>
+        <h2>
+          Read the Memoir
+        </h2>
 
         <p>
           The complete story is available to read for free.
@@ -732,7 +760,9 @@
 
         <div class="read-copy">
 
-          <h3>Break the Wall</h3>
+          <h3>
+            Break the Wall
+          </h3>
 
           <p>
             The complete memoir of how I went from being terrified
@@ -770,14 +800,18 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- IF THIS SOUNDS FAMILIAR -->
 
   <section class="familiar-section">
+
     <div class="familiar-inner">
 
-      <h2>If This Sounds Familiar...</h2>
+      <h2>
+        If This Sounds Familiar...
+      </h2>
 
       <p>
         If you've spent years watching videos, reading advice,
@@ -788,15 +822,22 @@
 
       <div class="next-links">
 
-        <a href="about-me.html">About Me</a>
+        <a href="about-me.html">
+          About Me
+        </a>
 
-        <a href="articles.html">Articles</a>
+        <a href="articles.html">
+          Articles
+        </a>
 
-        <a href="work-with-me.html">Work With Me</a>
+        <a href="work-with-me.html">
+          Work With Me
+        </a>
 
       </div>
 
     </div>
+
   </section>
 
   <footer>
@@ -804,16 +845,25 @@
   </footer>
 
   <script>
-    const revealItems = document.querySelectorAll('.what-intro, .what-item');
+    const revealItems = document.querySelectorAll(
+      '.what-intro, .what-item'
+    );
 
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
+
         entries.forEach(entry => {
+
           if (entry.isIntersecting) {
+
             entry.target.classList.add('show');
+
             observer.unobserve(entry.target);
+
           }
+
         });
+
       },
       {
         threshold: 0.15
