@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,8 +173,28 @@
     }
 
     .playing-inner {
-      max-width: 680px;
+      max-width: 1000px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .playing-text {
+      max-width: 680px;
+    }
+
+    .playing-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .playing-photo {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      border-radius: 3px;
     }
 
     .memoir-link {
@@ -239,12 +258,14 @@
         padding: 65px 22px;
       }
 
-      .story-inner {
+      .story-inner,
+      .playing-inner {
         grid-template-columns: 1fr;
         gap: 40px;
       }
 
-      .story-photo {
+      .story-photo,
+      .playing-photo {
         max-width: 300px;
       }
 
@@ -390,44 +411,58 @@
 
     <div class="playing-inner">
 
-      <h2>The Playing Field</h2>
+      <div class="playing-text">
 
-      <p>
-        After I conquered my approach anxiety, I really stopped caring about
-        women and making them the center of my focus.
-      </p>
+        <h2>The Playing Field</h2>
 
-      <p>
-        20-year-old Phil was thinking about chicks all the time. At 24?
-        Hardly the same priority.
-      </p>
+        <p>
+          After I conquered my approach anxiety, I really stopped caring about
+          women and making them the center of my focus.
+        </p>
 
-      <p>
-        Other things started taking over. What do I actually want from life?
-        How much long-term flexibility do I want? How do money and flexibility
-        go together? How do I want to live? Do I want a long-term relationship
-        so I can eventually have a family?
-      </p>
+        <p>
+          20-year-old Phil was thinking about chicks all the time. At 24?
+          Hardly the same priority.
+        </p>
 
-      <p>
-        Once you start having answers to those questions, other things that
-        seemed so huge before start to feel secondary to your actual goals.
-      </p>
+        <p>
+          Other things started taking over. What do I actually want from life?
+          How much long-term flexibility do I want? How do money and flexibility
+          go together? How do I want to live? Do I want a long-term relationship
+          so I can eventually have a family?
+        </p>
 
-      <p>
-        That was one of the unintended side effects of conquering my approach
-        anxiety. My priorities became crystal clear, and the neediness I had
-        around women disappeared. Going on so many dates also removed a lot
-        of my neediness. It became much easier to be laid back and have fun
-        with zero expectations.
-      </p>
+        <p>
+          Once you start having answers to those questions, other things that
+          seemed so huge before start to feel secondary to your actual goals.
+        </p>
 
-      <a
-        href="memoir.html"
-        class="memoir-link"
-      >
-        Read the full story in my memoir →
-      </a>
+        <p>
+          That was one of the unintended side effects of conquering my approach
+          anxiety. My priorities became crystal clear, and the neediness I had
+          around women disappeared. Going on so many dates also removed a lot
+          of my neediness. It became much easier to be laid back and have fun
+          with zero expectations.
+        </p>
+
+        <a
+          href="memoir.html"
+          class="memoir-link"
+        >
+          Read the full story in my memoir →
+        </a>
+
+      </div>
+
+      <div class="playing-photo-wrap">
+
+        <img
+          src="https://i.imgur.com/a1bhJPb.jpg"
+          alt="Phil"
+          class="playing-photo"
+        >
+
+      </div>
 
     </div>
 
@@ -440,4 +475,3 @@
 
 </body>
 </html>
-```
