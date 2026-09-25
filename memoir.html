@@ -116,8 +116,28 @@
     }
 
     .intro-inner {
-      max-width: 680px;
+      max-width: 1000px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .intro-text {
+      max-width: 680px;
+    }
+
+    .intro-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .intro-photo {
+      width: 100%;
+      max-width: 320px;
+      display: block;
+      border-radius: 3px;
     }
 
     h2 {
@@ -406,6 +426,19 @@
         padding: 70px 22px 75px;
       }
 
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .intro-text {
+        max-width: 680px;
+      }
+
+      .intro-photo {
+        max-width: 300px;
+      }
+
       .what-section {
         padding: 70px 22px 75px;
       }
@@ -512,46 +545,63 @@
   <section class="intro-section">
     <div class="intro-inner">
 
-      <h2>This Isn't Really a Book About Approaching Women</h2>
+      <div class="intro-text">
 
-      <p>
-        For years, I wanted to approach women.
-      </p>
+        <h2>
+          It Started With Approaching Women.
+          It Became Much Bigger Than That.
+        </h2>
 
-      <p>
-        I watched videos. I imagined myself doing it.
-      </p>
+        <p>
+          For years, I wanted to approach women.
+        </p>
 
-      <p>
-        And then, when the moment actually came, I couldn't do it.
-      </p>
+        <p>
+          I watched videos. I imagined myself doing it.
+        </p>
 
-      <p>
-        I spent years walking past women I wanted to talk to,
-        becoming a master of excuses, and wondering why something
-        that seemed so simple for other people felt almost impossible
-        for me.
-      </p>
+        <p>
+          And then, when the moment actually came, I couldn't do it.
+        </p>
 
-      <p>
-        That's what this story is really about.
-      </p>
+        <p>
+          I spent years walking past women I wanted to talk to,
+          becoming a master of excuses, and wondering why something
+          that seemed so simple for other people felt almost impossible
+          for me.
+        </p>
 
-      <p>
-        It's about what happens when you know what you want to do,
-        understand exactly what you should do, and still can't make
-        yourself do it.
-      </p>
+        <p>
+          That's what this story is really about.
+        </p>
 
-      <p>
-        It's about fear, avoidance, rejection, embarrassment,
-        and the gradual process of making something that once felt
-        impossible become normal.
-      </p>
+        <p>
+          It's about what happens when you know what you want to do,
+          understand exactly what you should do, and still can't make
+          yourself do it.
+        </p>
 
-      <p>
-        Approaching women was simply the battlefield where I learned it.
-      </p>
+        <p>
+          It's about fear, avoidance, rejection, embarrassment,
+          and the gradual process of making something that once felt
+          impossible become normal.
+        </p>
+
+        <p>
+          Approaching women was simply the battlefield where I learned it.
+        </p>
+
+      </div>
+
+      <div class="intro-photo-wrap">
+
+        <img
+          src="https://i.imgur.com/tNYSc7Y.jpg"
+          alt="Phil"
+          class="intro-photo"
+        >
+
+      </div>
 
     </div>
   </section>
