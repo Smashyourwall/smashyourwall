@@ -177,7 +177,27 @@
       margin-top: 50px;
       padding-top: 45px;
       border-top: 1px solid var(--border);
+    }
+
+    .read-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 55px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .memoir-preview {
+      width: 250px;
+      max-width: 100%;
+      transform: rotate(-3deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+
+    .read-copy {
       text-align: center;
+      max-width: 360px;
     }
 
     .read-section h2 {
@@ -276,6 +296,28 @@
 
       p {
         font-size: 17px;
+      }
+
+      /* MOBILE CTA */
+
+      .read-section {
+        margin-top: 40px;
+        padding-top: 40px;
+      }
+
+      .read-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      .memoir-preview {
+        width: 230px;
+        transform: rotate(-2deg);
+      }
+
+      .read-copy {
+        max-width: 100%;
       }
 
       footer {
@@ -398,23 +440,37 @@
 
       <div class="read-section">
 
-        <h2>Read the Full Memoir</h2>
+        <div class="read-content">
 
-        <p>
-          It's completely free.
-        </p>
+          <img
+            src="https://i.imgur.com/GVbZ8lh.png"
+            alt="Page 1 of Break the Wall by Phil Briarwood"
+            class="memoir-preview"
+          >
 
-        <a
-          class="read-button"
-          href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          READ THE MEMOIR →
-        </a>
+          <div class="read-copy">
 
-        <div class="free-note">
-          Read it online. No email required.
+            <h2>Read the Full Memoir</h2>
+
+            <p>
+              It's completely free.
+            </p>
+
+            <a
+              class="read-button"
+              href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              READ THE MEMOIR →
+            </a>
+
+            <div class="free-note">
+              Read it online. No email required.
+            </div>
+
+          </div>
+
         </div>
 
       </div>
