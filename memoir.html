@@ -78,13 +78,21 @@
 
     .hero {
       background: var(--gray);
-      padding: 100px 30px 55px;
+      padding: 90px 30px 60px;
       text-align: center;
     }
 
     .hero-inner {
       max-width: 800px;
       margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     h1 {
@@ -103,9 +111,32 @@
     }
 
     .hero-message {
-      margin: 0;
+      max-width: 700px;
+      margin: 0 auto 28px;
       font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 16px 28px;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
       font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-button:hover {
+      opacity: 0.9;
+    }
+
+    .hero-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     /* INTRO */
@@ -415,12 +446,21 @@
         padding: 70px 22px 45px;
       }
 
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+      }
+
       h1 {
         letter-spacing: -2px;
       }
 
       .subtitle {
         font-size: 18px;
+      }
+
+      .hero-message {
+        font-size: 17px;
       }
 
       .intro-section {
@@ -526,6 +566,10 @@
   <section class="hero">
     <div class="hero-inner">
 
+      <div class="eyebrow">
+        A FREE MEMOIR BY PHIL BRIARWOOD
+      </div>
+
       <h1>Break the Wall</h1>
 
       <p class="subtitle">
@@ -534,8 +578,17 @@
       </p>
 
       <p class="hero-message">
-        I was terrified to approach. I broke through it.
-        I can help you do the same.
+        Break the Wall is a free 37-page memoir about my struggle
+        and eventual triumph with approach anxiety—no sales pitch,
+        no course, just the unfiltered story.
+      </p>
+
+      <a href="#read-memoir" class="hero-button">
+        READ THE MEMOIR ↓
+      </a>
+
+      <p class="hero-note">
+        30-Minute Read • Completely Free • No Email Required
       </p>
 
     </div>
@@ -734,7 +787,7 @@
 
   <!-- READ MEMOIR -->
 
-  <section class="read-section">
+  <section class="read-section" id="read-memoir">
 
     <div class="read-inner">
 
