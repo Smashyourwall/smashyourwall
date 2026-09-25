@@ -1,24 +1,17 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Work With Me | Smash Your Wall</title>
-
-  <meta
-    name="description"
-    content="One-on-one coaching and in-person intensives for men who want to overcome approach anxiety and actually take action."
-  >
 
   <style>
     :root {
       --white: #ffffff;
       --gray: #e2e2e0;
       --text: #171717;
-      --muted: #666666;
+      --muted: #666;
       --accent: #a94f32;
       --border: #d2d2d0;
     }
@@ -36,218 +29,186 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
-    /* NAV */
+    a {
+      color: inherit;
+    }
 
-    nav {
+    .nav {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.97);
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      backdrop-filter: blur(8px);
     }
 
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 18px 30px;
+      padding: 16px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 30px;
     }
 
     .logo {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       letter-spacing: 1.5px;
+      text-decoration: none;
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 25px;
+      align-items: center;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .nav-links a {
-      color: var(--text);
-      text-decoration: none;
       font-size: 14px;
-      font-weight: 500;
+      text-decoration: none;
+      color: #444;
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--text);
     }
 
-    /* HERO */
-
-    .hero {
-      background: var(--gray);
-      padding: 65px 30px 70px;
+    section {
+      padding: 75px 30px;
     }
 
-    .hero-inner {
-      max-width: 900px;
+    .inner {
+      max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .top-section {
+      background: var(--gray);
+      padding: 55px 30px 60px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 0.98;
       margin: 0 0 28px;
-      font-size: clamp(42px, 6vw, 60px);
-      line-height: 1.05;
       letter-spacing: -2px;
-      font-weight: 800;
-    }
-
-    .intro {
-      max-width: 720px;
-      margin: 0;
-      font-size: 21px;
-      line-height: 1.6;
-    }
-
-    .hero-note {
-      margin-top: 28px;
-      font-size: 18px;
-    }
-
-    .hero-note strong {
-      font-size: 19px;
-    }
-
-    /* GENERAL SECTIONS */
-
-    .section {
-      padding: 85px 30px;
-    }
-
-    .section.gray {
-      background: var(--gray);
-    }
-
-    .section-inner {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 850px;
     }
 
     h2 {
-      margin: 0 0 32px;
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.15;
-      letter-spacing: -1.2px;
-      font-weight: 800;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.05;
+      margin: 0 0 28px;
+      letter-spacing: -1px;
     }
 
     h3 {
-      margin: 0 0 10px;
       font-size: 22px;
-      line-height: 1.3;
+      margin: 0 0 16px;
+      line-height: 1.2;
     }
 
     p {
-      margin: 0 0 25px;
-      font-size: 18px;
+      margin: 0 0 20px;
     }
 
-    /* WHAT I HELP WITH */
+    .lead {
+      font-size: 21px;
+      line-height: 1.55;
+      max-width: 760px;
+      color: #292929;
+    }
+
+    .story-intro {
+      font-size: 24px;
+      line-height: 1.5;
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
 
     .help-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      max-width: 760px;
+      max-width: 820px;
+      margin-top: 35px;
     }
 
-    .help-list li {
-      position: relative;
-      padding-left: 28px;
-      margin-bottom: 22px;
-      font-size: 18px;
+    .help-item {
+      display: flex;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 19px;
     }
 
-    .help-list li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
+    .help-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .arrow {
+      flex: 0 0 auto;
       font-weight: 700;
       color: var(--accent);
     }
 
-    .analogy {
-      max-width: 760px;
-      margin-top: 42px;
-      padding: 28px 30px;
-      border-left: 3px solid var(--text);
-      background: #f7f7f5;
-    }
-
-    .analogy p {
-      margin-bottom: 12px;
-    }
-
-    .analogy p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* WHO THIS IS FOR */
-
+    /*
+      Qualification section:
+      This is the intentional visual break on the page.
+    */
     .fit-section {
-      background: var(--white);
+      background: var(--gray);
     }
 
     .fit-intro {
-      max-width: 700px;
-      margin-bottom: 40px;
+      max-width: 720px;
+      font-size: 19px;
+      margin-bottom: 45px;
     }
 
     .fit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      max-width: 900px;
+      gap: 28px;
     }
 
     .fit-column {
-      padding: 30px;
-      border-top: 4px solid var(--text);
-      background: #f7f7f5;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
     }
 
-    .fit-column.not-for {
-      border-top-color: var(--border);
-      background: #fafafa;
+    .fit-column.not-fit {
+      background: #d8d8d6;
     }
 
     .fit-column h3 {
       margin-bottom: 24px;
-      font-size: 26px;
-      letter-spacing: -0.4px;
-    }
-
-    .fit-column h3 em {
-      font-style: normal;
     }
 
     .fit-list {
-      margin: 0;
-      padding: 0;
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
     .fit-list li {
       position: relative;
-      padding-left: 30px;
-      margin-bottom: 22px;
-      font-size: 17px;
-      line-height: 1.6;
+      padding-left: 28px;
+      margin-bottom: 20px;
+      line-height: 1.55;
     }
 
     .fit-list li:last-child {
@@ -258,217 +219,222 @@
       position: absolute;
       left: 0;
       top: 0;
-      font-size: 18px;
       font-weight: 700;
     }
 
-    .for-list li::before {
+    .fit-column:not(.not-fit) .fit-list li::before {
       content: "✓";
       color: var(--accent);
     }
 
-    .not-for-list li::before {
+    .fit-column.not-fit .fit-list li::before {
       content: "×";
-      color: var(--muted);
+      color: #555;
     }
 
-    /* OFFERS */
-
     .offers-section {
-      background: var(--gray);
+      background: var(--white);
+    }
+
+    .offers-intro {
+      max-width: 720px;
+      font-size: 19px;
+      margin-bottom: 45px;
     }
 
     .offer {
-      margin-bottom: 30px;
-      padding: 32px;
-      background: var(--white);
-      border: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: start;
     }
 
     .offer:last-child {
-      margin-bottom: 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    .offer h3 {
-      font-size: 27px;
-      letter-spacing: -0.4px;
+    .offer-name {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    .price {
-      margin-bottom: 22px;
+    .offer-price {
+      font-size: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .offer-description {
+      max-width: 700px;
+      color: #444;
+      font-size: 17px;
+    }
+
+    .contact-section {
+      background: var(--gray);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-copy p {
+      max-width: 500px;
       font-size: 18px;
-      font-weight: 700;
     }
 
-    .offer p:last-child {
-      margin-bottom: 0;
-    }
-
-    .offer-highlight {
-      margin-top: 24px;
-      font-weight: 700;
-    }
-
-    /* CTA */
-
-    .cta {
+    form {
       background: var(--white);
-      padding: 90px 30px 100px;
-      text-align: center;
-    }
-
-    .cta-inner {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .cta h2 {
-      margin-bottom: 28px;
-    }
-
-    .cta p {
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: 40px auto 25px;
-      text-align: left;
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 7px;
-      font-weight: 700;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 20px;
       border: 1px solid var(--border);
-      background: var(--white);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
+      padding: 32px;
     }
 
-    .contact-form textarea {
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #bbb;
+      padding: 13px 14px;
+      font: inherit;
+      font-size: 16px;
+      margin-bottom: 22px;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 150px;
       resize: vertical;
     }
 
-    .button {
-      display: inline-block;
-      padding: 14px 24px;
-      background: var(--text);
-      color: var(--white);
+    input:focus,
+    textarea:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    button {
       border: none;
-      text-decoration: none;
-      font-size: 14px;
+      background: var(--text);
+      color: white;
+      padding: 15px 22px;
+      font: inherit;
       font-weight: 700;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
       cursor: pointer;
     }
 
-    .button:hover {
-      opacity: 0.85;
+    button:hover {
+      background: #333;
     }
 
-    .instagram {
-      margin-top: 25px;
+    .instagram-note {
+      margin-top: 22px;
       font-size: 15px;
-      color: var(--muted);
+      color: #555;
     }
 
-    .instagram a {
+    .instagram-note a {
       color: var(--text);
       font-weight: 700;
-      text-decoration: none;
-    }
-
-    .instagram a:hover {
       text-decoration: underline;
     }
 
-    /* FOOTER */
-
     footer {
-      border-top: 1px solid var(--border);
-      background: var(--white);
-      padding: 28px 30px;
-      text-align: center;
-      color: var(--muted);
+      background: #171717;
+      color: #fff;
+      padding: 35px 30px;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
       font-size: 14px;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 750px) {
-
+    @media (max-width: 760px) {
       .nav-inner {
-        padding: 16px 18px;
+        padding: 14px 20px;
+        align-items: flex-start;
       }
 
       .nav-links {
-        gap: 15px;
+        gap: 14px;
+        justify-content: flex-end;
       }
 
       .nav-links a {
         font-size: 13px;
       }
 
-      .hero {
+      section {
+        padding: 60px 22px;
+      }
+
+      .top-section {
         padding: 45px 22px 50px;
       }
 
-      .section {
-        padding: 65px 22px;
-      }
-
-      .cta {
-        padding: 65px 22px 75px;
-      }
-
       h1 {
-        font-size: 40px;
-        letter-spacing: -1.5px;
+        font-size: 46px;
       }
 
-      h2 {
-        font-size: 34px;
+      .lead {
+        font-size: 19px;
       }
 
-      .intro {
-        font-size: 18px;
-      }
-
-      p,
-      .help-list li {
-        font-size: 17px;
-      }
-
-      .fit-grid {
+      .fit-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
       }
 
       .fit-column {
-        padding: 25px;
+        padding: 26px;
       }
 
       .offer {
-        padding: 25px;
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
 
-      .offer h3 {
-        font-size: 24px;
+      .offer-price {
+        margin-top: 4px;
       }
 
-      .analogy {
+      form {
         padding: 24px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -476,361 +442,324 @@
 
 <body>
 
-  <nav>
+  <nav class="nav">
     <div class="nav-inner">
-
-      <a href="index.html" class="logo">
-        SMASH YOUR WALL
-      </a>
+      <a href="index.html" class="logo">SMASH YOUR WALL</a>
 
       <div class="nav-links">
+        <a href="index.html">Home</a>
         <a href="about-me.html">About Me</a>
-        <a href="memoir.html">Memoir</a>
         <a href="articles.html">Articles</a>
+        <a href="memoir.html">My Memoir</a>
         <a href="work-with-me.html">Work With Me</a>
-        <a href="faq.html">FAQ</a>
       </div>
-
     </div>
   </nav>
 
 
   <!-- HERO -->
+  <section class="top-section">
+    <div class="inner">
+      <div class="eyebrow">Work With Me</div>
 
-  <section class="hero">
+      <h1>
+        Stop Thinking About Approaching.<br>
+        Start Actually Approaching.
+      </h1>
 
-    <div class="hero-inner">
-
-      <h1>Work With Me</h1>
-
-      <p class="intro">
+      <p class="lead">
         If you've spent months or years wanting to approach women but keep
         finding yourself freezing, overthinking, or walking away, this is
         what I help with.
       </p>
 
-      <p class="hero-note">
-        <strong>I've been there.</strong>
+      <p class="story-intro">
+        I've been there.
       </p>
 
-      <p class="hero-note">
+      <p>
         I spent years knowing exactly what I wanted to do and still being
         unable to make myself do it.
       </p>
 
-      <p class="hero-note">
-        Now I help other men work through the same problem.
+      <p>
+        I knew I wanted to approach women. I knew I was capable of doing it.
+        And yet when the moment came, my brain would say go while my body
+        would say absolutely not.
       </p>
 
-    </div>
+      <p>
+        Eventually, I stopped trying to think my way out of it and started
+        doing the thing I was afraid of.
+      </p>
 
+      <p>
+        Now I help other men work through the same problem.
+      </p>
+    </div>
   </section>
 
 
   <!-- WHAT I HELP WITH -->
-
-  <section class="section">
-
-    <div class="section-inner">
-
+  <section>
+    <div class="inner">
       <h2>What I Help With</h2>
 
-      <ul class="help-list">
+      <div class="help-list">
 
-        <li>
-          <strong>Getting yourself to actually walk over</strong>
-          instead of spending 20 minutes thinking about it.
-        </li>
+        <div class="help-item">
+          <span class="arrow">→</span>
+          <span>
+            Getting yourself to actually walk over instead of spending
+            20 minutes thinking about it
+          </span>
+        </div>
 
-        <li>
-          <strong>Breaking the hesitation</strong>
-          that takes over when the moment arrives.
-        </li>
+        <div class="help-item">
+          <span class="arrow">→</span>
+          <span>
+            Breaking hesitation and learning how to act before your fear
+            talks you out of it
+          </span>
+        </div>
 
-        <li>
-          <strong>Befriending rejection</strong>
-          and becoming comfortable hearing no.
-        </li>
+        <div class="help-item">
+          <span class="arrow">→</span>
+          <span>
+            Befriending rejection instead of treating it like something
+            you need to avoid
+          </span>
+        </div>
 
-        <li>
-          <strong>Approaching when other people are watching</strong>
-          instead of letting the audience in your head stop you.
-        </li>
+        <div class="help-item">
+          <span class="arrow">→</span>
+          <span>
+            Approaching when other people are watching
+          </span>
+        </div>
 
-        <li>
-          <strong>Building confidence through experience</strong>
-          instead of trying to convince yourself you're confident.
-        </li>
-
-      </ul>
-
-      <div class="analogy">
-
-        <p>
-          You wouldn't expect to feel confident playing basketball if you'd
-          never stepped on a court.
-        </p>
-
-        <p>
-          Approaching works the same way.
-        </p>
-
-        <p>
-          Confidence comes from accumulating evidence that you can actually
-          do the thing.
-        </p>
+        <div class="help-item">
+          <span class="arrow">→</span>
+          <span>
+            Building confidence through actual experience instead of
+            consuming more information
+          </span>
+        </div>
 
       </div>
 
-    </div>
+      <div style="margin-top: 55px; max-width: 760px;">
+        <p style="font-size: 21px;">
+          You wouldn't expect to feel confident playing basketball if
+          you'd never stepped on a court.
+        </p>
 
+        <p style="font-size: 21px;">
+          Approaching works the same way.
+        </p>
+
+        <p style="font-size: 21px; margin-bottom: 0;">
+          Confidence comes from accumulating evidence that you can
+          actually do the thing.
+        </p>
+      </div>
+    </div>
   </section>
 
 
-  <!-- WHO THIS IS FOR -->
-
-  <section class="section fit-section">
-
-    <div class="section-inner">
+  <!-- QUALIFICATION -->
+  <section class="fit-section">
+    <div class="inner">
 
       <h2>Is This Actually For You?</h2>
 
       <p class="fit-intro">
-        I'm not trying to work with every guy who has ever struggled with
-        approaching. This works best when you're in a position to actually
-        put the work in.
+        I don't think coaching makes sense for everyone. This works best
+        when you're already in a position to put the work in and actually
+        want to change this part of your life.
       </p>
 
       <div class="fit-grid">
 
         <div class="fit-column">
-
           <h3>This Makes Sense If...</h3>
 
-          <ul class="fit-list for-list">
-
+          <ul class="fit-list">
             <li>
               Your career and finances are in a reasonable place, but your
               dating life is way behind where you want it to be.
             </li>
 
             <li>
-              You're an action taker. You're willing to actually implement
-              what we work on rather than just collect more advice.
+              You're an action taker and are willing to implement rather
+              than collect more advice.
             </li>
 
             <li>
-              Investing $1,500 in solving this problem is realistic for you.
+              A $1,500 investment is realistic for you.
             </li>
 
             <li>
-              You're willing to practice in the real world, knowing you'll
-              have someone in your corner who will help you work through it
-              without judging you.
+              You're willing to practice in the real world with someone
+              in your corner who won't judge you.
             </li>
 
             <li>
-              You're open to practicing during the day rather than making
-              nightlife the only place you're willing to approach.
+              You're open to practicing during the day rather than relying
+              exclusively on nightlife.
             </li>
-
           </ul>
-
         </div>
 
 
-        <div class="fit-column not-for">
-
+        <div class="fit-column not-fit">
           <h3>Probably Not A Fit If...</h3>
 
-          <ul class="fit-list not-for-list">
-
+          <ul class="fit-list">
             <li>
-              You want pre-recorded "pickup" content to binge and never
-              apply. This isn't a course. It's built around you and your
-              situation.
+              You want pre-recorded "pickup" content to binge without
+              actually applying it. This isn't a course. It's built around you.
             </li>
 
             <li>
-              You're too busy to invest the time and get out there for a few
-              hours a week.
+              You're too busy to invest the time and get out a few hours
+              a week to practice.
             </li>
 
             <li>
-              You're currently struggling financially and $1,500 would put
-              you under financial pressure. If that's the case, coaching
-              probably isn't your priority right now.
+              You're financially struggling and spending $1,500 would create
+              pressure. Coaching probably isn't the priority right now.
             </li>
 
             <li>
               You're completely unwilling to practice outside of nightlife.
               I'm not interested in building this around bars, clubs,
-              alcohol, and waiting until nighttime to approach.
+              alcohol, or late nights.
             </li>
 
             <li>
-              You're looking for manipulation, tricks, or a way to guarantee
-              women saying yes.
+              You want manipulation, tricks, or a guarantee that women
+              will say yes.
             </li>
-
           </ul>
-
         </div>
 
       </div>
-
     </div>
-
   </section>
 
 
   <!-- HOW WE CAN WORK TOGETHER -->
-
-  <section class="section offers-section">
-
-    <div class="section-inner">
+  <section class="offers-section">
+    <div class="inner">
 
       <h2>How We Can Work Together</h2>
 
+      <p class="offers-intro">
+        There are a few different ways we can work together depending on
+        what you're looking for and how much time you want to spend doing it.
+      </p>
+
+
       <div class="offer">
+        <div>
+          <div class="offer-name">1-on-1 Coaching</div>
 
-        <h3>1-on-1 Coaching</h3>
+          <p class="offer-description">
+            12 calls · $1,500
+          </p>
 
-        <div class="price">
-          12 calls · $1,500
+          <p class="offer-description">
+            Ongoing coaching built around your specific situation. We work
+            through what's keeping you stuck, then actually apply it in
+            your life rather than just talking about it.
+          </p>
         </div>
 
-        <p>
-          This is the core coaching option.
-        </p>
-
-        <p>
-          We'll work together one-on-one over multiple calls, focusing
-          specifically on where you're getting stuck.
-        </p>
-
-        <p>
-          We'll talk through your experiences, identify the patterns keeping
-          you stuck, and figure out what you need to work on next.
-        </p>
-
-        <p>
-          The goal isn't to give you another pile of information.
-        </p>
-
-        <p class="offer-highlight">
-          It's to help you actually do the thing.
-        </p>
-
+        <div class="offer-price">$1,500</div>
       </div>
 
 
       <div class="offer">
+        <div>
+          <div class="offer-name">1-Day Intensive</div>
 
-        <h3>The 1-Day Intensive</h3>
+          <p class="offer-description">
+            A focused 4–6 hour session.
+          </p>
 
-        <div class="price">
-          $1,500
+          <p class="offer-description">
+            We spend the day working directly on the problem instead of
+            spreading it across weeks of calls. The goal is to get you
+            out of your head and into real-world action.
+          </p>
         </div>
 
-        <p>
-          A full day of working together in person.
-        </p>
-
-        <p>
-          We'll spend the day identifying what's holding you back and getting
-          you into the real world to work on it.
-        </p>
-
-        <p>
-          Less talking about approaching.
-        </p>
-
-        <p class="offer-highlight">
-          More actually approaching.
-        </p>
-
+        <div class="offer-price">$1,500</div>
       </div>
 
 
       <div class="offer">
+        <div>
+          <div class="offer-name">3-Day Intensive</div>
 
-        <h3>The 3-Day Intensive</h3>
+          <p class="offer-description">
+            Three days · 4–6 hours per day.
+          </p>
 
-        <div class="price">
-          $3,500
+          <p class="offer-description">
+            An immersive option for someone who wants to go all-in and
+            spend several days working through the wall with me in person.
+          </p>
         </div>
 
-        <p>
-          Three days of intensive, in-person work.
-        </p>
-
-        <p>
-          This is for someone who wants to go all-in and dedicate several
-          days to breaking through the problem rather than spreading the
-          work out over months.
-        </p>
-
-        <p>
-          We'll work on the same fundamental problem: getting you out of
-          your head and into action.
-        </p>
-
+        <div class="offer-price">$3,500</div>
       </div>
 
     </div>
-
   </section>
 
 
   <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="inner contact-grid">
 
-  <section class="cta">
+      <div class="contact-copy">
+        <div class="eyebrow">Let's Talk</div>
 
-    <div class="cta-inner">
+        <h2>Think We Might Be A Good Fit?</h2>
 
-      <h2>Think We Might Be a Good Fit?</h2>
+        <p>
+          If you've read my story or some of my articles and think I might
+          be able to help, send me a message.
+        </p>
 
-      <p>
-        If you've read my story or some of my articles and think I might be
-        able to help, send me a message.
-      </p>
+        <p>
+          Tell me a little about where you're stuck, what you've tried,
+          and what you're hoping to change.
+        </p>
 
-      <p>
-        Tell me a little about where you're stuck, what you've tried, and
-        what you're hoping to change.
-      </p>
+        <p>
+          I'll read it and get back to you.
+        </p>
+
+        <p class="instagram-note">
+          You can also DM me on Instagram:
+          <a href="https://www.instagram.com/smashyourwall/" target="_blank" rel="noopener">
+            @smashyourwall
+          </a>
+        </p>
+      </div>
 
 
       <form
-        class="contact-form"
         action="https://formsubmit.co/smashyourwall@gmail.com"
         method="POST"
       >
+        <input type="hidden" name="_next" value="https://smashyourwall.com/work-with-me.html">
+        <input type="hidden" name="_captcha" value="false">
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Smash Your Wall Coaching Inquiry"
-        >
-
-        <input
-          type="hidden"
-          name="_next"
-          value="https://smashyourwall.com/work-with-me.html"
-        >
-
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
-
-
-        <label for="name">
-          Name
-        </label>
-
+        <label for="name">Name</label>
         <input
           type="text"
           id="name"
@@ -838,11 +767,7 @@
           required
         >
 
-
-        <label for="email">
-          Email
-        </label>
-
+        <label for="email">Email</label>
         <input
           type="email"
           id="email"
@@ -850,47 +775,31 @@
           required
         >
 
-
-        <label for="message">
-          Tell me where you're stuck
-        </label>
-
+        <label for="message">Tell me where you're stuck</label>
         <textarea
           id="message"
           name="message"
-          rows="7"
           required
         ></textarea>
 
-
-        <button
-          type="submit"
-          class="button"
-        >
+        <button type="submit">
           SEND ME A MESSAGE →
         </button>
-
       </form>
 
-
-      <p class="instagram">
-        Prefer Instagram?
-        <a
-          href="https://www.instagram.com/smashyourwall/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          DM @smashyourwall
-        </a>
-      </p>
-
     </div>
-
   </section>
 
 
+  <!-- FOOTER -->
   <footer>
-    © Smash Your Wall
+    <div class="footer-inner">
+      <p>© Smash Your Wall</p>
+
+      <a href="mailto:smashyourwall@gmail.com">
+        smashyourwall@gmail.com
+      </a>
+    </div>
   </footer>
 
 </body>
