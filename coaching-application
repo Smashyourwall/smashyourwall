@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply To Work With Me — Smash Your Wall</title>
+
+  <style>
+    :root {
+      --white: #fff;
+      --gray: #e2e2e0;
+      --text: #171717;
+      --muted: #666;
+      --accent: #a94f32;
+      --border: #d2d2d0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 30px;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 80px 30px;
+    }
+
+    .inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .top-section {
+      background: var(--gray);
+      padding: 65px 30px 70px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 52px);
+      line-height: 1.02;
+      margin: 0 0 22px;
+      letter-spacing: -1.5px;
+      max-width: 800px;
+    }
+
+    .lead {
+      font-size: 21px;
+      line-height: 1.5;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      background: var(--white);
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin: 0 0 25px;
+    }
+
+    .intro-copy {
+      max-width: 720px;
+    }
+
+    .intro-copy p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .intro-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FORM */
+
+    .form-section {
+      background: #f7f7f5;
+    }
+
+    .form-intro {
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .form-intro p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .application-form {
+      max-width: 750px;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .form-note {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      border: 1px solid #bdbdbd;
+      background: #fff;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 16px;
+      border-radius: 0;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .submit-button {
+      border: none;
+      background: var(--text);
+      color: #fff;
+      padding: 16px 28px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: var(--accent);
+    }
+
+    .bottom-note {
+      margin-top: 25px;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* BACK LINK */
+
+    .back-link {
+      margin-top: 35px;
+      font-size: 15px;
+    }
+
+    .back-link a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #171717;
+      color: #fff;
+      padding: 35px 30px;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .footer-copy {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        padding: 15px 20px;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .top-section {
+        padding: 50px 20px 55px;
+      }
+
+      h1 {
+        font-size: clamp(36px, 10vw, 46px);
+        letter-spacing: -1px;
+      }
+
+      .lead {
+        font-size: 19px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+
+      <a href="index.html" class="brand">
+        SMASH YOUR WALL
+      </a>
+
+      <div class="nav-links">
+        <a href="about-me.html">About Me</a>
+        <a href="articles.html">Articles</a>
+        <a href="memoir.html">My Memoir</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="top-section">
+    <div class="inner">
+
+      <div class="eyebrow">Coaching Application</div>
+
+      <h1>
+        Let's See If We're A Good Fit.
+      </h1>
+
+      <p class="lead">
+        If you're serious about breaking through your approach anxiety,
+        tell me a little about yourself and where you're stuck.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="section intro-section">
+    <div class="inner">
+
+      <div class="intro-copy">
+
+        <h2>Before You Apply</h2>
+
+        <p>
+          This isn't a sales form. I want to understand where you're at,
+          what you've tried, and what you're actually looking to change.
+        </p>
+
+        <p>
+          There's no need to write the perfect answers. Just be honest.
+          The more I understand about your situation, the better I can
+          tell whether I think I can actually help you.
+        </p>
+
+        <p>
+          If it looks like we might be a good fit, I'll get back to you
+          and we'll figure out the next step from there.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- APPLICATION FORM -->
+
+  <section class="section form-section">
+    <div class="inner">
+
+      <div class="form-intro">
+
+        <h2>Your Application</h2>
+
+        <p>
+          Take your time. There are no right answers.
+        </p>
+
+      </div>
+
+
+      <form
+        class="application-form"
+        action="https://formsubmit.co/smashyourwall@gmail.com"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_next"
+          value="https://smashyourwall.com/work-with-me.html"
+        >
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+          <label for="name">
+            What should I call you?
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            required
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+          <label for="email">
+            What's your email?
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            required
+          >
+
+        </div>
+
+
+        <!-- CURRENT SITUATION -->
+
+        <div class="form-group">
+
+          <label for="situation">
+            Tell me about your current situation.
+          </label>
+
+          <textarea
+            id="situation"
+            name="Current Situation"
+            placeholder="How long have you been struggling with this? What happens when you try to approach?"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- ATTEMPTS -->
+
+        <div class="form-group">
+
+          <label for="tried">
+            What have you already tried?
+          </label>
+
+          <textarea
+            id="tried"
+            name="What They Have Tried"
+            placeholder="Books, videos, courses, going out, practicing, coaching, etc."
+          ></textarea>
+
+        </div>
+
+
+        <!-- GOAL -->
+
+        <div class="form-group">
+
+          <label for="goal">
+            What would you most like to change?
+          </label>
+
+          <textarea
+            id="goal"
+            name="Desired Change"
+            placeholder="What would be different in your life if you broke through this?"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- OFFER -->
+
+        <div class="form-group">
+
+          <label for="option">
+            Which option are you most interested in?
+          </label>
+
+          <select
+            id="option"
+            name="Coaching Option"
+            required
+          >
+
+            <option value="" selected disabled>
+              Select one
+            </option>
+
+            <option value="1-on-1 6 Week Transformation">
+              1-on-1 6 Week Transformation
+            </option>
+
+            <option value="1-Day Wall Smasher">
+              1-Day Wall Smasher
+            </option>
+
+            <option value="3-Day Wall Smasher">
+              3-Day Wall Smasher
+            </option>
+
+            <option value="Custom Wall Smasher">
+              Custom Wall Smasher
+            </option>
+
+            <option value="Not Sure">
+              I'm Not Sure Yet
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- FIT -->
+
+        <div class="form-group">
+
+          <label for="why">
+            Why do you think now is the right time to work on this?
+          </label>
+
+          <textarea
+            id="why"
+            name="Why Now"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- ANYTHING ELSE -->
+
+        <div class="form-group">
+
+          <label for="anything">
+            Anything else you want me to know?
+          </label>
+
+          <textarea
+            id="anything"
+            name="Anything Else"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          SUBMIT APPLICATION →
+        </button>
+
+
+        <p class="bottom-note">
+          I'll read your application personally. If I think I can help,
+          I'll get back to you by email and we'll go from there.
+        </p>
+
+      </form>
+
+
+      <div class="back-link">
+        <a href="work-with-me.html">
+          ← Back to Work With Me
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        SMASH YOUR WALL
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Smash Your Wall
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
