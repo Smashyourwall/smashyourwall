@@ -8,148 +8,261 @@
   <meta name="description" content="Articles about approach anxiety, rejection, confidence, and approaching women from someone who has lived through it.">
 
   <style>
+    :root {
+      --white: #ffffff;
+      --gray: #e2e2e0;
+      --text: #171717;
+      --muted: #666666;
+      --accent: #a94f32;
+      --border: #d2d2d0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f4ee;
-      color: #222;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
     }
 
-    header {
-      border-bottom: 1px solid #ddd7cc;
+    a {
+      color: inherit;
     }
+
+    /* NAV */
 
     nav {
-      max-width: 1000px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 24px;
+      padding: 18px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
-      font-size: 19px;
-      font-weight: bold;
-      color: #222;
+      color: var(--text);
       text-decoration: none;
-      white-space: nowrap;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 28px;
     }
 
     .nav-links a {
-      color: #444;
+      color: var(--text);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     .nav-links a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
 
-    main {
-      max-width: 900px;
+    /* HERO */
+
+    .hero {
+      background: var(--gray);
+      padding: 65px 30px 70px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 45px 24px 70px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: 34px;
-      line-height: 1.1;
-      margin: 0 0 10px;
+      font-size: clamp(42px, 6vw, 60px);
+      line-height: 1.02;
+      margin: 0 0 20px;
+      letter-spacing: -1.8px;
     }
 
     .intro {
-      max-width: 650px;
-      font-size: 14px;
+      max-width: 700px;
+      font-size: 20px;
       line-height: 1.5;
-      color: #666;
-      margin: 0 0 25px;
+      margin: 0;
+      color: #444;
+    }
+
+    /* ARTICLES */
+
+    .articles-section {
+      background: var(--white);
+      padding: 75px 30px 90px;
+    }
+
+    .articles-inner {
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .article-list {
-      border-top: 1px solid #d8d2c8;
+      border-top: 1px solid var(--border);
     }
 
     .article {
-      padding: 11px 0;
-      border-bottom: 1px solid #d8d2c8;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .article-line {
       display: flex;
       align-items: baseline;
-      gap: 8px;
+      justify-content: space-between;
+      gap: 25px;
       line-height: 1.3;
     }
 
     .article-title {
-      font-size: 17px;
-      font-weight: bold;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.25;
     }
 
     .article-title a {
-      color: #222;
+      color: var(--text);
       text-decoration: none;
     }
 
     .article-title a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
 
     .article-meta {
-      font-size: 11px;
-      color: #888;
+      font-size: 13px;
+      color: var(--muted);
       white-space: nowrap;
     }
 
     .article-description {
-      margin: 3px 0 0;
-      font-size: 13px;
-      line-height: 1.4;
-      color: #666;
+      max-width: 760px;
+      margin: 10px 0 0;
+      font-size: 16px;
+      line-height: 1.55;
+      color: #555;
     }
+
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid #ddd7cc;
-      padding: 25px 24px;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
+      background: #171717;
+      color: #fff;
+      padding: 35px 30px;
     }
 
-    @media (max-width: 700px) {
-      nav {
-        align-items: flex-start;
-        flex-direction: column;
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .footer-copy {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    /* MOBILE NAV */
+
+    @media (max-width: 750px) {
+      .nav-inner {
+        padding: 16px 18px;
       }
 
       .nav-links {
-        justify-content: flex-start;
-        gap: 13px;
+        gap: 15px;
       }
 
-      main {
-        padding-top: 35px;
+      .nav-links a {
+        font-size: 13px;
+      }
+    }
+
+    /* MOBILE CONTENT */
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 50px 20px 55px;
+      }
+
+      .articles-section {
+        padding: 55px 20px 70px;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: -1px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      .article {
+        padding: 25px 0;
+      }
+
+      .article-line {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
       }
 
       .article-title {
-        font-size: 16px;
+        font-size: 20px;
+      }
+
+      .article-meta {
+        font-size: 12px;
       }
 
       .article-description {
-        font-size: 12px;
+        font-size: 15px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -157,109 +270,172 @@
 
 <body>
 
-<header>
   <nav>
-    <a class="logo" href="index.html">Smash Your Wall</a>
+    <div class="nav-inner">
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about-me.html">About Me</a>
-      <a href="memoir.html">Memoir</a>
-      <a href="articles.html">Articles</a>
-      <a href="work-with-me.html">Work With Me</a>
-      <a href="faq.html">FAQ</a>
+      <a href="index.html" class="logo">
+        SMASH YOUR WALL
+      </a>
+
+      <div class="nav-links">
+        <a href="about-me.html">About Me</a>
+        <a href="memoir.html">My Memoir</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
     </div>
   </nav>
-</header>
 
-<main>
+  <!-- HERO -->
 
-  <h1>Articles</h1>
+  <section class="hero">
+    <div class="hero-inner">
 
-  <p class="intro">
-    Things I've learned about approach anxiety, rejection, confidence,
-    approaching women, and actually doing the thing you're afraid to do.
-  </p>
+      <div class="eyebrow">Articles</div>
 
-  <div class="article-list">
+      <h1>Things I've Learned About Approach Anxiety</h1>
 
-    <article class="article">
-      <div class="article-line">
-        <div class="article-title">
-          <a href="article-confident-but-terrified.html">
-            Why Am I Confident in Other Areas but Terrified of Approaching Women?
-          </a>
-        </div>
-        <div class="article-meta">10 min</div>
-      </div>
-      <p class="article-description">
-        Being confident in other parts of your life doesn't necessarily mean you'll feel confident approaching women. Here's why.
+      <p class="intro">
+        Things I've learned about approach anxiety, rejection, confidence,
+        approaching women, and actually doing the thing you're afraid to do.
       </p>
-    </article>
 
-    <article class="article">
-      <div class="article-line">
-        <div class="article-title">
-          <a href="article-rejection-while-watched.html">
-            How Do I Deal With Rejection When Other People Are Watching?
-          </a>
-        </div>
-        <div class="article-meta">8 min</div>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+
+  <section class="articles-section">
+    <div class="articles-inner">
+
+      <div class="article-list">
+
+        <article class="article">
+          <div class="article-line">
+
+            <div class="article-title">
+              <a href="article-confident-but-terrified.html">
+                Why Am I Confident in Other Areas but Terrified of Approaching Women?
+              </a>
+            </div>
+
+            <div class="article-meta">
+              10 min
+            </div>
+
+          </div>
+
+          <p class="article-description">
+            Being confident in other parts of your life doesn't necessarily mean you'll feel confident approaching women. Here's why.
+          </p>
+        </article>
+
+
+        <article class="article">
+          <div class="article-line">
+
+            <div class="article-title">
+              <a href="article-rejection-while-watched.html">
+                How Do I Deal With Rejection When Other People Are Watching?
+              </a>
+            </div>
+
+            <div class="article-meta">
+              8 min
+            </div>
+
+          </div>
+
+          <p class="article-description">
+            The fear of being judged by everyone around you can make an already difficult approach feel even harder.
+          </p>
+        </article>
+
+
+        <article class="article">
+          <div class="article-line">
+
+            <div class="article-title">
+              <a href="article-what-if-she-says-no.html">
+                What If She Says No When I Approach Her?
+              </a>
+            </div>
+
+            <div class="article-meta">
+              8 min
+            </div>
+
+          </div>
+
+          <p class="article-description">
+            What actually happens when you hear no—and why the imagined consequences are usually much worse than the reality.
+          </p>
+        </article>
+
+
+        <article class="article">
+          <div class="article-line">
+
+            <div class="article-title">
+              <a href="article-what-makes-an-approach-creepy.html">
+                What Makes an Approach Creepy?
+              </a>
+            </div>
+
+            <div class="article-meta">
+              8 min
+            </div>
+
+          </div>
+
+          <p class="article-description">
+            Where the line actually is between expressing interest, being awkward, and refusing to respect someone's disinterest.
+          </p>
+        </article>
+
+
+        <article class="article">
+          <div class="article-line">
+
+            <div class="article-title">
+              <a href="article-you-dont-want-every-woman-to-say-yes.html">
+                You Don't Actually Want Every Woman to Say Yes
+              </a>
+            </div>
+
+            <div class="article-meta">
+              7 min
+            </div>
+
+          </div>
+
+          <p class="article-description">
+            Rejection isn't necessarily failure. Sometimes it's simply information about whether two people are interested in each other.
+          </p>
+        </article>
+
       </div>
-      <p class="article-description">
-        The fear of being judged by everyone around you can make an already difficult approach feel even harder.
-      </p>
-    </article>
 
-    <article class="article">
-      <div class="article-line">
-        <div class="article-title">
-          <a href="article-what-if-she-says-no.html">
-            What If She Says No When I Approach Her?
-          </a>
-        </div>
-        <div class="article-meta">8 min</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        SMASH YOUR WALL
       </div>
-      <p class="article-description">
-        What actually happens when you hear no—and why the imagined consequences are usually much worse than the reality.
-      </p>
-    </article>
 
-    <article class="article">
-      <div class="article-line">
-        <div class="article-title">
-          <a href="article-what-makes-an-approach-creepy.html">
-            What Makes an Approach Creepy?
-          </a>
-        </div>
-        <div class="article-meta">8 min</div>
+      <div class="footer-copy">
+        © 2026 Smash Your Wall
       </div>
-      <p class="article-description">
-        Where the line actually is between expressing interest, being awkward, and refusing to respect someone's disinterest.
-      </p>
-    </article>
 
-    <article class="article">
-      <div class="article-line">
-        <div class="article-title">
-          <a href="article-you-dont-want-every-woman-to-say-yes.html">
-            You Don't Actually Want Every Woman to Say Yes
-          </a>
-        </div>
-        <div class="article-meta">7 min</div>
-      </div>
-      <p class="article-description">
-        Rejection isn't necessarily failure. Sometimes it's simply information about whether two people are interested in each other.
-      </p>
-    </article>
-
-  </div>
-
-</main>
-
-<footer>
-  © Smash Your Wall
-</footer>
+    </div>
+  </footer>
 
 </body>
 </html>
