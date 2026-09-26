@@ -92,7 +92,7 @@
 
     .top-section {
       background: var(--gray);
-      padding: 65px 30px 70px;
+      padding: 60px 30px 65px;
     }
 
     .eyebrow {
@@ -112,16 +112,30 @@
     }
 
     .lead {
-      font-size: 21px;
+      font-size: 20px;
       line-height: 1.5;
       max-width: 720px;
       margin: 0;
     }
 
-    /* INTRO */
+    /* APPLICATION */
 
-    .intro-section {
-      background: var(--white);
+    .application-section {
+      background: #f7f7f5;
+    }
+
+    .application-intro {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .application-intro p {
+      font-size: 18px;
+      margin: 0 0 18px;
+    }
+
+    .application-intro p:last-child {
+      margin-bottom: 0;
     }
 
     h2 {
@@ -129,35 +143,6 @@
       line-height: 1.05;
       letter-spacing: -1px;
       margin: 0 0 25px;
-    }
-
-    .intro-copy {
-      max-width: 720px;
-    }
-
-    .intro-copy p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .intro-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* FORM */
-
-    .form-section {
-      background: #f7f7f5;
-    }
-
-    .form-intro {
-      max-width: 700px;
-      margin-bottom: 40px;
-    }
-
-    .form-intro p {
-      font-size: 18px;
-      margin-bottom: 15px;
     }
 
     .application-form {
@@ -173,12 +158,6 @@
       font-size: 15px;
       font-weight: 700;
       margin-bottom: 9px;
-    }
-
-    .form-note {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 6px;
     }
 
     .form-group input,
@@ -223,8 +202,6 @@
       color: var(--muted);
       font-size: 14px;
     }
-
-    /* BACK LINK */
 
     .back-link {
       margin-top: 35px;
@@ -290,7 +267,7 @@
       }
 
       .top-section {
-        padding: 50px 20px 55px;
+        padding: 45px 20px 50px;
       }
 
       h1 {
@@ -339,63 +316,38 @@
       <div class="eyebrow">Coaching Application</div>
 
       <h1>
-        Let's See If We're A Good Fit.
+        Apply To Work With Me
       </h1>
 
       <p class="lead">
-        If you're serious about breaking through your approach anxiety,
-        tell me a little about yourself and where you're stuck.
+        I want to understand where you're at, what you've tried, and what
+        you're actually looking to change.
       </p>
 
     </div>
   </section>
 
 
-  <!-- INTRO -->
+  <!-- APPLICATION -->
 
-  <section class="section intro-section">
+  <section class="section application-section">
     <div class="inner">
 
-      <div class="intro-copy">
-
-        <h2>Before You Apply</h2>
-
-        <p>
-          This isn't a sales form. I want to understand where you're at,
-          what you've tried, and what you're actually looking to change.
-        </p>
+      <div class="application-intro">
 
         <p>
           There's no need to write the perfect answers. Just be honest.
-          The more I understand about your situation, the better I can
-          tell whether I think I can actually help you.
         </p>
 
         <p>
-          If it looks like we might be a good fit, I'll get back to you
-          and we'll figure out the next step from there.
+          The more I understand about your situation, the better I can tell
+          whether I think I can actually help you.
         </p>
 
       </div>
 
-    </div>
-  </section>
 
-
-  <!-- APPLICATION FORM -->
-
-  <section class="section form-section">
-    <div class="inner">
-
-      <div class="form-intro">
-
-        <h2>Your Application</h2>
-
-        <p>
-          Take your time. There are no right answers.
-        </p>
-
-      </div>
+      <h2>Your Application</h2>
 
 
       <form
@@ -471,7 +423,7 @@
         </div>
 
 
-        <!-- ATTEMPTS -->
+        <!-- WHAT THEY HAVE TRIED -->
 
         <div class="form-group">
 
@@ -506,7 +458,7 @@
         </div>
 
 
-        <!-- OFFER -->
+        <!-- COACHING OPTION -->
 
         <div class="form-group">
 
@@ -540,7 +492,7 @@
               Custom Wall Smasher
             </option>
 
-            <option value="Not Sure">
+            <option value="I'm Not Sure Yet">
               I'm Not Sure Yet
             </option>
 
@@ -549,7 +501,7 @@
         </div>
 
 
-        <!-- FIT -->
+        <!-- WHY NOW -->
 
         <div class="form-group">
 
@@ -582,6 +534,8 @@
         </div>
 
 
+        <!-- SUBMIT -->
+
         <button
           type="submit"
           class="submit-button"
@@ -599,9 +553,11 @@
 
 
       <div class="back-link">
+
         <a href="work-with-me.html">
           ← Back to Work With Me
         </a>
+
       </div>
 
     </div>
