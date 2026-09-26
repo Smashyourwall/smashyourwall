@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>FAQ — Smash Your Wall</title>
 
   <style>
     :root {
-      --white: #fff;
-      --gray: #e2e2e0;
-      --text: #171717;
+      --text: #111;
       --muted: #666;
-      --accent: #a94f32;
-      --border: #d2d2d0;
+      --accent: #111;
+      --border: #e5e5e5;
+      --light: #f7f7f7;
+      --max-width: 1100px;
     }
 
     * {
@@ -28,15 +27,9 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
+      background: #fff;
+      line-height: 1.7;
     }
-
-    a {
-      color: inherit;
-    }
-
-    /* NAVIGATION */
 
     .nav {
       position: sticky;
@@ -61,6 +54,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-decoration: none;
+      color: #111;
       white-space: nowrap;
     }
 
@@ -82,189 +76,12 @@
       color: var(--accent);
     }
 
-    /* HERO */
-
-    .top-section {
-      background: var(--gray);
-      padding: 40px 30px 45px;
-    }
-
-    .inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .nav-links a.active {
       font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 5vw, 52px);
-      line-height: 1.02;
-      margin: 0 0 18px;
-      letter-spacing: -1.5px;
-      max-width: 850px;
-    }
-
-    .lead {
-      font-size: 21px;
-      line-height: 1.5;
-      max-width: 780px;
-      margin: 0;
-    }
-
-    /* FAQ SECTION */
-
-    .faq-section {
-      background: var(--white);
-      padding: 80px 30px;
-    }
-
-    .faq-intro {
-      max-width: 760px;
-      margin-bottom: 45px;
-    }
-
-    .faq-intro h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -1px;
-      margin: 0 0 25px;
-    }
-
-    .faq-intro p {
-      font-size: 19px;
-      margin: 0;
-    }
-
-    .faq-list {
-      max-width: 850px;
-    }
-
-    .faq-item {
-      border-top: 1px solid var(--border);
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-item summary {
-      position: relative;
-      list-style: none;
-      cursor: pointer;
-      padding: 24px 45px 24px 0;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-      position: absolute;
-      right: 0;
-      top: 19px;
-      font-size: 28px;
-      font-weight: 400;
-      color: var(--accent);
-    }
-
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-
-    .faq-answer {
-      max-width: 760px;
-      padding: 0 45px 25px 0;
-    }
-
-    .faq-answer p {
-      margin: 0 0 18px;
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    .faq-answer p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* CTA */
-
-    .cta-section {
-      background: var(--gray);
-      padding: 80px 30px;
-      text-align: center;
-    }
-
-    .cta-inner {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .cta-inner h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -1px;
-      margin: 0 0 22px;
-    }
-
-    .cta-inner p {
-      font-size: 19px;
-      margin: 0 0 30px;
-    }
-
-    .application-button {
-      display: inline-block;
-      background: var(--text);
-      color: #fff;
-      padding: 16px 28px;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    .application-button:hover {
-      background: var(--accent);
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #171717;
-      color: #fff;
-      padding: 35px 30px;
-    }
-
-    .footer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-brand {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
-
-    .footer-copy {
-      color: #aaa;
-      font-size: 13px;
+      color: #111;
     }
 
     @media (max-width: 700px) {
-
       .nav {
         padding: 15px 20px;
       }
@@ -278,44 +95,191 @@
       .nav-links {
         gap: 16px;
       }
+    }
 
-      .faq-section {
-        padding: 60px 20px;
+    .hero {
+      background: var(--light);
+      padding: 90px 30px 85px;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: #555;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin: 0 0 25px;
+      max-width: 800px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 85px 30px;
+    }
+
+    .section-intro {
+      margin-bottom: 45px;
+    }
+
+    .section-intro h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+      letter-spacing: -0.7px;
+    }
+
+    .section-intro p {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0;
+      max-width: 700px;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--border);
+    }
+
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 25px 45px 25px 0;
+      font-size: 18px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 5px;
+      top: 22px;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1;
+      color: #555;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 45px 28px 0;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .faq-answer p {
+      margin: 0 0 15px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cta {
+      background: var(--light);
+      margin-top: 20px;
+      padding: 70px 30px;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin: 0 0 15px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0 0 30px;
+    }
+
+    .application-button {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .application-button:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 65px 20px 60px;
       }
 
-      .top-section {
-        padding: 35px 20px 40px;
+      .content {
+        padding: 65px 20px;
       }
 
       h1 {
-        font-size: clamp(36px, 10vw, 46px);
-        letter-spacing: -1px;
+        letter-spacing: -1.5px;
       }
 
-      .lead {
-        font-size: 19px;
+      .section-intro h2 {
+        font-size: 28px;
       }
 
-      .faq-item summary {
-        font-size: 18px;
-        padding-right: 35px;
+      summary {
+        font-size: 17px;
       }
 
-      .faq-answer {
-        padding-right: 20px;
-      }
-
-      .faq-answer p {
-        font-size: 16px;
-      }
-
-      .cta-section {
+      .cta {
         padding: 60px 20px;
       }
 
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .cta h2 {
+        font-size: 30px;
       }
     }
   </style>
@@ -325,598 +289,399 @@
 
   <nav class="nav">
     <div class="nav-inner">
-
-      <a href="index.html" class="brand">
-        SMASH YOUR WALL
-      </a>
+      <a href="index.html" class="brand">SMASH YOUR WALL</a>
 
       <div class="nav-links">
         <a href="about-me.html">About Me</a>
         <a href="memoir.html">My Memoir</a>
         <a href="articles.html">Articles</a>
         <a href="work-with-me.html">Work With Me</a>
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html" class="active">FAQ</a>
       </div>
-
     </div>
   </nav>
 
-
-  <!-- HERO -->
-
-  <section class="top-section">
-    <div class="inner">
-
+  <section class="hero">
+    <div class="hero-inner">
       <div class="eyebrow">Coaching FAQ</div>
 
-      <h1>
-        Frequently Asked Questions
-      </h1>
+      <h1>Frequently Asked Questions</h1>
 
-      <p class="lead">
+      <p>
         Answers to common questions about coaching, approach anxiety,
         and what you can expect if we work together.
       </p>
-
     </div>
   </section>
 
-
-  <!-- FAQ -->
-
-  <section class="faq-section">
-
-    <div class="inner">
-
-      <div class="faq-intro">
-
-        <h2>Still Have Questions?</h2>
-
-        <p>
-          Here are some of the questions I get most often about approach
-          anxiety, coaching, and what working together actually looks like.
-        </p>
-
-      </div>
-
-
-      <div class="faq-list">
-
-
-        <details class="faq-item">
-
-          <summary>
-            What if I've already watched tons of dating/cold approach content?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Doing and knowing are two different things.
-            </p>
-
-            <p>
-              Having an idea of what the process looks like is somewhat
-              advantageous. You already have an idea of what the process
-              looks like and therefore you know what your life can be like.
-            </p>
-
-            <p>
-              I help people who are knowledgeable but can't do it for whatever
-              reason. If you've already watched a ton of content but still
-              find yourself freezing when the moment comes, more information
-              probably isn't what you need.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Do we actually approach women during coaching?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Yes.
-            </p>
-
-            <p>
-              The whole point is to actually do the thing you're afraid of.
-              We'll spend time talking through what's happening, but we'll
-              also get into the real world and approach.
-            </p>
-
-            <p>
-              I don't want you spending hours talking about approaching without
-              actually approaching.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Why do you emphasize approaching during the day?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Because I think daytime environments give you a much better
-              environment for learning how to approach.
-            </p>
-
-            <p>
-              It's easier to actually hear each other, there isn't alcohol or
-              club noise involved, and you aren't relying on a nightlife
-              environment to create opportunities.
-            </p>
-
-            <p>
-              That's how I learned, and it's the environment I prefer to teach
-              in.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Is coaching remote or in person?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Both.
-            </p>
-
-            <p>
-              The 1-on-1 6 Week Transformation is online. The Wall Smasher
-              options are in person and involve actually getting out into the
-              real world together.
-            </p>
-
-            <p>
-              If you're interested in something custom, we can discuss what
-              makes sense for your situation.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            What happens when I choose/register for the program?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Once you register, we will get everything scheduled. For online,
-              we typically get started on the first available day you are able
-              to talk with me and go from there. For in person, we will
-              coordinate schedules and locations.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Can approach anxiety actually go away?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              I don't think you need to wait for fear to completely disappear
-              before you can approach.
-            </p>
-
-            <p>
-              What changes is your relationship with the fear. Something that
-              once felt enormous can become something you know how to deal with.
-              The goal is to get to the point where approaching isn't this huge
-              event that controls your behavior.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Will I ever get to the point where approaching feels normal?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Yes, I believe it can become much more normal.
-            </p>
-
-            <p>
-              That doesn't mean you'll never feel nervous. It means the nerves
-              don't have to control what you do.
-            </p>
-
-            <p>
-              Something that once required a huge amount of mental effort can
-              eventually become something you simply do.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            How long does it take to become comfortable approaching?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              This is going to vary a lot from person to person. The number of
-              approaches matters, but so does how consistently you do them and
-              how much you're actually pushing yourself.
-            </p>
-
-            <p>
-              For me, I noticed a major shift after about 30 approaches.
-              Someone else might need 10. Someone else might need 50.
-            </p>
-
-            <p>
-              I wouldn't obsess over the number. The important thing is that
-              you're consistently getting out there and putting yourself in
-              situations that make you uncomfortable. Over time and with reps,
-              it won't seem like such a big deal.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            What if I have very little dating experience?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              That's okay.
-            </p>
-
-            <p>
-              You don't need a long dating history to work on approach anxiety.
-              In fact, learning how to get comfortable taking the first step
-              can be one of the most useful things you can do if you don't have
-              much experience yet.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            What if I've never approached a woman before?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              That's okay too.
-            </p>
-
-            <p>
-              You don't need to have experience before starting. We'll work
-              from wherever you're actually at rather than pretending you're
-              further along than you are.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            How long is each coaching call?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              The calls are designed around what we actually need to work on,
-              rather than trying to force every conversation into an arbitrary
-              length.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            How often are the coaching calls?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              We'll figure out a schedule that makes sense for you and gives
-              you enough time between calls to actually practice.
-            </p>
-
-            <p>
-              The goal isn't to spend all your time talking to me. The goal is
-              to use our conversations to help you take action outside of them.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            What do we actually talk about on the calls?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              We talk about what's actually happening for you.
-            </p>
-
-            <p>
-              That could mean hesitation, overthinking, fear of rejection,
-              what happened during a particular approach, what you're avoiding,
-              or whatever else is getting in your way.
-            </p>
-
-            <p>
-              The more you actually practice between calls, the more specific
-              and useful our conversations can become.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Will you hold me accountable?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Yes.
-            </p>
-
-            <p>
-              If you're paying me to help you break through this, I don't want
-              the coaching to become another place where you talk about what
-              you're going to do without doing it.
-            </p>
-
-            <p>
-              I'll expect you to actually get out there and practice.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            Can I tell you about approaches that went badly?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              Absolutely.
-            </p>
-
-            <p>
-              Bad approaches are part of the process. You can tell me what
-              happened, we can look at it honestly, and figure out what you
-              can learn from it rather than letting one bad experience stop
-              you from continuing.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            How much time should I expect to spend practicing each week?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              It depends on your schedule and your goals, but you should expect
-              to actually practice.
-            </p>
-
-            <p>
-              Even a few hours a week can give us something to work with. The
-              important part is consistency and actually putting yourself in
-              situations that make you uncomfortable.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            What happens when the program is over?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              The goal isn't to make you dependent on coaching.
-            </p>
-
-            <p>
-              The goal is for you to have enough experience that you can keep
-              going on your own. Ideally, approaching becomes something you
-              know how to handle rather than a problem you need someone else
-              to solve for you.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            How do I know which coaching option is right for me?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              That depends on how much support and real-world practice you're
-              looking for.
-            </p>
-
-            <p>
-              The 6 Week Transformation is designed for ongoing online support.
-              The 1-Day and 3-Day Wall Smasher options are for people who want
-              concentrated in-person practice.
-            </p>
-
-            <p>
-              If you're unsure, that's exactly what the application is for.
-              Tell me about your situation and we can figure out what makes
-              sense.
-            </p>
-
-          </div>
-
-        </details>
-
-
-        <details class="faq-item">
-
-          <summary>
-            If I pay $1,500 for the in-person 1-day, and then decide I really
-            want to do the 3-day, does that original $1,500 payment count
-            toward the 3-day total or do I have to pay separately?
-          </summary>
-
-          <div class="faq-answer">
-
-            <p>
-              If you start with the 1-Day Wall Smasher and decide you want to
-              continue into the 3-Day Wall Smasher, the original $1,500 payment
-              would count toward the $3,500 total.
-            </p>
-
-            <p>
-              You would simply pay the remaining $2,000.
-            </p>
-
-          </div>
-
-        </details>
-
-
-      </div>
+  <main class="content">
+
+    <div class="section-intro">
+      <h2>Common Questions</h2>
+
+      <p>
+        Here are some of the questions I get most often about approach anxiety,
+        coaching, and what working together actually looks like.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>What if I've already watched tons of dating/cold approach content?</summary>
+        <div class="faq-answer">
+          <p>
+            Doing and knowing are two different things. Having knowledge can be
+            useful, but knowing what to do and actually doing it are completely
+            different skills.
+          </p>
+
+          <p>
+            I work with people who already understand a lot about dating,
+            approaching, or social confidence but still can't consistently get
+            themselves to take action.
+          </p>
+
+          <p>
+            You don't need more information if information isn't what's holding
+            you back. You need experience actually doing the thing.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do we actually approach women during coaching?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes.
+          </p>
+
+          <p>
+            The goal isn't to spend six weeks talking about approaching women
+            without actually approaching anyone. We work toward getting you
+            into real situations where you can practice.
+          </p>
+
+          <p>
+            The exact structure depends on the coaching option you choose and
+            where you're starting from.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why do you emphasize approaching during the day?</summary>
+        <div class="faq-answer">
+          <p>
+            Daytime environments give you a chance to practice without relying
+            on alcohol, loud music, nightlife, or the atmosphere of a club.
+          </p>
+
+          <p>
+            I also think daytime approaching makes it easier to build a skill
+            that you can actually use in normal life.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is coaching remote or in person?</summary>
+        <div class="faq-answer">
+          <p>
+            Both.
+          </p>
+
+          <p>
+            The 6-week 1-on-1 program is conducted remotely. The Wall Smasher
+            options are designed for in-person work.
+          </p>
+
+          <p>
+            If you're interested in something more customized, the Custom Wall
+            Smasher option gives us room to discuss what makes the most sense
+            for you.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What happens when I choose/register for the program?</summary>
+        <div class="faq-answer">
+          <p>
+            Once you register, we will get everything scheduled. For online,
+            We typically get started on the first available day you are able to
+            talk with me and go from there. For in person, we will coordinate
+            schedules and locations.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can approach anxiety actually go away?</summary>
+        <div class="faq-answer">
+          <p>
+            For many people, the fear can become dramatically smaller through
+            repeated exposure and experience.
+          </p>
+
+          <p>
+            I don't think the goal is necessarily to reach a point where you
+            never feel nervous again. The goal is to get to where nervousness
+            doesn't control your behavior.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Will I ever get to the point where approaching feels normal?</summary>
+        <div class="faq-answer">
+          <p>
+            It can become much more normal.
+          </p>
+
+          <p>
+            Something that initially feels like a huge event can eventually
+            become just another thing you are capable of doing.
+          </p>
+
+          <p>
+            The biggest change usually comes from accumulating enough
+            experiences that your brain stops treating every approach like a
+            massive unknown.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long does it take to become comfortable approaching?</summary>
+        <div class="faq-answer">
+          <p>
+            This is going to vary a lot from person to person. The number of
+            approaches matters, but so does how consistently you do them and
+            how much you're actually pushing yourself.
+          </p>
+
+          <p>
+            For me, I noticed a major shift after about 30 approaches. Someone
+            else might need 10. Someone else might need 50. I wouldn't obsess
+            over the number.
+          </p>
+
+          <p>
+            The important thing is that you're consistently getting out there
+            and putting yourself in situations that make you uncomfortable.
+            Over time and with reps, it won't seem like such a big deal.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What if I have very little dating experience?</summary>
+        <div class="faq-answer">
+          <p>
+            That's okay. You don't need a long dating history to start.
+          </p>
+
+          <p>
+            We focus on where you are right now and work from there. You don't
+            have to pretend you have experience that you don't have.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What if I've never approached a woman before?</summary>
+        <div class="faq-answer">
+          <p>
+            That's okay too.
+          </p>
+
+          <p>
+            Everyone has to start somewhere. If you've never approached before,
+            we'll work from the very beginning rather than assuming you already
+            know how to do it.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long is each coaching call?</summary>
+        <div class="faq-answer">
+          <p>
+            Call length can vary depending on what we're working on and the
+            coaching option you've chosen.
+          </p>
+
+          <p>
+            The 6-week program is structured around 12 calls, while the
+            in-person Wall Smasher options are structured around several hours
+            of direct work.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How often are the coaching calls?</summary>
+        <div class="faq-answer">
+          <p>
+            The exact schedule is flexible and we'll coordinate it around your
+            availability.
+          </p>
+
+          <p>
+            The goal is to create enough consistency that you keep moving
+            forward rather than letting weeks go by without practicing.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What do we actually talk about on the calls?</summary>
+        <div class="faq-answer">
+          <p>
+            We talk about what's actually happening when you try to approach.
+          </p>
+
+          <p>
+            That can include hesitation, overthinking, fear of rejection,
+            worrying about what other people think, approaches that didn't go
+            well, and what you're doing between calls.
+          </p>
+
+          <p>
+            The conversations are meant to support real-world action, not
+            replace it.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Will you hold me accountable?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes.
+          </p>
+
+          <p>
+            If we're working together, I expect you to actually practice.
+            We'll talk about what you said you were going to do, what you
+            actually did, what happened, and what needs to change.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I tell you about approaches that went badly?</summary>
+        <div class="faq-answer">
+          <p>
+            Absolutely.
+          </p>
+
+          <p>
+            Bad approaches are part of the process. We can look at what
+            happened without turning one awkward interaction into evidence that
+            you shouldn't approach.
+          </p>
+
+          <p>
+            The point isn't to make every interaction go perfectly. It's to
+            become someone who can handle the outcome and keep going.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How much time should I expect to spend practicing each week?</summary>
+        <div class="faq-answer">
+          <p>
+            That depends on your schedule and your starting point.
+          </p>
+
+          <p>
+            I would rather see someone consistently putting in meaningful reps
+            than making an unrealistic plan they can't maintain.
+          </p>
+
+          <p>
+            We'll figure out what amount of practice makes sense for you and
+            focus on actually following through.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What happens when the program is over?</summary>
+        <div class="faq-answer">
+          <p>
+            The goal isn't for you to need coaching forever.
+          </p>
+
+          <p>
+            Ideally, you've built enough experience and confidence that you can
+            continue practicing and pushing yourself without needing someone
+            else to make you do it.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I know which coaching option is right for me?</summary>
+        <div class="faq-answer">
+          <p>
+            It depends on where you're starting, how much support you want, and
+            how quickly you want to work.
+          </p>
+
+          <p>
+            The 6-week option is designed for ongoing remote support. The
+            1-Day and 3-Day Wall Smasher options are more intensive, in-person
+            experiences.
+          </p>
+
+          <p>
+            If you're not sure, that's exactly what the application is for.
+            Tell me about your situation and we can figure out what makes
+            sense.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>If I pay $1,500 for the in-person 1-day, and then decide I really want to do the 3-day, does that original $1,500 payment count toward the 3-day total or do I have to pay separately?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes. If you start with the 1-Day Wall Smasher and then decide you
+            want to continue into the 3-Day Wall Smasher, the original $1,500
+            payment can count toward the $3,500 total.
+          </p>
+
+          <p>
+            You would simply pay the remaining $2,000.
+          </p>
+        </div>
+      </details>
 
     </div>
 
-  </section>
+  </main>
 
-
-  <!-- CTA -->
-
-  <section class="cta-section">
-
+  <section class="cta">
     <div class="cta-inner">
-
       <h2>Still Have A Question?</h2>
 
       <p>
-        If you didn't find the answer you're looking for, you can ask me
-        directly through the application or reach out on Instagram.
+        If you didn't find what you were looking for, feel free to reach out
+        or apply to work with me.
       </p>
 
       <a href="coaching-application.html" class="application-button">
         APPLY TO WORK WITH ME →
       </a>
-
     </div>
-
   </section>
 
-
-  <!-- FOOTER -->
-
   <footer>
-
-    <div class="footer-inner">
-
-      <div class="footer-brand">
-        SMASH YOUR WALL
-      </div>
-
-      <div class="footer-copy">
-        © 2026 Smash Your Wall
-      </div>
-
-    </div>
-
+    © 2026 Smash Your Wall
   </footer>
 
 </body>
