@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>FAQ — Smash Your Wall</title>
 
   <style>
@@ -11,16 +12,12 @@
       --muted: #666;
       --accent: #111;
       --border: #e5e5e5;
-      --light: #f7f7f7;
+      --light: #f5f5f5;
       --max-width: 1100px;
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -30,6 +27,8 @@
       background: #fff;
       line-height: 1.7;
     }
+
+    /* NAVIGATION */
 
     .nav {
       position: sticky;
@@ -70,15 +69,11 @@
       font-size: 14px;
       text-decoration: none;
       color: #333;
+      font-weight: 400;
     }
 
     .nav-links a:hover {
       color: var(--accent);
-    }
-
-    .nav-links a.active {
-      font-weight: 700;
-      color: #111;
     }
 
     @media (max-width: 700px) {
@@ -97,62 +92,48 @@
       }
     }
 
+    /* HERO */
+
     .hero {
       background: var(--light);
-      padding: 90px 30px 85px;
+      padding: 80px 30px;
     }
 
     .hero-inner {
-      max-width: var(--max-width);
+      max-width: 1100px;
       margin: 0 auto;
     }
 
     .eyebrow {
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 18px;
       color: #555;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      letter-spacing: -2.5px;
-      margin: 0 0 25px;
+      font-size: 56px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0 0 20px;
       max-width: 800px;
     }
 
     .hero p {
       max-width: 700px;
-      font-size: 19px;
+      font-size: 18px;
       color: var(--muted);
       margin: 0;
     }
+
+    /* FAQ CONTENT */
 
     .content {
       max-width: 850px;
       margin: 0 auto;
-      padding: 85px 30px;
-    }
-
-    .section-intro {
-      margin-bottom: 45px;
-    }
-
-    .section-intro h2 {
-      font-size: 32px;
-      line-height: 1.2;
-      margin: 0 0 15px;
-      letter-spacing: -0.7px;
-    }
-
-    .section-intro p {
-      font-size: 17px;
-      color: var(--muted);
-      margin: 0;
-      max-width: 700px;
+      padding: 80px 30px;
     }
 
     .faq-list {
@@ -205,9 +186,10 @@
       margin-bottom: 0;
     }
 
+    /* CTA */
+
     .cta {
       background: var(--light);
-      margin-top: 20px;
       padding: 70px 30px;
       text-align: center;
     }
@@ -245,6 +227,8 @@
       opacity: 0.85;
     }
 
+    /* FOOTER */
+
     footer {
       border-top: 1px solid var(--border);
       padding: 30px;
@@ -255,19 +239,16 @@
 
     @media (max-width: 600px) {
       .hero {
-        padding: 65px 20px 60px;
+        padding: 60px 20px;
       }
 
       .content {
-        padding: 65px 20px;
+        padding: 60px 20px;
       }
 
       h1 {
+        font-size: 42px;
         letter-spacing: -1.5px;
-      }
-
-      .section-intro h2 {
-        font-size: 28px;
       }
 
       summary {
@@ -289,6 +270,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
+
       <a href="index.html" class="brand">SMASH YOUR WALL</a>
 
       <div class="nav-links">
@@ -296,13 +278,17 @@
         <a href="memoir.html">My Memoir</a>
         <a href="articles.html">Articles</a>
         <a href="work-with-me.html">Work With Me</a>
-        <a href="faq.html" class="active">FAQ</a>
+        <a href="faq.html">FAQ</a>
       </div>
+
     </div>
   </nav>
 
+  <!-- HERO -->
+
   <section class="hero">
     <div class="hero-inner">
+
       <div class="eyebrow">Coaching FAQ</div>
 
       <h1>Frequently Asked Questions</h1>
@@ -311,19 +297,13 @@
         Answers to common questions about coaching, approach anxiety,
         and what you can expect if we work together.
       </p>
+
     </div>
   </section>
 
+  <!-- FAQ -->
+
   <main class="content">
-
-    <div class="section-intro">
-      <h2>Common Questions</h2>
-
-      <p>
-        Here are some of the questions I get most often about approach anxiety,
-        coaching, and what working together actually looks like.
-      </p>
-    </div>
 
     <div class="faq-list">
 
@@ -331,20 +311,14 @@
         <summary>What if I've already watched tons of dating/cold approach content?</summary>
         <div class="faq-answer">
           <p>
-            Doing and knowing are two different things. Having knowledge can be
-            useful, but knowing what to do and actually doing it are completely
-            different skills.
+            Doing and knowing are two different things. Having an idea of what
+            the process looks like is somewhat advantageous, but knowing what
+            to do and actually doing it are different things.
           </p>
 
           <p>
-            I work with people who already understand a lot about dating,
-            approaching, or social confidence but still can't consistently get
-            themselves to take action.
-          </p>
-
-          <p>
-            You don't need more information if information isn't what's holding
-            you back. You need experience actually doing the thing.
+            I help people who are knowledgeable but can't actually get
+            themselves to do it.
           </p>
         </div>
       </details>
@@ -357,14 +331,9 @@
           </p>
 
           <p>
-            The goal isn't to spend six weeks talking about approaching women
-            without actually approaching anyone. We work toward getting you
-            into real situations where you can practice.
-          </p>
-
-          <p>
-            The exact structure depends on the coaching option you choose and
-            where you're starting from.
+            The point of coaching isn't to spend weeks talking about
+            approaching without actually doing it. We work toward getting you
+            into real situations and actually taking action.
           </p>
         </div>
       </details>
@@ -373,13 +342,13 @@
         <summary>Why do you emphasize approaching during the day?</summary>
         <div class="faq-answer">
           <p>
-            Daytime environments give you a chance to practice without relying
-            on alcohol, loud music, nightlife, or the atmosphere of a club.
+            Daytime approaching gives you the opportunity to practice without
+            relying on alcohol, loud music, clubs, or nightlife.
           </p>
 
           <p>
-            I also think daytime approaching makes it easier to build a skill
-            that you can actually use in normal life.
+            It's also much closer to how you're going to encounter women in
+            normal everyday life.
           </p>
         </div>
       </details>
@@ -392,14 +361,13 @@
           </p>
 
           <p>
-            The 6-week 1-on-1 program is conducted remotely. The Wall Smasher
-            options are designed for in-person work.
+            The 1-on-1 6 Week Transformation is conducted remotely. The
+            Wall Smasher options are designed for in-person work.
           </p>
 
           <p>
-            If you're interested in something more customized, the Custom Wall
-            Smasher option gives us room to discuss what makes the most sense
-            for you.
+            If you want something different, the Custom Wall Smasher option
+            gives us room to discuss what makes sense for you.
           </p>
         </div>
       </details>
@@ -409,9 +377,9 @@
         <div class="faq-answer">
           <p>
             Once you register, we will get everything scheduled. For online,
-            We typically get started on the first available day you are able to
-            talk with me and go from there. For in person, we will coordinate
-            schedules and locations.
+            We typically get started on the first available day you are able
+            to talk with me and go from there. For in person, we will
+            coordinate schedules and locations.
           </p>
         </div>
       </details>
@@ -420,14 +388,13 @@
         <summary>Can approach anxiety actually go away?</summary>
         <div class="faq-answer">
           <p>
-            For many people, the fear can become dramatically smaller through
-            repeated exposure and experience.
+            I think it can become dramatically smaller through repeated
+            exposure and experience.
           </p>
 
           <p>
-            I don't think the goal is necessarily to reach a point where you
-            never feel nervous again. The goal is to get to where nervousness
-            doesn't control your behavior.
+            The goal isn't necessarily to never feel nervous again. The goal
+            is to get to where the nervousness doesn't control what you do.
           </p>
         </div>
       </details>
@@ -436,18 +403,13 @@
         <summary>Will I ever get to the point where approaching feels normal?</summary>
         <div class="faq-answer">
           <p>
-            It can become much more normal.
+            Yes, approaching can become much more normal with enough
+            experience.
           </p>
 
           <p>
             Something that initially feels like a huge event can eventually
-            become just another thing you are capable of doing.
-          </p>
-
-          <p>
-            The biggest change usually comes from accumulating enough
-            experiences that your brain stops treating every approach like a
-            massive unknown.
+            become something you are simply capable of doing.
           </p>
         </div>
       </details>
@@ -483,8 +445,8 @@
           </p>
 
           <p>
-            We focus on where you are right now and work from there. You don't
-            have to pretend you have experience that you don't have.
+            We work from wherever you're starting rather than assuming you
+            already have experience.
           </p>
         </div>
       </details>
@@ -497,9 +459,9 @@
           </p>
 
           <p>
-            Everyone has to start somewhere. If you've never approached before,
-            we'll work from the very beginning rather than assuming you already
-            know how to do it.
+            Everyone has to start somewhere. If you've never approached
+            before, we'll work from the beginning rather than assuming you
+            already know what you're doing.
           </p>
         </div>
       </details>
@@ -508,14 +470,14 @@
         <summary>How long is each coaching call?</summary>
         <div class="faq-answer">
           <p>
-            Call length can vary depending on what we're working on and the
-            coaching option you've chosen.
+            The exact length can vary depending on what we're working on and
+            the coaching option you've chosen.
           </p>
 
           <p>
-            The 6-week program is structured around 12 calls, while the
-            in-person Wall Smasher options are structured around several hours
-            of direct work.
+            The 6-week program consists of 12 calls, while the in-person Wall
+            Smasher options are structured around several hours of direct
+            work.
           </p>
         </div>
       </details>
@@ -524,12 +486,11 @@
         <summary>How often are the coaching calls?</summary>
         <div class="faq-answer">
           <p>
-            The exact schedule is flexible and we'll coordinate it around your
-            availability.
+            We'll coordinate the schedule around your availability.
           </p>
 
           <p>
-            The goal is to create enough consistency that you keep moving
+            The goal is to create enough consistency that you continue moving
             forward rather than letting weeks go by without practicing.
           </p>
         </div>
@@ -579,8 +540,8 @@
 
           <p>
             Bad approaches are part of the process. We can look at what
-            happened without turning one awkward interaction into evidence that
-            you shouldn't approach.
+            happened without turning one awkward interaction into evidence
+            that you shouldn't approach.
           </p>
 
           <p>
@@ -601,11 +562,6 @@
             I would rather see someone consistently putting in meaningful reps
             than making an unrealistic plan they can't maintain.
           </p>
-
-          <p>
-            We'll figure out what amount of practice makes sense for you and
-            focus on actually following through.
-          </p>
         </div>
       </details>
 
@@ -617,9 +573,9 @@
           </p>
 
           <p>
-            Ideally, you've built enough experience and confidence that you can
-            continue practicing and pushing yourself without needing someone
-            else to make you do it.
+            Ideally, you've built enough experience that you can continue
+            practicing and pushing yourself without needing someone else to
+            make you do it.
           </p>
         </div>
       </details>
@@ -628,14 +584,14 @@
         <summary>How do I know which coaching option is right for me?</summary>
         <div class="faq-answer">
           <p>
-            It depends on where you're starting, how much support you want, and
-            how quickly you want to work.
+            It depends on where you're starting, how much support you want,
+            and how you want to work.
           </p>
 
           <p>
-            The 6-week option is designed for ongoing remote support. The
-            1-Day and 3-Day Wall Smasher options are more intensive, in-person
-            experiences.
+            The 1-on-1 6 Week Transformation is designed for ongoing remote
+            support. The 1-Day and 3-Day Wall Smasher options are more
+            intensive, in-person experiences.
           </p>
 
           <p>
@@ -647,7 +603,12 @@
       </details>
 
       <details>
-        <summary>If I pay $1,500 for the in-person 1-day, and then decide I really want to do the 3-day, does that original $1,500 payment count toward the 3-day total or do I have to pay separately?</summary>
+        <summary>
+          If I pay $1,500 for the in-person 1-day, and then decide I really
+          want to do the 3-day, does that original $1,500 payment count toward
+          the 3-day total or do I have to pay separately?
+        </summary>
+
         <div class="faq-answer">
           <p>
             Yes. If you start with the 1-Day Wall Smasher and then decide you
@@ -665,8 +626,11 @@
 
   </main>
 
+  <!-- CTA -->
+
   <section class="cta">
     <div class="cta-inner">
+
       <h2>Still Have A Question?</h2>
 
       <p>
@@ -677,6 +641,7 @@
       <a href="coaching-application.html" class="application-button">
         APPLY TO WORK WITH ME →
       </a>
+
     </div>
   </section>
 
