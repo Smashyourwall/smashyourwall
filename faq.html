@@ -40,45 +40,44 @@
     /* NAVIGATION */
 
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 2rem;
-      padding: 1.1rem 2rem;
-      background: rgba(255, 255, 255, 0.97);
+      padding: 1rem 1.5rem;
       border-bottom: 1px solid var(--border);
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav > a:first-child {
+    nav .brand {
       text-decoration: none;
       font-weight: 800;
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
 
-    nav div {
+    nav .nav-links {
       display: flex;
+      gap: 1.25rem;
       align-items: center;
-      gap: 1.4rem;
     }
 
-    nav div a {
+    nav .nav-links a {
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
       color: #444;
-      transition: color 0.2s ease;
     }
 
-    nav div a:hover {
+    nav .nav-links a:hover {
       color: var(--accent);
     }
 
-    nav div a[aria-current="page"] {
+    nav .nav-links a[aria-current="page"] {
       color: var(--accent);
+      font-weight: 800;
     }
 
     /* HERO */
@@ -265,13 +264,13 @@
         padding: 1rem 1.25rem;
       }
 
-      nav div {
+      nav .nav-links {
         width: 100%;
         gap: 0.9rem;
         flex-wrap: wrap;
       }
 
-      nav div a {
+      nav .nav-links a {
         font-size: 0.82rem;
       }
 
@@ -307,11 +306,11 @@
 <body>
 
   <nav>
-    <a href="index.html">SMASH YOUR WALL</a>
+    <a href="index.html" class="brand">SMASH YOUR WALL</a>
 
-    <div>
+    <div class="nav-links">
       <a href="about-me.html">About Me</a>
-      <a href="memoir.html">Memoir</a>
+      <a href="memoir.html">My Memoir</a>
       <a href="articles.html">Articles</a>
       <a href="work-with-me.html">Work With Me</a>
       <a href="faq.html" aria-current="page">FAQ</a>
