@@ -23,6 +23,28 @@
 
     html {
       scroll-behavior: smooth;
+
+      /* SCROLLBAR */
+      scrollbar-width: thin;
+      scrollbar-color: #888 #f1f1f1;
+    }
+
+    /* SCROLLBAR - CHROME / EDGE / SAFARI */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
     }
 
     body {
@@ -371,8 +393,7 @@
       <details>
         <summary>What happens when I choose/register for the program?</summary>
         <div class="faq-answer">
-          <p>Once you register, we will get everything scheduled. For online, We typically get started on the first available day you are able to talk with me and go from there. For in person, we will coordinate
-            schedules and locations.</p>
+          <p>Once you register, we will get everything scheduled. For online, We typically get started on the first available day you are able to talk with me and go from there. For in person, we will coordinate schedules and locations.</p>
         </div>
       </details>
 
