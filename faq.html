@@ -8,94 +8,78 @@
 
   <style>
     :root {
-      --text: #111;
-      --muted: #666;
-      --accent: #111;
-      --border: #e5e5e5;
-      --light: #e2e2e0;
-      --max-width: 1100px;
+      --white: #ffffff;
+      --gray: #e2e2e0;
+      --text: #171717;
+      --muted: #666666;
+      --accent: #a94f32;
+      --border: #d2d2d0;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: #fff;
+      background: var(--white);
       line-height: 1.7;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
-    .nav {
+    nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
-      padding: 18px 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
+      padding: 18px 30px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      justify-content: space-between;
     }
 
-    .brand {
-      font-size: 14px;
+    .logo {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
       font-weight: 700;
       letter-spacing: 1.5px;
-      text-decoration: none;
-      color: #111;
-      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 28px;
     }
 
     .nav-links a {
-      font-size: 14px;
+      color: var(--text);
       text-decoration: none;
-      color: #333;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     .nav-links a:hover {
       color: var(--accent);
     }
 
-    @media (max-width: 700px) {
-      .nav {
-        padding: 15px 20px;
-      }
-
-      .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        gap: 16px;
-      }
-    }
-
     /* HERO */
 
     .hero {
-      background: var(--light);
+      background: var(--gray);
       padding: 80px 30px;
     }
 
@@ -189,7 +173,7 @@
     /* CTA */
 
     .cta {
-      background: var(--light);
+      background: var(--gray);
       padding: 70px 30px;
       text-align: center;
     }
@@ -214,7 +198,7 @@
 
     .application-button {
       display: inline-block;
-      background: #111;
+      background: var(--text);
       color: #fff;
       text-decoration: none;
       padding: 15px 24px;
@@ -224,7 +208,7 @@
     }
 
     .application-button:hover {
-      opacity: 0.85;
+      background: var(--accent);
     }
 
     /* FOOTER */
@@ -233,11 +217,26 @@
       border-top: 1px solid var(--border);
       padding: 30px;
       text-align: center;
-      color: #777;
+      color: var(--muted);
       font-size: 13px;
     }
 
-    @media (max-width: 600px) {
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .nav-inner {
+        padding: 16px 18px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
       .hero {
         padding: 60px 20px;
       }
@@ -268,10 +267,12 @@
 
 <body>
 
-  <nav class="nav">
+  <nav>
     <div class="nav-inner">
 
-      <a href="index.html" class="brand">SMASH YOUR WALL</a>
+      <a href="index.html" class="logo">
+        SMASH YOUR WALL
+      </a>
 
       <div class="nav-links">
         <a href="about-me.html">About Me</a>
@@ -309,6 +310,7 @@
 
       <details>
         <summary>What if I've already watched tons of dating/cold approach content?</summary>
+
         <div class="faq-answer">
           <p>
             Doing and knowing are two different things. Having an idea of what
@@ -323,8 +325,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Do we actually approach women during coaching?</summary>
+
         <div class="faq-answer">
           <p>
             Yes.
@@ -338,8 +342,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Why do you emphasize approaching during the day?</summary>
+
         <div class="faq-answer">
           <p>
             Daytime approaching gives you the opportunity to practice without
@@ -353,8 +359,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Is coaching remote or in person?</summary>
+
         <div class="faq-answer">
           <p>
             Both.
@@ -372,8 +380,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>What happens when I choose/register for the program?</summary>
+
         <div class="faq-answer">
           <p>
             Once you register, we will get everything scheduled. For online,
@@ -384,8 +394,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Can approach anxiety actually go away?</summary>
+
         <div class="faq-answer">
           <p>
             I think it can become dramatically smaller through repeated
@@ -399,8 +411,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Will I ever get to the point where approaching feels normal?</summary>
+
         <div class="faq-answer">
           <p>
             Yes, approaching can become much more normal with enough
@@ -414,8 +428,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>How long does it take to become comfortable approaching?</summary>
+
         <div class="faq-answer">
           <p>
             This is going to vary a lot from person to person. The number of
@@ -437,8 +453,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>What if I have very little dating experience?</summary>
+
         <div class="faq-answer">
           <p>
             That's okay. You don't need a long dating history to start.
@@ -451,8 +469,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>What if I've never approached a woman before?</summary>
+
         <div class="faq-answer">
           <p>
             That's okay too.
@@ -466,8 +486,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>How long is each coaching call?</summary>
+
         <div class="faq-answer">
           <p>
             The exact length can vary depending on what we're working on and
@@ -482,8 +504,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>How often are the coaching calls?</summary>
+
         <div class="faq-answer">
           <p>
             We'll coordinate the schedule around your availability.
@@ -496,8 +520,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>What do we actually talk about on the calls?</summary>
+
         <div class="faq-answer">
           <p>
             We talk about what's actually happening when you try to approach.
@@ -516,8 +542,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Will you hold me accountable?</summary>
+
         <div class="faq-answer">
           <p>
             Yes.
@@ -531,8 +559,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>Can I tell you about approaches that went badly?</summary>
+
         <div class="faq-answer">
           <p>
             Absolutely.
@@ -551,8 +581,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>How much time should I expect to spend practicing each week?</summary>
+
         <div class="faq-answer">
           <p>
             That depends on your schedule and your starting point.
@@ -565,8 +597,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>What happens when the program is over?</summary>
+
         <div class="faq-answer">
           <p>
             The goal isn't for you to need coaching forever.
@@ -580,8 +614,10 @@
         </div>
       </details>
 
+
       <details>
         <summary>How do I know which coaching option is right for me?</summary>
+
         <div class="faq-answer">
           <p>
             It depends on where you're starting, how much support you want,
@@ -601,6 +637,7 @@
           </p>
         </div>
       </details>
+
 
       <details>
         <summary>
