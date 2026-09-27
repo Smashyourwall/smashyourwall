@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smash Your Wall — 75 New Logo Concepts</title>
+<title>Smash Your Wall — 75 Logo Concepts</title>
 
 <style>
 :root {
@@ -102,46 +102,10 @@ h1 {
   line-height: 1.65;
 }
 
-.controls {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 28px 30px 0;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.filter {
-  border: 1px solid var(--border);
-  background: #fff;
-  padding: 10px 15px;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.filter:hover,
-.filter.active {
-  background: var(--text);
-  color: #fff;
-  border-color: var(--text);
-}
-
 .section {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 30px 30px 80px;
-}
-
-.section-title {
-  margin: 30px 0 7px;
-  font-size: 22px;
-}
-
-.section-description {
-  margin: 0 0 22px;
-  color: var(--muted);
-  font-size: 14px;
+  padding: 40px 30px 80px;
 }
 
 .gallery {
@@ -194,10 +158,6 @@ h1 {
   font-weight: 700;
 }
 
-.hidden {
-  display: none !important;
-}
-
 footer {
   background: #111;
   color: #888;
@@ -233,11 +193,6 @@ footer {
     font-size: 35px;
   }
 
-  .controls {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   .section {
     padding-left: 18px;
     padding-right: 18px;
@@ -269,39 +224,17 @@ footer {
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Second Logo Exploration</div>
-    <h1>75 More Directions</h1>
+    <div class="eyebrow">Logo Exploration</div>
+    <h1>75 Logo Concepts</h1>
     <p>
       50 concepts built around SYW as a visual identity and 25 abstract
-      breakthrough symbols. These are intentionally more conceptual:
-      movement, tension, interruption, emergence, structure and breaking through.
+      breakthrough symbols.
     </p>
   </div>
 </section>
 
-<div class="controls">
-  <button class="filter active" type="button" onclick="showAll()">ALL 75</button>
-  <button class="filter" type="button" onclick="showType('syw')">SYW — 50</button>
-  <button class="filter" type="button" onclick="showType('break')">BREAKTHROUGH — 25</button>
-</div>
-
 <section class="section">
-
-  <h2 class="section-title">SYW — Conceptual Marks</h2>
-  <p class="section-description">
-    The letters are the identity. The surrounding geometry gives the mark a story.
-  </p>
-
-  <div class="gallery" id="sywGallery"></div>
-
-  <h2 class="section-title">Breakthrough — Abstract Marks</h2>
-  <p class="section-description">
-    These don't literally draw a wall. They explore the idea of something being broken,
-    opened, displaced or moved through.
-  </p>
-
-  <div class="gallery" id="breakGallery"></div>
-
+  <div class="gallery" id="gallery"></div>
 </section>
 
 <footer>
@@ -360,9 +293,9 @@ function circle(cx,cy,r,fill="none",stroke=B,width=7) {
     fill="${fill}" stroke="${stroke}" stroke-width="${width}"/>`;
 }
 
-function card(num,name,content,type) {
+function card(num,name,content) {
   return `
-    <div class="card ${type}">
+    <div class="card">
       <div class="icon">${svg(content)}</div>
       <div class="card-info">
         <div class="number">${num}</div>
@@ -372,25 +305,23 @@ function card(num,name,content,type) {
   `;
 }
 
+const concepts = [
 
-/* ==========================================================
-   50 SYW CONCEPTS
-========================================================== */
-
-const syw = [
-
+/* 01 */
 ["01","SYW Through Opening",
   RCT(35,45,130,110,B,B,0) +
   RCT(73,65,54,90,W,W,0) +
   txt(100,125,"SYW",38,B,800,-4) +
   L(73,65,127,65,R,5)],
 
+/* 02 */
 ["02","Letters Behind Structure",
   RCT(38,60,124,80,"none",B,9) +
   txt(100,123,"SYW",45,B,800,-5) +
   L(58,48,58,75,R,7) +
   L(142,48,142,75,R,7)],
 
+/* 03 */
 ["03","SYW Emerging",
   `<path d="M30 135H170V65H132V100H68V65H30Z" fill="${B}"/>
    ${txt(100,122,"SYW",40,W,800,-4)}
@@ -398,11 +329,13 @@ const syw = [
    ${L(100,35,88,48,R,7)}
    ${L(100,35,112,48,R,7)}`],
 
+/* 04 */
 ["04","Broken Surround",
   circle(100,100,68,"none",B,9) +
   `<path d="M82 38L72 62M118 162L128 138" stroke="${R}" stroke-width="7"/>` +
   txt(100,121,"SYW",39,B,800,-4)],
 
+/* 05 */
 ["05","SYW Inside Split",
   `<path d="M30 55H82L92 78L78 100L92 122L82 145H30
            M170 55H118L108 78L122 100L108 122L118 145H170"
@@ -410,12 +343,14 @@ const syw = [
   txt(100,122,"SYW",39,B,800,-4) +
   L(92,100,108,100,R,6)],
 
+/* 06 */
 ["06","Y Creates Opening",
   `<path d="M38 50V150M162 50V150M38 50H76L100 90L124 50H162"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   P("100,90 100,150",R,7) +
   txt(100,128,"SYW",32,B,800,-3)],
 
+/* 07 */
 ["07","SYW + Displaced Plane",
   RCT(42,55,116,90,B,B,0) +
   `<path d="M65 55L82 70L72 90L94 105L82 125L96 145"
@@ -423,35 +358,41 @@ const syw = [
   txt(100,123,"SYW",36,W,800,-3) +
   L(150,65,165,50,R,6)],
 
+/* 08 */
 ["08","SYW in Perspective",
   `<path d="M38 65L100 40L162 65V145L100 170L38 145Z"
     fill="none" stroke="${B}" stroke-width="8"/>` +
   txt(100,124,"SYW",38,B,800,-4) +
   L(38,65,62,82,R,5)],
 
+/* 09 */
 ["09","Y as Break",
   txt(70,128,"S",58,B,800,-5) +
   txt(130,128,"W",58,B,800,-5) +
   P("100,55 100,88 88,104 100,120 100,150",R,8)],
 
+/* 10 */
 ["10","SYW Between Planes",
   `<path d="M30 48L72 72L30 96M170 48L128 72L170 96
            M30 104L72 128L30 152M170 104L128 128L170 152"
     fill="none" stroke="${B}" stroke-width="7"/>` +
   txt(100,123,"SYW",42,B,800,-4)],
 
+/* 11 */
 ["11","SYW Interrupted",
   txt(100,124,"SYW",54,B,800,-6) +
   RCT(92,40,16,120,W,W,0) +
   L(100,40,100,70,R,5) +
   L(100,130,100,160,R,5)],
 
+/* 12 */
 ["12","SYW + Rising Block",
   RCT(40,75,120,75,B,B,0) +
   RCT(120,45,40,105,B,B,0) +
   txt(100,124,"SYW",37,W,800,-3) +
   L(120,45,145,30,R,6)],
 
+/* 13 */
 ["13","Open Center",
   `<path d="M35 45H165V155H35Z" fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M78 45V85H122V45M78 155V115H122V155"
@@ -459,6 +400,7 @@ const syw = [
   txt(100,122,"SYW",37,B,800,-4) +
   L(82,100,118,100,R,7)],
 
+/* 14 */
 ["14","SYW + Impact",
   txt(100,124,"SYW",52,B,800,-6) +
   L(100,28,100,48,R,6) +
@@ -467,6 +409,7 @@ const syw = [
   L(42,100,62,100,R,6) +
   L(158,100,138,100,R,6)],
 
+/* 15 */
 ["15","SYW in Aperture",
   `<path d="M32 42H72V75H128V42H168
            M32 158H72V125H128V158H168"
@@ -474,22 +417,26 @@ const syw = [
   txt(100,119,"SYW",40,B,800,-4) +
   L(72,100,128,100,R,6)],
 
+/* 16 */
 ["16","Layered SYW",
   txt(94,118,"SYW",52,B,800,-6) +
   txt(106,128,"SYW",52,R,800,-6)],
 
+/* 17 */
 ["17","SYW + Diagonal Plane",
   `<path d="M30 150L80 50H170L120 150Z"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(102,121,"SYW",38,B,800,-4) +
   L(80,50,100,70,R,5)],
 
+/* 18 */
 ["18","Split Background",
   `<path d="M30 50H92V150H30ZM108 50H170V150H108Z"
     fill="${B}"/>` +
   txt(100,123,"SYW",39,W,800,-4) +
   L(92,100,108,100,R,7)],
 
+/* 19 */
 ["19","SYW in Motion",
   txt(100,124,"SYW",50,B,800,-6) +
   L(32,67,67,67,R,5) +
@@ -497,17 +444,20 @@ const syw = [
   L(25,100,60,100,R,5) +
   L(140,100,175,100,R,5)],
 
+/* 20 */
 ["20","Emerging Y",
   txt(68,128,"S",58,B,800,-5) +
   txt(132,128,"W",58,B,800,-5) +
   `<path d="M100 155V80L82 58M100 80L118 58"
     fill="none" stroke="${R}" stroke-width="9"/>`],
 
+/* 21 */
 ["21","Structural SYW",
   `<path d="M40 55H75V145H40M80 55L100 100L80 145M120 55L140 145M140 55L160 145"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   L(75,100,125,100,R,6)],
 
+/* 22 */
 ["22","SYW + Central Void",
   `<path d="M35 50H75V90H125V50H165
            M35 150H75V110H125V150H165"
@@ -515,6 +465,7 @@ const syw = [
   txt(100,105,"SYW",34,B,800,-3) +
   L(82,100,118,100,R,6)],
 
+/* 23 */
 ["23","Corner Pressure",
   txt(100,125,"SYW",50,B,800,-6) +
   P("35,35 60,60 35,60",R,6) +
@@ -522,43 +473,51 @@ const syw = [
   P("35,165 60,140 35,140",R,6) +
   P("165,165 140,140 165,140",R,6)],
 
+/* 24 */
 ["24","SYW + Crossing",
   txt(100,124,"SYW",52,B,800,-6) +
   L(45,50,155,150,R,6) +
   L(155,50,45,150,R,3)],
 
+/* 25 */
 ["25","SYW Inside Path",
   `<path d="M30 145H65V55H135V145H170"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(100,123,"SYW",38,B,800,-4) +
   L(65,100,135,100,R,6)],
 
+/* 26 */
 ["26","Y as Arrow",
   txt(65,124,"S",58,B,800,-5) +
   txt(135,124,"W",58,B,800,-5) +
   P("100,150 100,70 80,90 100,70 120,90",R,8)],
 
+/* 27 */
 ["27","SYW + Breakout",
   txt(100,123,"SYW",48,B,800,-5) +
   P("135,75 155,55 145,55",R,7) +
   P("155,55 155,65",R,7) +
   P("65,125 45,145 55,145",R,7)],
 
+/* 28 */
 ["28","Enclosed Y",
   RCT(38,42,124,116,"none",B,8) +
   P("68,68 100,108 132,68 100,108 100,140",R,8) +
   txt(100,155,"SYW",24,B,800,-2)],
 
+/* 29 */
 ["29","SYW + Broken Circle",
   `<path d="M100 34A66 66 0 1 1 45 64M155 136A66 66 0 0 1 100 166"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(100,123,"SYW",38,B,800,-4) +
   L(77,52,87,43,R,5)],
 
+/* 30 */
 ["30","Offset Shadow",
   txt(96,122,"SYW",53,B,800,-6) +
   txt(105,131,"SYW",53,R,800,-6)],
 
+/* 31 */
 ["31","SYW + Vertical Opening",
   RCT(36,45,128,110,B,B,0) +
   RCT(91,45,18,110,W,W,0) +
@@ -566,6 +525,7 @@ const syw = [
   L(100,48,100,70,R,5) +
   L(100,130,100,152,R,5)],
 
+/* 32 */
 ["32","Three Structures",
   RCT(35,48,32,104,B,B,0) +
   RCT(84,48,32,104,B,B,0) +
@@ -574,12 +534,14 @@ const syw = [
   L(67,100,84,100,R,6) +
   L(116,100,133,100,R,6)],
 
+/* 33 */
 ["33","SYW + Diagonal Opening",
   `<path d="M38 48H162V152H38Z" fill="none" stroke="${B}" stroke-width="8"/>
    <path d="M58 145L142 55" stroke="${W}" stroke-width="19"/>
    <path d="M58 145L142 55" stroke="${R}" stroke-width="4"/>` +
   txt(100,123,"SYW",36,B,800,-4)],
 
+/* 34 */
 ["34","SYW Behind Bars",
   txt(100,124,"SYW",49,B,800,-5) +
   L(55,45,55,155,R,5) +
@@ -587,6 +549,7 @@ const syw = [
   L(118,45,118,155,R,5) +
   L(145,45,145,155,R,5)],
 
+/* 35 */
 ["35","SYW + Something Happening",
   `<path d="M30 145L55 118L42 95L68 72L58 48
            M170 145L145 118L158 95L132 72L142 48"
@@ -595,6 +558,7 @@ const syw = [
    ${L(84,100,116,100,R,7)}
    ${L(100,38,100,58,R,6)}`],
 
+/* 36 */
 ["36","Exploding Frame",
   txt(100,124,"SYW",48,B,800,-5) +
   P("42,42 62,62",R,6) +
@@ -603,30 +567,35 @@ const syw = [
   P("158,158 138,138",R,6) +
   P("100,25 100,48",R,6)],
 
+/* 37 */
 ["37","SYW + Offset Wall",
   RCT(45,60,95,80,"none",B,9) +
   RCT(65,42,95,80,"none",B,3) +
   txt(100,123,"SYW",38,B,800,-4) +
   L(45,100,65,100,R,6)],
 
+/* 38 */
 ["38","Interlocking Frames",
   `<rect x="38" y="55" width="80" height="90" fill="none" stroke="${B}" stroke-width="8"/>
    <rect x="82" y="55" width="80" height="90" fill="none" stroke="${B}" stroke-width="8"/>` +
   txt(100,123,"SYW",36,B,800,-4) +
   L(78,100,122,100,R,6)],
 
+/* 39 */
 ["39","SYW + Expanding Gap",
   `<path d="M30 55H78V145H30M170 55H122V145H170"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(100,124,"SYW",43,B,800,-4) +
   L(84,100,116,100,R,8)],
 
+/* 40 */
 ["40","Letter Collision",
   txt(70,122,"S",65,B,800,-7) +
   txt(110,122,"Y",65,B,800,-7) +
   txt(140,122,"W",65,B,800,-7) +
   L(84,55,116,55,R,7)],
 
+/* 41 */
 ["41","SYW + Exit",
   txt(100,123,"SYW",48,B,800,-5) +
   L(135,100,170,100,R,7) +
@@ -634,28 +603,34 @@ const syw = [
   L(170,100,157,113,R,7) +
   L(30,100,55,100,B,7)],
 
+/* 42 */
 ["42","SYW in Tunnel",
   `<path d="M30 45H170V155H30Z" fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M58 70H142V130H58Z" fill="none" stroke="${B}" stroke-width="5"/>` +
   txt(100,122,"SYW",35,B,800,-3) +
   L(78,100,122,100,R,6)],
 
+/* 43 */
 ["43","Broken Topology",
   `<path d="M40 145V55H75L100 90L125 55H160V145"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(100,126,"SYW",35,B,800,-3) +
   P("100,90 100,150",R,7)],
 
+/* 44 */
 ["44","SYW + Orbit",
   txt(100,123,"SYW",45,B,800,-4) +
   `<path d="M45 100C45 62 75 38 112 42C145 46 166 70 160 105"
     fill="none" stroke="${R}" stroke-width="6"/>
-   <path d="M155 94L160 105L148 106" fill="none" stroke="${R}" stroke-width="6"/>`],
+   <path d="M155 94L160 105L148 106"
+    fill="none" stroke="${R}" stroke-width="6"/>`],
 
+/* 45 */
 ["45","SYW + Fractured Ground",
   txt(100,112,"SYW",48,B,800,-5) +
   P("35,145 65,135 82,148 100,132 120,147 140,135 165,145",R,6)],
 
+/* 46 */
 ["46","SYW + Rising Lines",
   txt(100,122,"SYW",46,B,800,-5) +
   L(55,155,70,120,R,5) +
@@ -663,6 +638,7 @@ const syw = [
   L(128,120,138,155,R,5) +
   L(145,120,160,155,R,5)],
 
+/* 47 */
 ["47","SYW + Falling Pieces",
   txt(100,120,"SYW",47,B,800,-5) +
   RCT(45,45,15,15,R,R,0) +
@@ -670,6 +646,7 @@ const syw = [
   RCT(153,55,8,8,R,R,0) +
   RCT(38,75,10,10,R,R,0)],
 
+/* 48 */
 ["48","SYW + Pressure",
   txt(100,123,"SYW",48,B,800,-5) +
   P("25,100 50,100 62,88",R,7) +
@@ -677,34 +654,29 @@ const syw = [
   L(50,75,70,85,R,5) +
   L(150,75,130,85,R,5)],
 
+/* 49 */
 ["49","SYW + Portal",
   `<path d="M48 150V72C48 42 72 32 100 32C128 32 152 42 152 72V150"
     fill="none" stroke="${B}" stroke-width="9"/>` +
   txt(100,125,"SYW",39,B,800,-4) +
   L(100,70,100,45,R,6)],
 
+/* 50 */
 ["50","SYW — Signature",
   txt(100,124,"SYW",55,B,800,-7) +
   `<path d="M42 145C65 165 135 165 158 145"
     fill="none" stroke="${R}" stroke-width="7"/>
    <path d="M42 145L55 143M158 145L145 143"
-    stroke="${R}" stroke-width="5"/>`]
+    stroke="${R}" stroke-width="5"/>`],
 
-];
-
-
-/* ==========================================================
-   25 ABSTRACT BREAKTHROUGH CONCEPTS
-========================================================== */
-
-const breakthrough = [
-
+/* 51 */
 ["51","Pressure Point",
   circle(100,100,60,"none",B,10) +
   circle(100,100,16,R,R,0) +
   L(100,25,100,78,R,6) +
   L(100,122,100,175,R,6)],
 
+/* 52 */
 ["52","Forced Apart",
   RCT(28,55,52,90,B,B,0) +
   RCT(120,55,52,90,B,B,0) +
@@ -712,33 +684,43 @@ const breakthrough = [
   L(28,100,10,100,R,5) +
   L(172,100,190,100,R,5)],
 
+/* 53 */
 ["53","Emergence",
-  `<path d="M35 145V55H165V145" fill="none" stroke="${B}" stroke-width="11"/>
+  `<path d="M35 145V55H165V145"
+    fill="none" stroke="${B}" stroke-width="11"/>
    <path d="M100 145V78" stroke="${R}" stroke-width="9"/>
-   <path d="M100 78L82 96M100 78L118 96" stroke="${R}" stroke-width="8"/>`],
+   <path d="M100 78L82 96M100 78L118 96"
+    stroke="${R}" stroke-width="8"/>`],
 
+/* 54 */
 ["54","Shattered Center",
-  `<path d="M40 40H160V160H40Z" fill="none" stroke="${B}" stroke-width="9"/>
+  `<path d="M40 40H160V160H40Z"
+    fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M100 40L87 72L112 91L91 112L110 132L100 160"
-     fill="none" stroke="${R}" stroke-width="7"/>
-   <path d="M100 82L68 100M100 82L132 100" stroke="${R}" stroke-width="6"/>`],
+    fill="none" stroke="${R}" stroke-width="7"/>
+   <path d="M100 82L68 100M100 82L132 100"
+    stroke="${R}" stroke-width="6"/>`],
 
+/* 55 */
 ["55","Displacement",
   RCT(32,60,62,80,B,B,0) +
   RCT(106,48,62,80,B,B,0) +
   L(94,100,106,100,R,8)],
 
+/* 56 */
 ["56","Opening Forms",
   `<path d="M35 45H80V80H120V45H165
            M35 155H80V120H120V155H165"
     fill="none" stroke="${B}" stroke-width="10"/>` +
   L(80,100,120,100,R,8)],
 
+/* 57 */
 ["57","Breakout Arrow",
   RCT(35,55,130,90,"none",B,10) +
   L(55,100,150,100,R,9) +
   P("130,80 150,100 130,120",R,9)],
 
+/* 58 */
 ["58","Compression",
   L(30,55,85,55,B,14) +
   L(30,145,85,145,B,14) +
@@ -746,11 +728,14 @@ const breakthrough = [
   L(170,145,115,145,B,14) +
   L(85,100,115,100,R,9)],
 
+/* 59 */
 ["59","Split Orbit",
-  `<path d="M100 35A65 65 0 0 0 35 100M100 165A65 65 0 0 0 165 100"
+  `<path d="M100 35A65 65 0 0 0 35 100
+           M100 165A65 65 0 0 0 165 100"
     fill="none" stroke="${B}" stroke-width="10"/>` +
   L(78,100,122,100,R,8)],
 
+/* 60 */
 ["60","Impact Diamond",
   `<path d="M100 30L170 100L100 170L30 100Z"
     fill="none" stroke="${B}" stroke-width="9"/>
@@ -760,60 +745,77 @@ const breakthrough = [
    ${L(40,100,75,100,R,5)}
    ${L(125,100,160,100,R,5)}`],
 
+/* 61 */
 ["61","Moving Planes",
   `<path d="M25 50H75L105 100L75 150H25
            M175 50H125L95 100L125 150H175"
     fill="none" stroke="${B}" stroke-width="10"/>` +
   L(78,100,122,100,R,8)],
 
+/* 62 */
 ["62","Break In",
-  `<path d="M35 45H165V155H35" fill="none" stroke="${B}" stroke-width="10"/>
+  `<path d="M35 45H165V155H35"
+    fill="none" stroke="${B}" stroke-width="10"/>
    <path d="M35 100H85L100 82L115 100H165"
-     fill="none" stroke="${R}" stroke-width="8"/>`],
+    fill="none" stroke="${R}" stroke-width="8"/>`],
 
+/* 63 */
 ["63","Break Out",
-  `<path d="M35 45H165V155H35" fill="none" stroke="${B}" stroke-width="10"/>
+  `<path d="M35 45H165V155H35"
+    fill="none" stroke="${B}" stroke-width="10"/>
    <path d="M100 155V95L82 113M100 95L118 113"
-     fill="none" stroke="${R}" stroke-width="9"/>`],
+    fill="none" stroke="${R}" stroke-width="9"/>`],
 
+/* 64 */
 ["64","Unstable Stack",
   RCT(48,48,104,30,B,B,0) +
   RCT(38,85,70,30,B,B,0) +
   RCT(92,122,70,30,B,B,0) +
   L(82,100,118,100,R,7)],
 
+/* 65 */
 ["65","Missing Center",
   RCT(35,45,130,110,B,B,0) +
   RCT(80,80,40,40,W,W,0) +
   circle(100,100,13,"none",R,6)],
 
+/* 66 */
 ["66","Fracture Wave",
   `<path d="M30 100L58 100L70 75L86 125L103 82L120 118L138 95L170 100"
     fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M30 100L58 100L70 75L86 125L103 82L120 118L138 95L170 100"
     fill="none" stroke="${R}" stroke-width="3"/>`],
 
+/* 67 */
 ["67","Escaping Geometry",
   RCT(55,55,90,90,"none",B,10) +
   P("100,100 130,70 160,40",R,9) +
   P("160,40 145,43M160,40 157,55",R,7)],
 
+/* 68 */
 ["68","Structural Tear",
-  `<path d="M35 45H165V155H35Z" fill="none" stroke="${B}" stroke-width="9"/>
+  `<path d="M35 45H165V155H35Z"
+    fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M100 45L91 75L108 95L91 120L105 155"
-     fill="none" stroke="${R}" stroke-width="9"/>`],
+    fill="none" stroke="${R}" stroke-width="9"/>`],
 
+/* 69 */
 ["69","Two Worlds",
-  `<circle cx="65" cy="100" r="42" fill="none" stroke="${B}" stroke-width="10"/>
-   <circle cx="135" cy="100" r="42" fill="none" stroke="${B}" stroke-width="10"/>
-   <path d="M94 100H106" stroke="${R}" stroke-width="10"/>`],
+  `<circle cx="65" cy="100" r="42"
+    fill="none" stroke="${B}" stroke-width="10"/>
+   <circle cx="135" cy="100" r="42"
+    fill="none" stroke="${B}" stroke-width="10"/>
+   <path d="M94 100H106"
+    stroke="${R}" stroke-width="10"/>`],
 
+/* 70 */
 ["70","Opening Portal",
   `<path d="M48 150V65C48 42 70 32 100 32C130 32 152 42 152 65V150"
     fill="none" stroke="${B}" stroke-width="11"/>
    <path d="M100 150V78M82 96L100 78L118 96"
     fill="none" stroke="${R}" stroke-width="8"/>`],
 
+/* 71 */
 ["71","Fragments Moving",
   RCT(45,72,35,56,B,B,0) +
   RCT(82,50,35,45,B,B,0) +
@@ -821,16 +823,22 @@ const breakthrough = [
   P("80,100 100,100 120,100",R,8) +
   P("100,100 110,90 110,110",R,6)],
 
+/* 72 */
 ["72","Central Release",
-  `<path d="M35 45H165V155H35Z" fill="none" stroke="${B}" stroke-width="9"/>
+  `<path d="M35 45H165V155H35Z"
+    fill="none" stroke="${B}" stroke-width="9"/>
    <path d="M100 145V55M100 55L85 72M100 55L115 72"
-     stroke="${R}" stroke-width="9" fill="none"/>`],
+    stroke="${R}" stroke-width="9"
+    fill="none"/>`],
 
+/* 73 */
 ["73","Tension",
-  `<path d="M35 55L80 100L35 145M165 55L120 100L165 145"
+  `<path d="M35 55L80 100L35 145
+           M165 55L120 100L165 145"
     fill="none" stroke="${B}" stroke-width="11"/>
    <circle cx="100" cy="100" r="14" fill="${R}"/>`],
 
+/* 74 */
 ["74","One Clean Break",
   L(30,100,78,100,B,14) +
   L(122,100,170,100,B,14) +
@@ -839,68 +847,26 @@ const breakthrough = [
   L(122,100,109,87,R,7) +
   L(122,100,109,113,R,7)],
 
+/* 75 */
 ["75","Beyond",
   `<path d="M30 55H95V145H30
            M170 55H105V145H170"
     fill="none" stroke="${B}" stroke-width="11"/>
-   <path d="M72 100H145" stroke="${R}" stroke-width="8"/>
+   <path d="M72 100H145"
+    stroke="${R}" stroke-width="8"/>
    <path d="M128 82L150 100L128 118"
-     fill="none" stroke="${R}" stroke-width="8"/>`
+    fill="none" stroke="${R}" stroke-width="8"/>`
 
 ];
 
+const gallery = document.getElementById("gallery");
 
-/* ==========================================================
-   BUILD GALLERIES
-========================================================== */
-
-const sywGallery = document.getElementById("sywGallery");
-const breakGallery = document.getElementById("breakGallery");
-
-syw.forEach(x => {
-  sywGallery.insertAdjacentHTML(
+concepts.forEach(item => {
+  gallery.insertAdjacentHTML(
     "beforeend",
-    card(x[0], x[1], x[2], "syw")
+    card(item[0], item[1], item[2])
   );
 });
-
-breakthrough.forEach(x => {
-  breakGallery.insertAdjacentHTML(
-    "beforeend",
-    card(x[0], x[1], x[2], "break")
-  );
-});
-
-
-/* ==========================================================
-   FILTERS
-========================================================== */
-
-function showAll() {
-  document.querySelectorAll(".card").forEach(card => {
-    card.classList.remove("hidden");
-  });
-
-  activate(0);
-}
-
-function showType(type) {
-  document.querySelectorAll(".card").forEach(card => {
-    if (card.classList.contains(type)) {
-      card.classList.remove("hidden");
-    } else {
-      card.classList.add("hidden");
-    }
-  });
-
-  activate(type === "syw" ? 1 : 2);
-}
-
-function activate(index) {
-  document.querySelectorAll(".filter").forEach((button, i) => {
-    button.classList.toggle("active", i === index);
-  });
-}
 
 </script>
 
