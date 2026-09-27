@@ -9,73 +9,116 @@
   <meta name="description" content="You don't actually want every woman to say yes. Attraction gets you to the conversation. The conversation tells you whether there's anything more.">
 
   <style>
+    :root {
+      --text: #171717;
+      --muted: #555;
+      --white: #ffffff;
+      --gray: #e2e2e0;
+      --border: #d2d2d0;
+      --accent: #a94f32;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: #f7f4ee;
-      color: #222;
+      background: var(--white);
+      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 24px 30px;
+      padding: 18px 30px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 18px;
-      font-weight: 700;
-      color: #222;
+      color: var(--text);
       text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 28px;
     }
 
     .nav-links a {
-      color: #555;
+      color: var(--text);
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500;
     }
 
     .nav-links a:hover {
-      color: #111;
+      color: var(--accent);
     }
 
-    main {
-      max-width: 720px;
-      margin: 55px auto 90px;
-      padding: 0 25px;
+    .hero {
+      background: var(--gray);
+      padding: 60px 30px 48px;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     h1 {
+      max-width: 850px;
+      margin: 0;
       font-size: 42px;
       line-height: 1.12;
-      margin: 0 0 10px;
       letter-spacing: -1px;
     }
 
     .read-time {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 42px;
+      margin-top: 14px;
+      color: #666;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .article-section {
+      background: var(--white);
+      padding: 55px 30px 80px;
     }
 
     article {
+      max-width: 720px;
+      margin: 0 auto;
       font-size: 17px;
     }
 
@@ -93,15 +136,15 @@
 
     hr {
       border: 0;
-      border-top: 1px solid #ddd7ce;
+      border-top: 1px solid var(--border);
       margin: 42px 0;
     }
 
     .memoir-box {
       margin-top: 50px;
-      padding: 28px;
-      background: #eeeae2;
-      border-radius: 4px;
+      padding: 30px;
+      background: #f3f3f1;
+      border: 1px solid var(--border);
       text-align: center;
     }
 
@@ -111,70 +154,85 @@
 
     .memoir-link {
       display: inline-block;
-      padding: 11px 18px;
-      background: #222;
-      color: #fff;
+      padding: 12px 20px;
+      background: var(--text);
+      color: var(--white);
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: .3px;
+      letter-spacing: 0.3px;
     }
 
     .memoir-link:hover {
-      background: #444;
+      background: var(--accent);
     }
 
     .article-nav {
-      margin-top: 65px;
+      max-width: 720px;
+      margin: 0 auto;
       padding-top: 28px;
-      border-top: 1px solid #ddd7ce;
+      border-top: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       gap: 20px;
     }
 
     .article-nav a {
-      color: #222;
+      color: var(--text);
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500;
     }
 
     .article-nav a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
 
     footer {
+      background: #111;
+      color: #888;
       text-align: center;
       padding: 30px 20px 45px;
-      color: #888;
       font-size: 12px;
     }
 
-    @media (max-width: 700px) {
-      nav {
-        padding: 20px;
-        align-items: flex-start;
+    @media (max-width: 750px) {
+      .nav-inner {
+        padding: 16px 18px;
       }
 
       .nav-links {
-        gap: 12px;
+        gap: 15px;
       }
 
       .nav-links a {
         font-size: 13px;
       }
+    }
 
-      main {
-        margin-top: 35px;
-        padding: 0 20px;
+    @media (max-width: 700px) {
+      .hero {
+        padding: 50px 20px 42px;
       }
 
       h1 {
         font-size: 34px;
       }
 
+      .article-section {
+        padding: 42px 20px 65px;
+      }
+
       article {
         font-size: 16px;
+      }
+
+      article p {
+        margin-bottom: 23px;
+      }
+
+      .memoir-box {
+        padding: 25px 20px;
       }
 
       .article-nav {
@@ -188,23 +246,32 @@
 <body>
 
   <nav>
-    <a class="logo" href="index.html">Smash Your Wall</a>
+    <div class="nav-inner">
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about-me.html">About Me</a>
-      <a href="memoir.html">Memoir</a>
-      <a href="articles.html">Articles</a>
-      <a href="work-with-me.html">Work With Me</a>
-      <a href="faq.html">FAQ</a>
+      <a href="index.html" class="logo">
+        SMASH YOUR WALL
+      </a>
+
+      <div class="nav-links">
+        <a href="about-me.html">About Me</a>
+        <a href="memoir.html">My Memoir</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
     </div>
   </nav>
 
-  <main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Article</div>
+      <h1>You Don't Actually Want Every Woman to Say Yes</h1>
+      <div class="read-time">7 min read</div>
+    </div>
+  </section>
 
-    <h1>You Don't Actually Want Every Woman to Say Yes</h1>
-    <div class="read-time">7 min read</div>
-
+  <section class="article-section">
     <article>
 
       <p>Can you imagine if every woman said yes to you?</p>
@@ -454,8 +521,7 @@
       <a href="article-what-makes-an-approach-creepy.html">← Previous</a>
       <a href="articles.html">All Articles</a>
     </div>
-
-  </main>
+  </section>
 
   <footer>
     © Smash Your Wall
