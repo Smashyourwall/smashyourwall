@@ -195,7 +195,7 @@ h1 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 footer {
@@ -280,9 +280,9 @@ footer {
 </section>
 
 <div class="controls">
-  <button class="filter active" onclick="showAll()">ALL 75</button>
-  <button class="filter" onclick="showType('syw')">SYW — 50</button>
-  <button class="filter" onclick="showType('break')">BREAKTHROUGH — 25</button>
+  <button class="filter active" type="button" onclick="showAll()">ALL 75</button>
+  <button class="filter" type="button" onclick="showType('syw')">SYW — 50</button>
+  <button class="filter" type="button" onclick="showType('break')">BREAKTHROUGH — 25</button>
 </div>
 
 <section class="section">
@@ -316,24 +316,26 @@ const W = "#f4f4f2";
 
 function svg(content) {
   return `
-  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    ${content}
-  </svg>`;
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      ${content}
+    </svg>
+  `;
 }
 
 function txt(x, y, value="SYW", size=48, color=B, weight=800, spacing=-5) {
   return `
-  <text
-    x="${x}"
-    y="${y}"
-    text-anchor="middle"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="${size}"
-    font-weight="${weight}"
-    letter-spacing="${spacing}"
-    fill="${color}">
-    ${value}
-  </text>`;
+    <text
+      x="${x}"
+      y="${y}"
+      text-anchor="middle"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="${size}"
+      font-weight="${weight}"
+      letter-spacing="${spacing}"
+      fill="${color}">
+      ${value}
+    </text>
+  `;
 }
 
 function L(x1,y1,x2,y2,color=B,width=8) {
@@ -360,13 +362,14 @@ function circle(cx,cy,r,fill="none",stroke=B,width=7) {
 
 function card(num,name,content,type) {
   return `
-  <div class="card ${type}">
-    <div class="icon">${svg(content)}</div>
-    <div class="card-info">
-      <div class="number">${num}</div>
-      <div class="name">${name}</div>
+    <div class="card ${type}">
+      <div class="icon">${svg(content)}</div>
+      <div class="card-info">
+        <div class="number">${num}</div>
+        <div class="name">${name}</div>
+      </div>
     </div>
-  </div>`;
+  `;
 }
 
 
@@ -847,35 +850,55 @@ const breakthrough = [
 ];
 
 
+/* ==========================================================
+   BUILD GALLERIES
+========================================================== */
+
 const sywGallery = document.getElementById("sywGallery");
 const breakGallery = document.getElementById("breakGallery");
 
 syw.forEach(x => {
-  sywGallery.innerHTML += card(x[0],x[1],x[2],"syw");
+  sywGallery.insertAdjacentHTML(
+    "beforeend",
+    card(x[0], x[1], x[2], "syw")
+  );
 });
 
 breakthrough.forEach(x => {
-  breakGallery.innerHTML += card(x[0],x[1],x[2],"break");
+  breakGallery.insertAdjacentHTML(
+    "beforeend",
+    card(x[0], x[1], x[2], "break")
+  );
 });
 
 
+/* ==========================================================
+   FILTERS
+========================================================== */
+
 function showAll() {
-  document.querySelectorAll(".card").forEach(x => {
-    x.classList.remove("hidden");
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.remove("hidden");
   });
+
   activate(0);
 }
 
 function showType(type) {
-  document.querySelectorAll(".card").forEach(x => {
-    x.classList.toggle("hidden",!x.classList.contains(type));
+  document.querySelectorAll(".card").forEach(card => {
+    if (card.classList.contains(type)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
   });
+
   activate(type === "syw" ? 1 : 2);
 }
 
 function activate(index) {
-  document.querySelectorAll(".filter").forEach((x,i) => {
-    x.classList.toggle("active",i === index);
+  document.querySelectorAll(".filter").forEach((button, i) => {
+    button.classList.toggle("active", i === index);
   });
 }
 
