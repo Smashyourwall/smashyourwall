@@ -55,7 +55,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
     }
 
     .brand {
@@ -76,16 +75,15 @@
 
     .brand-name {
       color: var(--text);
+      text-decoration: none;
       font-size: 15px;
       font-weight: 700;
       letter-spacing: 1.5px;
-      line-height: 1.1;
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
       gap: 28px;
     }
 
@@ -94,7 +92,6 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -105,20 +102,20 @@
 
     .hero {
       background: var(--gray);
-      padding: 75px 30px 80px;
+      padding: 70px 30px 75px;
     }
 
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
-      gap: 70px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 65px;
       align-items: center;
     }
 
     .eyebrow {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: var(--accent);
       font-size: 12px;
       font-weight: 700;
@@ -129,15 +126,14 @@
     .hero h1 {
       max-width: 700px;
       margin: 0 0 25px;
-      font-size: 58px;
-      line-height: 1.04;
+      font-size: 56px;
+      line-height: 1.05;
       letter-spacing: -2px;
     }
 
     .hero-copy {
       max-width: 650px;
-      font-size: 18px;
-      line-height: 1.75;
+      font-size: 17px;
     }
 
     .hero-copy p {
@@ -145,33 +141,33 @@
     }
 
     .hero-copy .nothing {
-      font-size: 25px;
-      line-height: 1.2;
-      margin: 8px 0 22px;
+      margin-top: 5px;
+      margin-bottom: 22px;
+      font-size: 22px;
     }
 
     .hero-cta {
       display: inline-block;
-      margin-top: 10px;
-      padding: 14px 22px;
+      margin-top: 8px;
+      padding: 12px 20px;
       background: var(--accent);
       color: var(--white);
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
     }
 
     .hero-cta:hover {
       background: var(--text);
     }
 
-    /* 20 FOOT WALL CARD */
+    /* 20 FOOT WALL */
 
     .wall-card {
       position: relative;
-      min-height: 390px;
-      padding: 42px 38px;
+      min-height: 360px;
+      padding: 38px;
       background: var(--white);
       border: 1px solid var(--border);
       display: flex;
@@ -181,9 +177,7 @@
     }
 
     .wall-card-label {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       color: var(--accent);
       font-size: 12px;
       font-weight: 700;
@@ -191,60 +185,39 @@
     }
 
     .wall-card h2 {
-      position: relative;
-      z-index: 2;
-      margin: 0 0 22px;
+      margin: 0 0 20px;
       font-size: 30px;
       line-height: 1.2;
       letter-spacing: -0.5px;
     }
 
     .wall-card p {
-      position: relative;
-      z-index: 2;
       max-width: 390px;
       margin: 0;
+      color: var(--muted);
       font-size: 16px;
       line-height: 1.7;
-      color: var(--muted);
     }
 
-    .wall-card .wall-graphic {
+    .wall-graphic {
       position: absolute;
-      right: -35px;
-      bottom: -30px;
-      width: 230px;
-      height: 230px;
+      right: -25px;
+      bottom: -25px;
+      width: 220px;
+      height: 220px;
       opacity: 0.07;
-      z-index: 1;
     }
 
     /* PILLARS */
 
     .pillars {
       background: var(--white);
-      padding: 85px 30px;
+      padding: 75px 30px 80px;
     }
 
     .pillars-inner {
       max-width: 1100px;
       margin: 0 auto;
-    }
-
-    .section-heading {
-      max-width: 700px;
-      margin-bottom: 45px;
-    }
-
-    .section-heading .eyebrow {
-      margin-bottom: 12px;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      font-size: 38px;
-      line-height: 1.15;
-      letter-spacing: -1px;
     }
 
     .pillar-grid {
@@ -254,20 +227,20 @@
     }
 
     .pillar {
-      padding: 32px 28px 35px;
+      padding: 30px 28px 32px;
       border: 1px solid var(--border);
       background: var(--white);
     }
 
     .pillar-number {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       color: var(--accent);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
     }
 
-    .pillar h3 {
+    .pillar h2 {
       margin: 0 0 15px;
       font-size: 22px;
       line-height: 1.25;
@@ -280,11 +253,11 @@
       line-height: 1.7;
     }
 
-    /* BOTTOM CALLOUTS */
+    /* CALLOUTS */
 
     .callouts {
       background: var(--gray);
-      padding: 70px 30px;
+      padding: 65px 30px;
     }
 
     .callouts-inner {
@@ -296,7 +269,7 @@
     }
 
     .callout {
-      padding: 38px 35px;
+      padding: 35px;
       background: var(--white);
       border: 1px solid var(--border);
     }
@@ -308,18 +281,16 @@
     }
 
     .callout h2 {
-      margin: 0 0 14px;
+      margin: 0 0 15px;
       font-size: 28px;
       line-height: 1.2;
-      letter-spacing: -0.5px;
     }
 
     .callout p {
       max-width: 480px;
-      margin: 0 0 24px;
+      margin: 0 0 20px;
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.7;
     }
 
     .callout.primary p {
@@ -352,11 +323,11 @@
       color: var(--text);
     }
 
-    /* ABOUT LINK */
+    /* ABOUT */
 
     .about-link-section {
       background: var(--white);
-      padding: 55px 30px 70px;
+      padding: 50px 30px 65px;
       text-align: center;
     }
 
@@ -397,7 +368,7 @@
       }
 
       .hero {
-        padding: 60px 25px 65px;
+        padding: 55px 25px 65px;
       }
 
       .hero-inner {
@@ -409,20 +380,8 @@
         font-size: 48px;
       }
 
-      .wall-card {
-        min-height: 330px;
-      }
-
-      .pillars {
-        padding: 65px 25px;
-      }
-
       .pillar-grid {
         grid-template-columns: 1fr;
-      }
-
-      .callouts {
-        padding: 55px 25px;
       }
 
       .callouts-inner {
@@ -432,7 +391,7 @@
 
     @media (max-width: 650px) {
       .nav-inner {
-        align-items: center;
+        padding: 10px 18px;
       }
 
       .brand {
@@ -450,7 +409,7 @@
       }
 
       .nav-links {
-        gap: 12px;
+        gap: 13px;
       }
 
       .nav-links a {
@@ -463,12 +422,11 @@
       }
 
       .hero {
-        padding: 50px 20px 55px;
+        padding: 48px 20px 55px;
       }
 
       .hero h1 {
         font-size: 40px;
-        letter-spacing: -1.5px;
       }
 
       .hero-copy {
@@ -476,8 +434,8 @@
       }
 
       .wall-card {
-        padding: 32px 25px;
-        min-height: 300px;
+        min-height: 310px;
+        padding: 30px 25px;
       }
 
       .wall-card h2 {
@@ -485,19 +443,19 @@
       }
 
       .pillars {
-        padding: 55px 20px;
-      }
-
-      .section-heading h2 {
-        font-size: 32px;
+        padding: 55px 20px 65px;
       }
 
       .callouts {
-        padding: 45px 20px;
+        padding: 50px 20px;
       }
 
       .callout {
         padding: 30px 25px;
+      }
+
+      .about-link-section {
+        padding: 45px 20px 55px;
       }
     }
   </style>
@@ -510,7 +468,7 @@
 
       <a href="index.html" class="brand">
 
-        <!-- SYW LOGO -->
+        <!-- LARGE SYW LOGO -->
         <svg
           class="logo-mark"
           viewBox="0 0 220 150"
@@ -565,16 +523,12 @@
 
   <main>
 
-    <!-- HERO -->
-
     <section class="hero">
       <div class="hero-inner">
 
         <div class="hero-copy">
 
-          <div class="eyebrow">
-            Smash Your Wall
-          </div>
+          <div class="eyebrow">Smash Your Wall</div>
 
           <h1>
             Break Through Approach Anxiety
@@ -615,8 +569,6 @@
         </div>
 
 
-        <!-- 20 FOOT WALL -->
-
         <div class="wall-card">
 
           <div class="wall-card-label">
@@ -624,16 +576,13 @@
           </div>
 
           <h2>
-            Your brain says go.<br>
-            Your body says hell no.
+            Your brain says go. Your body says hell no.
           </h2>
 
           <p>
             The gap between wanting to approach and actually walking over.
           </p>
 
-          <!-- Subtle background graphic only.
-               It does not overlap the heading. -->
           <svg
             class="wall-graphic"
             viewBox="0 0 220 220"
@@ -665,35 +614,20 @@
     </section>
 
 
-    <!-- THREE PILLARS -->
-
     <section class="pillars">
       <div class="pillars-inner">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            What Changes
-          </div>
-
-          <h2>
-            The goal isn't to become someone else.
-          </h2>
-
-        </div>
-
 
         <div class="pillar-grid">
 
           <div class="pillar">
 
             <div class="pillar-number">
-              PILLAR 01
+              01
             </div>
 
-            <h3>
+            <h2>
               Actually Approach Women
-            </h3>
+            </h2>
 
             <p>
               The goal isn't to become some completely different person.
@@ -707,12 +641,12 @@
           <div class="pillar">
 
             <div class="pillar-number">
-              PILLAR 02
+              02
             </div>
 
-            <h3>
+            <h2>
               Learn to Handle Rejection
-            </h3>
+            </h2>
 
             <p>
               She might say no. That's part of it. The goal isn't to figure
@@ -727,12 +661,12 @@
           <div class="pillar">
 
             <div class="pillar-number">
-              PILLAR 03
+              03
             </div>
 
-            <h3>
+            <h2>
               Make Approaching Feel Normal
-            </h3>
+            </h2>
 
             <p>
               Approaching women can feel like defusing a bomb at first.
@@ -748,8 +682,6 @@
       </div>
     </section>
 
-
-    <!-- MEMOIR / WORK WITH ME -->
 
     <section class="callouts">
       <div class="callouts-inner">
@@ -771,7 +703,6 @@
 
           <p>
             No email. No course. No pitch.
-            Just the story.
           </p>
 
           <a href="memoir.html" class="callout-link">
@@ -806,8 +737,6 @@
       </div>
     </section>
 
-
-    <!-- ABOUT -->
 
     <section class="about-link-section">
       <a href="about-me.html">
