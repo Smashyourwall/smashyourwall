@@ -34,6 +34,8 @@
       line-height: 1.7;
     }
 
+    /* NAV */
+
     nav {
       position: sticky;
       top: 0;
@@ -76,17 +78,23 @@
       color: var(--accent);
     }
 
+    /* HERO */
+
     .hero {
       background: var(--gray);
-      padding: 80px 30px 75px;
+      padding: 80px 30px;
     }
 
     .hero-inner {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap: 70px;
+      align-items: center;
     }
 
-    .eyebrow {
+    .hero-eyebrow {
       margin-bottom: 14px;
       color: var(--accent);
       font-size: 12px;
@@ -95,24 +103,23 @@
       text-transform: uppercase;
     }
 
-    h1 {
-      max-width: 800px;
-      margin: 0;
-      font-size: 52px;
+    .hero h1 {
+      max-width: 700px;
+      margin: 0 0 24px;
+      font-size: 54px;
       line-height: 1.08;
       letter-spacing: -1.5px;
     }
 
     .hero-copy {
-      max-width: 700px;
-      margin: 24px 0 0;
-      font-size: 19px;
-      line-height: 1.65;
+      max-width: 650px;
       color: #444;
+      font-size: 18px;
+      line-height: 1.65;
     }
 
     .hero-copy p {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
     }
 
     .hero-copy p:last-child {
@@ -125,8 +132,8 @@
 
     .hero-cta {
       display: inline-block;
-      margin-top: 26px;
-      padding: 13px 21px;
+      margin-top: 30px;
+      padding: 14px 24px;
       background: var(--text);
       color: var(--white);
       text-decoration: none;
@@ -139,145 +146,193 @@
       background: var(--accent);
     }
 
-    .content-section {
+    /* 20 FOOT WALL CARD */
+
+    .wall-card {
+      padding: 38px 34px;
       background: var(--white);
-      padding: 65px 30px 80px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
     }
 
-    .content-inner {
-      max-width: 900px;
+    .wall-card-label {
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .wall-card h2 {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    .wall-quote {
+      margin: 0 0 22px;
+      font-size: 23px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .wall-card p:last-child {
+      margin: 0;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* PILLARS */
+
+    .pillars-section {
+      background: var(--white);
+      padding: 75px 30px 80px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .content-block {
+    .section-heading {
       max-width: 720px;
-      margin: 0 auto;
-      padding: 42px 0;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
     }
 
-    .content-block:first-child {
-      padding-top: 0;
+    .section-eyebrow {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-    .content-block:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
+    .section-heading h2 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
     }
 
-    h2 {
-      margin: 0 0 18px;
-      font-size: 28px;
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pillar {
+      padding: 30px 28px;
+      border: 1px solid var(--border);
+    }
+
+    .pillar-number {
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .pillar h3 {
+      margin: 0 0 15px;
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .pillar p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* BOTTOM CALLOUTS */
+
+    .callouts-section {
+      background: var(--gray);
+      padding: 70px 30px 80px;
+    }
+
+    .callouts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .callout {
+      padding: 34px 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .callout.primary {
+      background: var(--text);
+      color: var(--white);
+      border-color: var(--text);
+    }
+
+    .callout h2 {
+      margin: 0 0 15px;
+      font-size: 26px;
       line-height: 1.2;
       letter-spacing: -0.4px;
     }
 
-    .content-block p {
-      margin: 0 0 23px;
-      font-size: 17px;
+    .callout p {
+      margin: 0 0 22px;
+      font-size: 15px;
+      line-height: 1.65;
     }
 
-    .content-block p:last-child {
-      margin-bottom: 0;
+    .callout.primary p {
+      color: #ddd;
     }
 
-    .content-block strong {
-      font-weight: 700;
-    }
-
-    .text-link {
+    .callout-link {
       display: inline-block;
       color: var(--text);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
-    .text-link:hover {
+    .callout-link:hover {
       color: var(--accent);
     }
 
-    .memoir-box {
-      margin-top: 5px;
-      padding: 32px;
-      background: #f3f3f1;
-      border: 1px solid var(--border);
+    .callout.primary .callout-link {
+      color: var(--white);
+    }
+
+    .callout.primary .callout-link:hover {
+      color: #d88a6f;
+    }
+
+    /* ABOUT LINK */
+
+    .about-section {
+      background: var(--white);
+      padding: 55px 30px 65px;
       text-align: center;
     }
 
-    .memoir-box h2 {
-      margin-bottom: 16px;
-    }
-
-    .memoir-box p {
-      max-width: 580px;
-      margin: 0 auto 10px;
-    }
-
-    .memoir-box .fine-print {
-      color: #666;
-      font-size: 15px;
-    }
-
-    .memoir-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      background: var(--text);
-      color: var(--white);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .memoir-link:hover {
-      background: var(--accent);
-    }
-
-    .work-box {
-      margin-top: 5px;
-      padding: 32px;
-      border: 1px solid var(--border);
-    }
-
-    .work-box h2 {
-      margin-bottom: 16px;
-    }
-
-    .work-box p {
-      max-width: 650px;
-    }
-
-    .work-link {
-      display: inline-block;
-      margin-top: 4px;
-      padding: 12px 20px;
-      background: var(--text);
-      color: var(--white);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .work-link:hover {
-      background: var(--accent);
-    }
-
-    .about-link {
-      display: block;
-      margin-top: 30px;
+    .about-section a {
       color: var(--text);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      text-align: center;
     }
 
-    .about-link:hover {
+    .about-section a:hover {
       color: var(--accent);
     }
+
+    /* FOOTER */
 
     footer {
       background: #111;
@@ -285,6 +340,27 @@
       text-align: center;
       padding: 30px 20px 45px;
       font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .callouts {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 750px) {
@@ -299,40 +375,57 @@
       .nav-links a {
         font-size: 13px;
       }
-    }
 
-    @media (max-width: 700px) {
       .hero {
-        padding: 55px 20px 52px;
+        padding: 55px 20px 60px;
       }
 
-      h1 {
+      .hero h1 {
         font-size: 38px;
       }
 
       .hero-copy {
-        font-size: 17px;
-      }
-
-      .content-section {
-        padding: 45px 20px 65px;
-      }
-
-      .content-block {
-        padding: 35px 0;
-      }
-
-      h2 {
-        font-size: 25px;
-      }
-
-      .content-block p {
         font-size: 16px;
       }
 
-      .memoir-box,
-      .work-box {
-        padding: 26px 20px;
+      .wall-card {
+        padding: 30px 25px;
+      }
+
+      .wall-card h2 {
+        font-size: 27px;
+      }
+
+      .wall-quote {
+        font-size: 21px;
+      }
+
+      .pillars-section {
+        padding: 55px 20px 65px;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .pillar {
+        padding: 26px 24px;
+      }
+
+      .callouts-section {
+        padding: 55px 20px 65px;
+      }
+
+      .callout {
+        padding: 30px 25px;
+      }
+
+      .about-section {
+        padding: 45px 20px 55px;
       }
     }
   </style>
@@ -340,175 +433,261 @@
 
 <body>
 
-<nav>
-  <div class="nav-inner">
+  <nav>
+    <div class="nav-inner">
 
-    <a href="index.html" class="logo">
-      SMASH YOUR WALL
-    </a>
-
-    <div class="nav-links">
-      <a href="about-me.html">About Me</a>
-      <a href="memoir.html">Memoir</a>
-      <a href="articles.html">Articles</a>
-      <a href="work-with-me.html">Work With Me</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-inner">
-
-    <div class="eyebrow">SMASH YOUR WALL</div>
-
-    <h1>Break Through Approach Anxiety</h1>
-
-    <div class="hero-copy">
-
-      <p>
-        You've probably thought about approaching women more times than you've actually done it.
-      </p>
-
-      <p>
-        You see her. You think about going over. Your brain says go, your body says hell no. You don't. Whatever the excuse is, you already know what happens next.
-      </p>
-
-      <p>
-        <strong>Nothing.</strong>
-      </p>
-
-      <p>
-        <strong>That's the 20 foot wall.</strong>
-      </p>
-
-      <p>
-        I've been there.
-      </p>
-
-      <p>
-        Instead of spending years thinking about doing it like I did, you can actually learn to do it.
-      </p>
-
-    </div>
-
-    <a class="hero-cta" href="work-with-me.html">WORK WITH ME</a>
-
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="content-inner">
-
-    <div class="content-block">
-
-      <h2>Actually Approach Women</h2>
-
-      <p>
-        The goal isn't to become some completely different person.
-      </p>
-
-      <p>
-        It's to be able to see a woman you're interested in, decide you want to talk to her, and actually walk over and do it.
-      </p>
-
-      <p>
-        No waiting for the perfect moment. No spending twenty minutes talking yourself into it.
-      </p>
-
-      <p>
-        Just going and accepting whatever happens, happens.
-      </p>
-
-    </div>
-
-    <div class="content-block">
-
-      <h2>Learn to Handle Rejection</h2>
-
-      <p>
-        She might say no. That's part of it.
-      </p>
-
-      <p>
-        The goal isn't to figure out how to make every woman say yes. The goal is to get to the point where hearing no doesn't stop you from approaching the next woman you actually want to talk to.
-      </p>
-
-    </div>
-
-    <div class="content-block">
-
-      <h2>Make Approaching Feel Normal</h2>
-
-      <p>
-        Approaching women can feel like defusing a bomb at first.
-      </p>
-
-      <p>
-        But the more you do something, the less foreign it becomes. Eventually, the thing that once seemed impossible can become something you simply do.
-      </p>
-
-    </div>
-
-    <div class="content-block">
-
-      <div class="memoir-box">
-
-        <h2>Read the Memoir</h2>
-
-        <p>
-          I wrote down the whole story of how I went from being terrified to approach women to actually breaking through it.
-        </p>
-
-        <p class="fine-print">
-          It's free. No email. No course. No pitch. Just the story.
-        </p>
-
-        <a class="memoir-link" href="memoir.html">
-          READ THE MEMOIR →
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="content-block">
-
-      <div class="work-box">
-
-        <h2>Work With Me</h2>
-
-        <p>
-          If you're tired of thinking about approaching women and want to actually do something about it, that's what I help with.
-        </p>
-
-        <p>
-          We don't just sit around talking about confidence.
-        </p>
-
-        <p>
-          We work on actually breaking through the wall.
-        </p>
-
-        <a class="work-link" href="work-with-me.html">
-          WORK WITH ME →
-        </a>
-
-      </div>
-
-      <a class="about-link" href="about-me.html">
-        Want to know more about me? →
+      <a href="index.html" class="logo">
+        SMASH YOUR WALL
       </a>
 
+      <div class="nav-links">
+        <a href="about-me.html">About Me</a>
+        <a href="memoir.html">My Memoir</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
     </div>
+  </nav>
 
-  </div>
-</section>
+  <main>
 
-<footer>
-  © Smash Your Wall
-</footer>
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-inner">
+
+        <div class="hero-left">
+
+          <div class="hero-eyebrow">
+            SMASH YOUR WALL
+          </div>
+
+          <h1>
+            Break Through Approach Anxiety
+          </h1>
+
+          <div class="hero-copy">
+
+            <p>
+              You've probably thought about approaching women more times than you've actually done it.
+            </p>
+
+            <p>
+              You see her. You think about going over. Your brain says go, your body says hell no. You don't. Whatever the excuse is, you already know what happens next.
+            </p>
+
+            <p>
+              <strong>Nothing.</strong>
+            </p>
+
+            <p>
+              I've been there.
+            </p>
+
+            <p>
+              Instead of spending years thinking about doing it like I did, you can actually learn to do it.
+            </p>
+
+          </div>
+
+          <a href="work-with-me.html" class="hero-cta">
+            WORK WITH ME →
+          </a>
+
+        </div>
+
+        <div class="wall-card">
+
+          <div class="wall-card-label">
+            The 20-Foot Wall
+          </div>
+
+          <h2>
+            That's the point where everything changes.
+          </h2>
+
+          <p class="wall-quote">
+            Your brain says go.<br>
+            Your body says hell no.
+          </p>
+
+          <p>
+            The gap between wanting to approach and actually walking over.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- THREE CORE PILLARS -->
+
+    <section class="pillars-section">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <div class="section-eyebrow">
+            What This Is About
+          </div>
+
+          <h2>
+            Actually breaking through the wall.
+          </h2>
+        </div>
+
+        <div class="pillars">
+
+          <div class="pillar">
+
+            <div class="pillar-number">
+              PILLAR 01
+            </div>
+
+            <h3>
+              Actually Approach Women
+            </h3>
+
+            <p>
+              The goal isn't to become some completely different person. It's to be able to see a woman you're interested in, decide you want to talk to her, and actually walk over and do it.
+            </p>
+
+            <p style="margin-top: 18px;">
+              No waiting for the perfect moment. No spending twenty minutes talking yourself into it. Just going and accepting whatever happens, happens.
+            </p>
+
+          </div>
+
+
+          <div class="pillar">
+
+            <div class="pillar-number">
+              PILLAR 02
+            </div>
+
+            <h3>
+              Learn to Handle Rejection
+            </h3>
+
+            <p>
+              She might say no. That's part of it.
+            </p>
+
+            <p style="margin-top: 18px;">
+              The goal isn't to figure out how to make every woman say yes. The goal is to get to the point where hearing no doesn't stop you from approaching the next woman you actually want to talk to.
+            </p>
+
+          </div>
+
+
+          <div class="pillar">
+
+            <div class="pillar-number">
+              PILLAR 03
+            </div>
+
+            <h3>
+              Make Approaching Feel Normal
+            </h3>
+
+            <p>
+              Approaching women can feel like defusing a bomb at first.
+            </p>
+
+            <p style="margin-top: 18px;">
+              But the more you do something, the less foreign it becomes. Eventually, the thing that once seemed impossible can become something you simply do.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- MEMOIR + WORK WITH ME -->
+
+    <section class="callouts-section">
+      <div class="section-inner">
+
+        <div class="callouts">
+
+          <div class="callout">
+
+            <h2>
+              Read the Memoir
+            </h2>
+
+            <p>
+              I wrote down the whole story of how I went from being terrified to approach women to actually breaking through it.
+            </p>
+
+            <p>
+              It's free.
+            </p>
+
+            <p>
+              No email. No course. No pitch.
+            </p>
+
+            <p>
+              Just the story.
+            </p>
+
+            <a href="memoir.html" class="callout-link">
+              READ THE MEMOIR →
+            </a>
+
+          </div>
+
+
+          <div class="callout primary">
+
+            <h2>
+              Work With Me
+            </h2>
+
+            <p>
+              If you're tired of thinking about approaching women and want to actually do something about it, that's what I help with.
+            </p>
+
+            <p>
+              We don't just sit around talking about confidence.
+            </p>
+
+            <p>
+              We work on actually breaking through the wall.
+            </p>
+
+            <a href="work-with-me.html" class="callout-link">
+              WORK WITH ME →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about-section">
+      <a href="about-me.html">
+        Want to know more about me? →
+      </a>
+    </section>
+
+  </main>
+
+
+  <footer>
+    © Smash Your Wall
+  </footer>
 
 </body>
 </html>
