@@ -1,811 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo Concepts — Smash Your Wall</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smash Your Wall — Logo Exploration</title>
 
-  <style>
-    :root {
-      --text: #171717;
-      --muted: #666;
-      --white: #ffffff;
-      --gray: #e2e2e0;
-      --border: #d2d2d0;
-      --accent: #a94f32;
-    }
+<style>
+:root {
+  --text: #171717;
+  --muted: #666;
+  --white: #ffffff;
+  --gray: #e2e2e0;
+  --light: #f4f4f2;
+  --border: #d2d2d0;
+  --accent: #a94f32;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      background: var(--white);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .logo {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-    }
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
 
-    .nav-links a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+}
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+.nav-links a:hover {
+  color: var(--accent);
+}
 
-    .hero {
-      background: var(--gray);
-      padding: 60px 30px 50px;
-    }
+.hero {
+  background: var(--gray);
+  padding: 60px 30px 50px;
+}
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .eyebrow {
-      margin-bottom: 12px;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 44px;
-      line-height: 1.1;
-      letter-spacing: -1.2px;
-    }
+h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
 
-    .intro {
-      max-width: 700px;
-      margin: 18px 0 0;
-      color: #444;
-      font-size: 17px;
-    }
+.hero p {
+  max-width: 760px;
+  margin: 17px 0 0;
+  color: #444;
+  font-size: 17px;
+  line-height: 1.65;
+}
 
-    .logos-section {
-      padding: 55px 30px 80px;
-    }
+.controls {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 30px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    .logos-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.filter {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
 
-    .logo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+.filter.active,
+.filter:hover {
+  background: var(--text);
+  color: white;
+  border-color: var(--text);
+}
 
-    .logo-card {
-      border: 1px solid var(--border);
-      background: var(--white);
-    }
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 80px;
+}
 
-    .logo-preview {
-      min-height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 45px;
-      border-bottom: 1px solid var(--border);
-      background: #fafafa;
-    }
+.section-title {
+  margin: 28px 0 8px;
+  font-size: 22px;
+}
 
-    .logo-preview svg {
-      width: 150px;
-      height: 150px;
-      max-width: 100%;
-      max-height: 100%;
-    }
+.section-description {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
 
-    .logo-info {
-      padding: 18px 20px 20px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
 
-    .number {
-      margin-bottom: 5px;
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+.card {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 9px;
+  transition: transform .15s ease, border-color .15s ease;
+}
 
-    .logo-title {
-      margin: 0 0 7px;
-      font-size: 17px;
-      line-height: 1.3;
-    }
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #999;
+}
 
-    .logo-description {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
+.icon {
+  aspect-ratio: 1;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    footer {
-      background: #111;
-      color: #888;
-      text-align: center;
-      padding: 30px 20px 45px;
-      font-size: 12px;
-    }
+.icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
-    @media (max-width: 850px) {
-      .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+.card-info {
+  padding: 11px 3px 5px;
+}
 
-    @media (max-width: 650px) {
-      .nav-inner {
-        padding: 16px 18px;
-      }
+.number {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
-      .nav-links {
-        gap: 15px;
-      }
+.name {
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-      .nav-links a {
-        font-size: 13px;
-      }
+footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+  padding: 30px 20px 45px;
+  font-size: 12px;
+}
 
-      .hero {
-        padding: 50px 20px 42px;
-      }
+.hidden {
+  display: none;
+}
 
-      h1 {
-        font-size: 34px;
-      }
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
-      .logos-section {
-        padding: 42px 20px 65px;
-      }
+@media (max-width: 700px) {
+  .nav-inner {
+    padding: 16px 18px;
+  }
 
-      .logo-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 48px 20px 40px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .controls {
+    padding: 22px 18px 0;
+  }
+
+  .section {
+    padding: 25px 18px 60px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-inner">
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">SMASH YOUR WALL</a>
 
-      <a href="index.html" class="logo">
-        SMASH YOUR WALL
-      </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about-me.html">About Me</a>
+      <a href="articles.html">Articles</a>
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </div>
+</nav>
 
-      <div class="nav-links">
-        <a href="about-me.html">About Me</a>
-        <a href="memoir.html">My Memoir</a>
-        <a href="articles.html">Articles</a>
-        <a href="work-with-me.html">Work With Me</a>
-        <a href="faq.html">FAQ</a>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Logo Exploration</div>
+    <h1>75 Directions for Smash Your Wall</h1>
+    <p>
+      50 SYW concepts and 25 wall / breakthrough concepts.
+      The goal is to find a mark that feels like a real brand rather than
+      a generic coaching logo.
+    </p>
+  </div>
+</section>
+
+<div class="controls">
+  <button class="filter active" onclick="showAll()">ALL 75</button>
+  <button class="filter" onclick="showType('syw')">SYW — 50</button>
+  <button class="filter" onclick="showType('wall')">WALL / BREAKTHROUGH — 25</button>
+</div>
+
+<section class="section">
+
+  <h2 class="section-title">SYW Lettermarks</h2>
+  <p class="section-description">
+    50 directions built around the initials S-Y-W.
+  </p>
+
+  <div class="gallery" id="syw-gallery"></div>
+
+  <h2 class="section-title">Wall / Breakthrough Marks</h2>
+  <p class="section-description">
+    25 more abstract symbols based on barriers, breaks, openings and movement through them.
+  </p>
+
+  <div class="gallery" id="wall-gallery"></div>
+
+</section>
+
+<footer>
+  Smash Your Wall — Logo Exploration
+</footer>
+
+<script>
+
+const black = "#171717";
+const red = "#a94f32";
+
+function svg(content) {
+  return `
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    ${content}
+  </svg>`;
+}
+
+function textSYW(size = 58, weight = 800, spacing = -5) {
+  return `
+    <text
+      x="100"
+      y="123"
+      text-anchor="middle"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="${size}"
+      font-weight="${weight}"
+      letter-spacing="${spacing}"
+      fill="${black}">
+      SYW
+    </text>`;
+}
+
+function line(x1,y1,x2,y2,color=black,width=9) {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
+    stroke="${color}" stroke-width="${width}" stroke-linecap="square"/>`;
+}
+
+function rect(x,y,w,h,fill="none",stroke=black,width=8) {
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}"
+    fill="${fill}" stroke="${stroke}" stroke-width="${width}"/>`;
+}
+
+function card(number, name, markup, type) {
+  return `
+    <div class="card ${type}">
+      <div class="icon">${svg(markup)}</div>
+      <div class="card-info">
+        <div class="number">${number}</div>
+        <div class="name">${name}</div>
       </div>
+    </div>`;
+}
 
-    </div>
-  </nav>
 
+/* =========================================================
+   50 SYW CONCEPTS
+========================================================= */
 
-  <section class="hero">
-    <div class="hero-inner">
+const syw = [
 
-      <div class="eyebrow">Temporary Logo Page</div>
+["01","Classic Monogram", textSYW()],
 
-      <h1>Smash Your Wall — Logo Concepts</h1>
+["02","Tight Monogram",
+  textSYW(52,800,-9)],
 
-      <p class="intro">
-        Twelve logo concepts side by side for comparison.
-      </p>
+["03","Wide Monogram",
+  textSYW(52,800,2)],
 
-    </div>
-  </section>
-
-
-  <section class="logos-section">
-    <div class="logos-inner">
-
-      <div class="logo-grid">
-
-
-        <!-- CONCEPT 1 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <polygon
-                points="35,40 82,90 35,160"
-                fill="#171717"
-              />
-
-              <polygon
-                points="165,40 118,90 165,160"
-                fill="#171717"
-              />
-
-              <polygon
-                points="100,75 125,110 100,160 75,110"
-                fill="#171717"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 01</div>
-            <h2 class="logo-title">Impact</h2>
-            <p class="logo-description">
-              Two opposing shapes creating a strong central impact.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 2 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <polygon
-                points="30,35 55,25 48,155 25,165"
-                fill="#171717"
-              />
-
-              <polygon
-                points="72,25 97,20 92,150 68,155"
-                fill="#171717"
-              />
-
-              <polygon
-                points="114,20 139,25 143,155 119,150"
-                fill="#171717"
-              />
-
-              <polygon
-                points="156,25 179,35 175,165 152,155"
-                fill="#171717"
-              />
-
-              <polygon
-                points="88,150 112,150 100,178"
-                fill="#171717"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 02</div>
-            <h2 class="logo-title">Breaking Through</h2>
-            <p class="logo-description">
-              Vertical barriers separated by movement and disruption.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 3 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <polygon
-                points="100,20 168,60 168,140 100,180 32,140 32,60"
-                fill="#171717"
-              />
-
-              <polyline
-                points="55,105 80,105 92,88 108,112 122,95 145,95"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="8"
-                stroke-linecap="square"
-                stroke-linejoin="miter"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 03</div>
-            <h2 class="logo-title">Cracked Wall</h2>
-            <p class="logo-description">
-              A solid barrier with a break running through it.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 4 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect
-                x="25"
-                y="25"
-                width="50"
-                height="150"
-                fill="#171717"
-              />
-
-              <rect
-                x="125"
-                y="25"
-                width="50"
-                height="150"
-                fill="#171717"
-              />
-
-              <polygon
-                points="72,100 110,100 110,82 142,110 110,138 110,120 72,120"
-                fill="#171717"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 04</div>
-            <h2 class="logo-title">The Opening</h2>
-            <p class="logo-description">
-              A wall with an opening and a path moving directly through it.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 5 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect
-                x="28"
-                y="35"
-                width="35"
-                height="130"
-                fill="#171717"
-              />
-
-              <rect
-                x="137"
-                y="35"
-                width="35"
-                height="130"
-                fill="#171717"
-              />
-
-              <polygon
-                points="65,100 88,82 88,94 112,94 112,82 135,100 112,118 112,106 88,106 88,118"
-                fill="#171717"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 05</div>
-            <h2 class="logo-title">Closing the Gap</h2>
-            <p class="logo-description">
-              Two barriers with directional movement toward the break.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 6 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <polygon
-                points="38,55 100,55 82,105 20,105"
-                fill="#171717"
-              />
-
-              <polygon
-                points="118,95 180,95 162,145 100,145"
-                fill="#171717"
-              />
-
-              <rect
-                x="35"
-                y="108"
-                width="130"
-                height="8"
-                fill="#171717"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 06</div>
-            <h2 class="logo-title">Shift</h2>
-            <p class="logo-description">
-              Two sections of a barrier displaced from one another.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 7 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect x="25" y="30" width="45" height="35" fill="#171717"/>
-              <rect x="75" y="30" width="45" height="35" fill="#171717"/>
-              <rect x="125" y="30" width="50" height="35" fill="#171717"/>
-
-              <rect x="25" y="70" width="65" height="35" fill="#171717"/>
-              <rect x="95" y="70" width="45" height="35" fill="#171717"/>
-              <rect x="145" y="70" width="30" height="35" fill="#171717"/>
-
-              <rect x="25" y="110" width="40" height="35" fill="#171717"/>
-              <rect x="70" y="110" width="70" height="35" fill="#171717"/>
-              <rect x="145" y="110" width="30" height="35" fill="#171717"/>
-
-              <rect x="90" y="150" width="45" height="25" fill="#171717"/>
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 07</div>
-            <h2 class="logo-title">Brick Wall</h2>
-            <p class="logo-description">
-              A literal wall construction with one section breaking away.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 8 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect
-                x="25"
-                y="25"
-                width="150"
-                height="38"
-                fill="#171717"
-              />
-
-              <rect
-                x="25"
-                y="67"
-                width="65"
-                height="38"
-                fill="#171717"
-              />
-
-              <rect
-                x="110"
-                y="67"
-                width="65"
-                height="38"
-                fill="#171717"
-              />
-
-              <rect
-                x="25"
-                y="109"
-                width="150"
-                height="38"
-                fill="#171717"
-              />
-
-              <polyline
-                points="75,67 87,82 75,105 94,109 105,93 116,82"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="8"
-                stroke-linecap="square"
-                stroke-linejoin="miter"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 08</div>
-            <h2 class="logo-title">Broken Wall</h2>
-            <p class="logo-description">
-              A stronger architectural wall treatment with a visible break.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 9 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect x="25" y="30" width="28" height="140" fill="#171717"/>
-
-              <rect x="65" y="30" width="28" height="65" fill="#171717"/>
-              <rect x="65" y="115" width="28" height="55" fill="#171717"/>
-
-              <rect x="105" y="30" width="28" height="55" fill="#171717"/>
-              <rect x="105" y="105" width="28" height="65" fill="#171717"/>
-
-              <rect x="145" y="30" width="28" height="140" fill="#171717"/>
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 09</div>
-            <h2 class="logo-title">Broken Sections</h2>
-            <p class="logo-description">
-              Repeated vertical barriers interrupted by gaps.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 10 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
-
-              <text
-                x="350"
-                y="95"
-                text-anchor="middle"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="48"
-                font-weight="700"
-                letter-spacing="4"
-                fill="#171717"
-              >
-                SMASH YOUR WALL
-              </text>
-
-              <polygon
-                points="405,35 418,35 300,125 287,125"
-                fill="#a94f32"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 10</div>
-            <h2 class="logo-title">Broken Wordmark</h2>
-            <p class="logo-description">
-              The break is built directly into the SMASH YOUR WALL wordmark.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 11 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-
-              <rect
-                x="20"
-                y="20"
-                width="160"
-                height="160"
-                fill="#171717"
-              />
-
-              <text
-                x="100"
-                y="68"
-                text-anchor="middle"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="22"
-                font-weight="700"
-                fill="#ffffff"
-              >
-                SMASH
-              </text>
-
-              <text
-                x="100"
-                y="98"
-                text-anchor="middle"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="22"
-                font-weight="700"
-                fill="#ffffff"
-              >
-                YOUR
-              </text>
-
-              <text
-                x="100"
-                y="128"
-                text-anchor="middle"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="22"
-                font-weight="700"
-                fill="#ffffff"
-              >
-                WALL
-              </text>
-
-              <polygon
-                points="105,35 115,35 93,165 83,165"
-                fill="#ffffff"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 11</div>
-            <h2 class="logo-title">Stacked Mark</h2>
-            <p class="logo-description">
-              A compact square brand mark with the name built into it.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CONCEPT 12 -->
-
-        <div class="logo-card">
-
-          <div class="logo-preview">
-
-            <svg viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
-
-              <text
-                x="250"
-                y="78"
-                text-anchor="middle"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="35"
-                font-weight="700"
-                letter-spacing="3"
-                fill="#171717"
-              >
-                SMASH YOUR WALL
-              </text>
-
-              <line
-                x1="75"
-                y1="92"
-                x2="425"
-                y2="92"
-                stroke="#a94f32"
-                stroke-width="3"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="logo-info">
-            <div class="number">Concept 12</div>
-            <h2 class="logo-title">Simple Wordmark</h2>
-            <p class="logo-description">
-              A minimal horizontal wordmark with a single dividing line.
-            </p>
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <footer>
-    © Smash Your Wall
-  </footer>
+["04","Stacked",
+  `<text x="100" y="70" text-anchor="middle" font-family="Arial" font-size="45" font-weight="800" fill="${black}">S</text>
+   <text x="100" y="116" text-anchor="middle" font-family="Arial" font-size="45" font-weight="800" fill="${black}">Y</text>
+   <text x="100" y="162" text-anchor="middle" font-family="Arial" font-size="45" font-weight="800" fill="${black}">W</text>`],
+
+["05","Vertical Stack",
+  `<text x="62" y="126" font-family="Arial" font-size="70" font-weight="800" fill="${black}">S</text>
+   <text x="100" y="126" font-family="Arial" font-size="70" font-weight="800" fill="${black}">Y</text>
+   <text x="138" y="126" font-family="Arial" font-size="70" font-weight="800" fill="${black}">W</text>`],
+
+["06","Broken Baseline",
+  textSYW(56) + line(35,145,82,145,red,7) + line(118,145,165,145,red,7)],
+
+["07","Top Break",
+  textSYW(56) + line(35,58,82,58,red,7) + line(118,58,165,58,red,7)],
+
+["08","Central Slash",
+  textSYW() + `<line x1="55" y1="153" x2="145" y2="48" stroke="${red}" stroke-width="7"/>`],
+
+["09","Reverse Slash",
+  textSYW() + `<line x1="55" y1="48" x2="145" y2="153" stroke="${red}" stroke-width="7"/>`],
+
+["10","Vertical Cut",
+  textSYW() + rect(94,38,12,125,"white","white",0) + line(100,38,100,163,red,4)],
+
+["11","Horizontal Cut",
+  textSYW() + rect(35,94,130,12,"white","white",0) + line(35,100,165,100,red,4)],
+
+["12","Diagonal Cut",
+  textSYW() + `<line x1="45" y1="55" x2="155" y2="145" stroke="white" stroke-width="12"/>
+              <line x1="45" y1="55" x2="155" y2="145" stroke="${red}" stroke-width="3"/>`],
+
+["13","Open Frame",
+  rect(40,40,120,120,"none",black,8) + textSYW(40,800,-3)],
+
+["14","Double Frame",
+  rect(30,30,140,140,"none",black,6) +
+  rect(45,45,110,110,"none",black,2) +
+  textSYW(38,800,-3)],
+
+["15","Circle",
+  `<circle cx="100" cy="100" r="65" fill="none" stroke="${black}" stroke-width="8"/>` +
+  textSYW(40,800,-3)],
+
+["16","Circle Break",
+  `<path d="M100 35 A65 65 0 1 1 54 54" fill="none" stroke="${black}" stroke-width="8"/>
+   <path d="M146 146 A65 65 0 0 1 100 165" fill="none" stroke="${black}" stroke-width="8"/>` +
+  textSYW(39,800,-3)],
+
+["17","Square Cut",
+  rect(40,40,120,120,black,black,0) +
+  `<text x="100" y="123" text-anchor="middle" font-family="Arial" font-size="48" font-weight="800" letter-spacing="-4" fill="white">SYW</text>`],
+
+["18","Black Circle",
+  `<circle cx="100" cy="100" r="66" fill="${black}"/>
+   <text x="100" y="119" text-anchor="middle" font-family="Arial" font-size="45" font-weight="800" letter-spacing="-4" fill="white">SYW</text>`],
+
+["19","Negative Y",
+  rect(38,38,124,124,black,black,0) +
+  `<path d="M68 65L100 103L132 65M100 103V140"
+   fill="none" stroke="white" stroke-width="9"/>`],
+
+["20","Three Bars",
+  rect(42,48,116,14,black,black,0) +
+  rect(42,93,116,14,black,black,0) +
+  rect(42,138,116,14,black,black,0) +
+  `<text x="100" y="128" text-anchor="middle" font-family="Arial" font-size="34" font-weight="800" fill="white">SYW</text>`],
+
+["21","Corner Frame",
+  line(42,80,42,42,black,8) + line(42,42,80,42,black,8) +
+  line(120,42,158,42,black,8) + line(158,42,158,80,black,8) +
+  line(42,120,42,158,black,8) + line(42,158,80,158,black,8) +
+  line(120,158,158,158,black,8) + line(158,120,158,158,black,8) +
+  textSYW(40,800,-3)],
+
+["22","Underline",
+  textSYW(54) + line(40,145,160,145,red,7)],
+
+["23","Overline",
+  textSYW(54) + line(40,55,160,55,red,7)],
+
+["24","Arrow Through",
+  textSYW(48,800,-4) +
+  line(35,155,165,155,red,6) +
+  line(165,155,150,145,red,6) +
+  line(165,155,150,165,red,6)],
+
+["25","Upward Arrow",
+  textSYW(48,800,-4) +
+  line(100,160,100,40,red,6) +
+  line(100,40,86,55,red,6) +
+  line(100,40,114,55,red,6)],
+
+["26","Downward Break",
+  textSYW(48,800,-4) +
+  line(100,40,100,160,red,6) +
+  line(100,160,86,145,red,6) +
+  line(100,160,114,145,red,6)],
+
+["27","Impact Corners",
+  textSYW(50,800,-4) +
+  line(45,48,65,68,red,6) +
+  line(155,48,135,68,red,6) +
+  line(45,152,65,132,red,6) +
+  line(155,152,135,132,red,6)],
+
+["28","Offset Letters",
+  `<text x="65" y="112" font-family="Arial" font-size="58" font-weight="800" fill="${black}">S</text>
+   <text x="92" y="126" font-family="Arial" font-size="58" font-weight="800" fill="${black}">Y</text>
+   <text x="120" y="140" font-family="Arial" font-size="58" font-weight="800" fill="${black}">W</text>`],
+
+["29","Ascending",
+  `<text x="60" y="135" font-family="Arial" font-size="52" font-weight="800" fill="${black}">S</text>
+   <text x="93" y="117" font-family="Arial" font-size="52" font-weight="800" fill="${black}">Y</text>
+   <text x="126" y="99" font-family="Arial" font-size="52" font-weight="800" fill="${black}">W</text>`],
+
+["30","Descending",
+  `<text x="60" y="99" font-family="Arial" font-size="52" font-weight="800" fill="${black}">S</text>
+   <text x="93" y="117" font-family="Arial" font-size="52" font-weight="800" fill="${black}">Y</text>
+   <text x="126" y="135" font-family="Arial" font-size="52" font-weight="800" fill="${black}">W</text>`],
+
+["31","Y Doorway",
+  `<path d="M45 150V55H100V95M100 95V150M155 150V55H100"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <path d="M100 95V55" stroke="${red}" stroke-width="7"/>`],
+
+["32","W Barrier",
+  `<path d="M38 55L55 145L75 90L100 145L125 90L145 145L162 55"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <text x="100" y="82" text-anchor="middle" font-family="Arial" font-size="27" font-weight="800" fill="${red}">SY</text>`],
+
+["33","Interlock",
+  `<path d="M42 60H78V140H118V60H158V140H78"
+    fill="none" stroke="${black}" stroke-width="10" stroke-linejoin="miter"/>
+   <path d="M78 100H118" stroke="${red}" stroke-width="7"/>`],
+
+["34","Three Columns",
+  rect(42,48,26,104,black,black,0) +
+  rect(87,48,26,104,black,black,0) +
+  rect(132,48,26,104,black,black,0) +
+  `<path d="M68 100H87M113 100H132" stroke="${red}" stroke-width="7"/>`],
+
+["35","Stepped",
+  `<path d="M40 150H65V125H90V100H115V75H140V50H160"
+    fill="none" stroke="${black}" stroke-width="10" stroke-linejoin="miter"/>
+   <text x="100" y="120" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="${red}">SYW</text>`],
+
+["36","Angular Frame",
+  `<path d="M65 35L35 65V135L65 165M135 35L165 65V135L135 165"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <text x="100" y="121" text-anchor="middle" font-family="Arial" font-size="45" font-weight="800" letter-spacing="-4" fill="${black}">SYW</text>`],
+
+["37","Diamond",
+  `<path d="M100 30L165 100L100 170L35 100Z"
+    fill="none" stroke="${black}" stroke-width="8"/>
+   ${textSYW(39,800,-3)}`],
+
+["38","Hexagon",
+  `<path d="M62 35H138L165 100L138 165H62L35 100Z"
+    fill="none" stroke="${black}" stroke-width="8"/>
+   ${textSYW(39,800,-3)}`],
+
+["39","Red Y",
+  `<text x="70" y="124" font-family="Arial" font-size="62" font-weight="800" fill="${black}">S</text>
+   <text x="101" y="124" font-family="Arial" font-size="62" font-weight="800" fill="${red}">Y</text>
+   <text x="132" y="124" font-family="Arial" font-size="62" font-weight="800" fill="${black}">W</text>`],
+
+["40","Red Break",
+  textSYW(54) +
+  line(84,42,116,42,red,8) +
+  line(84,158,116,158,red,8)],
+
+["41","Split Letters",
+  `<text x="72" y="124" text-anchor="middle" font-family="Arial" font-size="53" font-weight="800" fill="${black}">S</text>
+   <text x="100" y="124" text-anchor="middle" font-family="Arial" font-size="53" font-weight="800" fill="${black}">Y</text>
+   <text x="128" y="124" text-anchor="middle" font-family="Arial" font-size="53" font-weight="800" fill="${black}">W</text>
+   <line x1="88" y1="45" x2="88" y2="155" stroke="${red}" stroke-width="5"/>
+   <line x1="112" y1="45" x2="112" y2="155" stroke="${red}" stroke-width="5"/>`],
+
+["42","Contained Y",
+  `<rect x="40" y="40" width="120" height="120" fill="none" stroke="${black}" stroke-width="8"/>
+   <path d="M68 62L100 104L132 62M100 104V140"
+    fill="none" stroke="${red}" stroke-width="9"/>`],
+
+["43","Open S",
+  `<path d="M150 60H70C52 60 42 70 42 84C42 98 52 106 70 106H130C148 106 158 114 158 128C158 142 148 150 130 150H50"
+    fill="none" stroke="${black}" stroke-width="9" stroke-linecap="square"/>` +
+  line(150,60,165,75,red,6)],
+
+["44","Open W",
+  `<path d="M38 60L58 145L82 82L100 145L118 82L142 145L162 60"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <path d="M92 82H108" stroke="${red}" stroke-width="7"/>`],
+
+["45","Bridge",
+  `<path d="M40 145V75H70V110H130V75H160V145"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <path d="M70 110H130" stroke="${red}" stroke-width="7"/>`],
+
+["46","Bracket",
+  `<path d="M65 42H42V158H65M135 42H158V158H135"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   ${textSYW(39,800,-3)}`],
+
+["47","Three Point",
+  `<circle cx="50" cy="100" r="16" fill="${black}"/>
+   <circle cx="100" cy="100" r="16" fill="${red}"/>
+   <circle cx="150" cy="100" r="16" fill="${black}"/>
+   <path d="M50 100H150" stroke="${black}" stroke-width="7"/>`],
+
+["48","Compact Block",
+  `<rect x="42" y="55" width="116" height="90" fill="${black}"/>
+   <text x="100" y="119" text-anchor="middle" font-family="Arial" font-size="43" font-weight="800" letter-spacing="-4" fill="white">SYW</text>
+   <path d="M55 150H100" stroke="${red}" stroke-width="6"/>`],
+
+["49","Seal",
+  `<circle cx="100" cy="100" r="67" fill="none" stroke="${black}" stroke-width="7"/>
+   <circle cx="100" cy="100" r="52" fill="none" stroke="${black}" stroke-width="2"/>
+   ${textSYW(38,800,-3)}
+   <circle cx="52" cy="100" r="3" fill="${red}"/>
+   <circle cx="148" cy="100" r="3" fill="${red}"/>`],
+
+["50","Pure Geometry",
+  `<path d="M40 55H72L100 100L128 55H160
+           M72 145H40V55
+           M128 145H160V55
+           M100 100V145"
+    fill="none" stroke="${black}" stroke-width="9" stroke-linejoin="miter"/>
+   <path d="M82 100H118" stroke="${red}" stroke-width="7"/>`]
+
+];
+
+
+/* =========================================================
+   25 WALL / BREAKTHROUGH CONCEPTS
+========================================================= */
+
+const walls = [
+
+["51","Split Wall",
+  rect(30,50,52,100,black,black,0) +
+  rect(118,50,52,100,black,black,0) +
+  line(100,70,100,130,red,8)],
+
+["52","Opening",
+  `<path d="M35 150V45H80V100H120V45H165V150"
+    fill="none" stroke="${black}" stroke-width="10"/>
+   <path d="M80 100H120" stroke="${red}" stroke-width="8"/>`],
+
+["53","Impact Point",
+  `<rect x="50" y="50" width="100" height="100" fill="none" stroke="${black}" stroke-width="9"/>
+   <circle cx="100" cy="100" r="18" fill="${red}"/>
+   ${line(100,38,100,67,red,5)}
+   ${line(100,133,100,162,red,5)}
+   ${line(38,100,67,100,red,5)}
+   ${line(133,100,162,100,red,5)}`],
+
+["54","Diagonal Fracture",
+  `<rect x="35" y="45" width="130" height="110" fill="${black}"/>
+   <path d="M48 58L78 82L66 106L105 128L92 150"
+    fill="none" stroke="white" stroke-width="10"/>
+   <path d="M48 58L78 82L66 106L105 128L92 150"
+    fill="none" stroke="${red}" stroke-width="3"/>`],
+
+["55","Arrow Through Wall",
+  `<rect x="40" y="55" width="120" height="90" fill="${black}"/>
+   <path d="M30 100H170" stroke="white" stroke-width="11"/>
+   <path d="M135 82L170 100L135 118" fill="none" stroke="${red}" stroke-width="7"/>`],
+
+["56","Expanding Gap",
+  `<rect x="35" y="50" width="48" height="100" fill="${black}"/>
+   <rect x="117" y="50" width="48" height="100" fill="${black}"/>
+   <path d="M83 100H117" stroke="${red}" stroke-width="8"/>
+   <path d="M100 82V118" stroke="${red}" stroke-width="8"/>`],
+
+["57","Falling Blocks",
+  `<rect x="38" y="55" width="34" height="34" fill="${black}"/>
+   <rect x="83" y="55" width="34" height="34" fill="${black}"/>
+   <rect x="128" y="55" width="34" height="34" fill="${black}"/>
+   <rect x="38" y="102" width="34" height="34" fill="${black}"/>
+   <rect x="128" y="102" width="34" height="34" fill="${black}"/>
+   <rect x="65" y="145" width="28" height="20" fill="${black}"/>
+   <path d="M100 103V143" stroke="${red}" stroke-width="7"/>`],
+
+["58","Cracked Slab",
+  `<rect x="35" y="55" width="130" height="90" fill="${black}"/>
+   <path d="M100 55L91 80L108 95L94 116L105 145"
+    fill="none" stroke="white" stroke-width="10"/>
+   <path d="M100 55L91 80L108 95L94 116L105 145"
+    fill="none" stroke="${red}" stroke-width="3"/>`],
+
+["59","Two Pillars",
+  `<rect x="38" y="45" width="40" height="110" fill="${black}"/>
+   <rect x="122" y="45" width="40" height="110" fill="${black}"/>
+   <path d="M78 100H122" stroke="${red}" stroke-width="8"/>`],
+
+["60","Broken Circle",
+  `<path d="M100 35A65 65 0 1 1 54 54"
+    fill="none" stroke="${black}" stroke-width="10"/>
+   <path d="M146 146A65 65 0 0 1 100 165"
+    fill="none" stroke="${black}" stroke-width="10"/>
+   <path d="M83 100H117" stroke="${red}" stroke-width="8"/>`],
+
+["61","Pushed Apart",
+  `<rect x="35" y="55" width="55" height="90" fill="${black}"/>
+   <rect x="110" y="55" width="55" height="90" fill="${black}"/>
+   <path d="M90 100L110 100" stroke="${red}" stroke-width="8"/>
+   <path d="M48 100L25 100M152 100L175 100" stroke="${red}" stroke-width="6"/>`],
+
+["62","Wedge",
+  `<path d="M35 50H165L120 100L165 150H35L80 100Z"
+    fill="${black}"/>
+   <path d="M80 100H120" stroke="${red}" stroke-width="8"/>`],
+
+["63","Exploded Center",
+  `<rect x="35" y="50" width="40" height="40" fill="${black}"/>
+   <rect x="125" y="50" width="40" height="40" fill="${black}"/>
+   <rect x="35" y="110" width="40" height="40" fill="${black}"/>
+   <rect x="125" y="110" width="40" height="40" fill="${black}"/>
+   <path d="M75 100H125" stroke="${red}" stroke-width="8"/>`],
+
+["64","Break Line",
+  `<rect x="35" y="55" width="130" height="90" fill="none" stroke="${black}" stroke-width="9"/>
+   <path d="M35 100L70 100L84 82L101 118L117 94L132 100H165"
+    fill="none" stroke="${red}" stroke-width="7"/>`],
+
+["65","Doorway",
+  `<path d="M42 150V45H158V150"
+    fill="none" stroke="${black}" stroke-width="10"/>
+   <path d="M78 150V78H122V150"
+    fill="none" stroke="${black}" stroke-width="9"/>
+   <path d="M100 95V60" stroke="${red}" stroke-width="7"/>
+   <path d="M100 60L88 73M100 60L112 73" stroke="${red}" stroke-width="7"/>`],
+
+["66","Impact Rays",
+  `<rect x="60" y="65" width="80" height="70" fill="${black}"/>
+   <circle cx="100" cy="100" r="15" fill="${red}"/>
+   <path d="M100 45V70M100 130V155M45 100H70M130 100H155"
+    stroke="${red}" stroke-width="6"/>`],
+
+["67","Missing Block",
+  `<path d="M35 50H165V150H35Z" fill="${black}"/>
+   <rect x="82" y="50" width="36" height="38" fill="#f4f4f2"/>
+   <path d="M100 88V120" stroke="${red}" stroke-width="8"/>`],
+
+["68","Offset Halves",
+  `<rect x="30" y="55" width="75" height="90" fill="${black}"/>
+   <rect x="95" y="45" width="75" height="90" fill="${black}"/>
+   <path d="M82 100H118" stroke="${red}" stroke-width="8"/>`],
+
+["69","Crack + Exit",
+  `<rect x="35" y="50" width="130" height="100" fill="${black}"/>
+   <path d="M100 50V78L88 96L108 112L96 130L108 150"
+    fill="none" stroke="white" stroke-width="9"/>
+   <path d="M108 112H155M155 112L142 99M155 112L142 125"
+    fill="none" stroke="${red}" stroke-width="7"/>`],
+
+["70","Dissolving Wall",
+  `<rect x="40" y="50" width="24" height="100" fill="${black}"/>
+   <rect x="76" y="58" width="20" height="84" fill="${black}"/>
+   <rect x="108" y="70" width="16" height="60" fill="${black}"/>
+   <rect x="136" y="82" width="10" height="36" fill="${black}"/>
+   <path d="M48 100H155" stroke="${red}" stroke-width="6"/>`],
+
+["71","Central Slash",
+  `<rect x="35" y="50" width="130" height="100" fill="${black}"/>
+   <path d="M68 150L132 50" stroke="white" stroke-width="18"/>
+   <path d="M68 150L132 50" stroke="${red}" stroke-width="4"/>`],
+
+["72","Wall Fragments",
+  `<rect x="40" y="55" width="34" height="90" fill="${black}"/>
+   <rect x="83" y="55" width="34" height="55" fill="${black}"/>
+   <rect x="126" y="55" width="34" height="90" fill="${black}"/>
+   <path d="M100 110V145" stroke="${red}" stroke-width="8"/>
+   <path d="M92 140L100 150L108 140" fill="none" stroke="${red}" stroke-width="6"/>`],
+
+["73","Path Through",
+  `<path d="M35 50H75V90H125V50H165V150H125V110H75V150H35Z"
+    fill="${black}"/>
+   <path d="M75 100H125" stroke="${red}" stroke-width="8"/>`],
+
+["74","Minimal Break",
+  `<path d="M35 100H82M118 100H165"
+    stroke="${black}" stroke-width="14" stroke-linecap="square"/>
+   <path d="M82 100L91 91M82 100L91 109M118 100L109 91M118 100L109 109"
+    stroke="${red}" stroke-width="6"/>`],
+
+["75","Breakthrough",
+  `<path d="M35 55H165V145H35Z" fill="none" stroke="${black}" stroke-width="10"/>
+   <path d="M55 100H145" stroke="${red}" stroke-width="8"/>
+   <path d="M125 80L145 100L125 120" fill="none" stroke="${red}" stroke-width="8"/>
+   <path d="M55 75V125" stroke="${black}" stroke-width="10"/>`]
+
+];
+
+
+const sywGallery = document.getElementById("syw-gallery");
+const wallGallery = document.getElementById("wall-gallery");
+
+syw.forEach(item => {
+  sywGallery.innerHTML += card(item[0], item[1], item[2], "syw");
+});
+
+walls.forEach(item => {
+  wallGallery.innerHTML += card(item[0], item[1], item[2], "wall");
+});
+
+
+function showAll() {
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.remove("hidden");
+  });
+
+  setActive(0);
+}
+
+function showType(type) {
+  document.querySelectorAll(".card").forEach(card => {
+    if (card.classList.contains(type)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+
+  setActive(type === "syw" ? 1 : 2);
+}
+
+function setActive(index) {
+  document.querySelectorAll(".filter").forEach((button,i) => {
+    button.classList.toggle("active", i === index);
+  });
+}
+
+</script>
 
 </body>
 </html>
