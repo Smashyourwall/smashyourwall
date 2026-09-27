@@ -1,1168 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYW Logo Exploration — 75 Concepts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYW Logo Exploration — 50 Concepts</title>
 
-  <style>
-    :root {
-      --text: #171717;
-      --muted: #666;
-      --white: #ffffff;
-      --gray: #f3f3f1;
-      --border: #d2d2d0;
-      --accent: #a94f32;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+  body {
+    margin: 0;
+    background: #f2f2f0;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-    body {
-      margin: 0;
-      background: var(--gray);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  header {
+    padding: 45px 30px 35px;
+    background: #171717;
+    color: white;
+  }
 
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 35px 30px;
-    }
+  header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+  }
 
-    header div {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  header p {
+    margin: 0;
+    max-width: 720px;
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 15px;
+  }
 
-    .eyebrow {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
+  .gallery {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
 
-    h1 {
-      margin: 0;
-      font-size: 34px;
-      line-height: 1.1;
-    }
+  .card {
+    background: white;
+    border: 1px solid #d5d5d3;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .intro {
-      max-width: 700px;
-      margin: 12px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-    }
+  .logo-area {
+    flex: 1;
+    min-height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+  }
 
+  .logo-area svg {
+    width: 100%;
+    max-width: 210px;
+    height: 150px;
+  }
+
+  .label {
+    border-top: 1px solid #e1e1df;
+    padding: 13px 15px 15px;
+    background: #fafaf9;
+  }
+
+  .number {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #a94f32;
+    margin-bottom: 4px;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1050px) {
     .gallery {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 35px 25px 70px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
     }
+  }
 
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      min-height: 260px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .number {
-      padding: 12px 14px 0;
-      color: #888;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
+  @media (max-width: 750px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 18px;
+      gap: 12px;
     }
 
     .logo-area {
-      height: 195px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      min-height: 190px;
     }
+  }
 
-    .logo-area svg {
-      width: 100%;
-      height: 100%;
-      max-width: 190px;
-      max-height: 160px;
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: 1fr;
     }
-
-    .name {
-      border-top: 1px solid var(--border);
-      padding: 13px 14px 15px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-
-    @media (max-width: 950px) {
-      .gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 700px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 20px 14px 50px;
-      }
-
-      header {
-        padding: 28px 20px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-    }
-
-    @media (max-width: 450px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
 <header>
-  <div>
-    <div class="eyebrow">Logo Exploration</div>
-    <h1>SYW + Breakthrough — 75 Concepts</h1>
-    <p class="intro">
-      50 SYW concepts exploring the idea of the letters becoming part of a larger
-      visual symbol, followed by 25 abstract breakthrough concepts.
-    </p>
-  </div>
+  <h1>SYW + CRACK / WALL — 50 LOGO CONCEPTS</h1>
+  <p>
+    The goal: make SYW itself feel like a barrier being broken,
+    rather than putting a generic wall icon next to the letters.
+  </p>
 </header>
 
 <div class="gallery">
 
   <!-- 01 -->
   <div class="card">
-    <div class="number">01</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="25" y="35" width="150" height="90" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#171717">SYW</text>
-        <path d="M85 35 L115 35 L100 55 Z" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="72" font-weight="800">SYW</text>
+        <path d="M112 32 L105 53 L114 67 L104 84 L111 108"
+          fill="none" stroke="white" stroke-width="7"/>
       </svg>
     </div>
-    <div class="name">SYW Through Opening</div>
+    <div class="label"><span class="number">01</span><span class="name">Crack Through Letters</span></div>
   </div>
 
   <!-- 02 -->
   <div class="card">
-    <div class="number">02</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="22" y="35" width="55" height="90" fill="#171717"/>
-        <rect x="123" y="35" width="55" height="90" fill="#171717"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#171717">SYW</text>
-        <path d="M77 80 L123 80" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="102" text-anchor="middle"
+          font-family="Arial" font-size="72" font-weight="800">SYW</text>
+        <path d="M116 28 L108 50 L118 65 L108 82 L116 111"
+          fill="none" stroke="#f2f2f0" stroke-width="10"/>
       </svg>
     </div>
-    <div class="name">Letters Behind Structure</div>
+    <div class="label"><span class="number">02</span><span class="name">Wide Fracture</span></div>
   </div>
 
   <!-- 03 -->
   <div class="card">
-    <div class="number">03</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 110 L55 110 L75 75 L100 110 L125 75 L145 110 L180 110" fill="none" stroke="#171717" stroke-width="13"/>
-        <text x="100" y="78" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#171717">SYW</text>
-        <path d="M87 55 L100 38 L113 55" fill="none" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M112 35 L103 57 L117 72 L102 90 L113 113"
+          fill="none" stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW Emerging</div>
+    <div class="label"><span class="number">03</span><span class="name">Hairline Crack</span></div>
   </div>
 
   <!-- 04 -->
   <div class="card">
-    <div class="number">04</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H75 V65 H125 V35 H175 V125 H125 V95 H75 V125 H25 Z" fill="#171717"/>
-        <text x="100" y="91" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M75 65 H125" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <rect x="34" y="35" width="152" height="82" fill="#171717"/>
+        <text x="110" y="100" text-anchor="middle"
+          font-family="Arial" font-size="62" font-weight="800" fill="white">SYW</text>
+        <path d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
+          fill="none" stroke="#f2f2f0" stroke-width="7"/>
       </svg>
     </div>
-    <div class="name">Broken Surround</div>
+    <div class="label"><span class="number">04</span><span class="name">SYW Inside Wall</span></div>
   </div>
 
   <!-- 05 -->
   <div class="card">
-    <div class="number">05</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 25 H175 V135 H25 Z" fill="none" stroke="#171717" stroke-width="11"/>
-        <path d="M25 80 H75 M125 80 H175" stroke="#171717" stroke-width="15"/>
-        <text x="100" y="96" text-anchor="middle" font-family="Arial" font-size="37" font-weight="900" fill="#171717">SYW</text>
-        <path d="M91 80 H109" stroke="#a94f32" stroke-width="10"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M109 26 L101 48 L116 61 L103 76 L119 91 L106 117"
+          fill="none" stroke="#171717" stroke-width="12"/>
       </svg>
     </div>
-    <div class="name">SYW Inside Split</div>
+    <div class="label"><span class="number">05</span><span class="name">Heavy Crack</span></div>
   </div>
 
   <!-- 06 -->
   <div class="card">
-    <div class="number">06</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="108" text-anchor="middle" font-family="Arial" font-size="54" font-weight="900" fill="#171717">S Y W</text>
-        <path d="M100 25 L100 65" stroke="#a94f32" stroke-width="9"/>
-        <path d="M86 38 L100 24 L114 38" fill="none" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M109 30 L101 51 L114 65 L105 82 L116 97 L108 119"
+          fill="none" stroke="white" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">Y Creates Opening</div>
+    <div class="label"><span class="number">06</span><span class="name">Interrupted SYW</span></div>
   </div>
 
   <!-- 07 -->
   <div class="card">
-    <div class="number">07</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 110 L80 55 L125 55 L175 105 L145 135 L90 80 L55 120 Z" fill="#171717"/>
-        <text x="100" y="104" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M126 55 L145 36" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">S Y W</text>
+        <path d="M110 28 L102 49 L117 64 L104 82 L117 99 L107 120"
+          fill="none" stroke="#171717" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">SYW + Displaced Plane</div>
+    <div class="label"><span class="number">07</span><span class="name">Separated Letters</span></div>
   </div>
 
   <!-- 08 -->
   <div class="card">
-    <div class="number">08</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M35 120 L60 40 L150 55 L170 120 Z" fill="none" stroke="#171717" stroke-width="11"/>
-        <text x="105" y="101" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#171717" transform="skewX(-8)">SYW</text>
-        <path d="M67 55 L90 70" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M105 31 L116 51 L104 67 L118 82 L105 99 L115 119"
+          fill="none" stroke="white" stroke-width="6"/>
       </svg>
     </div>
-    <div class="name">SYW in Perspective</div>
+    <div class="label"><span class="number">08</span><span class="name">Reverse Crack</span></div>
   </div>
 
   <!-- 09 -->
   <div class="card">
-    <div class="number">09</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="104" text-anchor="middle" font-family="Arial" font-size="54" font-weight="900" fill="#171717">S Y W</text>
-        <path d="M100 30 V65 M100 95 V130" stroke="#a94f32" stroke-width="10"/>
-        <path d="M87 44 L100 30 L113 44" fill="none" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <rect x="106" y="31" width="8" height="88" fill="#f2f2f0"/>
       </svg>
     </div>
-    <div class="name">Y as Break</div>
+    <div class="label"><span class="number">09</span><span class="name">Clean Split</span></div>
   </div>
 
   <!-- 10 -->
   <div class="card">
-    <div class="number">10</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 45 H180 M20 115 H180" stroke="#171717" stroke-width="16"/>
-        <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M72 45 L95 68" stroke="#a94f32" stroke-width="7"/>
-        <path d="M105 92 L128 115" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M111 27 L101 45 L115 58 L105 72 L119 86 L106 102 L114 122"
+          fill="none" stroke="#a94f32" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">SYW Between Planes</div>
+    <div class="label"><span class="number">10</span><span class="name">Accent Fracture</span></div>
   </div>
 
   <!-- 11 -->
   <div class="card">
-    <div class="number">11</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="103" text-anchor="middle" font-family="Arial" font-size="51" font-weight="900" fill="#171717">SYW</text>
-        <rect x="15" y="72" width="45" height="12" fill="#171717"/>
-        <rect x="140" y="72" width="45" height="12" fill="#171717"/>
-        <path d="M87 55 L113 112" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <rect x="25" y="37" width="170" height="76" fill="#171717"/>
+        <path d="M105 37 L97 54 L110 67 L99 81 L113 94 L103 113"
+          fill="none" stroke="#f2f2f0" stroke-width="6"/>
+        <text x="110" y="98" text-anchor="middle"
+          font-family="Arial" font-size="57" font-weight="800" fill="white">SYW</text>
       </svg>
     </div>
-    <div class="name">SYW Interrupted</div>
+    <div class="label"><span class="number">11</span><span class="name">Wall Behind SYW</span></div>
   </div>
 
   <!-- 12 -->
   <div class="card">
-    <div class="number">12</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="25" y="70" width="150" height="55" fill="#171717"/>
-        <rect x="75" y="35" width="50" height="35" fill="#171717"/>
-        <text x="100" y="111" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M100 20 V55" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M108 28 L98 48 L114 62 L103 77 L118 91 L104 108 L112 123"
+          fill="none" stroke="#171717" stroke-width="2"/>
+        <path d="M112 28 L102 48 L118 62 L107 77 L122 91 L108 108 L116 123"
+          fill="none" stroke="#171717" stroke-width="2"/>
       </svg>
     </div>
-    <div class="name">SYW + Rising Block</div>
+    <div class="label"><span class="number">12</span><span class="name">Double Fracture</span></div>
   </div>
 
   <!-- 13 -->
   <div class="card">
-    <div class="number">13</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="#171717"/>
-        <circle cx="100" cy="80" r="38" fill="#ffffff"/>
-        <text x="100" y="94" text-anchor="middle" font-family="Arial" font-size="31" font-weight="900" fill="#171717">SYW</text>
-        <circle cx="100" cy="80" r="43" fill="none" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M111 32 L103 52 L114 68 L101 84 L114 99 L106 119"
+          fill="none" stroke="#f2f2f0" stroke-width="13"/>
       </svg>
     </div>
-    <div class="name">Open Center</div>
+    <div class="label"><span class="number">13</span><span class="name">Open Crack</span></div>
   </div>
 
   <!-- 14 -->
   <div class="card">
-    <div class="number">14</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="103" text-anchor="middle" font-family="Arial" font-size="49" font-weight="900" fill="#171717">SYW</text>
-        <path d="M100 15 L110 45 L140 55 L110 65 L100 95 L90 65 L60 55 L90 45 Z" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M112 28 L99 48 L119 61 L101 78 L120 91 L105 111 L115 124"
+          fill="none" stroke="#171717" stroke-width="4"/>
+        <path d="M91 50 L75 42 M91 65 L70 65 M91 82 L75 91"
+          stroke="#171717" stroke-width="3"/>
+        <path d="M130 50 L146 42 M130 65 L151 65 M130 82 L146 91"
+          stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW + Impact</div>
+    <div class="label"><span class="number">14</span><span class="name">Impact Crack</span></div>
   </div>
 
   <!-- 15 -->
   <div class="card">
-    <div class="number">15</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="32" y="25" width="136" height="110" rx="55" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#171717">SYW</text>
-        <path d="M65 25 L83 44" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M111 25 L100 47 L115 60 L101 77 L118 92 L104 109 L114 126"
+          fill="none" stroke="#171717" stroke-width="8"/>
+        <circle cx="110" cy="76" r="25" fill="none" stroke="#171717" stroke-width="2"/>
       </svg>
     </div>
-    <div class="name">SYW in Aperture</div>
+    <div class="label"><span class="number">15</span><span class="name">Impact Ring</span></div>
   </div>
 
   <!-- 16 -->
   <div class="card">
-    <div class="number">16</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="108" text-anchor="middle" font-family="Arial" font-size="45" font-weight="900" fill="#171717">SYW</text>
-        <path d="M25 40 H175" stroke="#171717" stroke-width="9"/>
-        <path d="M35 55 H165" stroke="#171717" stroke-width="5"/>
-        <path d="M45 125 H155" stroke="#171717" stroke-width="9"/>
-        <path d="M75 40 L92 57 M108 103 L125 120" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <rect x="30" y="34" width="160" height="84" fill="none" stroke="#171717" stroke-width="10"/>
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="65" font-weight="800">SYW</text>
+        <path d="M110 30 L101 49 L116 64 L103 82 L117 99 L108 121"
+          fill="none" stroke="#f2f2f0" stroke-width="7"/>
       </svg>
     </div>
-    <div class="name">Layered SYW</div>
+    <div class="label"><span class="number">16</span><span class="name">Broken Frame</span></div>
   </div>
 
   <!-- 17 -->
   <div class="card">
-    <div class="number">17</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 125 L75 35 L180 35 L125 125 Z" fill="#171717"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M55 125 L95 65" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M65 25 L105 45 L92 63 L132 82 L118 100 L158 125"
+          fill="none" stroke="#171717" stroke-width="18"/>
       </svg>
     </div>
-    <div class="name">SYW + Diagonal Plane</div>
+    <div class="label"><span class="number">17</span><span class="name">Diagonal Wall</span></div>
   </div>
 
   <!-- 18 -->
   <div class="card">
-    <div class="number">18</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="25" width="70" height="110" fill="#171717"/>
-        <rect x="110" y="25" width="70" height="110" fill="#171717"/>
-        <text x="100" y="99" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M90 25 L110 45 M90 115 L110 135" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M110 28 L101 50 L117 65 L103 80 L118 96 L105 119"
+          fill="none" stroke="#171717" stroke-width="15"/>
+        <path d="M110 29 L101 50 L117 65 L103 80 L118 96 L105 119"
+          fill="none" stroke="#f2f2f0" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">Split Background</div>
+    <div class="label"><span class="number">18</span><span class="name">Layered Crack</span></div>
   </div>
 
   <!-- 19 -->
   <div class="card">
-    <div class="number">19</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="48" font-weight="900" fill="#171717" transform="skewX(-12)">SYW</text>
-        <path d="M25 45 L70 65 M130 95 L175 115" stroke="#a94f32" stroke-width="8"/>
-        <path d="M25 65 L60 80 M140 80 L175 95" stroke="#171717" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M110 26 L100 47 L118 62 L102 77 L120 92 L104 109 L114 126"
+          fill="none" stroke="#171717" stroke-width="5"/>
+        <path d="M90 40 L72 30 M88 55 L65 50 M88 95 L65 103 M91 111 L73 122"
+          stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW in Motion</div>
+    <div class="label"><span class="number">19</span><span class="name">Crack With Motion</span></div>
   </div>
 
   <!-- 20 -->
   <div class="card">
-    <div class="number">20</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="65" y="108" text-anchor="middle" font-family="Arial" font-size="45" font-weight="900" fill="#171717">SW</text>
-        <text x="135" y="75" text-anchor="middle" font-family="Arial" font-size="50" font-weight="900" fill="#171717">Y</text>
-        <path d="M135 25 V52" stroke="#a94f32" stroke-width="8"/>
-        <path d="M123 37 L135 25 L147 37" fill="none" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M108 30 L100 48 L114 62 L101 78 L116 92 L103 110 L111 121"
+          fill="none" stroke="#171717" stroke-width="7"/>
+        <path d="M110 30 L102 48 L116 62 L103 78 L118 92 L105 110 L113 121"
+          fill="none" stroke="#f2f2f0" stroke-width="2"/>
       </svg>
     </div>
-    <div class="name">Emerging Y</div>
+    <div class="label"><span class="number">20</span><span class="name">Crack Within Crack</span></div>
   </div>
 
   <!-- 21 -->
   <div class="card">
-    <div class="number">21</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="35" width="160" height="90" fill="#171717"/>
-        <path d="M70 35 V125 M130 35 V125" stroke="#ffffff" stroke-width="5"/>
-        <text x="100" y="99" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M95 35 V52" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <rect x="35" y="32" width="150" height="86" fill="#171717"/>
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="62" font-weight="800" fill="white">SYW</text>
+        <path d="M108 28 L99 47 L115 61 L102 78 L118 94 L104 113 L112 125"
+          fill="none" stroke="#171717" stroke-width="12"/>
       </svg>
     </div>
-    <div class="name">Structural SYW</div>
+    <div class="label"><span class="number">21</span><span class="name">Broken Wall Cover</span></div>
   </div>
 
   <!-- 22 -->
   <div class="card">
-    <div class="number">22</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 25 H175 V135 H25 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M75 25 V60 M125 100 V135" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="37" font-weight="900" fill="#171717">SYW</text>
-        <circle cx="100" cy="80" r="10" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M111 28 L100 48 L116 63 L102 79 L118 94 L104 111 L113 124"
+          fill="none" stroke="#171717" stroke-width="4"/>
+        <circle cx="110" cy="76" r="42" fill="none" stroke="#171717" stroke-width="2"/>
       </svg>
     </div>
-    <div class="name">SYW + Central Void</div>
+    <div class="label"><span class="number">22</span><span class="name">Fractured Circle</span></div>
   </div>
 
   <!-- 23 -->
   <div class="card">
-    <div class="number">23</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="none" stroke="#171717" stroke-width="10"/>
-        <text x="100" y="102" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#171717">SYW</text>
-        <path d="M25 35 L65 75" stroke="#a94f32" stroke-width="9"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="70" font-weight="800">SYW</text>
+        <path d="M110 29 L100 50 L116 65 L103 80 L118 96 L105 114"
+          fill="none" stroke="#171717" stroke-width="7"/>
+        <path d="M30 45 H82 M138 45 H190 M25 105 H82 M138 105 H195"
+          stroke="#171717" stroke-width="8"/>
       </svg>
     </div>
-    <div class="name">Corner Pressure</div>
+    <div class="label"><span class="number">23</span><span class="name">Wall Segments</span></div>
   </div>
 
   <!-- 24 -->
   <div class="card">
-    <div class="number">24</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="46" font-weight="900" fill="#171717">SYW</text>
-        <path d="M25 40 L175 120 M175 40 L25 120" stroke="#171717" stroke-width="7"/>
-        <path d="M75 65 L125 95" stroke="#a94f32" stroke-width="9"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M108 27 L98 47 L115 61 L101 78 L118 93 L103 111 L112 125"
+          fill="none" stroke="#171717" stroke-width="10"/>
+        <path d="M80 30 L94 42 M76 115 L94 104 M140 30 L126 42 M144 115 L126 104"
+          stroke="#171717" stroke-width="4"/>
       </svg>
     </div>
-    <div class="name">SYW + Crossing</div>
+    <div class="label"><span class="number">24</span><span class="name">Fragments Around SYW</span></div>
   </div>
 
   <!-- 25 -->
   <div class="card">
-    <div class="number">25</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 125 H175" stroke="#171717" stroke-width="13"/>
-        <path d="M50 125 V60 H150 V125" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M100 60 V35" stroke="#a94f32" stroke-width="8"/>
-        <path d="M88 47 L100 35 L112 47" fill="none" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M110 28 L101 49 L115 64 L102 80 L117 96 L104 113 L113 123"
+          fill="none" stroke="#a94f32" stroke-width="5"/>
+        <rect x="38" y="38" width="144" height="76" fill="none" stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW Inside Path</div>
+    <div class="label"><span class="number">25</span><span class="name">Cracked Container</span></div>
   </div>
 
   <!-- 26 -->
   <div class="card">
-    <div class="number">26</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="108" text-anchor="middle" font-family="Arial" font-size="50" font-weight="900" fill="#171717">S Y W</text>
-        <path d="M100 25 V70" stroke="#a94f32" stroke-width="8"/>
-        <path d="M86 55 L100 70 L114 55" fill="none" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M110 29 L101 49 L116 64 L103 80 L118 96 L105 113"
+          fill="none" stroke="#171717" stroke-width="5"/>
+        <path d="M108 35 L116 47 L104 47 Z" fill="#171717"/>
       </svg>
     </div>
-    <div class="name">Y as Arrow</div>
+    <div class="label"><span class="number">26</span><span class="name">Crack As Direction</span></div>
   </div>
 
   <!-- 27 -->
   <div class="card">
-    <div class="number">27</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="35" width="160" height="90" fill="#171717"/>
-        <text x="100" y="99" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M90 125 L110 125 L100 150 Z" fill="#a94f32"/>
-        <path d="M100 10 V38" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M111 29 L99 50 L117 65 L101 82 L119 98 L103 118"
+          fill="none" stroke="#171717" stroke-width="12"/>
+        <path d="M112 29 L100 50 L118 65 L102 82 L120 98 L104 118"
+          fill="none" stroke="#f2f2f0" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW + Breakout</div>
+    <div class="label"><span class="number">27</span><span class="name">Deep Structural Crack</span></div>
   </div>
 
   <!-- 28 -->
   <div class="card">
-    <div class="number">28</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M30 40 H170 V120 H30 Z" fill="none" stroke="#171717" stroke-width="11"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#171717">SYW</text>
-        <path d="M30 80 H55 M145 80 H170" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <path d="M35 35 H185 V115 H35 Z" fill="none" stroke="#171717" stroke-width="14"/>
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="62" font-weight="800">SYW</text>
+        <path d="M110 27 L101 48 L116 64 L103 81 L118 97 L105 122"
+          fill="none" stroke="#f2f2f0" stroke-width="8"/>
       </svg>
     </div>
-    <div class="name">Enclosed Y</div>
+    <div class="label"><span class="number">28</span><span class="name">Portal Wall</span></div>
   </div>
 
   <!-- 29 -->
   <div class="card">
-    <div class="number">29</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <circle cx="100" cy="80" r="60" fill="none" stroke="#171717" stroke-width="11"/>
-        <text x="100" y="98" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#171717">SYW</text>
-        <path d="M58 38 L77 57 M123 103 L142 122" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 29 L101 48 L116 64 L103 79 L119 95 L105 112"
+          fill="none" stroke="#171717" stroke-width="5"/>
+        <path d="M45 38 L65 28 L85 38 L65 48 Z M135 38 L155 28 L175 38 L155 48 Z"
+          fill="#171717"/>
       </svg>
     </div>
-    <div class="name">SYW + Broken Circle</div>
+    <div class="label"><span class="number">29</span><span class="name">Wall Pieces</span></div>
   </div>
 
   <!-- 30 -->
   <div class="card">
-    <div class="number">30</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="105" y="105" text-anchor="middle" font-family="Arial" font-size="50" font-weight="900" fill="#171717">SYW</text>
-        <text x="92" y="92" text-anchor="middle" font-family="Arial" font-size="50" font-weight="900" fill="#a94f32" opacity=".22">SYW</text>
-        <path d="M40 125 H160" stroke="#171717" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="69" font-weight="800">SYW</text>
+        <path d="M110 28 L101 48 L116 64 L102 80 L118 95 L104 113 L112 124"
+          fill="none" stroke="#171717" stroke-width="3"/>
+        <path d="M110 28 L106 45 M110 124 L106 110"
+          stroke="#a94f32" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">Offset Shadow</div>
+    <div class="label"><span class="number">30</span><span class="name">Subtle Accent Break</span></div>
   </div>
 
   <!-- 31 -->
   <div class="card">
-    <div class="number">31</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M35 25 V135 M165 25 V135" stroke="#171717" stroke-width="13"/>
-        <text x="100" y="102" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#171717">SYW</text>
-        <path d="M35 65 H65 M135 95 H165" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 28 L100 48 L116 63 L102 79 L118 94 L104 111 L113 123"
+          fill="none" stroke="#171717" stroke-width="6"/>
+        <path d="M90 25 V55 M90 95 V125 M130 25 V55 M130 95 V125"
+          stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW + Vertical Opening</div>
+    <div class="label"><span class="number">31</span><span class="name">Vertical Wall Break</span></div>
   </div>
 
   <!-- 32 -->
   <div class="card">
-    <div class="number">32</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="50" width="45" height="75" fill="#171717"/>
-        <rect x="78" y="25" width="45" height="100" fill="#171717"/>
-        <rect x="136" y="50" width="45" height="75" fill="#171717"/>
-        <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="31" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M100 25 V10" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 28 L99 49 L117 64 L102 80 L119 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="9"/>
+        <path d="M40 38 H88 M132 38 H180 M35 112 H88 M132 112 H185"
+          stroke="#171717" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">Three Structures</div>
+    <div class="label"><span class="number">32</span><span class="name">Four Wall Pieces</span></div>
   </div>
 
   <!-- 33 -->
   <div class="card">
-    <div class="number">33</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 30 H180 L140 130 H60 Z" fill="none" stroke="#171717" stroke-width="11"/>
-        <text x="100" y="99" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#171717">SYW</text>
-        <path d="M75 30 L95 55 M105 105 L125 130" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M75 27 L102 52 L91 69 L122 90 L111 107 L142 126"
+          fill="none" stroke="#171717" stroke-width="16"/>
       </svg>
     </div>
-    <div class="name">SYW + Diagonal Opening</div>
+    <div class="label"><span class="number">33</span><span class="name">Wall Through SYW</span></div>
   </div>
 
   <!-- 34 -->
   <div class="card">
-    <div class="number">34</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M30 30 V130 M75 30 V130 M125 30 V130 M170 30 V130" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M75 65 H125" stroke="#a94f32" stroke-width="9"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="68" font-weight="800">SYW</text>
+        <path d="M45 30 L85 50 L75 68 L112 88 L101 106 L143 127"
+          fill="none" stroke="#171717" stroke-width="8"/>
+        <path d="M175 30 L135 50 L145 68 L108 88 L119 106 L77 127"
+          fill="none" stroke="#171717" stroke-width="8"/>
       </svg>
     </div>
-    <div class="name">SYW Behind Bars</div>
+    <div class="label"><span class="number">34</span><span class="name">Opposing Walls</span></div>
   </div>
 
   <!-- 35 -->
   <div class="card">
-    <div class="number">35</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 115 L55 80 L80 105 L110 45 L135 75 L180 35" fill="none" stroke="#171717" stroke-width="13"/>
-        <text x="100" y="110" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#ffffff">SYW</text>
-        <rect x="48" y="72" width="104" height="55" fill="#171717"/>
-        <path d="M75 70 L90 45 M125 70 L140 45" stroke="#a94f32" stroke-width="7"/>
-        <text x="100" y="110" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#ffffff">SYW</text>
+      <svg viewBox="0 0 220 150">
+        <rect x="28" y="35" width="164" height="80" fill="#171717"/>
+        <path d="M62 35 L77 54 L67 70 L88 85 L78 102 L96 115"
+          fill="none" stroke="#f2f2f0" stroke-width="9"/>
+        <path d="M158 35 L143 54 L153 70 L132 85 L142 102 L124 115"
+          fill="none" stroke="#f2f2f0" stroke-width="9"/>
+        <text x="110" y="101" text-anchor="middle"
+          font-family="Arial" font-size="58" font-weight="800" fill="white">SYW</text>
       </svg>
     </div>
-    <div class="name">SYW + Something Happening</div>
+    <div class="label"><span class="number">35</span><span class="name">SYW + Something Happening</span></div>
   </div>
 
   <!-- 36 -->
   <div class="card">
-    <div class="number">36</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M35 35 H165 V125 H35 Z" fill="none" stroke="#171717" stroke-width="10"/>
-        <path d="M55 55 L75 75 M125 85 L145 105 M55 105 L75 85 M125 75 L145 55" stroke="#a94f32" stroke-width="8"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="37" font-weight="900" fill="#171717">SYW</text>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 29 L100 48 L117 64 L103 81 L119 97 L105 114"
+          fill="none" stroke="#171717" stroke-width="6"/>
+        <path d="M110 75 L55 45 M110 75 L165 45 M110 75 L50 108 M110 75 L170 108"
+          stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">Exploding Frame</div>
+    <div class="label"><span class="number">36</span><span class="name">Explosion Point</span></div>
   </div>
 
   <!-- 37 -->
   <div class="card">
-    <div class="number">37</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="50" width="80" height="70" fill="#171717"/>
-        <rect x="115" y="30" width="65" height="70" fill="#171717"/>
-        <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#171717">SYW</text>
-        <path d="M100 60 L115 75" stroke="#a94f32" stroke-width="9"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M42 38 H178 M35 110 H185"
+          stroke="#171717" stroke-width="13"/>
+        <path d="M110 27 L99 48 L116 64 L102 80 L118 96 L104 114"
+          fill="none" stroke="#f2f2f0" stroke-width="7"/>
       </svg>
     </div>
-    <div class="name">SYW + Offset Wall</div>
+    <div class="label"><span class="number">37</span><span class="name">Horizontal Wall Break</span></div>
   </div>
 
   <!-- 38 -->
   <div class="card">
-    <div class="number">38</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="25" y="35" width="95" height="90" fill="none" stroke="#171717" stroke-width="11"/>
-        <rect x="80" y="55" width="95" height="70" fill="none" stroke="#171717" stroke-width="11"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="36" font-weight="900" fill="#171717">SYW</text>
-        <path d="M120 55 L145 80" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <rect x="50" y="25" width="120" height="100" fill="none" stroke="#171717" stroke-width="8"/>
+        <path d="M110 24 L100 45 L117 61 L102 78 L119 95 L105 112 L113 126"
+          fill="none" stroke="#f2f2f0" stroke-width="8"/>
       </svg>
     </div>
-    <div class="name">Interlocking Frames</div>
+    <div class="label"><span class="number">38</span><span class="name">Broken Box</span></div>
   </div>
 
   <!-- 39 -->
   <div class="card">
-    <div class="number">39</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M25 80 H65 M135 80 H175" stroke="#a94f32" stroke-width="9"/>
-        <path d="M75 80 L65 70 M75 80 L65 90 M125 80 L135 70 M125 80 L135 90" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M109 28 L99 48 L116 64 L101 80 L118 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="6"/>
+        <path d="M42 75 H82 M138 75 H178"
+          stroke="#171717" stroke-width="9"/>
       </svg>
     </div>
-    <div class="name">SYW + Expanding Gap</div>
+    <div class="label"><span class="number">39</span><span class="name">Expanding Gap</span></div>
   </div>
 
   <!-- 40 -->
   <div class="card">
-    <div class="number">40</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="104" text-anchor="middle" font-family="Arial" font-size="49" font-weight="900" fill="#171717">SYW</text>
-        <path d="M35 35 L80 80 L35 125" fill="none" stroke="#171717" stroke-width="10"/>
-        <path d="M165 35 L120 80 L165 125" fill="none" stroke="#171717" stroke-width="10"/>
-        <circle cx="100" cy="80" r="7" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 29 L100 49 L116 64 L102 80 L118 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="5"/>
+        <path d="M50 50 L75 65 M170 50 L145 65 M50 100 L75 88 M170 100 L145 88"
+          stroke="#171717" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">Letter Collision</div>
+    <div class="label"><span class="number">40</span><span class="name">Collision</span></div>
   </div>
 
   <!-- 41 -->
   <div class="card">
-    <div class="number">41</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="#171717"/>
-        <text x="90" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#ffffff">SYW</text>
-        <path d="M145 80 H180" stroke="#a94f32" stroke-width="9"/>
-        <path d="M165 65 L180 80 L165 95" fill="none" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 29 L100 49 L116 64 L102 80 L118 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="7"/>
+        <path d="M40 75 H77 M143 75 H180"
+          stroke="#171717" stroke-width="3"/>
+        <path d="M174 69 L182 75 L174 81" fill="none" stroke="#171717" stroke-width="3"/>
       </svg>
     </div>
-    <div class="name">SYW + Exit</div>
+    <div class="label"><span class="number">41</span><span class="name">Exit</span></div>
   </div>
 
   <!-- 42 -->
   <div class="card">
-    <div class="number">42</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M30 30 L65 65 V95 L30 130" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M170 30 L135 65 V95 L170 130" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M65 80 H135" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <path d="M42 35 L82 55 L82 95 L42 115" fill="none" stroke="#171717" stroke-width="8"/>
+        <path d="M178 35 L138 55 L138 95 L178 115" fill="none" stroke="#171717" stroke-width="8"/>
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="61" font-weight="800">SYW</text>
+        <path d="M110 30 L101 49 L116 64 L102 80 L118 96 L104 115"
+          fill="none" stroke="#171717" stroke-width="4"/>
       </svg>
     </div>
-    <div class="name">SYW in Tunnel</div>
+    <div class="label"><span class="number">42</span><span class="name">Tunnel</span></div>
   </div>
 
   <!-- 43 -->
   <div class="card">
-    <div class="number">43</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 40 H175 M25 80 H75 M125 80 H175 M25 120 H175" stroke="#171717" stroke-width="11"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M75 80 L100 60 L125 80" fill="none" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 28 L99 48 L117 64 L101 80 L119 96 L103 113"
+          fill="none" stroke="#171717" stroke-width="4"/>
+        <path d="M70 30 L60 45 L72 56 M150 30 L160 45 L148 56 M70 120 L60 105 L72 94 M150 120 L160 105 L148 94"
+          fill="none" stroke="#171717" stroke-width="4"/>
       </svg>
     </div>
-    <div class="name">Broken Topology</div>
+    <div class="label"><span class="number">43</span><span class="name">Fractured Field</span></div>
   </div>
 
   <!-- 44 -->
   <div class="card">
-    <div class="number">44</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <ellipse cx="100" cy="80" rx="70" ry="35" fill="none" stroke="#171717" stroke-width="8"/>
-        <ellipse cx="100" cy="80" rx="45" ry="70" fill="none" stroke="#171717" stroke-width="6" transform="rotate(45 100 80)"/>
-        <text x="100" y="96" text-anchor="middle" font-family="Arial" font-size="34" font-weight="900" fill="#171717">SYW</text>
-        <circle cx="155" cy="55" r="8" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <ellipse cx="110" cy="75" rx="76" ry="42" fill="none" stroke="#171717" stroke-width="4"/>
+        <path d="M110 28 L100 48 L116 64 L102 80 L118 96 L104 114"
+          fill="none" stroke="#f2f2f0" stroke-width="9"/>
       </svg>
     </div>
-    <div class="name">SYW + Orbit</div>
+    <div class="label"><span class="number">44</span><span class="name">Broken Orbit</span></div>
   </div>
 
   <!-- 45 -->
   <div class="card">
-    <div class="number">45</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 120 L45 100 L70 115 L95 90 L120 110 L145 85 L180 105" fill="none" stroke="#171717" stroke-width="13"/>
-        <text x="100" y="83" text-anchor="middle" font-family="Arial" font-size="39" font-weight="900" fill="#171717">SYW</text>
-        <path d="M95 90 L105 72" stroke="#a94f32" stroke-width="7"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="100" text-anchor="middle"
+          font-family="Arial" font-size="65" font-weight="800">SYW</text>
+        <path d="M35 112 L60 92 L82 105 L106 85 L130 101 L157 80 L185 96"
+          fill="none" stroke="#171717" stroke-width="9"/>
+        <path d="M110 29 L101 48 L116 64 L102 80 L118 96"
+          fill="none" stroke="#171717" stroke-width="4"/>
       </svg>
     </div>
-    <div class="name">SYW + Fractured Ground</div>
+    <div class="label"><span class="number">45</span><span class="name">Fractured Ground</span></div>
   </div>
 
   <!-- 46 -->
   <div class="card">
-    <div class="number">46</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="110" text-anchor="middle" font-family="Arial" font-size="45" font-weight="900" fill="#171717">SYW</text>
-        <path d="M35 125 L65 65 M70 125 L90 55 M130 105 L150 35 M160 105 L175 55" stroke="#171717" stroke-width="7"/>
-        <path d="M92 55 L108 35" stroke="#a94f32" stroke-width="8"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="103" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M50 120 L75 85 L92 105 L110 60 L128 100 L147 72 L175 30"
+          fill="none" stroke="#171717" stroke-width="5"/>
       </svg>
     </div>
-    <div class="name">SYW + Rising Lines</div>
+    <div class="label"><span class="number">46</span><span class="name">Rising Break</span></div>
   </div>
 
   <!-- 47 -->
   <div class="card">
-    <div class="number">47</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <text x="100" y="90" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#171717">SYW</text>
-        <rect x="30" y="25" width="25" height="25" fill="#171717" transform="rotate(20 42 37)"/>
-        <rect x="145" y="25" width="25" height="25" fill="#171717" transform="rotate(-25 157 37)"/>
-        <rect x="45" y="110" width="22" height="22" fill="#171717" transform="rotate(-20 56 121)"/>
-        <rect x="135" y="110" width="22" height="22" fill="#171717" transform="rotate(25 146 121)"/>
-        <path d="M90 105 L100 135 L110 105" fill="#a94f32"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 29 L100 48 L116 64 L102 80 L118 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="5"/>
+        <rect x="46" y="28" width="15" height="15" fill="#171717" transform="rotate(20 53 35)"/>
+        <rect x="163" y="35" width="13" height="13" fill="#171717" transform="rotate(-20 169 41)"/>
+        <rect x="48" y="105" width="12" height="12" fill="#171717" transform="rotate(-15 54 111)"/>
+        <rect x="160" y="102" width="17" height="17" fill="#171717" transform="rotate(25 168 110)"/>
       </svg>
     </div>
-    <div class="name">SYW + Falling Pieces</div>
+    <div class="label"><span class="number">47</span><span class="name">Falling Pieces</span></div>
   </div>
 
   <!-- 48 -->
   <div class="card">
-    <div class="number">48</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 40 H175 V120 H25 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <text x="100" y="101" text-anchor="middle" font-family="Arial" font-size="38" font-weight="900" fill="#171717">SYW</text>
-        <path d="M25 80 H55 M145 80 H175" stroke="#a94f32" stroke-width="10"/>
-        <path d="M60 65 L75 80 L60 95 M140 65 L125 80 L140 95" fill="none" stroke="#a94f32" stroke-width="6"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="104" text-anchor="middle"
+          font-family="Arial" font-size="67" font-weight="800">SYW</text>
+        <path d="M110 28 L100 48 L116 64 L102 80 L118 96 L104 113"
+          fill="none" stroke="#171717" stroke-width="9"/>
+        <path d="M35 75 H88 M132 75 H185"
+          stroke="#171717" stroke-width="4"/>
       </svg>
     </div>
-    <div class="name">SYW + Pressure</div>
+    <div class="label"><span class="number">48</span><span class="name">Pressure</span></div>
   </div>
 
   <!-- 49 -->
   <div class="card">
-    <div class="number">49</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M35 125 V55 H165 V125" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M65 125 V80 H135 V125" fill="none" stroke="#171717" stroke-width="9"/>
-        <text x="100" y="112" text-anchor="middle" font-family="Arial" font-size="31" font-weight="900" fill="#171717">SYW</text>
-        <path d="M100 55 V30" stroke="#a94f32" stroke-width="8"/>
-        <path d="M87 43 L100 30 L113 43" fill="none" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <circle cx="110" cy="75" r="52" fill="none" stroke="#171717" stroke-width="9"/>
+        <text x="110" y="102" text-anchor="middle"
+          font-family="Arial" font-size="61" font-weight="800">SYW</text>
+        <path d="M110 20 L101 42 L116 57 L102 74 L118 90 L104 108 L113 130"
+          fill="none" stroke="#f2f2f0" stroke-width="9"/>
       </svg>
     </div>
-    <div class="name">SYW + Portal</div>
+    <div class="label"><span class="number">49</span><span class="name">Broken Portal</span></div>
   </div>
 
   <!-- 50 -->
   <div class="card">
-    <div class="number">50</div>
     <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 35 H180 V125 H20 Z" fill="none" stroke="#171717" stroke-width="9"/>
-        <text x="100" y="104" text-anchor="middle" font-family="Arial" font-size="49" font-weight="900" fill="#171717">SYW</text>
-        <path d="M20 80 H55 M145 80 H180" stroke="#a94f32" stroke-width="7"/>
-        <path d="M82 35 L95 48 M105 112 L118 125" stroke="#a94f32" stroke-width="5"/>
+      <svg viewBox="0 0 220 150">
+        <text x="110" y="105" text-anchor="middle"
+          font-family="Arial" font-size="74" font-weight="900" letter-spacing="-5">SYW</text>
+        <path d="M110 25 L99 47 L116 62 L101 79 L118 95 L103 112 L113 126"
+          fill="none" stroke="#171717" stroke-width="4"/>
+        <path d="M40 75 H77 M143 75 H180"
+          stroke="#171717" stroke-width="2"/>
       </svg>
     </div>
-    <div class="name">SYW — Signature</div>
-  </div>
-
-  <!-- 51 -->
-  <div class="card">
-    <div class="number">51</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 80 H75 M125 80 H175" stroke="#171717" stroke-width="18"/>
-        <path d="M75 80 L90 65 L100 80 L110 95 L125 80" fill="none" stroke="#a94f32" stroke-width="9"/>
-        <circle cx="100" cy="80" r="9" fill="#a94f32"/>
-      </svg>
-    </div>
-    <div class="name">Pressure Point</div>
-  </div>
-
-  <!-- 52 -->
-  <div class="card">
-    <div class="number">52</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 30 L85 80 L25 130" fill="none" stroke="#171717" stroke-width="18"/>
-        <path d="M175 30 L115 80 L175 130" fill="none" stroke="#171717" stroke-width="18"/>
-        <path d="M88 65 L100 80 L88 95 M112 65 L100 80 L112 95" fill="none" stroke="#a94f32" stroke-width="7"/>
-      </svg>
-    </div>
-    <div class="name">Forced Apart</div>
-  </div>
-
-  <!-- 53 -->
-  <div class="card">
-    <div class="number">53</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 125 H175" stroke="#171717" stroke-width="13"/>
-        <path d="M55 125 V70 H145 V125" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M75 70 L100 35 L125 70" fill="#a94f32"/>
-      </svg>
-    </div>
-    <div class="name">Emergence</div>
-  </div>
-
-  <!-- 54 -->
-  <div class="card">
-    <div class="number">54</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="25" width="65" height="65" fill="#171717"/>
-        <rect x="115" y="25" width="65" height="65" fill="#171717"/>
-        <rect x="20" y="105" width="65" height="35" fill="#171717"/>
-        <rect x="115" y="105" width="65" height="35" fill="#171717"/>
-        <path d="M85 80 H115" stroke="#a94f32" stroke-width="10"/>
-        <path d="M100 60 V100" stroke="#a94f32" stroke-width="6"/>
-      </svg>
-    </div>
-    <div class="name">Shattered Center</div>
-  </div>
-
-  <!-- 55 -->
-  <div class="card">
-    <div class="number">55</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="25" y="45" width="55" height="70" fill="#171717"/>
-        <rect x="80" y="35" width="55" height="70" fill="#171717" transform="rotate(-8 107 70)"/>
-        <rect x="135" y="50" width="40" height="70" fill="#171717"/>
-        <path d="M78 75 L125 75" stroke="#a94f32" stroke-width="9"/>
-      </svg>
-    </div>
-    <div class="name">Displacement</div>
-  </div>
-
-  <!-- 56 -->
-  <div class="card">
-    <div class="number">56</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 30 H175 V130 H25 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M70 30 V60 M130 100 V130" stroke="#171717" stroke-width="12"/>
-        <path d="M85 80 H115" stroke="#a94f32" stroke-width="12"/>
-        <path d="M85 65 L100 80 L85 95 M115 65 L100 80 L115 95" fill="none" stroke="#a94f32" stroke-width="5"/>
-      </svg>
-    </div>
-    <div class="name">Opening Forms</div>
-  </div>
-
-  <!-- 57 -->
-  <div class="card">
-    <div class="number">57</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 80 H145" stroke="#171717" stroke-width="16"/>
-        <path d="M125 55 L155 80 L125 105" fill="none" stroke="#a94f32" stroke-width="12"/>
-        <path d="M155 80 H180" stroke="#a94f32" stroke-width="9"/>
-      </svg>
-    </div>
-    <div class="name">Breakout Arrow</div>
-  </div>
-
-  <!-- 58 -->
-  <div class="card">
-    <div class="number">58</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 45 H180 M20 115 H180" stroke="#171717" stroke-width="20"/>
-        <path d="M75 80 H125" stroke="#a94f32" stroke-width="12"/>
-        <path d="M85 65 L75 80 L85 95 M115 65 L125 80 L115 95" fill="none" stroke="#a94f32" stroke-width="6"/>
-      </svg>
-    </div>
-    <div class="name">Compression</div>
-  </div>
-
-  <!-- 59 -->
-  <div class="card">
-    <div class="number">59</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <ellipse cx="100" cy="80" rx="75" ry="40" fill="none" stroke="#171717" stroke-width="10"/>
-        <path d="M25 80 H70 M130 80 H175" stroke="#a94f32" stroke-width="10"/>
-        <circle cx="100" cy="80" r="12" fill="#171717"/>
-      </svg>
-    </div>
-    <div class="name">Split Orbit</div>
-  </div>
-
-  <!-- 60 -->
-  <div class="card">
-    <div class="number">60</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M100 20 L160 80 L100 140 L40 80 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M80 80 H120" stroke="#a94f32" stroke-width="12"/>
-        <path d="M100 60 V100" stroke="#a94f32" stroke-width="6"/>
-      </svg>
-    </div>
-    <div class="name">Impact Diamond</div>
-  </div>
-
-  <!-- 61 -->
-  <div class="card">
-    <div class="number">61</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 40 L85 70 L25 100" fill="#171717"/>
-        <path d="M175 60 L115 90 L175 120" fill="#171717"/>
-        <path d="M80 80 H120" stroke="#a94f32" stroke-width="11"/>
-      </svg>
-    </div>
-    <div class="name">Moving Planes</div>
-  </div>
-
-  <!-- 62 -->
-  <div class="card">
-    <div class="number">62</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="none" stroke="#171717" stroke-width="13"/>
-        <path d="M70 80 H130" stroke="#a94f32" stroke-width="12"/>
-        <path d="M80 65 L70 80 L80 95" fill="none" stroke="#a94f32" stroke-width="7"/>
-      </svg>
-    </div>
-    <div class="name">Break In</div>
-  </div>
-
-  <!-- 63 -->
-  <div class="card">
-    <div class="number">63</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="none" stroke="#171717" stroke-width="13"/>
-        <path d="M100 80 H165" stroke="#a94f32" stroke-width="11"/>
-        <path d="M150 60 L170 80 L150 100" fill="none" stroke="#a94f32" stroke-width="8"/>
-      </svg>
-    </div>
-    <div class="name">Break Out</div>
-  </div>
-
-  <!-- 64 -->
-  <div class="card">
-    <div class="number">64</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="35" y="35" width="70" height="45" fill="#171717" transform="rotate(-7 70 57)"/>
-        <rect x="95" y="75" width="70" height="45" fill="#171717" transform="rotate(8 130 97)"/>
-        <path d="M85 80 L115 80" stroke="#a94f32" stroke-width="11"/>
-      </svg>
-    </div>
-    <div class="name">Unstable Stack</div>
-  </div>
-
-  <!-- 65 -->
-  <div class="card">
-    <div class="number">65</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="25" y="30" width="150" height="100" fill="#171717"/>
-        <circle cx="100" cy="80" r="31" fill="#ffffff"/>
-        <circle cx="100" cy="80" r="17" fill="#a94f32"/>
-      </svg>
-    </div>
-    <div class="name">Missing Center</div>
-  </div>
-
-  <!-- 66 -->
-  <div class="card">
-    <div class="number">66</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 80 C50 30 70 130 100 80 C130 30 150 130 180 80" fill="none" stroke="#171717" stroke-width="13"/>
-        <path d="M75 80 L100 80 L125 80" stroke="#a94f32" stroke-width="10"/>
-      </svg>
-    </div>
-    <div class="name">Fracture Wave</div>
-  </div>
-
-  <!-- 67 -->
-  <div class="card">
-    <div class="number">67</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 125 L75 75 L125 125" fill="none" stroke="#171717" stroke-width="14"/>
-        <path d="M75 75 L100 45 L125 75" fill="none" stroke="#a94f32" stroke-width="10"/>
-        <path d="M100 45 L100 20" stroke="#a94f32" stroke-width="8"/>
-      </svg>
-    </div>
-    <div class="name">Escaping Geometry</div>
-  </div>
-
-  <!-- 68 -->
-  <div class="card">
-    <div class="number">68</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 30 H175 V130 H25 Z" fill="none" stroke="#171717" stroke-width="12"/>
-        <path d="M70 30 L100 70 L130 30 M70 130 L100 90 L130 130" fill="none" stroke="#a94f32" stroke-width="9"/>
-      </svg>
-    </div>
-    <div class="name">Structural Tear</div>
-  </div>
-
-  <!-- 69 -->
-  <div class="card">
-    <div class="number">69</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="20" y="35" width="70" height="90" fill="#171717"/>
-        <rect x="110" y="35" width="70" height="90" fill="#171717"/>
-        <path d="M90 80 H110" stroke="#a94f32" stroke-width="12"/>
-        <path d="M95 65 L110 80 L95 95" fill="none" stroke="#a94f32" stroke-width="6"/>
-      </svg>
-    </div>
-    <div class="name">Two Worlds</div>
-  </div>
-
-  <!-- 70 -->
-  <div class="card">
-    <div class="number">70</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M35 130 V65 Q35 30 100 30 Q165 30 165 65 V130" fill="none" stroke="#171717" stroke-width="13"/>
-        <path d="M65 130 V75 Q65 55 100 55 Q135 55 135 75 V130" fill="none" stroke="#a94f32" stroke-width="9"/>
-        <circle cx="100" cy="92" r="9" fill="#171717"/>
-      </svg>
-    </div>
-    <div class="name">Opening Portal</div>
-  </div>
-
-  <!-- 71 -->
-  <div class="card">
-    <div class="number">71</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <rect x="75" y="60" width="50" height="50" fill="#171717"/>
-        <rect x="35" y="30" width="25" height="25" fill="#171717" transform="rotate(-20 47 42)"/>
-        <rect x="140" y="30" width="25" height="25" fill="#171717" transform="rotate(25 152 42)"/>
-        <rect x="35" y="115" width="25" height="25" fill="#171717" transform="rotate(20 47 127)"/>
-        <rect x="140" y="115" width="25" height="25" fill="#171717" transform="rotate(-25 152 127)"/>
-        <circle cx="100" cy="85" r="9" fill="#a94f32"/>
-      </svg>
-    </div>
-    <div class="name">Fragments Moving</div>
-  </div>
-
-  <!-- 72 -->
-  <div class="card">
-    <div class="number">72</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 80 H175" stroke="#171717" stroke-width="16"/>
-        <path d="M100 40 V120" stroke="#a94f32" stroke-width="11"/>
-        <path d="M85 55 L100 40 L115 55 M85 105 L100 120 L115 105" fill="none" stroke="#a94f32" stroke-width="7"/>
-      </svg>
-    </div>
-    <div class="name">Central Release</div>
-  </div>
-
-  <!-- 73 -->
-  <div class="card">
-    <div class="number">73</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M20 45 H180 M20 115 H180" stroke="#171717" stroke-width="18"/>
-        <path d="M70 80 H130" stroke="#a94f32" stroke-width="8"/>
-        <path d="M70 80 L55 65 M70 80 L55 95 M130 80 L145 65 M130 80 L145 95" stroke="#a94f32" stroke-width="6"/>
-      </svg>
-    </div>
-    <div class="name">Tension</div>
-  </div>
-
-  <!-- 74 -->
-  <div class="card">
-    <div class="number">74</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 35 H175 V125 H25 Z" fill="none" stroke="#171717" stroke-width="13"/>
-        <path d="M70 35 L95 68 L105 92 L130 125" fill="none" stroke="#a94f32" stroke-width="9"/>
-      </svg>
-    </div>
-    <div class="name">One Clean Break</div>
-  </div>
-
-  <!-- 75 -->
-  <div class="card">
-    <div class="number">75</div>
-    <div class="logo-area">
-      <svg viewBox="0 0 200 160">
-        <path d="M25 125 H75 V80 H125 V35 H175" fill="none" stroke="#171717" stroke-width="14"/>
-        <path d="M100 110 V50" stroke="#a94f32" stroke-width="10"/>
-        <path d="M85 65 L100 50 L115 65" fill="none" stroke="#a94f32" stroke-width="7"/>
-      </svg>
-    </div>
-    <div class="name">Beyond</div>
+    <div class="label"><span class="number">50</span><span class="name">Signature SYW</span></div>
   </div>
 
 </div>
