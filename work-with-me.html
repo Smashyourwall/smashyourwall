@@ -105,6 +105,27 @@
       padding: 40px 30px 45px;
     }
 
+    .top-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .top-copy {
+      min-width: 0;
+    }
+
+    .top-photo {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: 500px;
+      object-fit: cover;
+      object-position: center 70%;
+      border-radius: 3px;
+    }
+
     .eyebrow {
       font-size: 13px;
       text-transform: uppercase;
@@ -441,7 +462,6 @@
     /* MOBILE */
 
     @media (max-width: 750px) {
-
       .nav-inner {
         padding: 16px 18px;
       }
@@ -469,6 +489,18 @@
 
       .top-section {
         padding: 35px 20px 40px;
+      }
+
+      .top-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .top-photo {
+        width: 100%;
+        max-width: 360px;
+        height: 450px;
+        margin: 0 auto;
       }
 
       h1 {
@@ -565,41 +597,51 @@
 
   <section class="top-section">
     <div class="inner">
+      <div class="top-layout">
 
-      <div class="eyebrow">Work With Me</div>
+        <div class="top-copy">
+          <div class="eyebrow">Work With Me</div>
 
-      <h1>
-        Stop Thinking About Approaching. Start Actually Approaching.
-      </h1>
+          <h1>
+            Stop Thinking About Approaching. Start Actually Approaching.
+          </h1>
 
-      <p class="lead">
-        If you've spent months or years wanting to approach women but keep
-        finding yourself freezing, overthinking, or walking away, this is
-        what I help with.
-      </p>
+          <p class="lead">
+            If you've spent months or years wanting to approach women but keep
+            finding yourself freezing, overthinking, or walking away, this is
+            what I help with.
+          </p>
 
-      <p class="story-intro">I've been there.</p>
+          <p class="story-intro">I've been there.</p>
 
-      <p>
-        I spent years knowing exactly what I wanted to do and still being
-        unable to make myself do it.
-      </p>
+          <p>
+            I spent years knowing exactly what I wanted to do and still being
+            unable to make myself do it.
+          </p>
 
-      <p>
-        I knew I wanted to approach women. I knew I was capable of doing it.
-        And yet when the moment came, my brain would say go while my body
-        would say hell no.
-      </p>
+          <p>
+            I knew I wanted to approach women. I knew I was capable of doing it.
+            And yet when the moment came, my brain would say go while my body
+            would say hell no.
+          </p>
 
-      <p>
-        Eventually, I stopped trying to think my way out of it and started
-        doing the thing I was afraid of.
-      </p>
+          <p>
+            Eventually, I stopped trying to think my way out of it and started
+            doing the thing I was afraid of.
+          </p>
 
-      <p>
-        Now I help other men work through the same problem.
-      </p>
+          <p>
+            Now I help other men work through the same problem.
+          </p>
+        </div>
 
+        <img
+          src="https://i.imgur.com/a1bhJPb.jpg"
+          alt="Phil by the pool"
+          class="top-photo"
+        >
+
+      </div>
     </div>
   </section>
 
@@ -611,7 +653,6 @@
       <h2>What I Help With</h2>
 
       <ul class="help-list">
-
         <li>
           Getting yourself to actually walk over instead of spending
           20 minutes thinking about it
@@ -632,11 +673,9 @@
         <li>
           Building confidence through experience
         </li>
-
       </ul>
 
       <div style="margin-top: 55px; max-width: 760px;">
-
         <p style="font-size: 21px; margin-bottom: 18px;">
           You wouldn't expect to feel confident playing basketball if you'd
           never stepped on a court.
@@ -650,7 +689,6 @@
           Confidence comes from accumulating evidence that you can actually
           do the thing.
         </p>
-
       </div>
 
     </div>
@@ -671,11 +709,9 @@
       <div class="fit-grid">
 
         <div class="fit-column">
-
           <h3>This Makes Sense If...</h3>
 
           <ul class="fit-list good">
-
             <li>
               Your career and finances are in a reasonable place, but your
               dating life is way behind where you want it to be.
@@ -698,17 +734,13 @@
             <li>
               You're open to daytime practice rather than only nightlife.
             </li>
-
           </ul>
-
         </div>
 
         <div class="fit-column not-fit">
-
           <h3>Probably Not A Fit If...</h3>
 
           <ul class="fit-list not-good">
-
             <li>
               You want pre-recorded "pickup" content to binge without
               ever applying it. This isn't a course. It's built around you.
@@ -735,13 +767,10 @@
               You want manipulation, tricks, or a guarantee that women
               will say yes.
             </li>
-
           </ul>
-
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -758,7 +787,6 @@
       </p>
 
       <div class="offer">
-
         <div>
           <h3>1-on-1 6 Week Transformation</h3>
 
@@ -778,11 +806,9 @@
         <div class="offer-price">
           $1,500
         </div>
-
       </div>
 
       <div class="offer">
-
         <div>
           <h3>1-Day Wall Smasher</h3>
 
@@ -800,11 +826,9 @@
         <div class="offer-price">
           $1,500
         </div>
-
       </div>
 
       <div class="offer">
-
         <div>
           <h3>3-Day Wall Smasher</h3>
 
@@ -823,11 +847,9 @@
         <div class="offer-price">
           $3,500
         </div>
-
       </div>
 
       <div class="offer">
-
         <div>
           <h3>Custom Wall Smasher</h3>
 
@@ -846,11 +868,9 @@
         <div class="offer-price">
           Let's Discuss
         </div>
-
       </div>
 
       <div class="application-cta">
-
         <p>
           Think one of these options might be right for you? Tell me a little
           about your situation and what you're looking to change.
@@ -859,7 +879,6 @@
         <a href="coaching-application.html" class="application-button">
           APPLY TO WORK WITH ME →
         </a>
-
       </div>
 
     </div>
@@ -871,7 +890,6 @@
     <div class="inner">
 
       <div class="contact-copy">
-
         <h2>Think We Might Be A Good Fit?</h2>
 
         <p>
@@ -883,7 +901,6 @@
           Tell me a little about where you're stuck, what you've tried,
           and what you're hoping to change.
         </p>
-
       </div>
 
       <form
@@ -891,7 +908,6 @@
         action="https://formsubmit.co/smashyourwall@gmail.com"
         method="POST"
       >
-
         <input
           type="hidden"
           name="_next"
@@ -932,7 +948,6 @@
         <button type="submit" class="submit-button">
           SEND ME A MESSAGE →
         </button>
-
       </form>
 
       <div class="instagram">
@@ -953,7 +968,6 @@
 
   <footer>
     <div class="footer-inner">
-
       <div class="footer-brand">
         SMASH YOUR WALL
       </div>
@@ -961,7 +975,6 @@
       <div class="footer-copy">
         © 2026 Smash Your Wall
       </div>
-
     </div>
   </footer>
 
