@@ -217,8 +217,7 @@
     .pillar-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: 24px;
-      row-gap: 24px;
+      gap: 24px;
     }
 
     .pillar {
@@ -258,9 +257,15 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: 24px;
+      column-gap: 0;
       row-gap: 24px;
       align-items: stretch;
+    }
+
+    .callout,
+    .callout-photo-frame {
+      margin-left: 12px;
+      margin-right: 12px;
     }
 
     .callout {
@@ -405,12 +410,12 @@
         justify-self: center;
       }
 
-      .pillars-section {
-        padding: 60px 20px 65px;
-      }
-
       .pillar-grid {
         grid-template-columns: 1fr;
+      }
+
+      .pillars-section {
+        padding: 60px 20px 65px;
       }
 
       .callouts-section {
@@ -419,6 +424,12 @@
 
       .callouts-grid {
         grid-template-columns: 1fr;
+      }
+
+      .callout,
+      .callout-photo-frame {
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .callout {
