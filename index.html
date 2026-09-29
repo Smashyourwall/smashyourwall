@@ -275,9 +275,16 @@
       padding: 75px 30px 82px;
     }
 
-    .callout-grid {
+    .callouts-layout {
       max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .callout-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
@@ -343,6 +350,12 @@
       color: var(--text);
     }
 
+    .callout-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     /* ABOUT LINK */
 
     .about-section {
@@ -365,21 +378,6 @@
 
     .about-section a:hover {
       color: var(--accent);
-    }
-
-    /* BOTTOM PHOTO */
-
-    .bottom-photo-section {
-      padding: 0 30px 70px;
-      background: var(--white);
-    }
-
-    .bottom-photo {
-      display: block;
-      width: 100%;
-      max-width: 1100px;
-      height: auto;
-      margin: 0 auto;
     }
 
     /* FOOTER */
@@ -436,16 +434,22 @@
         padding: 60px 20px 65px;
       }
 
+      .callouts-layout {
+        grid-template-columns: 1fr;
+      }
+
       .callout-grid {
         grid-template-columns: 1fr;
       }
 
-      .about-section {
-        padding: 45px 20px 60px;
+      .callout-photo {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
       }
 
-      .bottom-photo-section {
-        padding: 0 20px 55px;
+      .about-section {
+        padding: 45px 20px 60px;
       }
     }
 
@@ -622,6 +626,7 @@
     </section>
 
     <section class="pillars-section">
+
       <div class="section-inner">
 
         <div class="section-heading">
@@ -672,63 +677,75 @@
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <section class="callouts-section">
-      <div class="callout-grid">
 
-        <div class="callout">
-          <div class="eyebrow">The Story</div>
+      <div class="callouts-layout">
 
-          <h2>Read the Memoir</h2>
+        <div class="callout-grid">
 
-          <p>
-            I wrote down the whole story of how I went from being terrified
-            to approach women to actually breaking through it.
-          </p>
+          <div class="callout">
 
-          <p>
-            It's free. No email. No course. No pitch. Just the story.
-          </p>
+            <div class="eyebrow">The Story</div>
 
-          <a class="callout-link" href="memoir.html">
-            READ THE MEMOIR →
-          </a>
+            <h2>Read the Memoir</h2>
+
+            <p>
+              I wrote down the whole story of how I went from being terrified
+              to approach women to actually breaking through it.
+            </p>
+
+            <p>
+              It's free. No email. No course. No pitch. Just the story.
+            </p>
+
+            <a class="callout-link" href="memoir.html">
+              READ THE MEMOIR →
+            </a>
+
+          </div>
+
+          <div class="callout primary">
+
+            <div class="eyebrow">Work With Me</div>
+
+            <h2>Stop Thinking About Approaching. Start Doing It.</h2>
+
+            <p>
+              If you're tired of thinking about approaching women and want to
+              actually do something about it, that's what I help with.
+              We don't just sit around talking about confidence.
+              We work on actually breaking through the wall.
+            </p>
+
+            <a class="callout-link" href="work-with-me.html">
+              WORK WITH ME →
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="callout primary">
-          <div class="eyebrow">Work With Me</div>
-
-          <h2>Stop Thinking About Approaching. Start Doing It.</h2>
-
-          <p>
-            If you're tired of thinking about approaching women and want to
-            actually do something about it, that's what I help with.
-            We don't just sit around talking about confidence.
-            We work on actually breaking through the wall.
-          </p>
-
-          <a class="callout-link" href="work-with-me.html">
-            WORK WITH ME →
-          </a>
-        </div>
+        <img
+          src="https://i.imgur.com/hZJbfKr.jpg"
+          alt="Phil"
+          class="callout-photo"
+        >
 
       </div>
+
     </section>
 
     <section class="about-section">
+
       <p>
         <a href="about-me.html">Want to know more about me? →</a>
       </p>
-    </section>
 
-    <section class="bottom-photo-section">
-      <img
-        src="https://i.imgur.com/hZJbfKr.jpg"
-        alt="Smash Your Wall"
-        class="bottom-photo"
-      >
     </section>
 
   </main>
