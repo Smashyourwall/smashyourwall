@@ -48,6 +48,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
@@ -70,6 +71,7 @@
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
     }
 
@@ -82,6 +84,18 @@
 
     .nav-links a:hover {
       color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      padding: 9px 12px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     .hero {
@@ -140,6 +154,7 @@
     .hero-button {
       display: inline-block;
       margin-top: 8px;
+      margin-bottom: 24px;
       padding: 13px 22px;
       background: var(--accent);
       color: var(--white);
@@ -153,7 +168,6 @@
       background: var(--text);
     }
 
-    /* Portrait frame matches the video's 9:16 aspect ratio. */
     .hero-video-frame {
       position: relative;
       width: 100%;
@@ -202,11 +216,13 @@
 
     .pillar-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 24px;
+      row-gap: 24px;
     }
 
     .pillar {
+      min-width: 0;
       padding: 30px;
       border: 1px solid var(--border);
       background: #fafafa;
@@ -242,11 +258,13 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      column-gap: 24px;
+      row-gap: 24px;
       align-items: stretch;
     }
 
     .callout {
+      min-width: 0;
       aspect-ratio: 1 / 1;
       padding: 24px;
       background: var(--white);
@@ -313,9 +331,9 @@
 
     .callout-photo-frame {
       position: relative;
+      min-width: 0;
       aspect-ratio: 9 / 10;
       align-self: center;
-      min-width: 0;
     }
 
     .callout-photo {
@@ -376,7 +394,7 @@
 
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 24px;
       }
 
       h1 {
@@ -434,14 +452,29 @@
         height: 31px;
       }
 
+      .menu-toggle {
+        display: inline-block;
+        margin-left: auto;
+      }
+
       .nav-links {
+        display: none;
         width: 100%;
-        justify-content: space-between;
-        gap: 8px;
+        padding: 8px 0 4px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .nav-links.is-open {
+        display: flex;
       }
 
       .nav-links a {
-        font-size: 12px;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
       }
 
       h1 {
@@ -450,6 +483,10 @@
 
       .hero-copy {
         font-size: 17px;
+      }
+
+      .hero-video-frame {
+        max-width: 320px;
       }
 
       .section-heading h2 {
@@ -505,8 +542,16 @@
         <span>SMASH YOUR WALL</span>
       </a>
 
-      <div class="nav-links">
-        <a href="index.html">Home</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        Menu
+      </button>
+
+      <div class="nav-links" id="site-navigation">
         <a href="about-me.html">About Me</a>
         <a href="memoir.html">Memoir</a>
         <a href="articles.html">Articles</a>
@@ -660,5 +705,16 @@
   <footer>
     © Smash Your Wall
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNavigation = document.querySelector("#site-navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      siteNavigation.classList.toggle("is-open", !isExpanded);
+    });
+  </script>
 </body>
 </html>
