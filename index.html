@@ -257,21 +257,14 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: 0;
-      row-gap: 24px;
+      gap: 24px;
       align-items: stretch;
-    }
-
-    .callout,
-    .callout-photo-frame {
-      margin-left: 12px;
-      margin-right: 12px;
     }
 
     .callout {
       min-width: 0;
       aspect-ratio: 1 / 1;
-      padding: 24px;
+      padding: 30px;
       background: var(--white);
       border: 1px solid var(--border);
       display: flex;
@@ -337,8 +330,9 @@
     .callout-photo-frame {
       position: relative;
       min-width: 0;
-      aspect-ratio: 9 / 10;
-      align-self: center;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--border);
+      overflow: hidden;
     }
 
     .callout-photo {
