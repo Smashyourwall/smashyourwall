@@ -279,15 +279,13 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
-      align-items: center;
+      align-items: stretch;
     }
 
     .callout-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      display: contents;
     }
 
     .callout {
@@ -353,7 +351,10 @@
     .callout-photo {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      object-position: center;
     }
 
     /* ABOUT LINK */
@@ -439,12 +440,15 @@
       }
 
       .callout-grid {
+        display: grid;
         grid-template-columns: 1fr;
       }
 
       .callout-photo {
         width: 100%;
         max-width: 500px;
+        height: auto;
+        min-height: 0;
         margin: 0 auto;
       }
 
