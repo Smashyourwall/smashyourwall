@@ -1,579 +1,537 @@
-\<!DOCTYPE html>&#x20;
-\<html lang="en">
-\<head>
-&#x20; \<meta charset="UTF-8">
-&#x20; \<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-&#x20; \<title>About Me — Smash Your Wall\</title>
-
-&#x20; \<style>
-&#x20;   :root {
-&#x20;     \--white: #ffffff;
-&#x20;     \--gray: #e2e2e0;
-&#x20;     \--text: #171717;
-&#x20;     \--muted: #666666;
-&#x20;     \--accent: #a94f32;
-&#x20;     \--border: #d2d2d0;
-&#x20;   }
-
-&#x20;   \* {
-&#x20;     box-sizing: border-box;
-&#x20;   }
-
-&#x20;   html {
-&#x20;     scroll-behavior: smooth;
-&#x20;   }
-
-&#x20;   body {
-&#x20;     margin: 0;
-&#x20;     font-family: Arial, Helvetica, sans-serif;
-&#x20;     color: var(--text);
-&#x20;     background: var(--white);
-&#x20;     line-height: 1.7;
-&#x20;   }
-
-&#x20;   /\* NAV \*/
-
-&#x20;   nav {
-&#x20;     position: sticky;
-&#x20;     top: 0;
-&#x20;     z-index: 1000;
-&#x20;     background: rgba(255, 255, 255, 0.97);
-&#x20;     border-bottom: 1px solid var(--border);
-&#x20;     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-&#x20;   }
-
-&#x20;   .nav-inner {
-&#x20;     max-width: 1100px;
-&#x20;     margin: 0 auto;
-&#x20;     padding: 18px 30px;
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     justify-content: space-between;
-&#x20;   }
-
-&#x20;   .logo {
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     gap: 11px;
-&#x20;     color: var(--text);
-&#x20;     text-decoration: none;
-&#x20;     font-size: 15px;
-&#x20;     font-weight: 700;
-&#x20;     letter-spacing: 1.5px;
-&#x20;     white-space: nowrap;
-&#x20;   }
-
-&#x20;   .logo-mark {
-&#x20;     width: 48px;
-&#x20;     height: 35px;
-&#x20;     flex-shrink: 0;
-&#x20;   }
-
-&#x20;   .nav-links {
-&#x20;     display: flex;
-&#x20;     gap: 28px;
-&#x20;   }
-
-&#x20;   .nav-links a {
-&#x20;     color: var(--text);
-&#x20;     text-decoration: none;
-&#x20;     font-size: 14px;
-&#x20;     font-weight: 500;
-&#x20;   }
-
-&#x20;   .nav-links a:hover {
-&#x20;     color: var(--accent);
-&#x20;   }
-
-&#x20;   /\* ABOUT ME HERO \*/
-
-&#x20;   .top-section {
-&#x20;     background: var(--gray);
-&#x20;     padding: 15px 30px 20px;
-&#x20;   }
-
-&#x20;   .top-inner {
-&#x20;     max-width: 900px;
-&#x20;     margin: 0 auto;
-&#x20;   }
-
-&#x20;   h1 {
-&#x20;     margin: 0 0 30px;
-&#x20;     text-align: center;
-&#x20;     font-size: clamp(40px, 6vw, 60px);
-&#x20;     line-height: 1.05;
-&#x20;     letter-spacing: -2px;
-&#x20;     font-weight: 800;
-&#x20;   }
-
-&#x20;   .hero-content {
-&#x20;     display: grid;
-&#x20;     grid-template-columns: 280px minmax(0, 1fr);
-&#x20;     gap: 65px;
-&#x20;     align-items: center;
-&#x20;     max-width: 760px;
-&#x20;     margin: 0 auto;
-&#x20;   }
-
-&#x20;   .about-photo {
-&#x20;     display: block;
-&#x20;     width: 280px;
-&#x20;     max-width: 100%;
-&#x20;     height: 360px;
-&#x20;     object-fit: cover;
-&#x20;     object-position: center 20%;
-&#x20;     margin: 0 auto;
-&#x20;     border-radius: 3px;
-&#x20;   }
-
-&#x20;   .hero-phrase {
-&#x20;     margin: 0;
-&#x20;     font-size: clamp(24px, 3vw, 34px);
-&#x20;     line-height: 1.3;
-&#x20;     letter-spacing: -0.6px;
-&#x20;     font-weight: 700;
-&#x20;   }
-
-&#x20;   /\* STORY \*/
-
-&#x20;   .story-section {
-&#x20;     background: var(--white);
-&#x20;     padding: 90px 30px;
-&#x20;   }
-
-&#x20;   .story-inner {
-&#x20;     max-width: 1000px;
-&#x20;     margin: 0 auto;
-&#x20;     display: grid;
-&#x20;     grid-template-columns: minmax(0, 1fr) 300px;
-&#x20;     gap: 65px;
-&#x20;     align-items: center;
-&#x20;   }
-
-&#x20;   .story-text {
-&#x20;     max-width: 680px;
-&#x20;   }
-
-&#x20;   h2 {
-&#x20;     margin: 0 0 35px;
-&#x20;     font-size: clamp(32px, 5vw, 48px);
-&#x20;     line-height: 1.15;
-&#x20;     letter-spacing: -1.2px;
-&#x20;     font-weight: 800;
-&#x20;   }
-
-&#x20;   p {
-&#x20;     margin: 0 0 25px;
-&#x20;     font-size: 18px;
-&#x20;   }
-
-&#x20;   .story-photo-wrap {
-&#x20;     display: flex;
-&#x20;     justify-content: center;
-&#x20;   }
-
-&#x20;   .story-photo {
-&#x20;     width: 100%;
-&#x20;     max-width: 300px;
-&#x20;     display: block;
-&#x20;     border-radius: 3px;
-&#x20;   }
-
-&#x20;   /\* PHILOSOPHY \*/
-
-&#x20;   .philosophy-section {
-&#x20;     background: var(--gray);
-&#x20;     padding: 90px 30px;
-&#x20;   }
-
-&#x20;   .philosophy-inner {
-&#x20;     max-width: 680px;
-&#x20;     margin: 0 auto;
-&#x20;   }
-
-&#x20;   /\* PLAYING FIELD \*/
-
-&#x20;   .playing-section {
-&#x20;     background: var(--white);
-&#x20;     padding: 90px 30px 100px;
-&#x20;   }
-
-&#x20;   .playing-inner {
-&#x20;     max-width: 1000px;
-&#x20;     margin: 0 auto;
-&#x20;     display: grid;
-&#x20;     grid-template-columns: minmax(0, 1fr) 360px;
-&#x20;     gap: 60px;
-&#x20;     align-items: center;
-&#x20;   }
-
-&#x20;   .playing-text {
-&#x20;     max-width: 680px;
-&#x20;   }
-
-&#x20;   .playing-photo-wrap {
-&#x20;     display: flex;
-&#x20;     justify-content: center;
-&#x20;   }
-
-&#x20;   .playing-photo {
-&#x20;     width: 360px;
-&#x20;     max-width: 100%;
-&#x20;     height: 560px;
-&#x20;     object-fit: cover;
-&#x20;     object-position: center 70%;
-&#x20;     display: block;
-&#x20;     border-radius: 3px;
-&#x20;   }
-
-&#x20;   .memoir-link {
-&#x20;     display: inline-block;
-&#x20;     margin-top: 15px;
-&#x20;     color: var(--accent);
-&#x20;     font-size: 18px;
-&#x20;     font-weight: 700;
-&#x20;     text-decoration: none;
-&#x20;   }
-
-&#x20;   .memoir-link:hover {
-&#x20;     text-decoration: underline;
-&#x20;   }
-
-&#x20;   /\* FOOTER \*/
-
-&#x20;   footer {
-&#x20;     border-top: 1px solid var(--border);
-&#x20;     background: var(--white);
-&#x20;     padding: 28px 30px;
-&#x20;     text-align: center;
-&#x20;     color: var(--muted);
-&#x20;     font-size: 14px;
-&#x20;   }
-
-&#x20;   /\* MOBILE \*/
-
-&#x20;   @media (max-width: 750px) {
-
-&#x20;     .nav-inner {
-&#x20;       padding: 16px 18px;
-&#x20;     }
-
-&#x20;     .nav-links {
-&#x20;       gap: 15px;
-&#x20;     }
-
-&#x20;     .nav-links a {
-&#x20;       font-size: 13px;
-&#x20;     }
-
-&#x20;     .logo {
-&#x20;       font-size: 13px;
-&#x20;     }
-
-&#x20;     .logo-mark {
-&#x20;       width: 42px;
-&#x20;       height: 31px;
-&#x20;     }
-
-&#x20;     .top-section {
-&#x20;       padding: 25px 20px 30px;
-&#x20;     }
-
-&#x20;     h1 {
-&#x20;       margin-bottom: 25px;
-&#x20;       letter-spacing: -1.8px;
-&#x20;     }
-
-&#x20;     .hero-content {
-&#x20;       grid-template-columns: 1fr;
-&#x20;       gap: 25px;
-&#x20;       max-width: 340px;
-&#x20;     }
-
-&#x20;     .about-photo {
-&#x20;       width: 240px;
-&#x20;       height: 300px;
-&#x20;     }
-
-&#x20;     .hero-phrase {
-&#x20;       text-align: center;
-&#x20;       font-size: 25px;
-&#x20;       line-height: 1.3;
-&#x20;     }
-
-&#x20;     .story-section,
-&#x20;     .philosophy-section,
-&#x20;     .playing-section {
-&#x20;       padding: 65px 22px;
-&#x20;     }
-
-&#x20;     .story-inner,
-&#x20;     .playing-inner {
-&#x20;       grid-template-columns: 1fr;
-&#x20;       gap: 40px;
-&#x20;     }
-
-&#x20;     .story-photo {
-&#x20;       max-width: 300px;
-&#x20;     }
-
-&#x20;     .playing-photo {
-&#x20;       width: 100%;
-&#x20;       max-width: 340px;
-&#x20;       height: 450px;
-&#x20;       object-fit: cover;
-&#x20;       object-position: center 65%;
-&#x20;     }
-
-&#x20;     h2 {
-&#x20;       margin-bottom: 28px;
-&#x20;     }
-
-&#x20;     p {
-&#x20;       font-size: 17px;
-&#x20;     }
-&#x20;   }
-&#x20; \</style>
-\</head>
-
-\<body>
-
-&#x20; \<nav>
-&#x20;   \<div class="nav-inner">
-
-&#x20;     \<a href="index.html" class="logo">
-
-&#x20;       \<svg
-&#x20;         class="logo-mark"
-&#x20;         viewBox="0 0 220 150"
-&#x20;         fill="none"
-&#x20;         xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
-&#x20;         aria-hidden="true"
-&#x20;       \>
-&#x20;         \<rect
-&#x20;           x="34"
-&#x20;           y="35"
-&#x20;           width="152"
-&#x20;           height="82"
-&#x20;           fill="currentColor"
-&#x20;         />
-
-&#x20;         \<text
-&#x20;           x="110"
-&#x20;           y="91"
-&#x20;           text-anchor="middle"
-&#x20;           fill="white"
-&#x20;           font-family="Arial, Helvetica, sans-serif"
-&#x20;           font-size="43"
-&#x20;           font-weight="700"
-&#x20;           letter-spacing="1"
-&#x20;         \>SYW\</text>
-
-&#x20;         \<path
-&#x20;           d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
-&#x20;           stroke="white"
-&#x20;           stroke-width="7"
-&#x20;           stroke-linecap="round"
-&#x20;           stroke-linejoin="round"
-&#x20;         />
-&#x20;       \</svg>
-
-&#x20;       \<span>SMASH YOUR WALL\</span>
-
-&#x20;     \</a>
-
-&#x20;     \<div class="nav-links">
-&#x20;       \<a href="about-me.html">About Me\</a>
-&#x20;       \<a href="memoir.html">Memoir\</a>
-&#x20;       \<a href="articles.html">Articles\</a>
-&#x20;       \<a href="work-with-me.html">Work With Me\</a>
-&#x20;       \<a href="faq.html">FAQ\</a>
-&#x20;     \</div>
-
-&#x20;   \</div>
-&#x20; \</nav>
-
-
-&#x20; \<!-- ABOUT ME / HERO -->
-
-&#x20; \<section class="top-section">
-
-&#x20;   \<div class="top-inner">
-
-&#x20;     \<h1>About Me\</h1>
-
-&#x20;     \<div class="hero-content">
-
-&#x20;       \<img
-&#x20;         src="[https://i.imgur.com/cCdf9gg.jpg](https://i.imgur.com/cCdf9gg.jpg)"
-&#x20;         alt="Phil — Smash Your Wall"
-&#x20;         class="about-photo"
-&#x20;       \>
-
-&#x20;       \<p class="hero-phrase">
-&#x20;         From “Approaching is Scary” to “Let's Go Meet Someone Awesome.”
-&#x20;       \</p>
-
-&#x20;     \</div>
-
-&#x20;   \</div>
-
-&#x20; \</section>
-
-
-&#x20; \<!-- MY STORY -->
-
-&#x20; \<section class="story-section">
-
-&#x20;   \<div class="story-inner">
-
-&#x20;     \<div class="story-text">
-
-&#x20;       \<h2>My Story\</h2>
-
-&#x20;       \<p>
-&#x20;         My name is Phil. My parents sent me to an all-boys high school,
-&#x20;         so from about 14–18 I wasn't talking to girls and having normal
-&#x20;         interactions with them, let alone flirting. That alone probably
-&#x20;         set me up for some monster approach anxiety. And the things I was
-&#x20;         good at didn't exactly help. Baseball, basketball, video games,
-&#x20;         poker, reading—these were all things I enjoyed, but none of them
-&#x20;         gave me much female interaction. I was basically competitive at
-&#x20;         a handful of things while borderline dysfunctional with women.
-&#x20;       \</p>
-
-&#x20;       \<p>
-&#x20;         When I eventually discovered cold approach, I immediately thought
-&#x20;         I'd found my solution. If I wanted to meet women, why not just go
-&#x20;         talk to them? But I couldn't just approach. It was way too
-&#x20;         daunting, especially by myself.
-&#x20;       \</p>
-
-&#x20;     \</div>
-
-&#x20;     \<div class="story-photo-wrap">
-
-&#x20;       \<img
-&#x20;         src="[https://i.imgur.com/slwbGrb.jpg](https://i.imgur.com/slwbGrb.jpg)"
-&#x20;         alt="Phil"
-&#x20;         class="story-photo"
-&#x20;       \>
-
-&#x20;     \</div>
-
-&#x20;   \</div>
-
-&#x20; \</section>
-
-
-&#x20; \<!-- COLD APPROACH PHILOSOPHY -->
-
-&#x20; \<section class="philosophy-section">
-
-&#x20;   \<div class="philosophy-inner">
-
-&#x20;     \<h2>My Cold Approach Philosophy\</h2>
-
-&#x20;     \<p>
-&#x20;       In a perfect world, “cold approach” shouldn't even have a label.
-&#x20;       In the pre-internet era, “cold approach” was just the way people met.
-&#x20;       I labeled it the “Grandpa Method” because boomers had to meet each
-&#x20;       other before the internet somehow, right?
-&#x20;     \</p>
-
-&#x20;     \<p>
-&#x20;       Either way, even if cold approach was totally normal eons ago,
-&#x20;       it now has a largely negative stigma in the general public. A lot
-&#x20;       of that comes from the men who can't detect or read signals when
-&#x20;       women get uncomfortable.
-&#x20;     \</p>
-
-&#x20;     \<p>
-&#x20;       It's a double-edged sword. The negativity that society puts on
-&#x20;       approaching makes it far more difficult to cross the initial barrier
-&#x20;       because we think we're going to be judged into oblivion. But it also
-&#x20;       provides a huge benefit. Since almost nobody is cold approaching,
-&#x20;       guess what that means?
-&#x20;     \</p>
-
-&#x20;     \<p>
-&#x20;       An approach is extremely unique and will stick out in a girl's mind,
-&#x20;       especially if she likes you.
-&#x20;     \</p>
-
-&#x20;   \</div>
-
-&#x20; \</section>
-
-
-&#x20; \<!-- THE PLAYING FIELD -->
-
-&#x20; \<section class="playing-section">
-
-&#x20;   \<div class="playing-inner">
-
-&#x20;     \<div class="playing-text">
-
-&#x20;       \<h2>The Playing Field\</h2>
-
-&#x20;       \<p>
-&#x20;         After I conquered my approach anxiety, I really stopped caring about
-&#x20;         women and making them the center of my focus.
-&#x20;       \</p>
-
-&#x20;       \<p>
-&#x20;         20-year-old Phil was thinking about chicks all the time. At 24?
-&#x20;         Hardly the same priority.
-&#x20;       \</p>
-
-&#x20;       \<p>
-&#x20;         Other things started taking over. What do I actually want from life?
-&#x20;         How much long-term flexibility do I want? How do money and flexibility
-&#x20;         go together? How do I want to live? Do I want a long-term relationship
-&#x20;         so I can eventually have a family?
-&#x20;       \</p>
-
-&#x20;       \<p>
-&#x20;         Once you start having answers to those questions, other things that
-&#x20;         seemed so huge before start to feel secondary to your actual goals.
-&#x20;       \</p>
-
-&#x20;       \<p>
-&#x20;         That was one of the unintended side effects of conquering my approach
-&#x20;         anxiety. My priorities became crystal clear, and the neediness I had
-&#x20;         around women disappeared. Going on so many dates also removed a lot
-&#x20;         of my neediness. It became much easier to be laid back and have fun
-&#x20;         with zero expectations.
-&#x20;       \</p>
-
-&#x20;       \<a
-&#x20;         href="memoir.html"
-&#x20;         class="memoir-link"
-&#x20;       \>
-&#x20;         Read the full story in my memoir →
-&#x20;       \</a>
-
-&#x20;     \</div>
-
-&#x20;     \<div class="playing-photo-wrap">
-
-&#x20;       \<img
-&#x20;         src="[https://i.imgur.com/a1bhJPb.jpg](https://i.imgur.com/a1bhJPb.jpg)"
-&#x20;         alt="Phil"
-&#x20;         class="playing-photo"
-&#x20;       \>
-
-&#x20;     \</div>
-
-&#x20;   \</div>
-
-&#x20; \</section>
-
-
-&#x20; \<footer>
-&#x20;   © Smash Your Wall
-&#x20; \</footer>
-
-\</body>
-\</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Smash Your Wall</title>
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --gray: #e2e2e0;
+      --text: #171717;
+      --muted: #666666;
+      --accent: #a94f32;
+      --border: #d2d2d0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 35px;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ABOUT ME HERO */
+
+    .top-section {
+      background: var(--gray);
+      padding: 15px 30px 20px;
+    }
+
+    .top-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      text-align: center;
+      font-size: clamp(40px, 6vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      font-weight: 800;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 65px;
+      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .about-photo {
+      display: block;
+      width: 280px;
+      max-width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center 20%;
+      margin: 0 auto;
+      border-radius: 3px;
+    }
+
+    .hero-phrase {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.3;
+      letter-spacing: -0.6px;
+      font-weight: 700;
+    }
+
+    /* STORY */
+
+    .story-section {
+      background: var(--white);
+      padding: 90px 30px;
+    }
+
+    .story-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .story-text {
+      max-width: 680px;
+    }
+
+    h2 {
+      margin: 0 0 35px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0 0 25px;
+      font-size: 18px;
+    }
+
+    .story-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .story-photo {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      border-radius: 3px;
+    }
+
+    /* PHILOSOPHY */
+
+    .philosophy-section {
+      background: var(--gray);
+      padding: 90px 30px;
+    }
+
+    .philosophy-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* PLAYING FIELD */
+
+    .playing-section {
+      background: var(--white);
+      padding: 90px 30px 100px;
+    }
+
+    .playing-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .playing-text {
+      max-width: 680px;
+    }
+
+    .playing-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .playing-photo {
+      width: 360px;
+      max-width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center 70%;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .memoir-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .memoir-link:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      padding: 28px 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+      .nav-inner {
+        padding: 16px 18px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .logo {
+        font-size: 13px;
+      }
+
+      .logo-mark {
+        width: 42px;
+        height: 31px;
+      }
+
+      .top-section {
+        padding: 25px 20px 30px;
+      }
+
+      h1 {
+        margin-bottom: 25px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 340px;
+      }
+
+      .about-photo {
+        width: 240px;
+        height: 300px;
+      }
+
+      .hero-phrase {
+        text-align: center;
+        font-size: 25px;
+        line-height: 1.3;
+      }
+
+      .story-section,
+      .philosophy-section,
+      .playing-section {
+        padding: 65px 22px;
+      }
+
+      .story-inner,
+      .playing-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .story-photo {
+        max-width: 300px;
+      }
+
+      .playing-photo {
+        width: 100%;
+        max-width: 340px;
+        height: 450px;
+        object-fit: cover;
+        object-position: center 65%;
+      }
+
+      h2 {
+        margin-bottom: 28px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <svg
+          class="logo-mark"
+          viewBox="0 0 220 150"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            x="34"
+            y="35"
+            width="152"
+            height="82"
+            fill="currentColor"
+          />
+
+          <text
+            x="110"
+            y="91"
+            text-anchor="middle"
+            fill="white"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="43"
+            font-weight="700"
+            letter-spacing="1"
+          >SYW</text>
+
+          <path
+            d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
+            stroke="white"
+            stroke-width="7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <span>SMASH YOUR WALL</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="about-me.html">About Me</a>
+        <a href="memoir.html">Memoir</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT ME / HERO -->
+
+  <section class="top-section">
+    <div class="top-inner">
+      <h1>About Me</h1>
+
+      <div class="hero-content">
+        <img
+          src="https://i.imgur.com/cCdf9gg.jpg"
+          alt="Phil — Smash Your Wall"
+          class="about-photo"
+        >
+
+        <p class="hero-phrase">
+          From “Approaching is Scary” to “Let's Go Meet Someone Awesome.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY STORY -->
+
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="story-text">
+        <h2>My Story</h2>
+
+        <p>
+          My name is Phil. My parents sent me to an all-boys high school,
+          so from about 14–18 I wasn't talking to girls and having normal
+          interactions with them, let alone flirting. That alone probably
+          set me up for some monster approach anxiety. And the things I was
+          good at didn't exactly help. Baseball, basketball, video games,
+          poker, reading—these were all things I enjoyed, but none of them
+          gave me much female interaction. I was basically competitive at
+          a handful of things while borderline dysfunctional with women.
+        </p>
+
+        <p>
+          When I eventually discovered cold approach, I immediately thought
+          I'd found my solution. If I wanted to meet women, why not just go
+          talk to them? But I couldn't just approach. It was way too
+          daunting, especially by myself.
+        </p>
+      </div>
+
+      <div class="story-photo-wrap">
+        <img
+          src="https://i.imgur.com/slwbGrb.jpg"
+          alt="Phil"
+          class="story-photo"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- COLD APPROACH PHILOSOPHY -->
+
+  <section class="philosophy-section">
+    <div class="philosophy-inner">
+      <h2>My Cold Approach Philosophy</h2>
+
+      <p>
+        In a perfect world, “cold approach” shouldn't even have a label.
+        In the pre-internet era, “cold approach” was just the way people met.
+        I labeled it the “Grandpa Method” because boomers had to meet each
+        other before the internet somehow, right?
+      </p>
+
+      <p>
+        Either way, even if cold approach was totally normal eons ago,
+        it now has a largely negative stigma in the general public. A lot
+        of that comes from the men who can't detect or read signals when
+        women get uncomfortable.
+      </p>
+
+      <p>
+        It's a double-edged sword. The negativity that society puts on
+        approaching makes it far more difficult to cross the initial barrier
+        because we think we're going to be judged into oblivion. But it also
+        provides a huge benefit. Since almost nobody is cold approaching,
+        guess what that means?
+      </p>
+
+      <p>
+        An approach is extremely unique and will stick out in a girl's mind,
+        especially if she likes you.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE PLAYING FIELD -->
+
+  <section class="playing-section">
+    <div class="playing-inner">
+      <div class="playing-text">
+        <h2>The Playing Field</h2>
+
+        <p>
+          After I conquered my approach anxiety, I really stopped caring about
+          women and making them the center of my focus.
+        </p>
+
+        <p>
+          20-year-old Phil was thinking about chicks all the time. At 24?
+          Hardly the same priority.
+        </p>
+
+        <p>
+          Other things started taking over. What do I actually want from life?
+          How much long-term flexibility do I want? How do money and flexibility
+          go together? How do I want to live? Do I want a long-term relationship
+          so I can eventually have a family?
+        </p>
+
+        <p>
+          Once you start having answers to those questions, other things that
+          seemed so huge before start to feel secondary to your actual goals.
+        </p>
+
+        <p>
+          That was one of the unintended side effects of conquering my approach
+          anxiety. My priorities became crystal clear, and the neediness I had
+          around women disappeared. Going on so many dates also removed a lot
+          of my neediness. It became much easier to be laid back and have fun
+          with zero expectations.
+        </p>
+
+        <a href="memoir.html" class="memoir-link">
+          Read the full story in my memoir →
+        </a>
+      </div>
+
+      <div class="playing-photo-wrap">
+        <img
+          src="https://i.imgur.com/a1bhJPb.jpg"
+          alt="Phil"
+          class="playing-photo"
+        >
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © Smash Your Wall
+  </footer>
+</body>
+</html>
