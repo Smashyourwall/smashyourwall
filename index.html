@@ -232,20 +232,16 @@
       max-width: 900px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      align-items: stretch;
-    }
-    .callout-grid {
-      display: contents;
+      align-items: start;
     }
     .callout {
-      padding: 30px 24px;
+      padding: 24px 20px;
       background: var(--white);
       border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
     .callout.primary {
       background: var(--text);
@@ -253,19 +249,22 @@
       border-color: var(--text);
     }
     .callout .eyebrow {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .callout h2 {
-      margin: 0 0 12px;
-      font-size: 22px;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.4px;
     }
     .callout p {
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.45;
+    }
+    .callout p:last-of-type {
+      margin-bottom: 18px;
     }
     .callout.primary p {
       color: #c8c8c8;
@@ -273,7 +272,7 @@
     .callout-link {
       display: inline-block;
       align-self: flex-start;
-      padding: 10px 16px;
+      padding: 9px 15px;
       background: var(--accent);
       color: var(--white);
       text-decoration: none;
@@ -292,21 +291,6 @@
     .callout.primary .callout-link:hover {
       background: var(--white);
       color: var(--text);
-    }
-    .callout-photo-frame {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-height: 380px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-    .callout-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
     }
     /* ABOUT LINK */
     .about-section {
@@ -371,16 +355,6 @@
       .callouts-layout {
         grid-template-columns: 1fr;
       }
-      .callout-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-      .callout-photo-frame {
-        width: 100%;
-        max-width: 500px;
-        min-height: 350px;
-        margin: 0 auto;
-      }
       .about-section {
         padding: 45px 20px 60px;
       }
@@ -421,7 +395,7 @@
         font-size: 31px;
       }
       .callout {
-        padding: 30px;
+        padding: 24px;
       }
     }
   </style>
@@ -562,45 +536,32 @@
     </section>
     <section class="callouts-section">
       <div class="callouts-layout">
-        <div class="callout-grid">
-          <div class="callout">
-            <div>
-              <div class="eyebrow">The Story</div>
-              <h2>Read the Memoir</h2>
-              <p>
-                I wrote down the whole story of how I went from being terrified
-                to approach women to actually breaking through it.
-              </p>
-              <p>
-                It's free. No email. No course. No pitch. Just the story.
-              </p>
-            </div>
-            <a class="callout-link" href="memoir.html">
-              READ THE MEMOIR →
-            </a>
-          </div>
-          <div class="callout primary">
-            <div>
-              <div class="eyebrow">Work With Me</div>
-              <h2>Stop Thinking About Approaching. Start Doing It.</h2>
-              <p>
-                If you're tired of thinking about approaching women and want to
-                actually do something about it, that's what I help with.
-                We don't just sit around talking about confidence.
-                We work on actually breaking through the wall.
-              </p>
-            </div>
-            <a class="callout-link" href="work-with-me.html">
-              WORK WITH ME →
-            </a>
-          </div>
+        <div class="callout">
+          <div class="eyebrow">The Story</div>
+          <h2>Read the Memoir</h2>
+          <p>
+            I wrote down the whole story of how I went from being terrified
+            to approach women to actually breaking through it.
+          </p>
+          <p>
+            It's free. No email. No course. No pitch. Just the story.
+          </p>
+          <a class="callout-link" href="memoir.html">
+            READ THE MEMOIR →
+          </a>
         </div>
-        <div class="callout-photo-frame">
-          <img
-            src="https://i.imgur.com/hZJbfKr.jpg"
-            alt="Phil"
-            class="callout-photo"
-          >
+        <div class="callout primary">
+          <div class="eyebrow">Work With Me</div>
+          <h2>Stop Thinking About Approaching. Start Doing It.</h2>
+          <p>
+            If you're tired of thinking about approaching women and want to
+            actually do something about it, that's what I help with.
+            We don't just sit around talking about confidence.
+            We work on actually breaking through the wall.
+          </p>
+          <a class="callout-link" href="work-with-me.html">
+            WORK WITH ME →
+          </a>
         </div>
       </div>
     </section>
