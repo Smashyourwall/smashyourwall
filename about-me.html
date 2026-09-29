@@ -188,8 +188,31 @@
     }
 
     .philosophy-inner {
-      max-width: 680px;
+      max-width: 1000px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 60px;
+      align-items: center;
+    }
+
+    .philosophy-text {
+      max-width: 680px;
+    }
+
+    .philosophy-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .philosophy-photo {
+      width: 360px;
+      max-width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center 70%;
+      display: block;
+      border-radius: 3px;
     }
 
     /* PLAYING FIELD */
@@ -202,29 +225,10 @@
     .playing-inner {
       max-width: 1000px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 60px;
-      align-items: center;
     }
 
     .playing-text {
       max-width: 680px;
-    }
-
-    .playing-photo-wrap {
-      display: flex;
-      justify-content: center;
-    }
-
-    .playing-photo {
-      width: 360px;
-      max-width: 100%;
-      height: 560px;
-      object-fit: cover;
-      object-position: center 70%;
-      display: block;
-      border-radius: 3px;
     }
 
     .memoir-link {
@@ -308,7 +312,7 @@
       }
 
       .story-inner,
-      .playing-inner {
+      .philosophy-inner {
         grid-template-columns: 1fr;
         gap: 40px;
       }
@@ -317,7 +321,7 @@
         max-width: 300px;
       }
 
-      .playing-photo {
+      .philosophy-photo {
         width: 100%;
         max-width: 340px;
         height: 450px;
@@ -472,34 +476,46 @@
 
     <div class="philosophy-inner">
 
-      <h2>My Cold Approach Philosophy</h2>
+      <div class="philosophy-photo-wrap">
+        <img
+          src="https://i.imgur.com/a1bhJPb.jpg"
+          alt="Phil by the pool"
+          class="philosophy-photo"
+        >
+      </div>
 
-      <p>
-        In a perfect world, “cold approach” shouldn't even have a label.
-        In the pre-internet era, “cold approach” was just the way people met.
-        I labeled it the “Grandpa Method” because boomers had to meet each
-        other before the internet somehow, right?
-      </p>
+      <div class="philosophy-text">
 
-      <p>
-        Either way, even if cold approach was totally normal eons ago,
-        it now has a largely negative stigma in the general public. A lot
-        of that comes from the men who can't detect or read signals when
-        women get uncomfortable.
-      </p>
+        <h2>My Cold Approach Philosophy</h2>
 
-      <p>
-        It's a double-edged sword. The negativity that society puts on
-        approaching makes it far more difficult to cross the initial barrier
-        because we think we're going to be judged into oblivion. But it also
-        provides a huge benefit. Since almost nobody is cold approaching,
-        guess what that means?
-      </p>
+        <p>
+          In a perfect world, “cold approach” shouldn't even have a label.
+          In the pre-internet era, “cold approach” was just the way people met.
+          I labeled it the “Grandpa Method” because boomers had to meet each
+          other before the internet somehow, right?
+        </p>
 
-      <p>
-        An approach is extremely unique and will stick out in a girl's mind,
-        especially if she likes you.
-      </p>
+        <p>
+          Either way, even if cold approach was totally normal eons ago,
+          it now has a largely negative stigma in the general public. A lot
+          of that comes from the men who can't detect or read signals when
+          women get uncomfortable.
+        </p>
+
+        <p>
+          It's a double-edged sword. The negativity that society puts on
+          approaching makes it far more difficult to cross the initial barrier
+          because we think we're going to be judged into oblivion. But it also
+          provides a huge benefit. Since almost nobody is cold approaching,
+          guess what that means?
+        </p>
+
+        <p>
+          An approach is extremely unique and will stick out in a girl's mind,
+          especially if she likes you.
+        </p>
+
+      </div>
 
     </div>
 
@@ -552,16 +568,6 @@
         >
           Read the full story in my memoir →
         </a>
-
-      </div>
-
-      <div class="playing-photo-wrap">
-
-        <img
-          src="https://i.imgur.com/a1bhJPb.jpg"
-          alt="Phil"
-          class="playing-photo"
-        >
 
       </div>
 
