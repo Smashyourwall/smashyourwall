@@ -116,14 +116,18 @@
       min-width: 0;
     }
 
-    .top-photo {
-      display: block;
+    .top-photo-frame {
       width: 100%;
       max-width: 360px;
       height: 440px;
-      object-fit: cover
-      object-position: center top;
+      overflow: hidden;
       border-radius: 3px;
+    }
+
+    .top-photo {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .eyebrow {
@@ -496,11 +500,9 @@
         gap: 30px;
       }
 
-      .top-photo {
-  height: 380px;
-  object-fit: cover;
-  object-position: center top;
-}
+      .top-photo-frame {
+        height: 400px;
+        margin: 0 auto;
       }
 
       h1 {
@@ -635,11 +637,13 @@
           </p>
         </div>
 
-        <img
-          src="https://i.imgur.com/cCdf9gg.jpg"
-          alt="Phil by the pool"
-          class="top-photo"
-        >
+        <div class="top-photo-frame">
+          <img
+            src="https://i.imgur.com/cCdf9gg.jpg"
+            alt="Phil by the pool"
+            class="top-photo"
+          >
+        </div>
 
       </div>
     </div>
