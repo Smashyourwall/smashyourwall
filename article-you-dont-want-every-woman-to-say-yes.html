@@ -34,6 +34,8 @@
       line-height: 1.7;
     }
 
+    /* NAV - IDENTICAL TO HOME & ABOUT ME */
+
     nav {
       position: sticky;
       top: 0;
@@ -72,6 +74,7 @@
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
     }
 
@@ -85,6 +88,20 @@
     .nav-links a:hover {
       color: var(--accent);
     }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      padding: 9px 12px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
 
     .hero {
       background: var(--gray);
@@ -119,6 +136,8 @@
       font-size: 13px;
       font-weight: 500;
     }
+
+    /* ARTICLE SECTION */
 
     .article-section {
       background: var(--white);
@@ -197,6 +216,8 @@
       color: var(--accent);
     }
 
+    /* FOOTER */
+
     footer {
       background: #111;
       color: #888;
@@ -205,9 +226,19 @@
       font-size: 12px;
     }
 
-    @media (max-width: 750px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
       .nav-inner {
         padding: 16px 18px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
       }
 
       .logo {
@@ -218,17 +249,39 @@
         width: 42px;
         height: 31px;
       }
+    }
+
+    @media (max-width: 650px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+        margin-left: auto;
+      }
 
       .nav-links {
-        gap: 15px;
+        display: none;
+        width: 100%;
+        padding: 8px 0 4px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .nav-links.is-open {
+        display: flex;
       }
 
       .nav-links a {
-        font-size: 13px;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
       }
-    }
 
-    @media (max-width: 700px) {
       .hero {
         padding: 50px 20px 42px;
       }
@@ -302,10 +355,19 @@
           />
         </svg>
 
-        SMASH YOUR WALL
+        <span>SMASH YOUR WALL</span>
       </a>
 
-      <div class="nav-links">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        Menu
+      </button>
+
+      <div class="nav-links" id="site-navigation">
         <a href="about-me.html">About Me</a>
         <a href="memoir.html">Memoir</a>
         <a href="articles.html">Articles</a>
@@ -394,5 +456,17 @@
     © Smash Your Wall
   </footer>
 
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNavigation = document.querySelector("#site-navigation");
+
+    if (menuToggle && siteNavigation) {
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        siteNavigation.classList.toggle("is-open", !isExpanded);
+      });
+    }
+  </script>
 </body>
 </html>
