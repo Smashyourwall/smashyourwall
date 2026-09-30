@@ -3,37 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Why Am I Confident in Other Areas but Terrified of Approaching Women? | Smash Your Wall</title>
-
-  <meta name="description" content="Why being confident in other areas of life doesn't necessarily mean you'll feel confident approaching women.">
-
+  <meta name="description" content="Why confidence in one part of life does not automatically carry over to approaching women—and how experience helps you build it.">
   <style>
     :root {
-      --text: #171717;
-      --muted: #555;
       --white: #ffffff;
       --gray: #e2e2e0;
-      --border: #d2d2d0;
+      --text: #171717;
+      --muted: #666666;
       --accent: #a94f32;
+      --border: #d2d2d0;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--white);
-      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
       line-height: 1.7;
     }
-
+    a { color: inherit; }
     nav {
       position: sticky;
       top: 0;
@@ -42,7 +32,6 @@
       border-bottom: 1px solid var(--border);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
-
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -50,10 +39,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
-
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
       gap: 11px;
@@ -64,52 +51,17 @@
       letter-spacing: 1.5px;
       white-space: nowrap;
     }
-
-    .logo-mark {
-      width: 48px;
-      height: 35px;
-      flex-shrink: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
+    .logo-mark { width: 48px; height: 35px; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 28px; }
     .nav-links a {
       color: var(--text);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
     }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 1px solid var(--border);
-      background: var(--white);
-      color: var(--text);
-      padding: 9px 12px;
-      font: inherit;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .hero {
-      background: var(--gray);
-      padding: 60px 30px 48px;
-    }
-
-    .hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    .nav-links a:hover { color: var(--accent); }
+    .hero { background: var(--gray); padding: 60px 30px 48px; }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
     .eyebrow {
       margin-bottom: 12px;
       color: var(--accent);
@@ -118,7 +70,6 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
-
     h1 {
       max-width: 850px;
       margin: 0;
@@ -126,48 +77,14 @@
       line-height: 1.12;
       letter-spacing: -1px;
     }
-
-    .read-time {
-      margin-top: 14px;
-      color: #666;
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .article-section {
-      background: var(--white);
-      padding: 55px 30px 80px;
-    }
-
-    article {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 17px;
-    }
-
-    article p {
-      margin: 0 0 25px;
-    }
-
-    article h2 {
-      margin: 42px 0 16px;
-      font-size: 25px;
-      line-height: 1.25;
-    }
-
-    article h3 {
-      margin: 32px 0 12px;
-      font-size: 20px;
-    }
-
-    article strong {
-      font-weight: 700;
-    }
-
-    article em {
-      font-style: italic;
-    }
-
+    .read-time { margin-top: 14px; color: #666; font-size: 13px; font-weight: 500; }
+    .article-section { background: var(--white); padding: 55px 30px 80px; }
+    article { max-width: 720px; margin: 0 auto; font-size: 17px; }
+    article p { margin: 0 0 25px; }
+    article h2 { margin: 42px 0 16px; font-size: 25px; line-height: 1.25; }
+    article strong { font-weight: 700; }
+    article em { font-style: italic; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 42px 0; }
     .memoir-box {
       margin-top: 50px;
       padding: 30px;
@@ -175,11 +92,7 @@
       border: 1px solid var(--border);
       text-align: center;
     }
-
-    .memoir-box p {
-      margin-bottom: 18px;
-    }
-
+    .memoir-box p { margin-bottom: 18px; }
     .memoir-link {
       display: inline-block;
       padding: 12px 20px;
@@ -190,11 +103,7 @@
       font-weight: 700;
       letter-spacing: 0.3px;
     }
-
-    .memoir-link:hover {
-      background: var(--accent);
-    }
-
+    .memoir-link:hover { background: var(--accent); }
     .article-nav {
       max-width: 720px;
       margin: 0 auto;
@@ -204,167 +113,50 @@
       justify-content: space-between;
       gap: 20px;
     }
-
     .article-nav a {
       color: var(--text);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
     }
-
-    .article-nav a:hover {
-      color: var(--accent);
-    }
-
+    .article-nav a:hover { color: var(--accent); }
     footer {
-      background: #111;
-      color: #888;
+      background: #171717;
+      color: #fff;
+      padding: 35px 30px;
       text-align: center;
-      padding: 30px 20px 45px;
       font-size: 12px;
     }
-
-    @media (max-width: 850px) {
-      .nav-inner {
-        padding: 16px 18px;
-      }
-
-      .nav-links {
-        gap: 15px;
-      }
-
-      .nav-links a {
-        font-size: 13px;
-      }
+    @media (max-width: 750px) {
+      .nav-inner { padding: 16px 18px; }
+      .logo { font-size: 13px; }
+      .logo-mark { width: 42px; height: 31px; }
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 13px; }
     }
-
-    @media (max-width: 650px) {
-      .nav-inner {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .brand {
-        font-size: 13px;
-      }
-
-      .logo-mark {
-        width: 42px;
-        height: 31px;
-      }
-
-      .menu-toggle {
-        display: inline-block;
-        margin-left: auto;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        padding: 8px 0 4px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-      }
-
-      .nav-links.is-open {
-        display: flex;
-      }
-
-      .nav-links a {
-        width: 100%;
-        padding: 10px 0;
-        font-size: 14px;
-        border-top: 1px solid var(--border);
-      }
-    }
-
     @media (max-width: 700px) {
-      .hero {
-        padding: 50px 20px 42px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      .article-section {
-        padding: 42px 20px 65px;
-      }
-
-      article {
-        font-size: 16px;
-      }
-
-      article p {
-        margin-bottom: 23px;
-      }
-
-      .memoir-box {
-        padding: 25px 20px;
-      }
-
-      .article-nav {
-        flex-direction: column;
-        gap: 12px;
-      }
+      .hero { padding: 50px 20px 42px; }
+      h1 { font-size: 34px; }
+      .article-section { padding: 42px 20px 65px; }
+      article { font-size: 16px; }
+      article p { margin-bottom: 23px; }
+      .memoir-box { padding: 25px 20px; }
+      .article-nav { flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
-
 <body>
-
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="brand">
-        <svg
-          class="logo-mark"
-          viewBox="0 0 220 150"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <rect
-            x="34"
-            y="35"
-            width="152"
-            height="82"
-            fill="currentColor"
-          />
-
-          <text
-            x="110"
-            y="91"
-            text-anchor="middle"
-            fill="white"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="43"
-            font-weight="700"
-            letter-spacing="1"
-          >SYW</text>
-
-          <path
-            d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
-            stroke="white"
-            stroke-width="7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" viewBox="0 0 220 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="34" y="35" width="152" height="82" fill="currentColor" />
+          <text x="110" y="91" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" letter-spacing="1">SYW</text>
+          <path d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-
-        <span>SMASH YOUR WALL</span>
+        SMASH YOUR WALL
       </a>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-navigation"
-      >
-        Menu
-      </button>
-
-      <div class="nav-links" id="site-navigation">
+      <div class="nav-links">
         <a href="about-me.html">About Me</a>
         <a href="memoir.html">Memoir</a>
         <a href="articles.html">Articles</a>
@@ -384,345 +176,170 @@
 
   <section class="article-section">
     <article>
+      <p>Almost every straight man has experienced some version of this:</p>
 
-      <p>
-        You might be confident in almost every other area of your life.
-      </p>
-
-      <p>
-        Maybe you're good at your job. Maybe you're comfortable talking to
-        strangers. Maybe you've played sports your whole life, have plenty of
-        friends, or can stand in front of a room and give a presentation without
-        thinking twice.
-      </p>
-
-      <p>
-        And yet when it comes to walking up to a woman you're attracted to and
-        saying hello, suddenly everything changes.
-      </p>
-
-      <p>
-        Your heart starts racing. You start thinking about what you're going to
-        say. You wonder what she'll think. You tell yourself you'll do it in a
-        minute.
-      </p>
-
-      <p>
-        And then she leaves.
-      </p>
-
-      <p>
-        If that sounds familiar, there's probably nothing wrong with your
-        confidence.
-      </p>
-
-      <p>
-        You're probably just trying to do something you've never actually
-        learned how to do.
-      </p>
-
-      <h2>Confidence Isn't Universal</h2>
-
-      <p>
-        One of the biggest mistakes we make is thinking of confidence like it's
-        one giant trait you either have or don't have.
-      </p>
-
-      <p>
-        It doesn't really work that way.
-      </p>
-
-      <p>
-        You can be confident in one area and completely insecure in another.
-      </p>
-
-      <p>
-        Think about basketball.
-      </p>
-
-      <p>
-        Someone who has played basketball for ten years might casually walk onto
-        a court and knock down free throws without giving it much thought.
-      </p>
-
-      <p>
-        Put that same person on a baseball field and ask them to hit a 90 mph
-        fastball, and they might look completely lost.
-      </p>
-
-      <p>
-        That doesn't mean they suddenly became an unconfident person.
-      </p>
-
-      <p>
-        They simply don't have the same experience.
-      </p>
-
-      <p>
-        Approaching women can work the same way.
-      </p>
-
-      <h2>The First Time Is Supposed to Feel Terrifying</h2>
-
-      <p>
-        When I first started approaching women, I had spent years thinking about
-        doing it.
-      </p>
-
-      <p>
-        I'd watch videos of guys walking up to women and starting conversations.
-      </p>
-
-      <p>
-        They made it look incredibly simple.
-      </p>
-
-      <p>
-        Walk over.
-      </p>
-
-      <p>
-        Say hello.
-      </p>
-
-      <p>
-        Talk.
-      </p>
+      <p>You know you're competent in one or two areas of your life. Maybe you're good at your job. Maybe you're athletic. Maybe you're funny. Maybe you're a great musician, gamer, artist, or whatever else you genuinely enjoy.</p>
 
-      <p>
-        But when I imagined myself doing it, it felt almost impossible.
-      </p>
+      <p>Then you see a woman you're attracted to in public, and suddenly you're scared shitless to say hello.</p>
 
-      <p>
-        The first time I finally forced myself to approach, I was terrified.
-      </p>
+      <p>What the hell happened to all that confidence?</p>
 
-      <p>
-        I wasn't suddenly confident because I had decided I was going to do it.
-      </p>
+      <p><strong>You haven't lost your confidence. You're stepping into a skill you've barely practiced.</strong></p>
 
-      <p>
-        I was scared and did it anyway.
-      </p>
+      <h2>Confidence Is Specific to the Skill</h2>
 
-      <p>
-        That's an important distinction.
-      </p>
+      <p>Think about something you're already good at. You're alive, which means there is almost certainly something that interests you enough to spend hours doing. Maybe it's drawing, dancing, singing, lifting weights, reading, skateboarding, playing video games, or playing sports. Everyone has something.</p>
 
-      <p>
-        Confidence didn't come first.
-      </p>
+      <p>And if you've spent years doing something you genuinely enjoy, you're probably pretty damn good at it.</p>
 
-      <p>
-        The experience came first.
-      </p>
+      <p>Even the guy who spends hours playing video games can look at his stats and know exactly where he stands. He might have an excellent win rate, K/D ratio, ranking, or whatever metric matters in that game.</p>
 
-      <h2>Confidence Is Accumulated Data</h2>
+      <p>At the same time, that exact same guy might be completely incompetent at something else.</p>
 
-      <p>
-        Every time you do something and survive it, your brain gets another piece
-        of information.
-      </p>
+      <p>That's normal. It's part of everyday life.</p>
 
-      <p>
-        You approach someone.
-      </p>
+      <p>I'm a perfect example. My handwriting is terrible, and I have essentially zero interest in drawing. Put me on a baseball diamond, volleyball court, basketball court, or padel court, and I'll be right at home. I've spent years playing sports because I actually enjoy them. The movements, teamwork, decision-making, competition, and pressure are natural to me.</p>
 
-      <p>
-        Maybe she says yes.
-      </p>
+      <p>But put a pencil in my hand and tell me to draw something?</p>
 
-      <p>
-        Maybe she says no.
-      </p>
+      <p>Get ready for a disaster.</p>
 
-      <p>
-        Maybe the conversation is awkward.
-      </p>
+      <p>I haven't seriously drawn anything since I was forced to in grade school. Art class was a special kind of torture. If someone put a gun to my head and said, “Draw this picture perfectly,” I wouldn't suddenly unlock some hidden artistic ability. I've spent almost no time developing that skill. So how could I possibly expect myself to produce world-class artwork?</p>
 
-      <p>
-        Maybe it's great.
-      </p>
+      <p>Hell, I'd be happy if it remotely resembled what I was supposed to draw. And if the colors even stayed in the lines, I'd consider it a win.</p>
 
-      <p>
-        Maybe you completely screw it up.
-      </p>
+      <p>And yet men routinely expect themselves to do exactly this with women. They've never approached a woman they found attractive in public, learned how to start a conversation with a stranger, practiced handling awkwardness, experienced dozens or hundreds of different reactions, or learned how to recognize interest, disinterest, or when to leave.</p>
 
-      <p>
-        And then you realize you're still alive.
-      </p>
-
-      <p>
-        You go home.
-      </p>
-
-      <p>
-        The world didn't end.
-      </p>
-
-      <p>
-        Then you do it again.
-      </p>
-
-      <p>
-        And again.
-      </p>
-
-      <p>
-        Eventually, your brain has a lot more evidence to work with.
-      </p>
-
-      <p>
-        That's what happened to me.
-      </p>
-
-      <p>
-        After thousands of approaches, I had accumulated a ridiculous amount of
-        evidence that approaching a woman wasn't actually as catastrophic as my
-        brain had originally convinced me it was.
-      </p>
-
-      <p>
-        I wasn't born with some special confidence gene.
-      </p>
-
-      <p>
-        I had simply done the thing enough times that it stopped feeling like
-        something completely unknown.
-      </p>
-
-      <h2>You're Not Going to Think Your Way Into Confidence</h2>
-
-      <p>
-        This is where I think a lot of guys get stuck.
-      </p>
-
-      <p>
-        They keep trying to become confident before they take action.
-      </p>
-
-      <p>
-        They watch another video.
-      </p>
-
-      <p>
-        Read another article.
-      </p>
-
-      <p>
-        Think about what they're going to say.
-      </p>
-
-      <p>
-        Try to get themselves into the right mindset.
-      </p>
-
-      <p>
-        And then they wait.
-      </p>
-
-      <p>
-        But eventually you have to get some real-world experience.
-      </p>
-
-      <p>
-        You can't practice a free throw by reading about basketball.
-      </p>
-
-      <p>
-        And you can't become comfortable approaching women by thinking about
-        approaching women.
-      </p>
-
-      <p>
-        At some point, you have to walk over and say hello.
-      </p>
-
-      <h2>So What If You're Confident Everywhere Else?</h2>
-
-      <p>
-        If you're confident in your career, your friendships, your hobbies, your
-        conversations, or other parts of your life but completely freeze when it
-        comes to approaching women, I wouldn't take that as proof that you're
-        secretly an insecure person.
-      </p>
-
-      <p>
-        I'd look at it as a skill you've probably spent very little time
-        practicing.
-      </p>
-
-      <p>
-        And if you've spent years avoiding it, your brain has had years to build
-        up the fear around it.
-      </p>
-
-      <p>
-        That's what happened to me.
-      </p>
-
-      <p>
-        I spent years wanting to approach women and backing out.
-      </p>
-
-      <p>
-        Then I finally started doing it.
-      </p>
-
-      <p>
-        It took a lot of approaches, a lot of rejection, a lot of uncomfortable
-        conversations, and a lot of mistakes.
-      </p>
-
-      <p>
-        But eventually, something that once felt almost impossible became
-        something I could actually do.
-      </p>
-
-      <p>
-        Not because I magically became a different person.
-      </p>
-
-      <p>
-        Because I finally gave myself enough experience to prove that I could.
-      </p>
+      <p>Then they see an attractive woman and expect themselves to suddenly execute perfectly.</p>
+
+      <p>Why?</p>
+
+      <p>Women aren't a magically different species of human. Talking to an attractive stranger is simply a skill you've probably never developed.</p>
+
+      <h2>The Stakes Feel Bigger Than They Are</h2>
+
+      <p>Think about shooting a basketball. If you've never picked up a basketball in your life, I'm not going to put you on the free-throw line and expect you to make ten shots in a row. You might hit the backboard six times. You might airball the other four. You might not even know how to hold the fucking ball correctly.</p>
+
+      <p>And nobody would look at you and say, “Wow. You must have some serious confidence issues.” They'd say, “Well... he's never played basketball.”</p>
+
+      <p><strong>BINGO.</strong></p>
+
+      <p>Now imagine taking those same ten free throws while you're completely alone in an empty gym. Pretty low stakes, right? Miss? Who cares? You pick up the ball and shoot again.</p>
+
+      <p>Now put 20,000 people in the arena. Put cameras on you. Put your free throws on national television. Tell everyone watching that if you miss, they're going to know you missed.</p>
+
+      <p>Suddenly those same ten shots feel very different.</p>
+
+      <p>Your ability didn't suddenly disappear. The perceived stakes changed.</p>
+
+      <p>That's a huge part of what happens when you approach a woman you're attracted to. Your rational brain understands that you're simply walking over to another human being and saying hello. But another part of your brain doesn't experience it that way. It sees an attractive woman, recognizes that the interaction could involve rejection and social judgment, and starts screaming:</p>
+
+      <p><em>“THIS IS IMPORTANT. DON'T FUCK THIS UP.”</em></p>
+
+      <p>Historically, social belonging was crucial. Humans evolved in groups and depended on other people for safety, resources, cooperation, and survival. Being rejected or excluded by your social group could mean death. We don't live in that world anymore.</p>
+
+      <p>If a woman in a coffee shop doesn't like your approach, you're not getting kicked out of the tribe and thrown into a local volcano.</p>
+
+      <p>But your nervous system doesn't have a little notification pop up saying, “Don't worry, Phil. It's 2026. There are 8 billion people and you'll be completely fine.”</p>
+
+      <p>It reacts to the perceived threat. So the interaction can feel dramatically more important than it actually is.</p>
+
+      <p>That's why you can be completely comfortable competing in a sport, giving a presentation at work, or doing something you've practiced hundreds of times—and suddenly become terrified of walking twenty feet toward a woman.</p>
+
+      <p>It's not necessarily because you're secretly insecure. It's not because you're incapable of confidence. And it doesn't mean there's something fundamentally wrong with you.</p>
+
+      <p><strong>You're inexperienced at a skill that your brain has decided is extremely high-stakes.</strong></p>
+
+      <h2>Confidence Comes From Experience</h2>
+
+      <p>There's only one real way to change that.</p>
+
+      <p><strong>Practice.</strong></p>
+
+      <p>Want to get better at dancing? You have to dance. Want to get better at basketball? You have to shoot the ball. Want to get better at Modern Warfare 2? You're going to have to play Modern Warfare 2. Watching someone else play isn't going to give your hands the repetitions.</p>
+
+      <p>And wanting to approach women isn't enough either. Eventually, you have to approach women even with your brain actively working against you.</p>
+
+      <p>You can't think your way into becoming comfortable with something you've never done. You can't watch another 100 videos and expect your nervous system to suddenly say, “Alright, boys. We've completed the YouTube curriculum. We're ready.”</p>
+
+      <p>At some point, you have to take the shot.</p>
+
+      <p>And your first shot might be fucking terrible.</p>
+
+      <p>Guess what? That's okay.</p>
+
+      <p>Maybe your voice shakes. Mine certainly did. Maybe you stumble over your words. Maybe the conversation lasts thirty seconds. Maybe she isn't interested. Maybe you walk away thinking you looked like an idiot. Maybe you get her number.</p>
+
+      <p>So what?</p>
+
+      <p>You just took a shot. And you lived to tell the tale.</p>
+
+      <p>The next one might be slightly better. Then another. Then another.</p>
+
+      <p>Eventually, you start collecting something you didn't have before: <strong>data.</strong></p>
+
+      <p>You learn what actually happens when you approach. You learn that some women are interested and some aren't. You learn that awkward moments don't kill you. You even start laughing at some of them. You learn that rejection is survivable, how to start conversations, how to read situations, and how to handle yourself when things don't go perfectly.</p>
+
+      <p>Every single one of those experiences gives your brain another piece of evidence:</p>
+
+      <p><em>I approached her.<br>My voice shook.<br>I stumbled over my words.<br>She wasn't interested.<br>And I'm still standing.</em></p>
+
+      <p>That's data.</p>
+
+      <p>Eventually, the thing that once felt like walking onto national television starts feeling more like walking into an empty gym. You're not walking toward that woman with zero information anymore. You've got repetitions. You've got experience. You've got evidence. You've got a database. You've accumulated data.</p>
+
+      <p>Maybe that's a better way to think about confidence.</p>
+
+      <p><strong>Confidence: accumulated data.</strong></p>
+
+      <p>Not all confidence, obviously. But a huge amount of what looks like confidence from the outside is simply someone who has done the thing enough times that their brain no longer treats it like an unknown.</p>
+
+      <p>Think about someone who has given 500 presentations. He doesn't necessarily have some magical personality trait that you don't possess. He has 500 presentations worth of data. He knows what it feels like when the room goes quiet, to screw up a sentence, and to answer the questions people tend to ask. He knows that sometimes a presentation goes badly and... somehow... he survives.</p>
+
+      <p>You see the finished product and call him confident. He sees the accumulated evidence that got him there.</p>
+
+      <h2>My First Attempt Wasn't Impressive</h2>
+
+      <p>And I know this because I started with almost none.</p>
+
+      <p>The first time I seriously tried to approach a woman, I didn't walk confidently across the room, say something clever, and suddenly become the guy I wanted to be.</p>
+
+      <p>I was fucking terrified.</p>
+
+      <p>I remember finally getting close enough that I could actually say something. And I barely squeaked out a hello.</p>
+
+      <p>That's it.</p>
+
+      <p>Hello.</p>
+
+      <p>My heart was pounding. My brain was screaming at me to turn around. I didn't suddenly become confident because I had discovered some secret phrase or mastered women. I had simply finally taken one shot.</p>
+
+      <p>And when it was over, I had something I didn't have five minutes earlier: data.</p>
+
+      <p>I had approached a woman. I hadn't died. The world hadn't ended. I was actually proud of myself!</p>
+
+      <p>That tiny piece of evidence made the next attempt possible.</p>
+
+      <p>Over the next several years, I made thousands of approaches, screwed up more times than I could possibly remember, had conversations that went nowhere, had conversations that surprised me, and slowly accumulated enough experience that something that once felt almost impossible became something I could actually do.</p>
+
+      <p>I wrote the entire story down. Not because I think everyone needs to approach thousands of women, and not because I think approaching women is some magical solution to every problem in your life.</p>
+
+      <p>I wrote it because I know what it's like to spend years standing twenty feet away, wanting to do something and being completely unable to make yourself move. I know what it's like to know intellectually that something shouldn't be scary while your body is screaming at you that it is. And I know what it feels like when the first tiny crack finally appears in that wall.</p>
+
+      <p>If that's where you are right now, I wrote the story for you.</p>
 
       <div class="memoir-box">
-
-        <p>
-          If that's where you are right now, I wrote the story for you.
-        </p>
-
-        <a class="memoir-link" href="memoir.html">
-          READ THE FREE MEMOIR →
-        </a>
-
+        <p><strong>Read the story of how I broke through the wall.</strong></p>
+        <a class="memoir-link" href="memoir.html">READ THE FREE MEMOIR</a>
       </div>
-
     </article>
 
     <div class="article-nav">
       <a href="articles.html">← All Articles</a>
-      <a href="article-rejection-while-watched.html">
-        Next Article →
-      </a>
+      <a href="article-rejection-while-watched.html">Next Article →</a>
     </div>
   </section>
 
-  <footer>
-    © Smash Your Wall
-  </footer>
-
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNavigation = document.querySelector("#site-navigation");
-
-    menuToggle.addEventListener("click", () => {
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-      siteNavigation.classList.toggle("is-open", !isExpanded);
-    });
-  </script>
-
+  <footer>© 2026 Smash Your Wall</footer>
 </body>
 </html>
