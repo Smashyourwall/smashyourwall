@@ -151,10 +151,16 @@
       font-weight: 700;
     }
 
-    .hero-button {
-      display: inline-block;
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-top: 8px;
       margin-bottom: 24px;
+    }
+
+    .hero-button {
+      display: inline-block;
       padding: 13px 22px;
       background: var(--accent);
       color: var(--white);
@@ -166,6 +172,17 @@
 
     .hero-button:hover {
       background: var(--text);
+    }
+
+    .hero-button.secondary {
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .hero-button.secondary:hover {
+      background: var(--text);
+      color: var(--white);
     }
 
     .hero-video-frame {
@@ -596,9 +613,15 @@
             you can actually learn to do it.
           </p>
 
-          <a class="hero-button" href="work-with-me.html">
-            WORK WITH ME →
-          </a>
+          <div class="hero-buttons">
+            <a class="hero-button" href="work-with-me.html">
+              WORK WITH ME →
+            </a>
+
+            <a class="hero-button secondary" href="memoir.html">
+              READ THE FREE MEMOIR →
+            </a>
+          </div>
         </div>
 
         <div class="hero-video-frame">
