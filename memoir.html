@@ -134,10 +134,13 @@
       align-items: center;
     }
 
+    /* Updated Photo Styles: Top locked in place, cropped from bottom */
     .hero-photo {
       width: 100%;
       max-width: 400px;
-      height: auto;
+      height: 380px;
+      object-fit: cover;
+      object-position: top;
       display: block;
       border-radius: 4px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -448,6 +451,7 @@
 
       .hero-photo {
         max-width: 320px;
+        height: 300px;
       }
     }
 
