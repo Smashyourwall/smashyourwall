@@ -56,9 +56,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
       gap: 11px;
@@ -78,6 +79,7 @@
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
     }
 
@@ -90,6 +92,18 @@
 
     .nav-links a:hover {
       color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      padding: 9px 12px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     /* HERO */
@@ -223,18 +237,9 @@
 
     /* MOBILE NAV */
 
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
       .nav-inner {
         padding: 16px 18px;
-      }
-
-      .logo {
-        font-size: 13px;
-      }
-
-      .logo-mark {
-        width: 42px;
-        height: 31px;
       }
 
       .nav-links {
@@ -243,6 +248,47 @@
 
       .nav-links a {
         font-size: 13px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .logo-mark {
+        width: 42px;
+        height: 31px;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+        margin-left: auto;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        padding: 8px 0 4px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        border-top: 1px solid var(--border);
       }
     }
 
@@ -285,8 +331,7 @@
 
   <nav>
     <div class="nav-inner">
-
-      <a href="index.html" class="logo">
+      <a href="index.html" class="brand">
         <svg
           class="logo-mark"
           viewBox="0 0 220 150"
@@ -322,17 +367,25 @@
           />
         </svg>
 
-        SMASH YOUR WALL
+        <span>SMASH YOUR WALL</span>
       </a>
 
-      <div class="nav-links">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        Menu
+      </button>
+
+      <div class="nav-links" id="site-navigation">
         <a href="about-me.html">About Me</a>
         <a href="memoir.html">Memoir</a>
         <a href="articles.html">Articles</a>
         <a href="work-with-me.html">Work With Me</a>
         <a href="faq.html">FAQ</a>
       </div>
-
     </div>
   </nav>
 
@@ -416,6 +469,17 @@
   <footer>
     © 2026 Smash Your Wall
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNavigation = document.querySelector("#site-navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      siteNavigation.classList.toggle("is-open", !isExpanded);
+    });
+  </script>
 
 </body>
 </html>
