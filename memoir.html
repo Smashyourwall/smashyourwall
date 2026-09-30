@@ -16,13 +16,9 @@
       --border: #d2d2d0;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -156,28 +152,26 @@
       max-width: 1050px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 50px;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 80px;
       align-items: center;
     }
 
     .intro-text {
-      min-width: 0;
       max-width: 680px;
     }
 
     .intro-photo-wrap {
-      width: 100%;
-      max-width: 360px;
-      height: 500px;
-      overflow: hidden;
-      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .intro-photo {
-      display: block;
       width: 100%;
-      height: auto;
+      max-width: 380px;
+      display: block;
+      border-radius: 3px;
     }
 
     h2 {
@@ -473,16 +467,15 @@
 
       .intro-inner {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 45px;
       }
 
       .intro-text {
         max-width: 680px;
       }
 
-      .intro-photo-wrap {
-        height: 400px;
-        margin: 0 auto;
+      .intro-photo {
+        max-width: 300px;
       }
 
       .what-section {
@@ -551,334 +544,383 @@
   <nav>
     <div class="nav-inner">
 
-      <a href="index.html" class="logo">
-        <svg
-          class="logo-mark"
-          viewBox="0 0 220 150"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <rect
-            x="34"
-            y="35"
-            width="152"
-            height="82"
-            fill="currentColor"
-          />
+  <a href="index.html" class="logo">
+    <svg
+      class="logo-mark"
+      viewBox="0 0 220 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <rect
+        x="34"
+        y="35"
+        width="152"
+        height="82"
+        fill="currentColor"
+      />
 
-          <text
-            x="110"
-            y="91"
-            text-anchor="middle"
-            fill="white"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="43"
-            font-weight="700"
-            letter-spacing="1"
-          >SYW</text>
+      <text
+        x="110"
+        y="91"
+        text-anchor="middle"
+        fill="white"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="43"
+        font-weight="700"
+        letter-spacing="1"
+      >SYW</text>
 
-          <path
-            d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
-            stroke="white"
-            stroke-width="7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+      <path
+        d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
+        stroke="white"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
 
-        SMASH YOUR WALL
-      </a>
+    SMASH YOUR WALL
+  </a>
 
-      <div class="nav-links">
-        <a href="about-me.html">About Me</a>
-        <a href="memoir.html">Memoir</a>
-        <a href="articles.html">Articles</a>
-        <a href="work-with-me.html">Work With Me</a>
-        <a href="faq.html">FAQ</a>
-      </div>
+  <div class="nav-links">
+    <a href="about-me.html">About Me</a>
+    <a href="memoir.html">Memoir</a>
+    <a href="articles.html">Articles</a>
+    <a href="work-with-me.html">Work With Me</a>
+    <a href="faq.html">FAQ</a>
+  </div>
 
-    </div>
+</div>
   </nav>
 
   <section class="hero">
     <div class="hero-inner">
 
-      <div class="eyebrow">
-        A FREE MEMOIR BY PHIL BRIARWOOD
-      </div>
+  <div class="eyebrow">
+    A FREE MEMOIR BY PHIL BRIARWOOD
+  </div>
 
-      <h1>Break the Wall</h1>
+  <h1>Break the Wall</h1>
 
-      <p class="subtitle">
-        How I went from being terrified to approach women
-        to actually breaking through the fear.
-      </p>
+  <p class="subtitle">
+    How I went from being terrified to approach women
+    to actually breaking through the fear.
+  </p>
 
-      <p class="hero-message">
-        <em>Break the Wall</em> is a free 37-page memoir about the years
-        it took to get there—fear, avoidance, rejection, mistakes, and
-        everything I learned along the way. No sales pitch, no course,
-        just the unfiltered story.
-      </p>
+  <p class="hero-message">
+    <em>Break the Wall</em> is a free 37-page memoir about the years
+    it took to get there—fear, avoidance, rejection, mistakes, and
+    everything I learned along the way. No sales pitch, no course,
+    just the unfiltered story.
+  </p>
 
-      <a href="#read-memoir" class="hero-button">
-        READ THE MEMOIR ↓
-      </a>
+  <a href="#read-memoir" class="hero-button">
+    READ THE MEMOIR ↓
+  </a>
 
-      <p class="hero-note">
-        30-Minute Read • Completely Free • No Email Required
-      </p>
+  <p class="hero-note">
+    30-Minute Read • Completely Free • No Email Required
+  </p>
 
-    </div>
+</div>
   </section>
 
   <section class="intro-section">
-    <div class="intro-inner">
-      <div class="intro-text">
-        <h2>
-          It Started With Approaching Women.
-          It Became Much Bigger Than That.
-        </h2>
 
-        <p>
-          For years, I wanted to approach women.
-        </p>
+<div class="intro-inner">
 
-        <p>
-          I watched videos. I imagined myself doing it.
-        </p>
+  <div class="intro-text">
 
-        <p>
-          And then, when the moment actually came, I couldn't do it.
-        </p>
+    <h2>
+      It Started With Approaching Women.
+      It Became Much Bigger Than That.
+    </h2>
 
-        <p>
-          I spent years walking past women I wanted to talk to,
-          becoming a master of excuses, and wondering why something
-          that seemed so simple for other people felt almost impossible
-          for me.
-        </p>
+    <p>
+      For years, I wanted to approach women.
+    </p>
 
-        <p>
-          That's what this story is really about.
-        </p>
+    <p>
+      I watched videos. I imagined myself doing it.
+    </p>
 
-        <p>
-          It's about what happens when you know what you want to do,
-          understand exactly what you should do, and still can't make
-          yourself do it.
-        </p>
+    <p>
+      And then, when the moment actually came, I couldn't do it.
+    </p>
 
-        <p>
-          It's about fear, avoidance, rejection, embarrassment,
-          and the gradual process of making something that once felt
-          impossible become normal.
-        </p>
+    <p>
+      I spent years walking past women I wanted to talk to,
+      becoming a master of excuses, and wondering why something
+      that seemed so simple for other people felt almost impossible
+      for me.
+    </p>
 
-        <p>
-          Approaching women was simply the battlefield where I learned it.
-        </p>
-      </div>
+    <p>
+      That's what this story is really about.
+    </p>
 
-      <div class="intro-photo-wrap">
-        <img
-          src="https://i.imgur.com/SMzLAGK.jpg"
-          alt="Phil"
-          class="intro-photo"
-        >
-      </div>
-    </div>
+    <p>
+      It's about what happens when you know what you want to do,
+      understand exactly what you should do, and still can't make
+      yourself do it.
+    </p>
+
+    <p>
+      It's about fear, avoidance, rejection, embarrassment,
+      and the gradual process of making something that once felt
+      impossible become normal.
+    </p>
+
+    <p>
+      Approaching women was simply the battlefield where I learned it.
+    </p>
+
+  </div>
+
+  <div class="intro-photo-wrap">
+
+    <img
+      src="https://i.imgur.com/tNYSc7Y.jpg"
+      alt="Phil"
+      class="intro-photo"
+    >
+
+  </div>
+
+</div>
   </section>
 
   <section class="what-section">
-    <div class="what-inner">
-      <div class="what-intro">
-        <h2>What You'll See in the Story</h2>
 
-        <p>
-          This isn't a collection of theories from someone who figured
-          everything out overnight. It's what actually happened.
-        </p>
-      </div>
+<div class="what-inner">
 
-      <div class="what-grid">
-        <div class="what-item">
-          <h3>The Fear</h3>
-          <p>
-            What approach anxiety actually felt like from the inside,
-            and why knowing what to do wasn't enough to make me do it.
-          </p>
-        </div>
+  <div class="what-intro">
 
-        <div class="what-item">
-          <h3>The First Step</h3>
-          <p>
-            What finally made me stop walking past women and take
-            the first step toward actually changing.
-          </p>
-        </div>
+    <h2>What You'll See in the Story</h2>
 
-        <div class="what-item">
-          <h3>The People Along the Way</h3>
-          <p>
-            The friends, allies, and unexpected people I met along
-            the way, and how having people around me helped shape
-            the journey.
-          </p>
-        </div>
+    <p>
+      This isn't a collection of theories from someone who figured
+      everything out overnight. It's what actually happened.
+    </p>
 
-        <div class="what-item">
-          <h3>The Change</h3>
-          <p>
-            What happened when approaching stopped being the massive
-            obstacle it once was, and how it changed much more than
-            just my dating life.
-          </p>
-        </div>
-      </div>
+  </div>
+
+  <div class="what-grid">
+
+    <div class="what-item">
+
+      <h3>The Fear</h3>
+
+      <p>
+        What approach anxiety actually felt like from the inside,
+        and why knowing what to do wasn't enough to make me do it.
+      </p>
+
     </div>
+
+    <div class="what-item">
+
+      <h3>The First Step</h3>
+
+      <p>
+        What finally made me stop walking past women and take
+        the first step toward actually changing.
+      </p>
+
+    </div>
+
+    <div class="what-item">
+
+      <h3>The People Along the Way</h3>
+
+      <p>
+        The friends, allies, and unexpected people I met along
+        the way, and how having people around me helped shape
+        the journey.
+      </p>
+
+    </div>
+
+    <div class="what-item">
+
+      <h3>The Change</h3>
+
+      <p>
+        What happened when approaching stopped being the massive
+        obstacle it once was, and how it changed much more than
+        just my dating life.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
   </section>
 
   <section class="turning-point">
-    <div class="turning-inner">
-      <div class="date">
-        October 6, 2019
-      </div>
 
-      <h2>
-        I Finally Approached.
-      </h2>
+<div class="turning-inner">
 
-      <p class="big-line">
-        I had had enough.
-        <strong>And it went terribly.</strong>
-      </p>
-    </div>
+  <div class="date">
+    October 6, 2019
+  </div>
+
+  <h2>
+    I Finally Approached.
+  </h2>
+
+  <p class="big-line">
+    I had had enough.
+    <strong>And it went terribly.</strong>
+  </p>
+
+</div>
   </section>
 
   <section class="aftermath-section">
-    <div class="aftermath-inner">
-      <p>
-        Trust me, the first approach was quite embarrassing.
-        It was one of the hardest things I have ever done.
-      </p>
 
-      <p>
-        What followed was years of approaches, rejections,
-        uncomfortable conversations, unexpected successes,
-        mistakes, and a lot of figuring things out the hard way.
-      </p>
+<div class="aftermath-inner">
 
-      <p>
-        I wrote the whole story down.
-      </p>
+  <p>
+    Trust me, the first approach was quite embarrassing.
+    It was one of the hardest things I have ever done.
+  </p>
 
-      <p class="emphasis">
-        No course. No sales pitch. Just my story.
-      </p>
-    </div>
+  <p>
+    What followed was years of approaches, rejections,
+    uncomfortable conversations, unexpected successes,
+    mistakes, and a lot of figuring things out the hard way.
+  </p>
+
+  <p>
+    I wrote the whole story down.
+  </p>
+
+  <p class="emphasis">
+    No course. No sales pitch. Just my story.
+  </p>
+
+</div>
   </section>
 
   <section class="read-section" id="read-memoir">
-    <div class="read-inner">
-      <div class="read-heading">
-        <h2>
-          Read the Memoir
-        </h2>
 
-        <p>
-          The complete story is available to read for free.
-        </p>
-      </div>
+<div class="read-inner">
 
-      <div class="read-content">
-        <img
-          src="https://i.imgur.com/GVbZ8lh.png"
-          alt="Page 1 of Break the Wall by Phil Briarwood"
-          class="memoir-preview"
-        >
+  <div class="read-heading">
 
-        <div class="read-copy">
-          <h3>
-            Break the Wall
-          </h3>
+    <h2>
+      Read the Memoir
+    </h2>
 
-          <p>
-            The complete memoir of how I went from being terrified
-            to approach women to eventually making it something
-            I could actually do.
-          </p>
+    <p>
+      The complete story is available to read for free.
+    </p>
 
-          <p>No email.</p>
-          <p>No course.</p>
-          <p>No pitch.</p>
+  </div>
 
-          <a
-            class="read-button"
-            href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            READ THE MEMOIR →
-          </a>
+  <div class="read-content">
 
-          <div class="free-note">
-            Read it online. Completely free.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <img
+      src="https://i.imgur.com/GVbZ8lh.png"
+      alt="Page 1 of Break the Wall by Phil Briarwood"
+      class="memoir-preview"
+    >
 
-  <section class="familiar-section">
-    <div class="familiar-inner">
-      <h2>
-        If This Sounds Familiar...
-      </h2>
+    <div class="read-copy">
+
+      <h3>
+        Break the Wall
+      </h3>
 
       <p>
-        If you've spent years watching videos, reading advice,
-        thinking about approaching, and still finding yourself
-        frozen when the moment comes, you're probably going to
-        recognize a lot of yourself in this story.
+        The complete memoir of how I went from being terrified
+        to approach women to eventually making it something
+        I could actually do.
       </p>
 
-      <div class="next-links">
-        <a href="about-me.html">About Me</a>
-        <a href="articles.html">Articles</a>
-        <a href="work-with-me.html">Work With Me</a>
-      </div>
-    </div>
-  </section>
+      <p>No email.</p>
+      <p>No course.</p>
+      <p>No pitch.</p>
 
-  <footer>
-    © Smash Your Wall
-  </footer>
+      <a
+        class="read-button"
+        href="https://www.papermark.com/view/cmu8qc0wb0001jj04o35irsh0" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+      > 
+        READ THE MEMOIR → 
+      </a> 
 
-  <script>
-    const revealItems = document.querySelectorAll(
-      '.what-intro, .what-item'
-    );
+      <div class="free-note"> 
+        Read it online. Completely free. 
+      </div> 
 
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15
-      }
-    );
+    </div> 
 
-    revealItems.forEach(item => {
-      revealObserver.observe(item);
-    });
-  </script>
+  </div> 
 
-</body>
+</div> 
+  </section> 
+ 
+  <section class="familiar-section"> 
+ 
+<div class="familiar-inner"> 
+
+  <h2> 
+    If This Sounds Familiar... 
+  </h2> 
+
+  <p> 
+    If you've spent years watching videos, reading advice, 
+    thinking about approaching, and still finding yourself 
+    frozen when the moment comes, you're probably going to 
+    recognize a lot of yourself in this story. 
+  </p> 
+
+  <div class="next-links"> 
+
+    <a href="about-me.html">About Me</a> 
+    <a href="articles.html">Articles</a> 
+    <a href="work-with-me.html">Work With Me</a> 
+
+  </div> 
+
+</div> 
+  </section> 
+ 
+  <footer> 
+    © Smash Your Wall 
+  </footer> 
+ 
+  <script> 
+    const revealItems = document.querySelectorAll( 
+      '.what-intro, .what-item' 
+    ); 
+ 
+    const revealObserver = new IntersectionObserver( 
+      (entries, observer) => { 
+ 
+        entries.forEach(entry => { 
+ 
+          if (entry.isIntersecting) { 
+            entry.target.classList.add('show'); 
+            observer.unobserve(entry.target); 
+          } 
+ 
+        }); 
+ 
+      }, 
+      { 
+        threshold: 0.15 
+      } 
+    ); 
+ 
+    revealItems.forEach(item => { 
+      revealObserver.observe(item); 
+    }); 
+  </script> 
+</body> 
 </html>
