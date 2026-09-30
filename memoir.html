@@ -16,9 +16,13 @@
       --border: #d2d2d0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -152,26 +156,28 @@
       max-width: 1050px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 380px;
-      gap: 80px;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 50px;
       align-items: center;
     }
 
     .intro-text {
+      min-width: 0;
       max-width: 680px;
     }
 
     .intro-photo-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
+      max-width: 360px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 3px;
     }
 
     .intro-photo {
-      width: 100%;
-      max-width: 380px;
       display: block;
-      border-radius: 3px;
+      width: 100%;
+      height: auto;
     }
 
     h2 {
@@ -467,15 +473,16 @@
 
       .intro-inner {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 30px;
       }
 
       .intro-text {
         max-width: 680px;
       }
 
-      .intro-photo {
-        max-width: 300px;
+      .intro-photo-wrap {
+        height: 400px;
+        margin: 0 auto;
       }
 
       .what-section {
@@ -627,11 +634,8 @@
   </section>
 
   <section class="intro-section">
-
     <div class="intro-inner">
-
       <div class="intro-text">
-
         <h2>
           It Started With Approaching Women.
           It Became Much Bigger Than That.
@@ -675,96 +679,69 @@
         <p>
           Approaching women was simply the battlefield where I learned it.
         </p>
-
       </div>
 
       <div class="intro-photo-wrap">
-
         <img
-          src="https://i.imgur.com/tNYSc7Y.jpg"
+          src="https://i.imgur.com/SMzLAGK.jpg"
           alt="Phil"
           class="intro-photo"
         >
-
       </div>
-
     </div>
-
   </section>
 
   <section class="what-section">
-
     <div class="what-inner">
-
       <div class="what-intro">
-
         <h2>What You'll See in the Story</h2>
 
         <p>
           This isn't a collection of theories from someone who figured
           everything out overnight. It's what actually happened.
         </p>
-
       </div>
 
       <div class="what-grid">
-
         <div class="what-item">
-
           <h3>The Fear</h3>
-
           <p>
             What approach anxiety actually felt like from the inside,
             and why knowing what to do wasn't enough to make me do it.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The First Step</h3>
-
           <p>
             What finally made me stop walking past women and take
             the first step toward actually changing.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The People Along the Way</h3>
-
           <p>
             The friends, allies, and unexpected people I met along
             the way, and how having people around me helped shape
             the journey.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The Change</h3>
-
           <p>
             What happened when approaching stopped being the massive
             obstacle it once was, and how it changed much more than
             just my dating life.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <section class="turning-point">
-
     <div class="turning-inner">
-
       <div class="date">
         October 6, 2019
       </div>
@@ -777,15 +754,11 @@
         I had had enough.
         <strong>And it went terribly.</strong>
       </p>
-
     </div>
-
   </section>
 
   <section class="aftermath-section">
-
     <div class="aftermath-inner">
-
       <p>
         Trust me, the first approach was quite embarrassing.
         It was one of the hardest things I have ever done.
@@ -804,17 +777,12 @@
       <p class="emphasis">
         No course. No sales pitch. Just my story.
       </p>
-
     </div>
-
   </section>
 
   <section class="read-section" id="read-memoir">
-
     <div class="read-inner">
-
       <div class="read-heading">
-
         <h2>
           Read the Memoir
         </h2>
@@ -822,11 +790,9 @@
         <p>
           The complete story is available to read for free.
         </p>
-
       </div>
 
       <div class="read-content">
-
         <img
           src="https://i.imgur.com/GVbZ8lh.png"
           alt="Page 1 of Break the Wall by Phil Briarwood"
@@ -834,7 +800,6 @@
         >
 
         <div class="read-copy">
-
           <h3>
             Break the Wall
           </h3>
@@ -861,19 +826,13 @@
           <div class="free-note">
             Read it online. Completely free.
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <section class="familiar-section">
-
     <div class="familiar-inner">
-
       <h2>
         If This Sounds Familiar...
       </h2>
@@ -886,15 +845,11 @@
       </p>
 
       <div class="next-links">
-
         <a href="about-me.html">About Me</a>
         <a href="articles.html">Articles</a>
         <a href="work-with-me.html">Work With Me</a>
-
       </div>
-
     </div>
-
   </section>
 
   <footer>
@@ -908,16 +863,12 @@
 
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
-
         entries.forEach(entry => {
-
           if (entry.isIntersecting) {
             entry.target.classList.add('show');
             observer.unobserve(entry.target);
           }
-
         });
-
       },
       {
         threshold: 0.15
