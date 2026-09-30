@@ -53,11 +53,21 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
       color: var(--text);
       text-decoration: none;
       font-size: 15px;
       font-weight: 700;
       letter-spacing: 1.5px;
+      white-space: nowrap;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 35px;
+      flex-shrink: 0;
     }
 
     .nav-links {
@@ -200,6 +210,15 @@
         padding: 16px 18px;
       }
 
+      .logo {
+        font-size: 13px;
+      }
+
+      .logo-mark {
+        width: 42px;
+        height: 31px;
+      }
+
       .nav-links {
         gap: 15px;
       }
@@ -248,6 +267,41 @@
     <div class="nav-inner">
 
       <a href="index.html" class="logo">
+        <svg
+          class="logo-mark"
+          viewBox="0 0 220 150"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            x="34"
+            y="35"
+            width="152"
+            height="82"
+            fill="currentColor"
+          />
+
+          <text
+            x="110"
+            y="91"
+            text-anchor="middle"
+            fill="white"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="43"
+            font-weight="700"
+            letter-spacing="1"
+          >SYW</text>
+
+          <path
+            d="M111 28 L101 49 L115 64 L104 82 L117 100 L107 122"
+            stroke="white"
+            stroke-width="7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
         SMASH YOUR WALL
       </a>
 
