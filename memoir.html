@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7H4SRM138"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7H4SRM138"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T7H4SRM138');
+  </script>
 
-  gtag('config', 'G-T7H4SRM138');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,9 +25,13 @@
       --border: #d2d2d0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -89,7 +93,6 @@
       color: var(--accent);
     }
 
-    /* Updated Hero Grid Styles */
     .hero {
       background: var(--gray);
       padding: 65px 30px;
@@ -143,7 +146,6 @@
       align-items: center;
     }
 
-    /* Updated Photo Styles: Top locked in place, cropped from bottom */
     .hero-photo {
       width: 100%;
       max-width: 400px;
@@ -167,7 +169,8 @@
       letter-spacing: 0.5px;
     }
 
-    .hero-button:hover {
+    .hero-button:hover,
+    .read-button:hover {
       opacity: 0.9;
     }
 
@@ -390,10 +393,6 @@
       letter-spacing: 0.5px;
     }
 
-    .read-button:hover {
-      opacity: 0.9;
-    }
-
     .free-note {
       margin-top: 14px;
       color: var(--muted);
@@ -451,26 +450,44 @@
     @media (max-width: 900px) {
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
       }
 
       .hero-content {
         text-align: center;
       }
 
-    .hero-photo {
-  max-width: 320px;
-  height: 420px;
-  object-fit: cover;
-  object-position: center top;
-}
-}
+      .hero-photo {
+        max-width: 320px;
+        height: 420px;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-text {
+        max-width: 680px;
+      }
+
+      .intro-photo {
+        max-width: 320px;
+      }
+
+      .read-content {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 45px;
       }
     }
 
     @media (max-width: 750px) {
       .nav-inner {
-        padding: 16px 18px;
+        padding: 14px 18px;
+        flex-direction: column;
+        gap: 12px;
       }
 
       .logo {
@@ -483,7 +500,9 @@
       }
 
       .nav-links {
-        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
       }
 
       .nav-links a {
@@ -491,7 +510,13 @@
       }
 
       .hero {
-        padding: 45px 22px 40px;
+        padding: 42px 20px 45px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 11vw, 58px);
+        line-height: 1.02;
+        letter-spacing: -1.8px;
       }
 
       .eyebrow {
@@ -499,33 +524,50 @@
         letter-spacing: 1.5px;
       }
 
-      h1 {
-        letter-spacing: -2px;
-      }
-
       .subtitle {
         font-size: 18px;
+        line-height: 1.45;
       }
 
       .hero-message {
         font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .hero-button,
+      .read-button {
+        padding: 14px 20px;
       }
 
       .hero-note {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       .intro-section {
-        padding: 70px 22px 75px;
+        padding: 52px 22px 58px;
       }
 
       .intro-inner {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 30px;
       }
 
       .intro-text {
-        max-width: 680px;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .intro-text h2 {
+        margin-bottom: 24px;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .intro-text p {
+        margin-bottom: 18px;
+        font-size: 17px;
+        line-height: 1.65;
       }
 
       .intro-photo {
@@ -533,45 +575,96 @@
       }
 
       .what-section {
-        padding: 45px 22px 55px;
+        padding: 42px 22px 50px;
       }
 
       .what-intro {
-        margin-bottom: 45px;
+        margin-bottom: 35px;
+      }
+
+      .what-intro h2 {
+        margin-bottom: 18px;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .what-intro p,
+      .what-item p {
+        font-size: 16px;
+        line-height: 1.6;
       }
 
       .what-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+      }
+
+      .what-item h3 {
+        margin-bottom: 8px;
+        font-size: 22px;
       }
 
       .turning-point {
         padding: 30px 22px;
       }
 
+      .turning-point h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .date {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+      }
+
       .big-line {
-        font-size: 20px;
+        font-size: 19px;
       }
 
       .aftermath-section {
-        padding: 10px 22px 45px;
+        padding: 8px 22px 42px;
+      }
+
+      .aftermath-inner p {
+        font-size: 16px;
+        line-height: 1.65;
+        margin-bottom: 19px;
+      }
+
+      .emphasis {
+        margin-top: 25px;
+        font-size: 18px !important;
       }
 
       .read-section {
-        padding: 75px 22px;
+        padding: 55px 22px;
       }
 
       .read-heading {
-        margin-bottom: 45px;
+        margin-bottom: 35px;
+      }
+
+      .read-heading h2 {
+        margin-bottom: 12px;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .read-heading p {
+        font-size: 17px;
       }
 
       .read-content {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 35px;
       }
 
       .memoir-preview {
-        max-width: 280px;
+        max-width: 250px;
       }
 
       .read-copy {
@@ -579,15 +672,75 @@
       }
 
       .read-copy h3 {
-        font-size: 30px;
+        font-size: 28px;
+      }
+
+      .read-copy p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .free-note {
+        font-size: 13px;
       }
 
       .familiar-section {
-        padding: 75px 22px;
+        padding: 55px 22px;
+      }
+
+      .familiar-inner h2 {
+        margin-bottom: 18px;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .familiar-inner p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.65;
       }
 
       .next-links {
-        gap: 25px;
+        gap: 18px 24px;
+      }
+
+      .next-links a {
+        font-size: 15px;
+      }
+
+      footer {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-links {
+        gap: 9px 13px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .hero-photo {
+        max-width: 300px;
+        height: 400px;
+      }
+
+      .intro-section,
+      .what-section,
+      .turning-point,
+      .aftermath-section,
+      .read-section,
+      .familiar-section {
+        padding-right: 18px;
+        padding-left: 18px;
       }
     }
   </style>
@@ -691,27 +844,19 @@
   </section>
 
   <section class="intro-section">
-
     <div class="intro-inner">
 
       <div class="intro-text">
-
         <h2>
           It Started With Approaching Women.
           It Became Much Bigger Than That.
         </h2>
 
-        <p>
-          For years, I wanted to approach women.
-        </p>
+        <p>For years, I wanted to approach women.</p>
 
-        <p>
-          I watched videos. I imagined myself doing it.
-        </p>
+        <p>I watched videos. I imagined myself doing it.</p>
 
-        <p>
-          And then, when the moment actually came, I couldn't do it.
-        </p>
+        <p>And then, when the moment actually came, I couldn't do it.</p>
 
         <p>
           I spent years walking past women I wanted to talk to,
@@ -720,9 +865,7 @@
           for me.
         </p>
 
-        <p>
-          That's what this story is really about.
-        </p>
+        <p>That's what this story is really about.</p>
 
         <p>
           It's about what happens when you know what you want to do,
@@ -736,116 +879,81 @@
           impossible become normal.
         </p>
 
-        <p>
-          Approaching women was simply the battlefield where I learned it.
-        </p>
-
+        <p>Approaching women was simply the battlefield where I learned it.</p>
       </div>
 
       <div class="intro-photo-wrap">
-
         <img
           src="https://i.imgur.com/tNYSc7Y.jpg"
           alt="Phil"
           class="intro-photo"
         >
-
       </div>
 
     </div>
   </section>
 
   <section class="what-section">
-
     <div class="what-inner">
 
       <div class="what-intro">
-
         <h2>What You'll See in the Story</h2>
-
         <p>
           This isn't a collection of theories from someone who figured
           everything out overnight. It's what actually happened.
         </p>
-
       </div>
 
       <div class="what-grid">
 
         <div class="what-item">
-
           <h3>The Fear</h3>
-
           <p>
             What approach anxiety actually felt like from the inside,
             and why knowing what to do wasn't enough to make me do it.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The First Step</h3>
-
           <p>
             What finally made me stop walking past women and take
             the first step toward actually changing.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The People Along the Way</h3>
-
           <p>
             The friends, allies, and unexpected people I met along
             the way, and how having people around me helped shape
             the journey.
           </p>
-
         </div>
 
         <div class="what-item">
-
           <h3>The Change</h3>
-
           <p>
             What happened when approaching stopped being the massive
             obstacle it once was, and how it changed much more than
             just my dating life.
           </p>
-
         </div>
 
       </div>
-
     </div>
   </section>
 
   <section class="turning-point">
-
     <div class="turning-inner">
-
-      <div class="date">
-        October 6, 2019
-      </div>
-
-      <h2>
-        I Finally Approached.
-      </h2>
-
-      <p class="big-line">
-        I had had enough.
-      </p>
-
+      <div class="date">October 6, 2019</div>
+      <h2>I Finally Approached.</h2>
+      <p class="big-line">I had had enough.</p>
     </div>
   </section>
 
   <section class="aftermath-section">
-
     <div class="aftermath-inner">
-
       <p>
         Trust me, the first approach was quite embarrassing.
         It was one of the hardest things I have ever done.
@@ -857,35 +965,21 @@
         mistakes, and a lot of figuring things out the hard way.
       </p>
 
-      <p>
-        I wrote the whole story down.
-      </p>
+      <p>I wrote the whole story down.</p>
 
-      <p class="emphasis">
-        No course. No sales pitch. Just my story.
-      </p>
-
+      <p class="emphasis">No course. No sales pitch. Just my story.</p>
     </div>
   </section>
 
   <section class="read-section" id="read-memoir">
-
     <div class="read-inner">
 
       <div class="read-heading">
-
-        <h2>
-          Read the Memoir
-        </h2>
-
-        <p>
-          The complete story is available to read for free.
-        </p>
-
+        <h2>Read the Memoir</h2>
+        <p>The complete story is available to read for free.</p>
       </div>
 
       <div class="read-content">
-
         <img
           src="https://i.imgur.com/GVbZ8lh.png"
           alt="Page 1 of Break the Wall by Phil Briarwood"
@@ -893,10 +987,7 @@
         >
 
         <div class="read-copy">
-
-          <h3>
-            Break the Wall
-          </h3>
+          <h3>Break the Wall</h3>
 
           <p>
             The complete memoir of how I went from being terrified
@@ -910,80 +1001,65 @@
 
           <a
             class="read-button"
-            href="https://www.papermark.com/view/cmurszmac0001kz04dszqe5k0" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-          > 
-            READ THE MEMOIR → 
-          </a> 
+            href="https://www.papermark.com/view/cmurszmac0001kz04dszqe5k0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >READ THE MEMOIR →</a>
 
-          <div class="free-note"> 
-            Read it online. Completely free. 
-          </div> 
+          <div class="free-note">
+            Read it online. Completely free.
+          </div>
+        </div>
+      </div>
 
-        </div> 
+    </div>
+  </section>
 
-      </div> 
+  <section class="familiar-section">
+    <div class="familiar-inner">
+      <h2>If This Sounds Familiar...</h2>
 
-    </div> 
-  </section> 
+      <p>
+        If you've spent years watching videos, reading advice,
+        thinking about approaching, and still finding yourself
+        frozen when the moment comes, you're probably going to
+        recognize a lot of yourself in this story.
+      </p>
 
-  <section class="familiar-section"> 
+      <div class="next-links">
+        <a href="about-me.html">About Me</a>
+        <a href="articles.html">Articles</a>
+        <a href="work-with-me.html">Work With Me</a>
+      </div>
+    </div>
+  </section>
 
-    <div class="familiar-inner"> 
+  <footer>
+    © Smash Your Wall
+  </footer>
 
-      <h2> 
-        If This Sounds Familiar... 
-      </h2> 
+  <script>
+    const revealItems = document.querySelectorAll(
+      '.what-intro, .what-item'
+    );
 
-      <p> 
-        If you've spent years watching videos, reading advice, 
-        thinking about approaching, and still finding yourself 
-        frozen when the moment comes, you're probably going to 
-        recognize a lot of yourself in this story. 
-      </p> 
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15
+      }
+    );
 
-      <div class="next-links"> 
-
-        <a href="about-me.html">About Me</a> 
-        <a href="articles.html">Articles</a> 
-        <a href="work-with-me.html">Work With Me</a> 
-
-      </div> 
-
-    </div> 
-  </section> 
-
-  <footer> 
-    © Smash Your Wall 
-  </footer> 
-
-  <script> 
-    const revealItems = document.querySelectorAll( 
-      '.what-intro, .what-item' 
-    ); 
-
-    const revealObserver = new IntersectionObserver( 
-      (entries, observer) => { 
-
-        entries.forEach(entry => { 
-
-          if (entry.isIntersecting) { 
-            entry.target.classList.add('show'); 
-            observer.unobserve(entry.target); 
-          } 
-
-        }); 
-
-      }, 
-      { 
-        threshold: 0.15 
-      } 
-    ); 
-
-    revealItems.forEach(item => { 
-      revealObserver.observe(item); 
-    }); 
-  </script> 
-</body> 
+    revealItems.forEach(item => {
+      revealObserver.observe(item);
+    });
+  </script>
+</body>
 </html>
